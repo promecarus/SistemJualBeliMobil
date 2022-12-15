@@ -1,5 +1,5 @@
-# JualMobil.com
-Sebuah aplikasi jual beli mobil berbasis VB yang sudah ga zaman
+# JualBeliMobil.com
+Sebuah aplikasi jual beli mobil berbasis VB
 
 ## Table of contents
 
