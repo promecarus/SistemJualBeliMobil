@@ -29,3 +29,10 @@ CREATE TABLE mobil(
 	harga_default INT(12)
 );
 
+CREATE TABLE pembeli(
+	id_pembeli INT(11) PRIMARY KEY AUTO_INCREMENT,
+	nik VARCHAR(16),
+	nama VARCHAR(100),
+	alamat VARCHAR(100)
+);
+
