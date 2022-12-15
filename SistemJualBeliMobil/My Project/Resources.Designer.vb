@@ -79,5 +79,15 @@ Namespace My.Resources
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property VEN_MY23_0052_V001_4x3() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("VEN_MY23_0052_V001_4x3", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
     End Module
 End Namespace
