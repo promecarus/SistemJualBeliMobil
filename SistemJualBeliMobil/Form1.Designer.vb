@@ -32,6 +32,7 @@ Partial Class Form1
         Me.ButtonFormMobilTambah = New System.Windows.Forms.Button()
         Me.ButtonFormMobilEdit = New System.Windows.Forms.Button()
         Me.ButtonFormMobilHapus = New System.Windows.Forms.Button()
+        Me.ButtonFormDashboard = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'ButtonFormSignIn
@@ -124,11 +125,21 @@ Partial Class Form1
         Me.ButtonFormMobilHapus.Text = "Form Hapus Mobil"
         Me.ButtonFormMobilHapus.UseVisualStyleBackColor = True
         '
+        'ButtonFormDashboard
+        '
+        Me.ButtonFormDashboard.Location = New System.Drawing.Point(424, 12)
+        Me.ButtonFormDashboard.Name = "ButtonFormDashboard"
+        Me.ButtonFormDashboard.Size = New System.Drawing.Size(200, 29)
+        Me.ButtonFormDashboard.TabIndex = 0
+        Me.ButtonFormDashboard.Text = "Form Dashboard"
+        Me.ButtonFormDashboard.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(882, 450)
+        Me.Controls.Add(Me.ButtonFormDashboard)
         Me.Controls.Add(Me.ButtonFormSignUp)
         Me.Controls.Add(Me.ButtonFormMobilHapus)
         Me.Controls.Add(Me.ButtonFormHapusJenisMobil)
@@ -156,4 +167,5 @@ Partial Class Form1
     Friend WithEvents ButtonFormMobilTambah As Button
     Friend WithEvents ButtonFormMobilEdit As Button
     Friend WithEvents ButtonFormMobilHapus As Button
+    Friend WithEvents ButtonFormDashboard As Button
 End Class
