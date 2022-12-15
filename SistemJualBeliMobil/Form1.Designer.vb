@@ -22,57 +22,35 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.ButtonFormSignInAdmin = New System.Windows.Forms.Button()
-        Me.ButtonFormSignUpAdmin = New System.Windows.Forms.Button()
-        Me.ButtonFormSignInUser = New System.Windows.Forms.Button()
-        Me.ButtonFormSignUpUser = New System.Windows.Forms.Button()
+        Me.ButtonFormSignIn = New System.Windows.Forms.Button()
+        Me.ButtonFormSignUp = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'ButtonFormSignInAdmin
+        'ButtonFormSignIn
         '
-        Me.ButtonFormSignInAdmin.Location = New System.Drawing.Point(12, 12)
-        Me.ButtonFormSignInAdmin.Name = "ButtonFormSignInAdmin"
-        Me.ButtonFormSignInAdmin.Size = New System.Drawing.Size(200, 29)
-        Me.ButtonFormSignInAdmin.TabIndex = 0
-        Me.ButtonFormSignInAdmin.Text = "Form Sign In Admin"
-        Me.ButtonFormSignInAdmin.UseVisualStyleBackColor = True
+        Me.ButtonFormSignIn.Location = New System.Drawing.Point(12, 12)
+        Me.ButtonFormSignIn.Name = "ButtonFormSignIn"
+        Me.ButtonFormSignIn.Size = New System.Drawing.Size(150, 29)
+        Me.ButtonFormSignIn.TabIndex = 0
+        Me.ButtonFormSignIn.Text = "Form Sign In"
+        Me.ButtonFormSignIn.UseVisualStyleBackColor = True
         '
-        'ButtonFormSignUpAdmin
+        'ButtonFormSignUp
         '
-        Me.ButtonFormSignUpAdmin.Location = New System.Drawing.Point(218, 12)
-        Me.ButtonFormSignUpAdmin.Name = "ButtonFormSignUpAdmin"
-        Me.ButtonFormSignUpAdmin.Size = New System.Drawing.Size(200, 29)
-        Me.ButtonFormSignUpAdmin.TabIndex = 0
-        Me.ButtonFormSignUpAdmin.Text = "Form Sign Up Admin"
-        Me.ButtonFormSignUpAdmin.UseVisualStyleBackColor = True
-        '
-        'ButtonFormSignInUser
-        '
-        Me.ButtonFormSignInUser.Location = New System.Drawing.Point(12, 47)
-        Me.ButtonFormSignInUser.Name = "ButtonFormSignInUser"
-        Me.ButtonFormSignInUser.Size = New System.Drawing.Size(200, 29)
-        Me.ButtonFormSignInUser.TabIndex = 0
-        Me.ButtonFormSignInUser.Text = "Form Sign In User"
-        Me.ButtonFormSignInUser.UseVisualStyleBackColor = True
-        '
-        'ButtonFormSignUpUser
-        '
-        Me.ButtonFormSignUpUser.Location = New System.Drawing.Point(218, 47)
-        Me.ButtonFormSignUpUser.Name = "ButtonFormSignUpUser"
-        Me.ButtonFormSignUpUser.Size = New System.Drawing.Size(200, 29)
-        Me.ButtonFormSignUpUser.TabIndex = 0
-        Me.ButtonFormSignUpUser.Text = "Form Sign Up User"
-        Me.ButtonFormSignUpUser.UseVisualStyleBackColor = True
+        Me.ButtonFormSignUp.Location = New System.Drawing.Point(168, 12)
+        Me.ButtonFormSignUp.Name = "ButtonFormSignUp"
+        Me.ButtonFormSignUp.Size = New System.Drawing.Size(150, 29)
+        Me.ButtonFormSignUp.TabIndex = 0
+        Me.ButtonFormSignUp.Text = "Form Sign Up"
+        Me.ButtonFormSignUp.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.ButtonFormSignUpUser)
-        Me.Controls.Add(Me.ButtonFormSignUpAdmin)
-        Me.Controls.Add(Me.ButtonFormSignInUser)
-        Me.Controls.Add(Me.ButtonFormSignInAdmin)
+        Me.Controls.Add(Me.ButtonFormSignUp)
+        Me.Controls.Add(Me.ButtonFormSignIn)
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
@@ -80,8 +58,6 @@ Partial Class Form1
 
     End Sub
 
-    Friend WithEvents ButtonFormSignInAdmin As Button
-    Friend WithEvents ButtonFormSignUpAdmin As Button
-    Friend WithEvents ButtonFormSignInUser As Button
-    Friend WithEvents ButtonFormSignUpUser As Button
+    Friend WithEvents ButtonFormSignIn As Button
+    Friend WithEvents ButtonFormSignUp As Button
 End Class
