@@ -15,6 +15,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="8.0.31" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="My Project\Application.Designer.vb">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
