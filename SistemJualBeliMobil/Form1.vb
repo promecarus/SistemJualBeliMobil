@@ -28,4 +28,24 @@
         FormJenisMobilHapus.Show()
         Me.Hide()
     End Sub
+
+    Private Sub ButtonFormMobil_Click(sender As Object, e As EventArgs) Handles ButtonFormMobil.Click
+        FormMobil.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub ButtonFormMobilTambah_Click(sender As Object, e As EventArgs) Handles ButtonFormMobilTambah.Click
+        FormMobilTambah.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub ButtonFormMobilEdit_Click(sender As Object, e As EventArgs) Handles ButtonFormMobilEdit.Click
+        FormMobilEdit.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub ButtonFormMobilHapus_Click(sender As Object, e As EventArgs) Handles ButtonFormMobilHapus.Click
+        FormMobilHapus.Show()
+        Me.Hide()
+    End Sub
 End Class
