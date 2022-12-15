@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FormSignInAdmin
+Partial Class FormSignIn
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -24,14 +24,14 @@ Partial Class FormSignInAdmin
     Private Sub InitializeComponent()
         Me.SuspendLayout()
         '
-        'FormSignInAdmin
+        'FormSignIn
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Name = "FormSignInAdmin"
+        Me.Name = "FormSignIn"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FormSignInAdmin"
+        Me.Text = "Sign In"
         Me.ResumeLayout(False)
 
     End Sub
