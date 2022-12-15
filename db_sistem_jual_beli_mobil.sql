@@ -36,3 +36,12 @@ CREATE TABLE pembeli(
 	alamat VARCHAR(100)
 );
 
+CREATE TABLE buku_penjualan(
+	id_penjualan INT(11) PRIMARY KEY AUTO_INCREMENT,
+	id_mobil INT(11),
+	FOREIGN KEY (id_mobil) REFERENCES mobil(id),
+	id_pembeli INT(11),
+	FOREIGN KEY (id_pembeli) REFERENCES pembeli(id_pembeli),
+	harga_terjual INT(12),
+	tanggal_penjualan DATE
+);
