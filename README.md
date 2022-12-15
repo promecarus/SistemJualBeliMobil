@@ -41,7 +41,7 @@ Sebuah aplikasi jual beli mobil berbasis VB
 
 ## Author
 
-- Muhammad Haikal Alrasyid
+- Muhammad Haikal Al Rasyid
 - Heical Chandra Syahputra
 - Sandhi Karunia Sugihartana
-- Hilmawan Fauzi Wibowo
+- Hilmawan Fauzy Wibowo
