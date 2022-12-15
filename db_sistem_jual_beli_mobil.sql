@@ -16,3 +16,16 @@ CREATE TABLE jenis_mobil(
 	jenis VARCHAR(100) UNIQUE
 );
 
+CREATE TABLE mobil(
+	id INT(11) PRIMARY KEY AUTO_INCREMENT,
+	id_jenis_mobil INT(11),
+	FOREIGN KEY (id_jenis_mobil) REFERENCES jenis_mobil(id_jenis),
+	tipe_mobil VARCHAR(100),
+	tahun_pembuatan YEAR,
+	kondisi VARCHAR(100),
+	harga INT(12),
+	garansi TIME,
+	status_terjual BOOLEAN DEFAULT FALSE,
+	harga_default INT(12)
+);
+
