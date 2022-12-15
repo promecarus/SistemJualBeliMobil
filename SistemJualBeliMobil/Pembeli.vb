@@ -2,8 +2,10 @@
 Imports MySql.Data.MySqlClient
 Imports Mysqlx.XDevAPI.Relational
 
-Public Class JenisMobil
-    Private jenis As String
+Public Class Pembeli
+    Private nik As String
+    Private nama As String
+    Private alamat As String
 
     Public Shared dbConn As New MySqlConnection
     Public Shared sqlCommand As New MySqlCommand
@@ -15,16 +17,37 @@ Public Class JenisMobil
     Private password_db As String = ""
     Private database As String = "db_sistem_jual_beli_mobil"
 
-    Public Property jenisProperty() As String
+    Public Property nikProperty() As String
         Get
-            Return jenis
+            Return nik
         End Get
         Set(ByVal value As String)
-            jenis = value
+            nik = value
         End Set
     End Property
 
-    Public Function AddDataJenisMobilDatabase(jenis As String)
+    Public Property namaProperty() As String
+        Get
+            Return nama
+        End Get
+        Set(ByVal value As String)
+            nama = value
+        End Set
+    End Property
+
+    Public Property alamatProperty() As String
+        Get
+            Return alamat
+        End Get
+        Set(ByVal value As String)
+            alamat = value
+        End Set
+    End Property
+
+    Public Function AddDataPembeliDatabase(nik As String,
+                                              nama As String,
+                                              alamat As String)
+
         dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" _
                 + "password=" + password_db + ";" + "database =" + database
 
@@ -32,8 +55,10 @@ Public Class JenisMobil
             dbConn.Open()
 
             sqlCommand.Connection = dbConn
-            sqlQuery = "INSERT INTO JENIS_MOBIL(jenis) VALUES('" _
-                        & jenis & "')"
+            sqlQuery = "INSERT INTO PEMBELI(nik, nama, alamat) VALUES('" _
+                        & nik & "', '" _
+                        & nama & "', '" _
+                        & alamat & "')"
 
             sqlCommand = New MySqlCommand(sqlQuery, dbConn)
             sqlRead = sqlCommand.ExecuteReader
@@ -49,7 +74,7 @@ Public Class JenisMobil
         End Try
     End Function
 
-    Public Function GetDataJenisMobilDatabase() As DataTable
+    Public Function GetDataPembeliDatabase() As DataTable
         Dim result As New DataTable
 
         dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" _
@@ -58,9 +83,11 @@ Public Class JenisMobil
         dbConn.Open()
 
         sqlCommand.Connection = dbConn
-        sqlCommand.CommandText = "SELECT id_jenis AS 'ID',
-                                  jenis AS 'Jenis Mobil'
-                                  FROM JENIS_MOBIL"
+        sqlCommand.CommandText = "SELECT id_pembeli AS 'ID',
+                                  nik AS 'NIK',
+                                  nama AS 'Nama',
+                                  alamat AS 'Alamat'
+                                  FROM PEMBELI"
 
         sqlRead = sqlCommand.ExecuteReader
 
@@ -72,7 +99,7 @@ Public Class JenisMobil
         Return result
     End Function
 
-    Public Function GetDataJenisMobilByIDDatabase(ID As Integer) As List(Of String)
+    Public Function GetDataPembeliByIDDatabase(ID As Integer) As List(Of String)
         Dim result As New List(Of String)
 
         dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" _
@@ -81,16 +108,20 @@ Public Class JenisMobil
         dbConn.Open()
 
         sqlCommand.Connection = dbConn
-        sqlCommand.CommandText = "SELECT id_jenis,
-                                  jenis
-                                  FROM JENIS_MOBIL
-                                  WHERE id_jenis='" & ID & "'"
+        sqlCommand.CommandText = "SELECT id_pembeli,
+                                  nik,
+                                  nama,
+                                  alamat
+                                  FROM PEMBELI
+                                  WHERE id_pembeli='" & ID & "'"
 
         sqlRead = sqlCommand.ExecuteReader
 
         While sqlRead.Read
             result.Add(sqlRead.GetString(0).ToString())
             result.Add(sqlRead.GetString(1).ToString())
+            result.Add(sqlRead.GetString(2).ToString())
+            result.Add(sqlRead.GetString(3).ToString())
         End While
 
         sqlRead.Close()
@@ -100,8 +131,10 @@ Public Class JenisMobil
         Return result
     End Function
 
-    Public Function UpdateDataJenisMobilByIDDatabase(ID As Integer,
-                                                     jenis As String)
+    Public Function UpdateDataPembeliByIDDatabase(ID As Integer,
+                                                     nik As String,
+                                                     nama As String,
+                                                     alamat As String)
 
         dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" _
             + "password=" + password_db + ";" + "database =" + database
@@ -110,9 +143,11 @@ Public Class JenisMobil
             dbConn.Open()
 
             sqlCommand.Connection = dbConn
-            sqlQuery = "UPDATE JENIS_MOBIL SET" &
-                        "jenis='" & jenis & "' " &
-                        "WHERE id_jenis='" & ID & "'"
+            sqlQuery = "UPDATE PEMBELI SET" &
+                        "nik='" & nik & "', " &
+                        "nama='" & nama & "', " &
+                        "alamat='" & alamat & "' " &
+                        "WHERE id_pembeli='" & ID & "'"
 
             sqlCommand = New MySqlCommand(sqlQuery, dbConn)
             sqlRead = sqlCommand.ExecuteReader
@@ -127,7 +162,7 @@ Public Class JenisMobil
         End Try
     End Function
 
-    Public Function DeleteDataJenisMobilByIDDatabase(ID As Integer)
+    Public Function DeleteDataPembeliByIDDatabase(ID As Integer)
         dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" _
                 + "password=" + password_db + ";" + "database =" + database
 
@@ -135,8 +170,8 @@ Public Class JenisMobil
             dbConn.Open()
 
             sqlCommand.Connection = dbConn
-            sqlQuery = "DELETE FROM JENIS_MOBIL" &
-                        "WHERE id_jenis='" & ID & "'"
+            sqlQuery = "DELETE FROM PEMBELI" &
+                        "WHERE id_pembeli='" & ID & "'"
 
             Debug.WriteLine(sqlQuery)
 
