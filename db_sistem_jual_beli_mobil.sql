@@ -45,3 +45,32 @@ CREATE TABLE buku_penjualan(
 	harga_terjual INT(12),
 	tanggal_penjualan DATE
 );
+
+
+INSERT INTO users(username,email,PASSWORD) 
+VALUES 
+('mawanrunner','hilmawanfauzy77@gmail.com','password'),
+('promecarus','haikusersusersalslipi@gmail.com','password'),
+('Dynavx','haical31@gmail.com','password'),
+('Lowl16','sandhi372@gmail.com','password');
+
+INSERT INTO pembeli(nik,nama,alamat) 
+VALUES 
+('2107411009','Hilmawan Fauzy Wibowo','Marrakash Blok B 7'),
+('2107411022','Heical Chandra Saputra','Jakarta Pusat JL.Mangga'),
+('2107411025','Muhammad Haikal Al Rasyid','Jakarta Pusat Slipi'),
+('2107411007','Sandhi Karunia Sugihartana','Bogor JL.Sisingamangaraja');
+
+INSERT INTO jenis_mobil(jenis) 
+VALUES 
+('van'),
+('suv'),
+('pick up'),
+('box');
+
+
+
+
+
+
+
