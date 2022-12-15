@@ -85,7 +85,7 @@ Partial Class FormSignIn
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(322, 37)
         Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Sign in"
+        Me.Button1.Text = "Sign up"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'Label2

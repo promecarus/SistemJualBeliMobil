@@ -68,7 +68,7 @@ Partial Class FormSignUp
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(592, 381)
+        Me.Label2.Location = New System.Drawing.Point(598, 381)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(26, 21)
         Me.Label2.TabIndex = 14
@@ -120,7 +120,7 @@ Partial Class FormSignUp
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.SistemJualBeliMobil.My.Resources.Resources.BannerSign
+        Me.PictureBox1.Image = Global.SistemJualBeliMobil.My.Resources.Resources.VEN_MY23_0052_V001_4x3
         Me.PictureBox1.Location = New System.Drawing.Point(-8, -3)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(409, 507)
@@ -134,9 +134,9 @@ Partial Class FormSignUp
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label5.Location = New System.Drawing.Point(443, 175)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(87, 21)
+        Me.Label5.Size = New System.Drawing.Size(53, 21)
         Me.Label5.TabIndex = 19
-        Me.Label5.Text = "Username"
+        Me.Label5.Text = "Email"
         '
         'TextBox2
         '
@@ -150,6 +150,7 @@ Partial Class FormSignUp
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(824, 503)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.TextBox2)
