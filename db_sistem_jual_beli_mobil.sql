@@ -11,3 +11,8 @@ CREATE TABLE users(
 	password VARCHAR(50)
 );
 
+CREATE TABLE jenis_mobil(
+	id_jenis INT(11) PRIMARY KEY AUTO_INCREMENT,
+	jenis VARCHAR(100) UNIQUE
+);
+
