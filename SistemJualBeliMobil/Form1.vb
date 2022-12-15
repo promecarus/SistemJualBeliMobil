@@ -9,6 +9,11 @@
         Me.Hide()
     End Sub
 
+    Private Sub ButtonFormDashboard_Click(sender As Object, e As EventArgs) Handles ButtonFormDashboard.Click
+        FormDashboard.Show()
+        Me.Hide()
+    End Sub
+
     Private Sub ButtonFormJenisMobil_Click(sender As Object, e As EventArgs) Handles ButtonFormJenisMobil.Click
         FormJenisMobil.Show()
         Me.Hide()
