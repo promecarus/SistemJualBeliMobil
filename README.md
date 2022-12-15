@@ -1,5 +1,5 @@
-# JualMobil.com
-Sebuah aplikasi jual beli mobil berbasis VB yang sudah ga zaman
+# JualBeliMobil.com
+Sebuah aplikasi jual beli mobil berbasis VB
 
 ## Table of contents
 
@@ -41,7 +41,7 @@ Sebuah aplikasi jual beli mobil berbasis VB yang sudah ga zaman
 
 ## Author
 
-- Muhammad Haikal Alrasyid
+- Muhammad Haikal Al Rasyid
 - Heical Chandra Syahputra
 - Sandhi Karunia Sugihartana
-- Hilmawan Fauzi Wibowo
+- Hilmawan Fauzy Wibowo
