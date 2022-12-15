@@ -19,7 +19,7 @@ Sebuah aplikasi jual beli mobil berbasis VB
         
     </div>
     <div>
-        <img src="./screenshot/3.png" alt="drawing" width="400"  loading="lazy"/>
+        <img src="/Prototype/SIGNup.png" alt="drawing" width="400"  loading="lazy"/>
         <img src="./screenshot/4.png" alt="drawing" width="400"  loading="lazy"/>
         <img src="./screenshot/5.png" alt="drawing" width="400"  loading="lazy"/>
     </div>
