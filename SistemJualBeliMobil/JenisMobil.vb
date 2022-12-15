@@ -59,7 +59,7 @@ Public Class JenisMobil
 
         sqlCommand.Connection = dbConn
         sqlCommand.CommandText = "SELECT id_jenis AS 'ID',
-                                  jenis as 'Jenis Mobil'
+                                  jenis AS 'Jenis Mobil'
                                   FROM JENIS_MOBIL"
 
         sqlRead = sqlCommand.ExecuteReader
