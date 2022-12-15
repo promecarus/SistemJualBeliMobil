@@ -53,4 +53,44 @@
         FormMobilHapus.Show()
         Me.Hide()
     End Sub
+
+    Private Sub ButtonFormPembeli_Click(sender As Object, e As EventArgs) Handles ButtonFormPembeli.Click
+        FormPembeli.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub ButtonFormPembeliTambah_Click(sender As Object, e As EventArgs) Handles ButtonFormPembeliTambah.Click
+        FormPembeliTambah.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub ButtonFormPembeliEdit_Click(sender As Object, e As EventArgs) Handles ButtonFormPembeliEdit.Click
+        FormPembeliEdit.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub ButtonFormPembeliHapus_Click(sender As Object, e As EventArgs) Handles ButtonFormPembeliHapus.Click
+        FormPembeliHapus.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub ButtonFormBukuPenjualan_Click(sender As Object, e As EventArgs) Handles ButtonFormBukuPenjualan.Click
+        FormBukuPenjualan.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub ButtonFormBukuPenjualanTambah_Click(sender As Object, e As EventArgs) Handles ButtonFormBukuPenjualanTambah.Click
+        FormBukuPenjualanTambah.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub ButtonFormBukuPenjualanEdit_Click(sender As Object, e As EventArgs) Handles ButtonFormBukuPenjualanEdit.Click
+        FormBukuPenjualanEdit.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub ButtonFormBukuPenjualanHapus_Click(sender As Object, e As EventArgs) Handles ButtonFormBukuPenjualanHapus.Click
+        FormBukuPenjualanHapus.Show()
+        Me.Hide()
+    End Sub
 End Class
