@@ -28,6 +28,10 @@ Partial Class Form1
         Me.ButtonFormTambahJenisMobil = New System.Windows.Forms.Button()
         Me.ButtonFormEditJenisMobil = New System.Windows.Forms.Button()
         Me.ButtonFormHapusJenisMobil = New System.Windows.Forms.Button()
+        Me.ButtonFormMobil = New System.Windows.Forms.Button()
+        Me.ButtonFormMobilTambah = New System.Windows.Forms.Button()
+        Me.ButtonFormMobilEdit = New System.Windows.Forms.Button()
+        Me.ButtonFormMobilHapus = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'ButtonFormSignIn
@@ -84,15 +88,55 @@ Partial Class Form1
         Me.ButtonFormHapusJenisMobil.Text = "Form Hapus Jenis Mobil"
         Me.ButtonFormHapusJenisMobil.UseVisualStyleBackColor = True
         '
+        'ButtonFormMobil
+        '
+        Me.ButtonFormMobil.Location = New System.Drawing.Point(12, 82)
+        Me.ButtonFormMobil.Name = "ButtonFormMobil"
+        Me.ButtonFormMobil.Size = New System.Drawing.Size(200, 29)
+        Me.ButtonFormMobil.TabIndex = 0
+        Me.ButtonFormMobil.Text = "Form Mobil"
+        Me.ButtonFormMobil.UseVisualStyleBackColor = True
+        '
+        'ButtonFormMobilTambah
+        '
+        Me.ButtonFormMobilTambah.Location = New System.Drawing.Point(218, 82)
+        Me.ButtonFormMobilTambah.Name = "ButtonFormMobilTambah"
+        Me.ButtonFormMobilTambah.Size = New System.Drawing.Size(200, 29)
+        Me.ButtonFormMobilTambah.TabIndex = 0
+        Me.ButtonFormMobilTambah.Text = "Form Tambah Mobil"
+        Me.ButtonFormMobilTambah.UseVisualStyleBackColor = True
+        '
+        'ButtonFormMobilEdit
+        '
+        Me.ButtonFormMobilEdit.Location = New System.Drawing.Point(424, 82)
+        Me.ButtonFormMobilEdit.Name = "ButtonFormMobilEdit"
+        Me.ButtonFormMobilEdit.Size = New System.Drawing.Size(200, 29)
+        Me.ButtonFormMobilEdit.TabIndex = 0
+        Me.ButtonFormMobilEdit.Text = "Form Edit Mobil"
+        Me.ButtonFormMobilEdit.UseVisualStyleBackColor = True
+        '
+        'ButtonFormMobilHapus
+        '
+        Me.ButtonFormMobilHapus.Location = New System.Drawing.Point(630, 82)
+        Me.ButtonFormMobilHapus.Name = "ButtonFormMobilHapus"
+        Me.ButtonFormMobilHapus.Size = New System.Drawing.Size(200, 29)
+        Me.ButtonFormMobilHapus.TabIndex = 0
+        Me.ButtonFormMobilHapus.Text = "Form Hapus Mobil"
+        Me.ButtonFormMobilHapus.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(882, 450)
         Me.Controls.Add(Me.ButtonFormSignUp)
+        Me.Controls.Add(Me.ButtonFormMobilHapus)
         Me.Controls.Add(Me.ButtonFormHapusJenisMobil)
+        Me.Controls.Add(Me.ButtonFormMobilEdit)
         Me.Controls.Add(Me.ButtonFormEditJenisMobil)
+        Me.Controls.Add(Me.ButtonFormMobilTambah)
         Me.Controls.Add(Me.ButtonFormTambahJenisMobil)
+        Me.Controls.Add(Me.ButtonFormMobil)
         Me.Controls.Add(Me.ButtonFormJenisMobil)
         Me.Controls.Add(Me.ButtonFormSignIn)
         Me.Name = "Form1"
@@ -108,4 +152,8 @@ Partial Class Form1
     Friend WithEvents ButtonFormTambahJenisMobil As Button
     Friend WithEvents ButtonFormEditJenisMobil As Button
     Friend WithEvents ButtonFormHapusJenisMobil As Button
+    Friend WithEvents ButtonFormMobil As Button
+    Friend WithEvents ButtonFormMobilTambah As Button
+    Friend WithEvents ButtonFormMobilEdit As Button
+    Friend WithEvents ButtonFormMobilHapus As Button
 End Class
