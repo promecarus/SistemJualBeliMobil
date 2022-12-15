@@ -24,6 +24,7 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.ButtonFormSignIn = New System.Windows.Forms.Button()
         Me.ButtonFormSignUp = New System.Windows.Forms.Button()
+        Me.ButtonFormJenisMobil = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'ButtonFormSignIn
@@ -44,12 +45,22 @@ Partial Class Form1
         Me.ButtonFormSignUp.Text = "Form Sign Up"
         Me.ButtonFormSignUp.UseVisualStyleBackColor = True
         '
+        'ButtonFormJenisMobil
+        '
+        Me.ButtonFormJenisMobil.Location = New System.Drawing.Point(12, 47)
+        Me.ButtonFormJenisMobil.Name = "ButtonFormJenisMobil"
+        Me.ButtonFormJenisMobil.Size = New System.Drawing.Size(150, 29)
+        Me.ButtonFormJenisMobil.TabIndex = 0
+        Me.ButtonFormJenisMobil.Text = "Form Jenis Mobil"
+        Me.ButtonFormJenisMobil.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.ButtonFormSignUp)
+        Me.Controls.Add(Me.ButtonFormJenisMobil)
         Me.Controls.Add(Me.ButtonFormSignIn)
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -60,4 +71,5 @@ Partial Class Form1
 
     Friend WithEvents ButtonFormSignIn As Button
     Friend WithEvents ButtonFormSignUp As Button
+    Friend WithEvents ButtonFormJenisMobil As Button
 End Class
