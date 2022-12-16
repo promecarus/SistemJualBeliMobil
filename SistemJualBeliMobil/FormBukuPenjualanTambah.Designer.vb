@@ -30,6 +30,8 @@ Partial Class FormBukuPenjualanTambah
         Me.LabelPembeli = New System.Windows.Forms.Label()
         Me.LabelHargaTerjual = New System.Windows.Forms.Label()
         Me.LabelTanggalPenjualan = New System.Windows.Forms.Label()
+        Me.ButtonTambah = New System.Windows.Forms.Button()
+        Me.ButtonCancel = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'ComboBoxIdMobil
@@ -98,11 +100,31 @@ Partial Class FormBukuPenjualanTambah
         Me.LabelTanggalPenjualan.TabIndex = 7
         Me.LabelTanggalPenjualan.Text = "Tanggal Penjualan"
         '
+        'ButtonTambah
+        '
+        Me.ButtonTambah.Location = New System.Drawing.Point(12, 226)
+        Me.ButtonTambah.Name = "ButtonTambah"
+        Me.ButtonTambah.Size = New System.Drawing.Size(94, 29)
+        Me.ButtonTambah.TabIndex = 4
+        Me.ButtonTambah.Text = "Tambah"
+        Me.ButtonTambah.UseVisualStyleBackColor = True
+        '
+        'ButtonCancel
+        '
+        Me.ButtonCancel.Location = New System.Drawing.Point(112, 226)
+        Me.ButtonCancel.Name = "ButtonCancel"
+        Me.ButtonCancel.Size = New System.Drawing.Size(94, 29)
+        Me.ButtonCancel.TabIndex = 8
+        Me.ButtonCancel.Text = "Cancel"
+        Me.ButtonCancel.UseVisualStyleBackColor = True
+        '
         'FormBukuPenjualanTambah
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.ButtonCancel)
+        Me.Controls.Add(Me.ButtonTambah)
         Me.Controls.Add(Me.LabelTanggalPenjualan)
         Me.Controls.Add(Me.LabelHargaTerjual)
         Me.Controls.Add(Me.LabelPembeli)
@@ -127,4 +149,6 @@ Partial Class FormBukuPenjualanTambah
     Friend WithEvents LabelPembeli As Label
     Friend WithEvents LabelHargaTerjual As Label
     Friend WithEvents LabelTanggalPenjualan As Label
+    Friend WithEvents ButtonTambah As Button
+    Friend WithEvents ButtonCancel As Button
 End Class
