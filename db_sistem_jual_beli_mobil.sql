@@ -54,30 +54,7 @@ VALUES
 ('Dynavx','haical31@gmail.com','password'),
 ('Lowl16','sandhi372@gmail.com','password');
 
-INSERT INTO pembeli(nik,nama,alamat) 
-VALUES 
-('2107411009','Hilmawan Fauzy Wibowo','Marrakash Blok B 7'),
-('2107411022','Heical Chandra Saputra','Jakarta Pusat JL.Mangga'),
-('2107411025','Muhammad Haikal Al Rasyid','Jakarta Pusat Slipi'),
-('2107411007','Sandhi Karunia Sugihartana','Bogor JL.Sisingamangaraja');
 
-INSERT INTO jenis_mobil(jenis) 
-VALUES 
-('van'),
-('suv'),
-('pick up'),
-('box');
-
-INSERT INTO mobil(id_jenis_mobil,tipe_mobil,tahun_pembuatan,kondisi,harga,garansi,status_terjual,harga_default)
-VALUES
-(1,'matic',2001,'baik',200000000,'230:00:00',FALSE,200000000),
-(2,'manual',2003,'buruk',150000000,'300:00:00',TRUE,150000000),
-(3,'manual',2007,'baik',250000000,'400:00:00',FALSE,250000000),
-(4,'manual',2008,'baik',300000000,'350:00:00',FALSE,350000000),
-(1,'manual',2005,'sangat baik',500000000,'400:00:00',FALSE,500000000),
-(2,'matic',2004,'baik',450000000,'250:00:00',FALSE,450000000),
-(3,'matic',2009,'sangat baik',300000000,'450:00:00',FALSE,300000000),
-(4,'matic',2008,'baik',550000000,'300:00:00',TRUE,550000000);
 
 
 
