@@ -68,6 +68,9 @@ VALUES
 ('pick up'),
 ('box');
 
+INSERT INTO mobil(id_jenis_mobil,tipe_mobil,tahun_pembuatan,kondisi,harga,garansi,status_terjual,harga_default)
+VALUES
+(1,'matic',2001,'baik',200000000,'23:00:00'mobil,FALSE,200000000);
 
 
 
