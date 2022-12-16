@@ -187,4 +187,31 @@ Public Class Pembeli
             dbConn.Dispose()
         End Try
     End Function
+
+    Public Function ListDataPembeli() As DataTable
+        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" _
+                + "password=" + password_db + ";" + "database =" + database
+
+        Try
+            dbConn.Open()
+
+            sqlCommand.Connection = dbConn
+            sqlQuery = "SELECT id_pembeli, nama FROM pembeli"
+
+            Debug.WriteLine(sqlQuery)
+
+            Dim adapter As New MySqlDataAdapter(sqlQuery, dbConn)
+            Dim table As New DataTable()
+
+            adapter.Fill(table)
+
+            dbConn.Close()
+
+            Return table
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        Finally
+            dbConn.Dispose()
+        End Try
+    End Function
 End Class
