@@ -31,9 +31,12 @@ Partial Class FormPembeli
         '
         'DataGridViewPembeli
         '
+        Me.DataGridViewPembeli.AllowUserToAddRows = False
+        Me.DataGridViewPembeli.AllowUserToDeleteRows = False
         Me.DataGridViewPembeli.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridViewPembeli.Location = New System.Drawing.Point(12, 12)
         Me.DataGridViewPembeli.Name = "DataGridViewPembeli"
+        Me.DataGridViewPembeli.ReadOnly = True
         Me.DataGridViewPembeli.RowHeadersWidth = 51
         Me.DataGridViewPembeli.RowTemplate.Height = 29
         Me.DataGridViewPembeli.Size = New System.Drawing.Size(776, 387)
