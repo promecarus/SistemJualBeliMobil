@@ -22,17 +22,69 @@ Partial Class FormPembeli
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.ButtonTambah = New System.Windows.Forms.Button()
+        Me.ButtonEdit = New System.Windows.Forms.Button()
+        Me.ButtonHapus = New System.Windows.Forms.Button()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 12)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowHeadersWidth = 51
+        Me.DataGridView1.RowTemplate.Height = 29
+        Me.DataGridView1.Size = New System.Drawing.Size(776, 387)
+        Me.DataGridView1.TabIndex = 0
+        '
+        'ButtonTambah
+        '
+        Me.ButtonTambah.Location = New System.Drawing.Point(11, 410)
+        Me.ButtonTambah.Name = "ButtonTambah"
+        Me.ButtonTambah.Size = New System.Drawing.Size(251, 29)
+        Me.ButtonTambah.TabIndex = 1
+        Me.ButtonTambah.Text = "Tambah"
+        Me.ButtonTambah.UseVisualStyleBackColor = True
+        '
+        'ButtonEdit
+        '
+        Me.ButtonEdit.Location = New System.Drawing.Point(274, 410)
+        Me.ButtonEdit.Name = "ButtonEdit"
+        Me.ButtonEdit.Size = New System.Drawing.Size(251, 29)
+        Me.ButtonEdit.TabIndex = 2
+        Me.ButtonEdit.Text = "Edit"
+        Me.ButtonEdit.UseVisualStyleBackColor = True
+        '
+        'ButtonHapus
+        '
+        Me.ButtonHapus.Location = New System.Drawing.Point(537, 410)
+        Me.ButtonHapus.Name = "ButtonHapus"
+        Me.ButtonHapus.Size = New System.Drawing.Size(251, 29)
+        Me.ButtonHapus.TabIndex = 3
+        Me.ButtonHapus.Text = "Hapus"
+        Me.ButtonHapus.UseVisualStyleBackColor = True
         '
         'FormPembeli
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.ButtonHapus)
+        Me.Controls.Add(Me.ButtonEdit)
+        Me.Controls.Add(Me.ButtonTambah)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Name = "FormPembeli"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Pembeli"
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
+
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents ButtonTambah As Button
+    Friend WithEvents ButtonEdit As Button
+    Friend WithEvents ButtonHapus As Button
 End Class
