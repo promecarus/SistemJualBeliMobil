@@ -30,6 +30,8 @@ Partial Class FormBukuPenjualanEdit
         Me.TextBoxHargaTerjual = New System.Windows.Forms.TextBox()
         Me.ComboBoxIdPembeli = New System.Windows.Forms.ComboBox()
         Me.ComboBoxIdMobil = New System.Windows.Forms.ComboBox()
+        Me.ButtonCancel = New System.Windows.Forms.Button()
+        Me.ButtonEdit = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'LabelTanggalPenjualan
@@ -98,11 +100,31 @@ Partial Class FormBukuPenjualanEdit
         Me.ComboBoxIdMobil.Size = New System.Drawing.Size(151, 28)
         Me.ComboBoxIdMobil.TabIndex = 8
         '
+        'ButtonCancel
+        '
+        Me.ButtonCancel.Location = New System.Drawing.Point(112, 226)
+        Me.ButtonCancel.Name = "ButtonCancel"
+        Me.ButtonCancel.Size = New System.Drawing.Size(94, 29)
+        Me.ButtonCancel.TabIndex = 17
+        Me.ButtonCancel.Text = "Cancel"
+        Me.ButtonCancel.UseVisualStyleBackColor = True
+        '
+        'ButtonEdit
+        '
+        Me.ButtonEdit.Location = New System.Drawing.Point(12, 226)
+        Me.ButtonEdit.Name = "ButtonEdit"
+        Me.ButtonEdit.Size = New System.Drawing.Size(94, 29)
+        Me.ButtonEdit.TabIndex = 16
+        Me.ButtonEdit.Text = "Edit"
+        Me.ButtonEdit.UseVisualStyleBackColor = True
+        '
         'FormBukuPenjualanEdit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.ButtonCancel)
+        Me.Controls.Add(Me.ButtonEdit)
         Me.Controls.Add(Me.LabelTanggalPenjualan)
         Me.Controls.Add(Me.LabelHargaTerjual)
         Me.Controls.Add(Me.LabelPembeli)
@@ -127,4 +149,6 @@ Partial Class FormBukuPenjualanEdit
     Friend WithEvents TextBoxHargaTerjual As TextBox
     Friend WithEvents ComboBoxIdPembeli As ComboBox
     Friend WithEvents ComboBoxIdMobil As ComboBox
+    Friend WithEvents ButtonCancel As Button
+    Friend WithEvents ButtonEdit As Button
 End Class
