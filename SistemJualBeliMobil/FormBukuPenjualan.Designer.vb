@@ -58,9 +58,12 @@ Partial Class FormBukuPenjualan
         '
         'DataGridViewBukuPenjualan
         '
+        Me.DataGridViewBukuPenjualan.AllowUserToAddRows = False
+        Me.DataGridViewBukuPenjualan.AllowUserToDeleteRows = False
         Me.DataGridViewBukuPenjualan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridViewBukuPenjualan.Location = New System.Drawing.Point(13, 12)
         Me.DataGridViewBukuPenjualan.Name = "DataGridViewBukuPenjualan"
+        Me.DataGridViewBukuPenjualan.ReadOnly = True
         Me.DataGridViewBukuPenjualan.RowHeadersWidth = 51
         Me.DataGridViewBukuPenjualan.RowTemplate.Height = 29
         Me.DataGridViewBukuPenjualan.Size = New System.Drawing.Size(776, 387)
