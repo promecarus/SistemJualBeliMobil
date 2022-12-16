@@ -22,22 +22,22 @@ Partial Class FormPembeli
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewPembeli = New System.Windows.Forms.DataGridView()
         Me.ButtonTambah = New System.Windows.Forms.Button()
         Me.ButtonEdit = New System.Windows.Forms.Button()
         Me.ButtonHapus = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridViewPembeli, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'DataGridView1
+        'DataGridViewPembeli
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 12)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 29
-        Me.DataGridView1.Size = New System.Drawing.Size(776, 387)
-        Me.DataGridView1.TabIndex = 0
+        Me.DataGridViewPembeli.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridViewPembeli.Location = New System.Drawing.Point(12, 12)
+        Me.DataGridViewPembeli.Name = "DataGridViewPembeli"
+        Me.DataGridViewPembeli.RowHeadersWidth = 51
+        Me.DataGridViewPembeli.RowTemplate.Height = 29
+        Me.DataGridViewPembeli.Size = New System.Drawing.Size(776, 387)
+        Me.DataGridViewPembeli.TabIndex = 0
         '
         'ButtonTambah
         '
@@ -74,16 +74,16 @@ Partial Class FormPembeli
         Me.Controls.Add(Me.ButtonHapus)
         Me.Controls.Add(Me.ButtonEdit)
         Me.Controls.Add(Me.ButtonTambah)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.DataGridViewPembeli)
         Me.Name = "FormPembeli"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Pembeli"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridViewPembeli, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents DataGridViewPembeli As DataGridView
     Friend WithEvents ButtonTambah As Button
     Friend WithEvents ButtonEdit As Button
     Friend WithEvents ButtonHapus As Button
