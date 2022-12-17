@@ -38,12 +38,11 @@ Public Class JenisMobil
             sqlCommand = New MySqlCommand(sqlQuery, dbConn)
             sqlRead = sqlCommand.ExecuteReader
 
-            dbConn.Close()
-
             sqlRead.Close()
+
             dbConn.Close()
         Catch ex As Exception
-            Return ex.Message
+            MessageBox.Show(ex.Message)
         Finally
             dbConn.Dispose()
         End Try
@@ -60,7 +59,7 @@ Public Class JenisMobil
         sqlCommand.Connection = dbConn
         sqlCommand.CommandText = "SELECT id_jenis AS 'ID',
                                   jenis AS 'Jenis Mobil'
-                                  FROM JENIS_MOBIL"
+                                  FROM JENIS_MOBIL ORDER BY id_jenis"
 
         sqlRead = sqlCommand.ExecuteReader
 
@@ -110,7 +109,7 @@ Public Class JenisMobil
             dbConn.Open()
 
             sqlCommand.Connection = dbConn
-            sqlQuery = "UPDATE JENIS_MOBIL SET" &
+            sqlQuery = "UPDATE JENIS_MOBIL SET " &
                         "jenis='" & jenis & "' " &
                         "WHERE id_jenis='" & ID & "'"
 
@@ -121,7 +120,7 @@ Public Class JenisMobil
 
             dbConn.Close()
         Catch ex As Exception
-            Return ex.Message
+            MessageBox.Show(ex.Message)
         Finally
             dbConn.Dispose()
         End Try
@@ -135,7 +134,7 @@ Public Class JenisMobil
             dbConn.Open()
 
             sqlCommand.Connection = dbConn
-            sqlQuery = "DELETE FROM JENIS_MOBIL" &
+            sqlQuery = "DELETE FROM JENIS_MOBIL " &
                         "WHERE id_jenis='" & ID & "'"
 
             Debug.WriteLine(sqlQuery)
@@ -147,7 +146,7 @@ Public Class JenisMobil
 
             dbConn.Close()
         Catch ex As Exception
-            Return ex.Message
+            MessageBox.Show(ex.Message)
         Finally
             dbConn.Dispose()
         End Try
