@@ -26,6 +26,8 @@ Partial Class FormBukuPenjualanHapus
         Me.ButtonYes = New System.Windows.Forms.Button()
         Me.LabelIdPenjualan = New System.Windows.Forms.Label()
         Me.LabelKonfirmasi = New System.Windows.Forms.Label()
+        Me.PictureBoxBack = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBoxBack, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ButtonNo
@@ -64,11 +66,21 @@ Partial Class FormBukuPenjualanHapus
         Me.LabelKonfirmasi.TabIndex = 5
         Me.LabelKonfirmasi.Text = "Apakah Anda yakin ingin menghapus data buku penjualan dengan ID"
         '
+        'PictureBoxBack
+        '
+        Me.PictureBoxBack.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBoxBack.Location = New System.Drawing.Point(12, 12)
+        Me.PictureBoxBack.Name = "PictureBoxBack"
+        Me.PictureBoxBack.Size = New System.Drawing.Size(75, 37)
+        Me.PictureBoxBack.TabIndex = 8
+        Me.PictureBoxBack.TabStop = False
+        '
         'FormBukuPenjualanHapus
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.PictureBoxBack)
         Me.Controls.Add(Me.ButtonNo)
         Me.Controls.Add(Me.ButtonYes)
         Me.Controls.Add(Me.LabelIdPenjualan)
@@ -76,6 +88,7 @@ Partial Class FormBukuPenjualanHapus
         Me.Name = "FormBukuPenjualanHapus"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Hapus Buku Penjualan"
+        CType(Me.PictureBoxBack, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -85,4 +98,5 @@ Partial Class FormBukuPenjualanHapus
     Friend WithEvents ButtonYes As Button
     Friend WithEvents LabelIdPenjualan As Label
     Friend WithEvents LabelKonfirmasi As Label
+    Friend WithEvents PictureBoxBack As PictureBox
 End Class
