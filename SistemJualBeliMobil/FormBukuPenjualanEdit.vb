@@ -22,17 +22,25 @@
     End Sub
 
     Private Sub ButtonEdit_Click(sender As Object, e As EventArgs) Handles ButtonEdit.Click
-        FormBukuPenjualan.dataBukuPenjualan.UpdateDataBukuPenjualanByIDDatabase(
-            FormBukuPenjualan.selectedRowBukuPenjualan,
-            ComboBoxIdMobil.SelectedValue,
-            ComboBoxIdPembeli.SelectedValue,
-            TextBoxHargaTerjual.Text,
-            DateTimePickerTanggalPenjualan.Value.ToShortDateString()
-        )
+        If Not TextBoxHargaTerjual.Text = "" Then
+            If IsNumeric(TextBoxHargaTerjual.Text) Then
+                FormBukuPenjualan.dataBukuPenjualan.UpdateDataBukuPenjualanByIDDatabase(
+                    FormBukuPenjualan.selectedRowBukuPenjualan,
+                    ComboBoxIdMobil.SelectedValue,
+                    ComboBoxIdPembeli.SelectedValue,
+                    TextBoxHargaTerjual.Text,
+                    DateTimePickerTanggalPenjualan.Value.ToShortDateString()
+                )
 
-        MessageBox.Show("Data buku penjualan dengan ID " & FormBukuPenjualan.selectedRowBukuPenjualan & " berhasil diedit.")
-        Me.Close()
-        FormBukuPenjualan.Show()
+                MessageBox.Show("Data buku penjualan dengan ID " & FormBukuPenjualan.selectedRowBukuPenjualan & " berhasil diedit.")
+                Me.Close()
+                FormBukuPenjualan.Show()
+            Else
+                MessageBox.Show("Input harga terjual harus angka!")
+            End If
+        Else
+            MessageBox.Show("Input tidak boleh kosong!")
+        End If
     End Sub
 
     Private Sub ButtonCancel_Click(sender As Object, e As EventArgs) Handles ButtonCancel.Click
