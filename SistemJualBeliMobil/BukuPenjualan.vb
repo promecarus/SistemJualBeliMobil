@@ -150,7 +150,7 @@ Public Class BukuPenjualan
                                                   id_mobil As Integer,
                                                   id_pembeli As Integer,
                                                   harga_terjual As Integer,
-                                                  tanggal_penjualan As String)
+                                                  tanggal_penjualan As Date)
 
         dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" _
             + "password=" + password_db + ";" + "database =" + database
@@ -159,11 +159,11 @@ Public Class BukuPenjualan
             dbConn.Open()
 
             sqlCommand.Connection = dbConn
-            sqlQuery = "UPDATE BUKUPENJUALAN SET" &
+            sqlQuery = "UPDATE buku_penjualan SET " &
                         "id_mobil='" & id_mobil & "', " &
                         "id_pembeli='" & id_pembeli & "', " &
                         "harga_terjual='" & harga_terjual & "', " &
-                        "tanggal_penjualan='" & tanggal_penjualan & "' " &
+                        "tanggal_penjualan='" & tanggal_penjualan.ToString("yyyy/MM/dd") & "' " &
                         "WHERE id_penjualan='" & ID & "'"
 
             sqlCommand = New MySqlCommand(sqlQuery, dbConn)
@@ -173,7 +173,7 @@ Public Class BukuPenjualan
 
             dbConn.Close()
         Catch ex As Exception
-            Return ex.Message
+            MessageBox.Show(ex.Message)
         Finally
             dbConn.Dispose()
         End Try
