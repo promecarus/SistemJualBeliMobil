@@ -259,7 +259,7 @@ Public Class Mobil
 
             dbConn.Close()
         Catch ex As Exception
-            Return ex.Message
+            MessageBox.Show(ex.Message)
         Finally
             dbConn.Dispose()
         End Try
