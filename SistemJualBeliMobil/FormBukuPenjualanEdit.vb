@@ -35,6 +35,11 @@
         FormBukuPenjualan.Show()
     End Sub
 
+    Private Sub ButtonCancel_Click(sender As Object, e As EventArgs) Handles ButtonCancel.Click
+        Me.Close()
+        FormBukuPenjualan.Show()
+    End Sub
+
     Private Sub FormBukuPenjualanEdit_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         Form1.Show()
     End Sub
