@@ -15,6 +15,10 @@
         DataGridViewBukuPenjualan.ClearSelection()
     End Sub
 
+    Private Sub DataGridViewBukuPenjualan_ColumnHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DataGridViewBukuPenjualan.ColumnHeaderMouseClick
+        DataGridViewBukuPenjualan.ClearSelection()
+    End Sub
+
     Private Sub DataGridViewBukuPenjualan_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewBukuPenjualan.CellClick
         Dim index As Integer = e.RowIndex
 
