@@ -19,6 +19,17 @@
         DataGridViewPembeli.ClearSelection()
     End Sub
 
+    Private Sub DataGridViewPembeli_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewPembeli.CellClick
+        Dim index As Integer = e.RowIndex
+
+        If index > -1 Then
+            Dim selectedRow As DataGridViewRow
+            selectedRow = DataGridViewPembeli.Rows(index)
+
+            selectedRowPembeli = selectedRow.Cells(0).Value
+        End If
+    End Sub
+
     Private Sub FormPembeli_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         Form1.Show()
     End Sub
