@@ -26,6 +26,8 @@ Partial Class FormPembeliHapus
         Me.LabelNamaPembeli = New System.Windows.Forms.Label()
         Me.ButtonYes = New System.Windows.Forms.Button()
         Me.ButtonNo = New System.Windows.Forms.Button()
+        Me.PictureBoxBack = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBoxBack, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LabelKonfirmasi
@@ -64,11 +66,21 @@ Partial Class FormPembeliHapus
         Me.ButtonNo.Text = "No"
         Me.ButtonNo.UseVisualStyleBackColor = True
         '
+        'PictureBoxBack
+        '
+        Me.PictureBoxBack.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBoxBack.Location = New System.Drawing.Point(12, 12)
+        Me.PictureBoxBack.Name = "PictureBoxBack"
+        Me.PictureBoxBack.Size = New System.Drawing.Size(75, 37)
+        Me.PictureBoxBack.TabIndex = 19
+        Me.PictureBoxBack.TabStop = False
+        '
         'FormPembeliHapus
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.PictureBoxBack)
         Me.Controls.Add(Me.ButtonNo)
         Me.Controls.Add(Me.ButtonYes)
         Me.Controls.Add(Me.LabelNamaPembeli)
@@ -76,6 +88,7 @@ Partial Class FormPembeliHapus
         Me.Name = "FormPembeliHapus"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Hapus Pembeli"
+        CType(Me.PictureBoxBack, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -85,4 +98,5 @@ Partial Class FormPembeliHapus
     Friend WithEvents LabelNamaPembeli As Label
     Friend WithEvents ButtonYes As Button
     Friend WithEvents ButtonNo As Button
+    Friend WithEvents PictureBoxBack As PictureBox
 End Class

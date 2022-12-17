@@ -19,6 +19,11 @@
         FormPembeli.Show()
     End Sub
 
+    Private Sub PictureBoxBack_Click(sender As Object, e As EventArgs) Handles PictureBoxBack.Click
+        Me.Close()
+        FormPembeli.Show()
+    End Sub
+
     Private Sub FormPembeliHapus_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         FormSignIn.Close()
     End Sub
