@@ -13,7 +13,6 @@
     End Sub
 
     Private Sub BtnTambahMobil_Click(sender As Object, e As EventArgs) Handles BtnTambahMobil.Click
-        'FormMobil.Mobil.idjenisMobillProperty = ComboBoxJenisMobil.SelectedValue.ToString()
 
         Dim tipe_mobil As String
 
@@ -22,8 +21,6 @@
         ElseIf RdMatic.Checked Then
             tipe_mobil = "Matic"
         End If
-
-        'FormMobil.Mobil.tahunPembuatanProperty = Integer.Parse(TxtTahunPembuatan.Text)
 
         Dim kondisi As String
 
@@ -38,10 +35,6 @@
         ElseIf RdSangatBuruk.Checked Then
             kondisi = "Sangat Buruk"
         End If
-
-        'FormMobil.Mobil.hargaProperty = Integer.Parse(TxtHargaDefault.Text)
-        'FormMobil.Mobil.garansiProperty = Integer.Parse(TxtGaransi.Text)
-        'FormMobil.Mobil.hargaDefaultProperty = Integer.Parse(TxtHargaDefault.Text)
 
         Form1.Mobil.AddDataMobilDatabase(ComboBoxJenisMobil.SelectedValue,
                                          tipe_mobil,

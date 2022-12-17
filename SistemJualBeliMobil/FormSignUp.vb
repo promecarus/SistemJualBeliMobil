@@ -27,8 +27,6 @@
         End If
     End Sub
 
-
-
     Private Sub SigninBtn_Click(sender As Object, e As EventArgs) Handles SigninBtn.Click
         FormSignIn.Show()
         Me.Close()
@@ -45,9 +43,5 @@
     Private Sub FormSignUp_Load(sender As Object, e As EventArgs) Handles Me.Load
         inputPassword.UseSystemPasswordChar = True
     End Sub
-
-    'Private Sub FormSignUpAdmin_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-    '    Form1.Show()
-    'End Sub
 
 End Class
