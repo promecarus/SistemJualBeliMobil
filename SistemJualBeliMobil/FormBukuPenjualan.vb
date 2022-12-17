@@ -49,6 +49,20 @@
         End Try
     End Sub
 
+    Private Sub ButtonHapus_Click(sender As Object, e As EventArgs) Handles ButtonHapus.Click
+        Try
+            Dim selectedKoleksi As List(Of String) = dataBukuPenjualan.GetDataBukuPenjualanByIDDatabase(selectedRowBukuPenjualan)
+
+            dataBukuPenjualan.idMobilProperty = selectedKoleksi(1)
+
+            Dim formHapus = New FormBukuPenjualanHapus()
+            formHapus.Show()
+            Me.Hide()
+        Catch ex As Exception
+            MessageBox.Show("Pilih row terlebih dahulu!")
+        End Try
+    End Sub
+
     Private Sub FormBukuPenjualan_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         Form1.Show()
     End Sub
