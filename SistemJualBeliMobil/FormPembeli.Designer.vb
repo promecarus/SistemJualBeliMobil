@@ -26,7 +26,9 @@ Partial Class FormPembeli
         Me.ButtonTambah = New System.Windows.Forms.Button()
         Me.ButtonEdit = New System.Windows.Forms.Button()
         Me.ButtonHapus = New System.Windows.Forms.Button()
+        Me.PictureBoxBack = New System.Windows.Forms.PictureBox()
         CType(Me.DataGridViewPembeli, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBoxBack, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridViewPembeli
@@ -34,12 +36,12 @@ Partial Class FormPembeli
         Me.DataGridViewPembeli.AllowUserToAddRows = False
         Me.DataGridViewPembeli.AllowUserToDeleteRows = False
         Me.DataGridViewPembeli.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewPembeli.Location = New System.Drawing.Point(12, 12)
+        Me.DataGridViewPembeli.Location = New System.Drawing.Point(12, 55)
         Me.DataGridViewPembeli.Name = "DataGridViewPembeli"
         Me.DataGridViewPembeli.ReadOnly = True
         Me.DataGridViewPembeli.RowHeadersWidth = 51
         Me.DataGridViewPembeli.RowTemplate.Height = 29
-        Me.DataGridViewPembeli.Size = New System.Drawing.Size(776, 387)
+        Me.DataGridViewPembeli.Size = New System.Drawing.Size(776, 344)
         Me.DataGridViewPembeli.TabIndex = 0
         '
         'ButtonTambah
@@ -69,11 +71,21 @@ Partial Class FormPembeli
         Me.ButtonHapus.Text = "Hapus"
         Me.ButtonHapus.UseVisualStyleBackColor = True
         '
+        'PictureBoxBack
+        '
+        Me.PictureBoxBack.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBoxBack.Location = New System.Drawing.Point(12, 12)
+        Me.PictureBoxBack.Name = "PictureBoxBack"
+        Me.PictureBoxBack.Size = New System.Drawing.Size(75, 37)
+        Me.PictureBoxBack.TabIndex = 4
+        Me.PictureBoxBack.TabStop = False
+        '
         'FormPembeli
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.PictureBoxBack)
         Me.Controls.Add(Me.ButtonHapus)
         Me.Controls.Add(Me.ButtonEdit)
         Me.Controls.Add(Me.ButtonTambah)
@@ -82,6 +94,7 @@ Partial Class FormPembeli
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Pembeli"
         CType(Me.DataGridViewPembeli, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBoxBack, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -90,4 +103,5 @@ Partial Class FormPembeli
     Friend WithEvents ButtonTambah As Button
     Friend WithEvents ButtonEdit As Button
     Friend WithEvents ButtonHapus As Button
+    Friend WithEvents PictureBoxBack As PictureBox
 End Class
