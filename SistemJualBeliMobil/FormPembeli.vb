@@ -51,6 +51,20 @@
         End Try
     End Sub
 
+    Private Sub ButtonHapus_Click(sender As Object, e As EventArgs) Handles ButtonHapus.Click
+        Try
+            Dim selectedKoleksi As List(Of String) = dataPembeli.GetDataPembeliByIDDatabase(selectedRowPembeli)
+
+            dataPembeli.namaProperty = selectedKoleksi(2)
+
+            Dim formHapus = New FormPembeliHapus()
+            formHapus.Show()
+            Me.Hide()
+        Catch ex As Exception
+            MessageBox.Show("Pilih row terlebih dahulu!")
+        End Try
+    End Sub
+
     Private Sub FormPembeli_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         Form1.Show()
     End Sub
