@@ -151,4 +151,31 @@ Public Class JenisMobil
             dbConn.Dispose()
         End Try
     End Function
+
+    Public Function ListDataJenisMobil() As DataTable
+        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" _
+                + "password=" + password_db + ";" + "database =" + database
+
+        Try
+            dbConn.Open()
+
+            sqlCommand.Connection = dbConn
+            sqlQuery = "SELECT id_jenis, jenis FROM jenis_mobil"
+
+            Debug.WriteLine(sqlQuery)
+
+            Dim adapter As New MySqlDataAdapter(sqlQuery, dbConn)
+            Dim dataTable As New DataTable()
+
+            adapter.Fill(dataTable)
+
+            dbConn.Close()
+
+            Return dataTable
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        Finally
+            dbConn.Dispose()
+        End Try
+    End Function
 End Class
