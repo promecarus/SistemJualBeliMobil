@@ -49,20 +49,20 @@ Partial Class FormBukuPenjualanHapus
         'LabelIdPenjualan
         '
         Me.LabelIdPenjualan.AutoSize = True
-        Me.LabelIdPenjualan.Location = New System.Drawing.Point(359, 206)
+        Me.LabelIdPenjualan.Location = New System.Drawing.Point(341, 206)
         Me.LabelIdPenjualan.Name = "LabelIdPenjualan"
-        Me.LabelIdPenjualan.Size = New System.Drawing.Size(91, 20)
+        Me.LabelIdPenjualan.Size = New System.Drawing.Size(127, 20)
         Me.LabelIdPenjualan.TabIndex = 6
-        Me.LabelIdPenjualan.Text = "ID Penjualan"
+        Me.LabelIdPenjualan.Text = "ID Buku Penjualan"
         '
         'LabelKonfirmasi
         '
         Me.LabelKonfirmasi.AutoSize = True
-        Me.LabelKonfirmasi.Location = New System.Drawing.Point(195, 164)
+        Me.LabelKonfirmasi.Location = New System.Drawing.Point(156, 159)
         Me.LabelKonfirmasi.Name = "LabelKonfirmasi"
-        Me.LabelKonfirmasi.Size = New System.Drawing.Size(430, 20)
+        Me.LabelKonfirmasi.Size = New System.Drawing.Size(466, 20)
         Me.LabelKonfirmasi.TabIndex = 5
-        Me.LabelKonfirmasi.Text = "Apakah Anda yakin ingin menghapus data penjualan dengan ID"
+        Me.LabelKonfirmasi.Text = "Apakah Anda yakin ingin menghapus data buku penjualan dengan ID"
         '
         'FormBukuPenjualanHapus
         '

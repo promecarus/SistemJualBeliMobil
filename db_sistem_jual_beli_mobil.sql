@@ -19,7 +19,7 @@ CREATE TABLE jenis_mobil(
 CREATE TABLE mobil(
 	id INT(11) PRIMARY KEY AUTO_INCREMENT,
 	id_jenis_mobil INT(11),
-	FOREIGN KEY (id_jenis_mobil) REFERENCES jenis_mobil(id_jenis),
+	FOREIGN KEY (id_jenis_mobil) REFERENCES jenis_mobil(id_jenis) ON DELETE CASCADE,
 	tipe_mobil VARCHAR(100),
 	tahun_pembuatan YEAR,
 	kondisi VARCHAR(100),
@@ -39,9 +39,9 @@ CREATE TABLE pembeli(
 CREATE TABLE buku_penjualan(
 	id_penjualan INT(11) PRIMARY KEY AUTO_INCREMENT,
 	id_mobil INT(11),
-	FOREIGN KEY (id_mobil) REFERENCES mobil(id),
+	FOREIGN KEY (id_mobil) REFERENCES mobil(id) ON DELETE CASCADE,
 	id_pembeli INT(11),
-	FOREIGN KEY (id_pembeli) REFERENCES pembeli(id_pembeli),
+	FOREIGN KEY (id_pembeli) REFERENCES pembeli(id_pembeli) ON DELETE CASCADE,
 	harga_terjual INT(12),
 	tanggal_penjualan DATE
 );
