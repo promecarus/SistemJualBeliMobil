@@ -10,16 +10,24 @@
     End Sub
 
     Private Sub ButtonEdit_Click(sender As Object, e As EventArgs) Handles ButtonEdit.Click
-        FormPembeli.dataPembeli.UpdateDataPembeliByIDDatabase(
-            FormPembeli.selectedRowPembeli,
-            TextBoxNik.Text,
-            TextBoxNama.Text,
-            RichTextBoxAlamat.Text
-        )
+        If (Not TextBoxNik.Text = "") And (Not TextBoxNama.Text = "") And (Not RichTextBoxAlamat.Text = "") Then
+            If IsNumeric(TextBoxNik.Text) Then
+                FormPembeli.dataPembeli.UpdateDataPembeliByIDDatabase(
+                    FormPembeli.selectedRowPembeli,
+                    TextBoxNik.Text,
+                    TextBoxNama.Text,
+                    RichTextBoxAlamat.Text
+                )
 
-        MessageBox.Show("Data pembeli dengan ID " & FormPembeli.selectedRowPembeli & " berhasil diedit.")
-        Me.Close()
-        FormPembeli.Show()
+                MessageBox.Show("Data pembeli dengan ID " & FormPembeli.selectedRowPembeli & " berhasil diedit.")
+                Me.Close()
+                FormPembeli.Show()
+            Else
+                MessageBox.Show("Input NIK harus angka!")
+            End If
+        Else
+            MessageBox.Show("Input tidak boleh kosong!")
+        End If
     End Sub
 
     Private Sub ButtonCancel_Click(sender As Object, e As EventArgs) Handles ButtonCancel.Click
