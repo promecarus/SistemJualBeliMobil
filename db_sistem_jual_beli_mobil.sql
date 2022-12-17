@@ -24,7 +24,7 @@ CREATE TABLE mobil(
 	tahun_pembuatan YEAR,
 	kondisi VARCHAR(100),
 	harga INT(12),
-	garansi TIME,
+	garansi INT(5),
 	status_terjual BOOLEAN DEFAULT FALSE,
 	harga_default INT(12)
 );
@@ -46,53 +46,221 @@ CREATE TABLE buku_penjualan(
 	tanggal_penjualan DATE
 );
 
-
-INSERT INTO users(username,email,PASSWORD) 
+INSERT
+	INTO
+	users(
+		username,
+		email,
+		PASSWORD
+	)
 VALUES 
-('mawanrunner','hilmawanfauzy77@gmail.com','password'),
-('promecarus','haikusersusersalslipi@gmail.com','password'),
-('Dynavx','haical31@gmail.com','password'),
-('Lowl16','sandhi372@gmail.com','password');
+(
+	'mawanrunner',
+	'hilmawanfauzy77@gmail.com',
+	'password'
+),
+(
+	'promecarus',
+	'haikusersusersalslipi@gmail.com',
+	'password'
+),
+(
+	'Dynavx',
+	'haical31@gmail.com',
+	'password'
+),
+(
+	'Lowl16',
+	'sandhi372@gmail.com',
+	'password'
+);
 
-INSERT INTO pembeli(nik,nama,alamat) 
+INSERT
+	INTO
+	pembeli(
+		nik,
+		nama,
+		alamat
+	)
 VALUES 
-('2107411009','Hilmawan Fauzy Wibowo','Marrakash Blok B 7'),
-('2107411022','Heical Chandra Saputra','Jakarta Pusat JL.Mangga'),
-('2107411025','Muhammad Haikal Al Rasyid','Jakarta Pusat Slipi'),
-('2107411007','Sandhi Karunia Sugihartana','Bogor JL.Sisingamangaraja');
+(
+	'2107411009',
+	'Hilmawan Fauzy Wibowo',
+	'Marrakash Blok B 7'
+),
+(
+	'2107411022',
+	'Heical Chandra Saputra',
+	'Jakarta Pusat JL.Mangga'
+),
+(
+	'2107411025',
+	'Muhammad Haikal Al Rasyid',
+	'Jakarta Pusat Slipi'
+),
+(
+	'2107411007',
+	'Sandhi Karunia Sugihartana',
+	'Bogor JL.Sisingamangaraja'
+);
 
-INSERT INTO jenis_mobil(jenis) 
+INSERT
+	INTO
+	jenis_mobil(jenis)
 VALUES 
 ('van'),
 ('suv'),
 ('pick up'),
 ('box');
 
-INSERT INTO mobil(id_jenis_mobil,tipe_mobil,tahun_pembuatan,kondisi,harga,garansi,status_terjual,harga_default)
+INSERT
+	INTO
+	mobil(
+		id_jenis_mobil,
+		tipe_mobil,
+		tahun_pembuatan,
+		kondisi,
+		harga,
+		garansi,
+		status_terjual,
+		harga_default
+	)
 VALUES
-(1,'matic',2001,'baik',200000000,'230:00:00',FALSE,200000000),
-(2,'manual',2003,'buruk',150000000,'300:00:00',TRUE,150000000),
-(3,'manual',2007,'baik',250000000,'400:00:00',FALSE,250000000),
-(4,'manual',2008,'baik',300000000,'350:00:00',FALSE,350000000),
-(1,'manual',2005,'sangat baik',500000000,'400:00:00',FALSE,500000000),
-(2,'matic',2004,'baik',450000000,'250:00:00',FALSE,450000000),
-(3,'matic',2009,'sangat baik',300000000,'450:00:00',FALSE,300000000),
-(4,'matic',2008,'baik',550000000,'300:00:00',TRUE,550000000);
+(
+	1,
+	'matic',
+	2001,
+	'baik',
+	200000000,
+	2556,
+	FALSE,
+	200000000
+),
+(
+	2,
+	'manual',
+	2003,
+	'buruk',
+	150000000,
+	2191,
+	TRUE,
+	150000000
+),
+(
+	3,
+	'manual',
+	2007,
+	'baik',
+	250000000,
+	1826,
+	FALSE,
+	250000000
+),
+(
+	4,
+	'manual',
+	2008,
+	'baik',
+	300000000,
+	1461,
+	FALSE,
+	350000000
+),
+(
+	1,
+	'manual',
+	2005,
+	'sangat baik',
+	500000000,
+	1095,
+	FALSE,
+	500000000
+),
+(
+	2,
+	'matic',
+	2004,
+	'baik',
+	450000000,
+	730,
+	FALSE,
+	450000000
+),
+(
+	3,
+	'matic',
+	2009,
+	'sangat baik',
+	300000000,
+	365,
+	FALSE,
+	300000000
+),
+(
+	4,
+	'matic',
+	2008,
+	'baik',
+	550000000,
+	2556,
+	TRUE,
+	550000000
+);
 
-INSERT INTO buku_penjualan(id_mobil,id_pembeli,harga_terjual,tanggal_penjualan)
+INSERT
+	INTO
+	buku_penjualan(
+		id_mobil,
+		id_pembeli,
+		harga_terjual,
+		tanggal_penjualan
+	)
 VALUES
-(1,1,250000000,'2022/02/12'),
-(2,2,200000000,'2022/07/12'),
-(3,3,300000000,'2022/08/23'),
-(4,4,350000000,'2022/09/07'),
-(5,1,550000000,'2022/09/16'),
-(6,2,500000000,'2022/10/17'),
-(7,3,350000000,'2022/10/26'),
-(8,4,600000000,'2022/11/29');
-
-
-
-
-
-
-
+(
+	1,
+	1,
+	250000000,
+	'2022/02/12'
+),
+(
+	2,
+	2,
+	200000000,
+	'2022/07/12'
+),
+(
+	3,
+	3,
+	300000000,
+	'2022/08/23'
+),
+(
+	4,
+	4,
+	350000000,
+	'2022/09/07'
+),
+(
+	5,
+	1,
+	550000000,
+	'2022/09/16'
+),
+(
+	6,
+	2,
+	500000000,
+	'2022/10/17'
+),
+(
+	7,
+	3,
+	350000000,
+	'2022/10/26'
+),
+(
+	8,
+	4,
+	600000000,
+	'2022/11/29'
+);
