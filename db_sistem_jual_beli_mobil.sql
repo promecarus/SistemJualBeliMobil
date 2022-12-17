@@ -24,7 +24,7 @@ CREATE TABLE mobil(
 	tahun_pembuatan YEAR,
 	kondisi VARCHAR(100),
 	harga INT(12),
-	garansi TIME,
+	garansi INT(5),
 	status_terjual BOOLEAN DEFAULT FALSE,
 	harga_default INT(12)
 );
