@@ -27,6 +27,11 @@
         End Try
     End Sub
 
+    Private Sub ButtonTambah_Click(sender As Object, e As EventArgs) Handles ButtonTambah.Click
+        FormBukuPenjualanTambah.Show()
+        Me.Hide()
+    End Sub
+
     Private Sub FormBukuPenjualan_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         Form1.Show()
     End Sub
