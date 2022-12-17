@@ -21,6 +21,20 @@
         DateTimePickerTanggalPenjualan.Value = FormBukuPenjualan.dataBukuPenjualan.tanggalPenjualanProperty
     End Sub
 
+    Private Sub ButtonEdit_Click(sender As Object, e As EventArgs) Handles ButtonEdit.Click
+        FormBukuPenjualan.dataBukuPenjualan.UpdateDataBukuPenjualanByIDDatabase(
+            FormBukuPenjualan.selectedRowBukuPenjualan,
+            ComboBoxIdMobil.SelectedValue,
+            ComboBoxIdPembeli.SelectedValue,
+            TextBoxHargaTerjual.Text,
+            DateTimePickerTanggalPenjualan.Value.ToShortDateString()
+        )
+
+        MessageBox.Show("Data buku penjualan dengan ID " & FormBukuPenjualan.selectedRowBukuPenjualan & " berhasil diedit.")
+        Me.Close()
+        FormBukuPenjualan.Show()
+    End Sub
+
     Private Sub FormBukuPenjualanEdit_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         Form1.Show()
     End Sub
