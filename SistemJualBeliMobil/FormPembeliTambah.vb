@@ -11,6 +11,11 @@
         FormPembeli.Show()
     End Sub
 
+    Private Sub ButtonCancel_Click(sender As Object, e As EventArgs) Handles ButtonCancel.Click
+        Me.Close()
+        FormPembeli.Show()
+    End Sub
+
     Private Sub FormPembeliTambah_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         Form1.Show()
     End Sub
