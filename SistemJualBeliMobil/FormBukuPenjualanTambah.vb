@@ -17,16 +17,11 @@
     End Sub
 
     Private Sub ButtonTambah_Click(sender As Object, e As EventArgs) Handles ButtonTambah.Click
-        FormBukuPenjualan.dataBukuPenjualan.idMobilProperty = ComboBoxIdMobil.SelectedValue
-        FormBukuPenjualan.dataBukuPenjualan.idPembeliProperty = ComboBoxIdPembeli.SelectedValue
-        FormBukuPenjualan.dataBukuPenjualan.hargaTerjualProperty = TextBoxHargaTerjual.Text
-        FormBukuPenjualan.dataBukuPenjualan.tanggalPenjualanProperty = DateTimePickerTanggalPenjualan.Value.ToShortDateString
-
         FormBukuPenjualan.dataBukuPenjualan.AddDataBukuPenjualanDatabase(
-            FormBukuPenjualan.dataBukuPenjualan.idMobilProperty,
-            FormBukuPenjualan.dataBukuPenjualan.idPembeliProperty,
-            FormBukuPenjualan.dataBukuPenjualan.hargaTerjualProperty,
-            FormBukuPenjualan.dataBukuPenjualan.tanggalPenjualanProperty
+            ComboBoxIdMobil.SelectedValue,
+            ComboBoxIdPembeli.SelectedValue,
+            TextBoxHargaTerjual.Text,
+            DateTimePickerTanggalPenjualan.Value.ToShortDateString
         )
 
         MessageBox.Show("Data buku penjualan baru berhasil ditambahkan.")
