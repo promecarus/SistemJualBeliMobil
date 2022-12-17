@@ -22,11 +22,6 @@
         FormBukuPenjualan.dataBukuPenjualan.hargaTerjualProperty = TextBoxHargaTerjual.Text
         FormBukuPenjualan.dataBukuPenjualan.tanggalPenjualanProperty = DateTimePickerTanggalPenjualan.Value.ToShortDateString
 
-        MessageBox.Show(FormBukuPenjualan.dataBukuPenjualan.idMobilProperty)
-        MessageBox.Show(FormBukuPenjualan.dataBukuPenjualan.idPembeliProperty)
-        MessageBox.Show(FormBukuPenjualan.dataBukuPenjualan.hargaTerjualProperty)
-        MessageBox.Show(FormBukuPenjualan.dataBukuPenjualan.tanggalPenjualanProperty)
-
         FormBukuPenjualan.dataBukuPenjualan.AddDataBukuPenjualanDatabase(
             FormBukuPenjualan.dataBukuPenjualan.idMobilProperty,
             FormBukuPenjualan.dataBukuPenjualan.idPembeliProperty,
