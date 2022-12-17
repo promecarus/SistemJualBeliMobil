@@ -16,6 +16,29 @@
         DateTimePickerTanggalPenjualan.CustomFormat = "yyyy/MM/dd"
     End Sub
 
+    Private Sub ButtonTambah_Click(sender As Object, e As EventArgs) Handles ButtonTambah.Click
+        FormBukuPenjualan.dataBukuPenjualan.idMobilProperty = ComboBoxIdMobil.SelectedValue
+        FormBukuPenjualan.dataBukuPenjualan.idPembeliProperty = ComboBoxIdPembeli.SelectedValue
+        FormBukuPenjualan.dataBukuPenjualan.hargaTerjualProperty = TextBoxHargaTerjual.Text
+        FormBukuPenjualan.dataBukuPenjualan.tanggalPenjualanProperty = DateTimePickerTanggalPenjualan.Value.ToShortDateString
+
+        MessageBox.Show(FormBukuPenjualan.dataBukuPenjualan.idMobilProperty)
+        MessageBox.Show(FormBukuPenjualan.dataBukuPenjualan.idPembeliProperty)
+        MessageBox.Show(FormBukuPenjualan.dataBukuPenjualan.hargaTerjualProperty)
+        MessageBox.Show(FormBukuPenjualan.dataBukuPenjualan.tanggalPenjualanProperty)
+
+        FormBukuPenjualan.dataBukuPenjualan.AddDataBukuPenjualanDatabase(
+            FormBukuPenjualan.dataBukuPenjualan.idMobilProperty,
+            FormBukuPenjualan.dataBukuPenjualan.idPembeliProperty,
+            FormBukuPenjualan.dataBukuPenjualan.hargaTerjualProperty,
+            FormBukuPenjualan.dataBukuPenjualan.tanggalPenjualanProperty
+        )
+
+        MessageBox.Show("Data buku penjualan baru berhasil ditambahkan.")
+        Me.Close()
+        FormBukuPenjualan.Show()
+    End Sub
+
     Private Sub FormBukuPenjualanTambah_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         Form1.Show()
     End Sub
