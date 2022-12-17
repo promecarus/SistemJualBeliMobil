@@ -170,7 +170,7 @@ Public Class Pembeli
             dbConn.Open()
 
             sqlCommand.Connection = dbConn
-            sqlQuery = "DELETE FROM PEMBELI" &
+            sqlQuery = "DELETE FROM pembeli " &
                         "WHERE id_pembeli='" & ID & "'"
 
             Debug.WriteLine(sqlQuery)
@@ -182,7 +182,7 @@ Public Class Pembeli
 
             dbConn.Close()
         Catch ex As Exception
-            Return ex.Message
+            MessageBox.Show(ex.Message)
         Finally
             dbConn.Dispose()
         End Try
