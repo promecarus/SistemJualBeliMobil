@@ -21,6 +21,8 @@
             FormJenisMobil.JenisMobil.AddDataJenisMobilDatabase(FormJenisMobil.JenisMobil.jenisProperty)
 
             MessageBox.Show("Jenis Mobil Berhasil Ditambahkan !!")
+
+            Me.Close()
         End If
     End Sub
 
