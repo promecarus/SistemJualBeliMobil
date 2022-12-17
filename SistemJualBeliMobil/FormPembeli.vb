@@ -30,6 +30,11 @@
         End If
     End Sub
 
+    Private Sub ButtonTambah_Click(sender As Object, e As EventArgs) Handles ButtonTambah.Click
+        FormPembeliTambah.Show()
+        Me.Hide()
+    End Sub
+
     Private Sub FormPembeli_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         Form1.Show()
     End Sub
