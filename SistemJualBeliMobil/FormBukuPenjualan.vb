@@ -32,6 +32,23 @@
         Me.Hide()
     End Sub
 
+    Private Sub ButtonEdit_Click(sender As Object, e As EventArgs) Handles ButtonEdit.Click
+        Try
+            Dim selectedKoleksi As List(Of String) = dataBukuPenjualan.GetDataBukuPenjualanByIDDatabase(selectedRowBukuPenjualan)
+
+            dataBukuPenjualan.idMobilProperty = selectedKoleksi(1)
+            dataBukuPenjualan.idPembeliProperty = selectedKoleksi(2)
+            dataBukuPenjualan.hargaTerjualProperty = selectedKoleksi(3)
+            dataBukuPenjualan.tanggalPenjualanProperty = selectedKoleksi(4)
+
+            Dim formEdit = New FormBukuPenjualanEdit()
+            formEdit.Show()
+            Me.Hide()
+        Catch ex As Exception
+            MessageBox.Show("Pilih row terlebih dahulu!")
+        End Try
+    End Sub
+
     Private Sub FormBukuPenjualan_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         Form1.Show()
     End Sub
