@@ -80,7 +80,7 @@ Public Class BukuPenjualan
             sqlRead.Close()
             dbConn.Close()
         Catch ex As Exception
-            Return ex.Message
+            MessageBox.Show(ex.Message)
         Finally
             dbConn.Dispose()
         End Try
