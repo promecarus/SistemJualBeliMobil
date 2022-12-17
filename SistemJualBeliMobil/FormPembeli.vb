@@ -35,6 +35,22 @@
         Me.Hide()
     End Sub
 
+    Private Sub ButtonEdit_Click(sender As Object, e As EventArgs) Handles ButtonEdit.Click
+        Try
+            Dim selectedKoleksi As List(Of String) = dataPembeli.GetDataPembeliByIDDatabase(selectedRowPembeli)
+
+            dataPembeli.nikProperty = selectedKoleksi(1)
+            dataPembeli.namaProperty = selectedKoleksi(2)
+            dataPembeli.alamatProperty = selectedKoleksi(3)
+
+            Dim formEdit = New FormPembeliEdit()
+            formEdit.Show()
+            Me.Hide()
+        Catch ex As Exception
+            MessageBox.Show("Pilih row terlebih dahulu!")
+        End Try
+    End Sub
+
     Private Sub FormPembeli_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         Form1.Show()
     End Sub
