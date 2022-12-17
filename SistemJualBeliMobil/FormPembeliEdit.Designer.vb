@@ -30,11 +30,13 @@ Partial Class FormPembeliEdit
         Me.RichTextBoxAlamat = New System.Windows.Forms.RichTextBox()
         Me.TextBoxNama = New System.Windows.Forms.TextBox()
         Me.TextBoxNik = New System.Windows.Forms.TextBox()
+        Me.PictureBoxBack = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBoxBack, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ButtonCancel
         '
-        Me.ButtonCancel.Location = New System.Drawing.Point(112, 264)
+        Me.ButtonCancel.Location = New System.Drawing.Point(112, 307)
         Me.ButtonCancel.Name = "ButtonCancel"
         Me.ButtonCancel.Size = New System.Drawing.Size(94, 29)
         Me.ButtonCancel.TabIndex = 11
@@ -43,7 +45,7 @@ Partial Class FormPembeliEdit
         '
         'ButtonEdit
         '
-        Me.ButtonEdit.Location = New System.Drawing.Point(12, 264)
+        Me.ButtonEdit.Location = New System.Drawing.Point(12, 307)
         Me.ButtonEdit.Name = "ButtonEdit"
         Me.ButtonEdit.Size = New System.Drawing.Size(94, 29)
         Me.ButtonEdit.TabIndex = 9
@@ -53,7 +55,7 @@ Partial Class FormPembeliEdit
         'LabelAlamat
         '
         Me.LabelAlamat.AutoSize = True
-        Me.LabelAlamat.Location = New System.Drawing.Point(12, 115)
+        Me.LabelAlamat.Location = New System.Drawing.Point(12, 158)
         Me.LabelAlamat.Name = "LabelAlamat"
         Me.LabelAlamat.Size = New System.Drawing.Size(57, 20)
         Me.LabelAlamat.TabIndex = 13
@@ -62,7 +64,7 @@ Partial Class FormPembeliEdit
         'LabelNama
         '
         Me.LabelNama.AutoSize = True
-        Me.LabelNama.Location = New System.Drawing.Point(12, 62)
+        Me.LabelNama.Location = New System.Drawing.Point(12, 105)
         Me.LabelNama.Name = "LabelNama"
         Me.LabelNama.Size = New System.Drawing.Size(49, 20)
         Me.LabelNama.TabIndex = 12
@@ -71,7 +73,7 @@ Partial Class FormPembeliEdit
         'LabelNik
         '
         Me.LabelNik.AutoSize = True
-        Me.LabelNik.Location = New System.Drawing.Point(12, 9)
+        Me.LabelNik.Location = New System.Drawing.Point(12, 52)
         Me.LabelNik.Name = "LabelNik"
         Me.LabelNik.Size = New System.Drawing.Size(33, 20)
         Me.LabelNik.TabIndex = 10
@@ -79,7 +81,7 @@ Partial Class FormPembeliEdit
         '
         'RichTextBoxAlamat
         '
-        Me.RichTextBoxAlamat.Location = New System.Drawing.Point(12, 138)
+        Me.RichTextBoxAlamat.Location = New System.Drawing.Point(12, 181)
         Me.RichTextBoxAlamat.Name = "RichTextBoxAlamat"
         Me.RichTextBoxAlamat.Size = New System.Drawing.Size(125, 120)
         Me.RichTextBoxAlamat.TabIndex = 8
@@ -87,23 +89,33 @@ Partial Class FormPembeliEdit
         '
         'TextBoxNama
         '
-        Me.TextBoxNama.Location = New System.Drawing.Point(12, 85)
+        Me.TextBoxNama.Location = New System.Drawing.Point(12, 128)
         Me.TextBoxNama.Name = "TextBoxNama"
         Me.TextBoxNama.Size = New System.Drawing.Size(125, 27)
         Me.TextBoxNama.TabIndex = 7
         '
         'TextBoxNik
         '
-        Me.TextBoxNik.Location = New System.Drawing.Point(12, 32)
+        Me.TextBoxNik.Location = New System.Drawing.Point(12, 75)
         Me.TextBoxNik.Name = "TextBoxNik"
         Me.TextBoxNik.Size = New System.Drawing.Size(125, 27)
         Me.TextBoxNik.TabIndex = 6
+        '
+        'PictureBoxBack
+        '
+        Me.PictureBoxBack.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBoxBack.Location = New System.Drawing.Point(12, 12)
+        Me.PictureBoxBack.Name = "PictureBoxBack"
+        Me.PictureBoxBack.Size = New System.Drawing.Size(75, 37)
+        Me.PictureBoxBack.TabIndex = 19
+        Me.PictureBoxBack.TabStop = False
         '
         'FormPembeliEdit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.PictureBoxBack)
         Me.Controls.Add(Me.ButtonCancel)
         Me.Controls.Add(Me.ButtonEdit)
         Me.Controls.Add(Me.LabelAlamat)
@@ -115,6 +127,7 @@ Partial Class FormPembeliEdit
         Me.Name = "FormPembeliEdit"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Edit Pembeli"
+        CType(Me.PictureBoxBack, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -128,4 +141,5 @@ Partial Class FormPembeliEdit
     Friend WithEvents RichTextBoxAlamat As RichTextBox
     Friend WithEvents TextBoxNama As TextBox
     Friend WithEvents TextBoxNik As TextBox
+    Friend WithEvents PictureBoxBack As PictureBox
 End Class
