@@ -77,41 +77,13 @@ VALUES
 
 INSERT
 	INTO
-	pembeli(
-		nik,
-		nama,
-		alamat
-	)
-VALUES 
-(
-	'2107411009',
-	'Hilmawan Fauzy Wibowo',
-	'Marrakash Blok B 7'
-),
-(
-	'2107411022',
-	'Heical Chandra Saputra',
-	'Jakarta Pusat JL.Mangga'
-),
-(
-	'2107411025',
-	'Muhammad Haikal Al Rasyid',
-	'Jakarta Pusat Slipi'
-),
-(
-	'2107411007',
-	'Sandhi Karunia Sugihartana',
-	'Bogor JL.Sisingamangaraja'
-);
-
-INSERT
-	INTO
 	jenis_mobil(jenis)
 VALUES 
 ('van'),
 ('suv'),
 ('pick up'),
 ('box');
+
 
 INSERT
 	INTO
@@ -143,7 +115,7 @@ VALUES
 	'buruk',
 	150000000,
 	2191,
-	TRUE,
+	FALSE,
 	150000000
 ),
 (
@@ -203,8 +175,37 @@ VALUES
 	'baik',
 	550000000,
 	2556,
-	TRUE,
+	FALSE,
 	550000000
+);
+
+INSERT
+	INTO
+	pembeli(
+		nik,
+		nama,
+		alamat
+	)
+VALUES 
+(
+	'2107411009',
+	'Hilmawan Fauzy Wibowo',
+	'Marrakash Blok B 7'
+),
+(
+	'2107411022',
+	'Heical Chandra Saputra',
+	'Jakarta Pusat JL.Mangga'
+),
+(
+	'2107411025',
+	'Muhammad Haikal Al Rasyid',
+	'Jakarta Pusat Slipi'
+),
+(
+	'2107411007',
+	'Sandhi Karunia Sugihartana',
+	'Bogor JL.Sisingamangaraja'
 );
 
 INSERT

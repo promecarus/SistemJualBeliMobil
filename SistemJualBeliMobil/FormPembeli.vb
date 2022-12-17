@@ -37,11 +37,11 @@
 
     Private Sub ButtonEdit_Click(sender As Object, e As EventArgs) Handles ButtonEdit.Click
         Try
-            Dim selectedKoleksi As List(Of String) = dataPembeli.GetDataPembeliByIDDatabase(selectedRowPembeli)
+            Dim selectedPembeli As List(Of String) = dataPembeli.GetDataPembeliByIDDatabase(selectedRowPembeli)
 
-            dataPembeli.nikProperty = selectedKoleksi(1)
-            dataPembeli.namaProperty = selectedKoleksi(2)
-            dataPembeli.alamatProperty = selectedKoleksi(3)
+            dataPembeli.nikProperty = selectedPembeli(1)
+            dataPembeli.namaProperty = selectedPembeli(2)
+            dataPembeli.alamatProperty = selectedPembeli(3)
 
             Dim formEdit = New FormPembeliEdit()
             formEdit.Show()
@@ -53,9 +53,9 @@
 
     Private Sub ButtonHapus_Click(sender As Object, e As EventArgs) Handles ButtonHapus.Click
         Try
-            Dim selectedKoleksi As List(Of String) = dataPembeli.GetDataPembeliByIDDatabase(selectedRowPembeli)
+            Dim selectedPembeli As List(Of String) = dataPembeli.GetDataPembeliByIDDatabase(selectedRowPembeli)
 
-            dataPembeli.namaProperty = selectedKoleksi(2)
+            dataPembeli.namaProperty = selectedPembeli(2)
 
             Dim formHapus = New FormPembeliHapus()
             formHapus.Show()
