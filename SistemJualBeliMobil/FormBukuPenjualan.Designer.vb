@@ -26,7 +26,9 @@ Partial Class FormBukuPenjualan
         Me.ButtonEdit = New System.Windows.Forms.Button()
         Me.ButtonTambah = New System.Windows.Forms.Button()
         Me.DataGridViewBukuPenjualan = New System.Windows.Forms.DataGridView()
+        Me.PictureBoxBack = New System.Windows.Forms.PictureBox()
         CType(Me.DataGridViewBukuPenjualan, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBoxBack, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ButtonHapus
@@ -61,19 +63,29 @@ Partial Class FormBukuPenjualan
         Me.DataGridViewBukuPenjualan.AllowUserToAddRows = False
         Me.DataGridViewBukuPenjualan.AllowUserToDeleteRows = False
         Me.DataGridViewBukuPenjualan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewBukuPenjualan.Location = New System.Drawing.Point(13, 12)
+        Me.DataGridViewBukuPenjualan.Location = New System.Drawing.Point(12, 55)
         Me.DataGridViewBukuPenjualan.Name = "DataGridViewBukuPenjualan"
         Me.DataGridViewBukuPenjualan.ReadOnly = True
         Me.DataGridViewBukuPenjualan.RowHeadersWidth = 51
         Me.DataGridViewBukuPenjualan.RowTemplate.Height = 29
-        Me.DataGridViewBukuPenjualan.Size = New System.Drawing.Size(776, 387)
+        Me.DataGridViewBukuPenjualan.Size = New System.Drawing.Size(776, 344)
         Me.DataGridViewBukuPenjualan.TabIndex = 4
+        '
+        'PictureBoxBack
+        '
+        Me.PictureBoxBack.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBoxBack.Location = New System.Drawing.Point(12, 12)
+        Me.PictureBoxBack.Name = "PictureBoxBack"
+        Me.PictureBoxBack.Size = New System.Drawing.Size(75, 37)
+        Me.PictureBoxBack.TabIndex = 8
+        Me.PictureBoxBack.TabStop = False
         '
         'FormBukuPenjualan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.PictureBoxBack)
         Me.Controls.Add(Me.ButtonHapus)
         Me.Controls.Add(Me.ButtonEdit)
         Me.Controls.Add(Me.ButtonTambah)
@@ -82,6 +94,7 @@ Partial Class FormBukuPenjualan
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Buku Penjualan"
         CType(Me.DataGridViewBukuPenjualan, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBoxBack, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -90,4 +103,5 @@ Partial Class FormBukuPenjualan
     Friend WithEvents ButtonEdit As Button
     Friend WithEvents ButtonTambah As Button
     Friend WithEvents DataGridViewBukuPenjualan As DataGridView
+    Friend WithEvents PictureBoxBack As PictureBox
 End Class

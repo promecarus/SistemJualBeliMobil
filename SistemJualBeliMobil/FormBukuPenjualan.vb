@@ -66,6 +66,11 @@
         End Try
     End Sub
 
+    Private Sub PictureBoxBack_Click(sender As Object, e As EventArgs) Handles PictureBoxBack.Click
+        Me.Close()
+        FormDashboard.Show()
+    End Sub
+
     Private Sub FormBukuPenjualan_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         FormSignIn.Close()
     End Sub
