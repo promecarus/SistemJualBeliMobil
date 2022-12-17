@@ -16,15 +16,14 @@
     End Sub
 
     Private Sub DataGridViewBukuPenjualan_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewBukuPenjualan.CellClick
-        Try
-            Dim index As Integer = e.RowIndex
+        Dim index As Integer = e.RowIndex
+
+        If index > -1 Then
             Dim selectedRow As DataGridViewRow
             selectedRow = DataGridViewBukuPenjualan.Rows(index)
 
             selectedRowBukuPenjualan = selectedRow.Cells(0).Value
-        Catch ex As Exception
-            MessageBox.Show("Fitur sorting belum tersedia!")
-        End Try
+        End If
     End Sub
 
     Private Sub ButtonTambah_Click(sender As Object, e As EventArgs) Handles ButtonTambah.Click
