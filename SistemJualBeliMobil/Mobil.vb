@@ -8,7 +8,7 @@ Public Class Mobil
     Private tahun_pembuatan As String
     Private kondisi As String
     Private harga As Integer
-    Private garansi As String
+    Private garansi As Integer
     Private status_terjual As Integer
     Private harga_default As Integer
 
@@ -99,8 +99,7 @@ Public Class Mobil
                                          tahun_pembuatan As String,
                                          kondisi As String,
                                          harga As Integer,
-                                         garansi As String,
-                                         status_terjual As Integer,
+                                         garansi As Integer,
                                          harga_default As Integer)
 
         dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" _
@@ -110,26 +109,22 @@ Public Class Mobil
             dbConn.Open()
 
             sqlCommand.Connection = dbConn
-            sqlQuery = "INSERT INTO MOBIL(id_jenis_mobil, tipe_mobil, tahun_pembuatan, 
-                        kondisi, harga, garansi, status_terjual, harga_defult) VALUES('" _
+            sqlQuery = "INSERT INTO mobil(id_jenis_mobil, tipe_mobil, tahun_pembuatan, kondisi, harga, garansi, harga_default) VALUES('" _
                         & id_jenis_mobil & "', '" _
                         & tipe_mobil & "', '" _
                         & tahun_pembuatan & "', '" _
                         & kondisi & "', '" _
                         & harga & "', '" _
                         & garansi & "', '" _
-                        & status_terjual & "', '" _
                         & harga_default & "')"
 
             sqlCommand = New MySqlCommand(sqlQuery, dbConn)
             sqlRead = sqlCommand.ExecuteReader
 
-            dbConn.Close()
-
             sqlRead.Close()
             dbConn.Close()
         Catch ex As Exception
-            Return ex.Message
+            MessageBox.Show(ex.Message)
         Finally
             dbConn.Dispose()
         End Try
@@ -174,7 +169,8 @@ Public Class Mobil
         dbConn.Open()
 
         sqlCommand.Connection = dbConn
-        sqlCommand.CommandText = "SELECT id_jenis_mobil,
+        sqlCommand.CommandText = "SELECT id,
+                                  id_jenis_mobil,
                                   tipe_mobil,
                                   tahun_pembuatan,
                                   kondisi,
@@ -196,6 +192,7 @@ Public Class Mobil
             result.Add(sqlRead.GetString(5).ToString())
             result.Add(sqlRead.GetString(6).ToString())
             result.Add(sqlRead.GetString(7).ToString())
+            result.Add(sqlRead.GetString(8).ToString())
         End While
 
         sqlRead.Close()
@@ -210,9 +207,7 @@ Public Class Mobil
                                                 tipe_mobil As String,
                                                 tahun_pembuatan As String,
                                                 kondisi As String,
-                                                harga As Integer,
                                                 garansi As String,
-                                                status_terjual As Integer,
                                                 harga_default As Integer)
 
         dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" _
@@ -222,14 +217,12 @@ Public Class Mobil
             dbConn.Open()
 
             sqlCommand.Connection = dbConn
-            sqlQuery = "UPDATE MOBIL SET" &
+            sqlQuery = "UPDATE MOBIL SET " &
                         "id_jenis_mobil='" & id_jenis_mobil & "', " &
                         "tipe_mobil='" & tipe_mobil & "', " &
                         "tahun_pembuatan='" & tahun_pembuatan & "', " &
-                        "kondisi='" & kondisi & "' " &
-                        "harga='" & harga & "' " &
-                        "garansi='" & garansi & "' " &
-                        "status_terjual='" & status_terjual & "' " &
+                        "kondisi='" & kondisi & "', " &
+                        "garansi='" & garansi & "', " &
                         "harga_default='" & harga_default & "' " &
                         "WHERE id='" & ID & "'"
 
@@ -240,7 +233,7 @@ Public Class Mobil
 
             dbConn.Close()
         Catch ex As Exception
-            Return ex.Message
+            MessageBox.Show(ex.Message)
         Finally
             dbConn.Dispose()
         End Try
@@ -254,7 +247,7 @@ Public Class Mobil
             dbConn.Open()
 
             sqlCommand.Connection = dbConn
-            sqlQuery = "DELETE FROM MOBIL" &
+            sqlQuery = "DELETE FROM MOBIL " &
                         "WHERE id='" & ID & "'"
 
             Debug.WriteLine(sqlQuery)
@@ -266,7 +259,34 @@ Public Class Mobil
 
             dbConn.Close()
         Catch ex As Exception
-            Return ex.Message
+            MessageBox.Show(ex.Message)
+        Finally
+            dbConn.Dispose()
+        End Try
+    End Function
+
+    Public Function ListDataMobil() As DataTable
+        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" _
+                + "password=" + password_db + ";" + "database =" + database
+
+        Try
+            dbConn.Open()
+
+            sqlCommand.Connection = dbConn
+            sqlQuery = "SELECT id FROM mobil ORDER BY id"
+
+            Debug.WriteLine(sqlQuery)
+
+            Dim adapter As New MySqlDataAdapter(sqlQuery, dbConn)
+            Dim table As New DataTable()
+
+            adapter.Fill(table)
+
+            dbConn.Close()
+
+            Return table
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
         Finally
             dbConn.Dispose()
         End Try

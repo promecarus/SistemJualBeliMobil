@@ -143,7 +143,7 @@ Public Class Pembeli
             dbConn.Open()
 
             sqlCommand.Connection = dbConn
-            sqlQuery = "UPDATE PEMBELI SET" &
+            sqlQuery = "UPDATE pembeli SET " &
                         "nik='" & nik & "', " &
                         "nama='" & nama & "', " &
                         "alamat='" & alamat & "' " &
@@ -156,7 +156,7 @@ Public Class Pembeli
 
             dbConn.Close()
         Catch ex As Exception
-            Return ex.Message
+            MessageBox.Show(ex.Message)
         Finally
             dbConn.Dispose()
         End Try
@@ -170,7 +170,7 @@ Public Class Pembeli
             dbConn.Open()
 
             sqlCommand.Connection = dbConn
-            sqlQuery = "DELETE FROM PEMBELI" &
+            sqlQuery = "DELETE FROM pembeli " &
                         "WHERE id_pembeli='" & ID & "'"
 
             Debug.WriteLine(sqlQuery)
@@ -182,7 +182,34 @@ Public Class Pembeli
 
             dbConn.Close()
         Catch ex As Exception
-            Return ex.Message
+            MessageBox.Show(ex.Message)
+        Finally
+            dbConn.Dispose()
+        End Try
+    End Function
+
+    Public Function ListDataPembeli() As DataTable
+        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" _
+                + "password=" + password_db + ";" + "database =" + database
+
+        Try
+            dbConn.Open()
+
+            sqlCommand.Connection = dbConn
+            sqlQuery = "SELECT id_pembeli, nama FROM pembeli"
+
+            Debug.WriteLine(sqlQuery)
+
+            Dim adapter As New MySqlDataAdapter(sqlQuery, dbConn)
+            Dim table As New DataTable()
+
+            adapter.Fill(table)
+
+            dbConn.Close()
+
+            Return table
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
         Finally
             dbConn.Dispose()
         End Try

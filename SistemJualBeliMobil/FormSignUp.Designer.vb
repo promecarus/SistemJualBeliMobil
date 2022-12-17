@@ -78,7 +78,7 @@ Partial Class FormSignUp
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(677, 504)
+        Me.Label2.Location = New System.Drawing.Point(598, 381)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(32, 28)
         Me.Label2.TabIndex = 14
@@ -141,9 +141,8 @@ Partial Class FormSignUp
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.SistemJualBeliMobil.My.Resources.Resources.BannerSign
-        Me.PictureBox1.Location = New System.Drawing.Point(-9, -4)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.PictureBox1.Image = Global.SistemJualBeliMobil.My.Resources.Resources.VEN_MY23_0052_V001_4x3
+        Me.PictureBox1.Location = New System.Drawing.Point(-8, -3)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(467, 676)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
