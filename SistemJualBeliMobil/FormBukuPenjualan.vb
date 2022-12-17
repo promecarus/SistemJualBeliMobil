@@ -64,6 +64,6 @@
     End Sub
 
     Private Sub FormBukuPenjualan_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-        Form1.Show()
+        Form1.Close()
     End Sub
 End Class
