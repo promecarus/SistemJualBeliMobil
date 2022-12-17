@@ -37,12 +37,12 @@
 
     Private Sub ButtonEdit_Click(sender As Object, e As EventArgs) Handles ButtonEdit.Click
         Try
-            Dim selectedKoleksi As List(Of String) = dataBukuPenjualan.GetDataBukuPenjualanByIDDatabase(selectedRowBukuPenjualan)
+            Dim selectedBukuPenjualan As List(Of String) = dataBukuPenjualan.GetDataBukuPenjualanByIDDatabase(selectedRowBukuPenjualan)
 
-            dataBukuPenjualan.idMobilProperty = selectedKoleksi(1)
-            dataBukuPenjualan.idPembeliProperty = selectedKoleksi(2)
-            dataBukuPenjualan.hargaTerjualProperty = selectedKoleksi(3)
-            dataBukuPenjualan.tanggalPenjualanProperty = selectedKoleksi(4)
+            dataBukuPenjualan.idMobilProperty = selectedBukuPenjualan(1)
+            dataBukuPenjualan.idPembeliProperty = selectedBukuPenjualan(2)
+            dataBukuPenjualan.hargaTerjualProperty = selectedBukuPenjualan(3)
+            dataBukuPenjualan.tanggalPenjualanProperty = selectedBukuPenjualan(4)
 
             Dim formEdit = New FormBukuPenjualanEdit()
             formEdit.Show()
@@ -54,9 +54,9 @@
 
     Private Sub ButtonHapus_Click(sender As Object, e As EventArgs) Handles ButtonHapus.Click
         Try
-            Dim selectedKoleksi As List(Of String) = dataBukuPenjualan.GetDataBukuPenjualanByIDDatabase(selectedRowBukuPenjualan)
+            Dim selectedBukuPenjualan As List(Of String) = dataBukuPenjualan.GetDataBukuPenjualanByIDDatabase(selectedRowBukuPenjualan)
 
-            dataBukuPenjualan.idMobilProperty = selectedKoleksi(1)
+            dataBukuPenjualan.idMobilProperty = selectedBukuPenjualan(1)
 
             Dim formHapus = New FormBukuPenjualanHapus()
             formHapus.Show()
