@@ -187,7 +187,7 @@ Public Class BukuPenjualan
             dbConn.Open()
 
             sqlCommand.Connection = dbConn
-            sqlQuery = "DELETE FROM BUKU_PENJUALAN" &
+            sqlQuery = "DELETE FROM buku_penjualan " &
                         "WHERE id_penjualan='" & ID & "'"
 
             Debug.WriteLine(sqlQuery)
@@ -199,7 +199,7 @@ Public Class BukuPenjualan
 
             dbConn.Close()
         Catch ex As Exception
-            Return ex.Message
+            MessageBox.Show(ex.Message)
         Finally
             dbConn.Dispose()
         End Try
