@@ -1,4 +1,22 @@
 ﻿Public Class Form1
+    Public Shared Users As Users
+    Public Shared JenisMobil As JenisMobil
+    Public Shared Mobil As Mobil
+    Public Shared Pembeli As Pembeli
+    Public Shared BukuPenjualan As BukuPenjualan
+
+    Public Sub New()
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
+        Users = New Users()
+        JenisMobil = New JenisMobil()
+        Mobil = New Mobil()
+        Pembeli = New Pembeli()
+        BukuPenjualan = New BukuPenjualan()
+    End Sub
+
     Private Sub ButtonFormSignIn_Click(sender As Object, e As EventArgs) Handles ButtonFormSignIn.Click
         FormSignIn.Show()
         Me.Hide()

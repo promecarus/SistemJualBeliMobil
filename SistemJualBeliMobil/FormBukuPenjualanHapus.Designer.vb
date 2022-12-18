@@ -22,17 +22,81 @@ Partial Class FormBukuPenjualanHapus
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.ButtonNo = New System.Windows.Forms.Button()
+        Me.ButtonYes = New System.Windows.Forms.Button()
+        Me.LabelIdPenjualan = New System.Windows.Forms.Label()
+        Me.LabelKonfirmasi = New System.Windows.Forms.Label()
+        Me.PictureBoxBack = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBoxBack, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'ButtonNo
+        '
+        Me.ButtonNo.Location = New System.Drawing.Point(408, 258)
+        Me.ButtonNo.Name = "ButtonNo"
+        Me.ButtonNo.Size = New System.Drawing.Size(94, 29)
+        Me.ButtonNo.TabIndex = 7
+        Me.ButtonNo.Text = "No"
+        Me.ButtonNo.UseVisualStyleBackColor = True
+        '
+        'ButtonYes
+        '
+        Me.ButtonYes.Location = New System.Drawing.Point(308, 258)
+        Me.ButtonYes.Name = "ButtonYes"
+        Me.ButtonYes.Size = New System.Drawing.Size(94, 29)
+        Me.ButtonYes.TabIndex = 4
+        Me.ButtonYes.Text = "Yes"
+        Me.ButtonYes.UseVisualStyleBackColor = True
+        '
+        'LabelIdPenjualan
+        '
+        Me.LabelIdPenjualan.AutoSize = True
+        Me.LabelIdPenjualan.Location = New System.Drawing.Point(341, 206)
+        Me.LabelIdPenjualan.Name = "LabelIdPenjualan"
+        Me.LabelIdPenjualan.Size = New System.Drawing.Size(127, 20)
+        Me.LabelIdPenjualan.TabIndex = 6
+        Me.LabelIdPenjualan.Text = "ID Buku Penjualan"
+        '
+        'LabelKonfirmasi
+        '
+        Me.LabelKonfirmasi.AutoSize = True
+        Me.LabelKonfirmasi.Location = New System.Drawing.Point(156, 159)
+        Me.LabelKonfirmasi.Name = "LabelKonfirmasi"
+        Me.LabelKonfirmasi.Size = New System.Drawing.Size(466, 20)
+        Me.LabelKonfirmasi.TabIndex = 5
+        Me.LabelKonfirmasi.Text = "Apakah Anda yakin ingin menghapus data buku penjualan dengan ID"
+        '
+        'PictureBoxBack
+        '
+        Me.PictureBoxBack.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBoxBack.Location = New System.Drawing.Point(12, 12)
+        Me.PictureBoxBack.Name = "PictureBoxBack"
+        Me.PictureBoxBack.Size = New System.Drawing.Size(75, 37)
+        Me.PictureBoxBack.TabIndex = 8
+        Me.PictureBoxBack.TabStop = False
         '
         'FormBukuPenjualanHapus
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.PictureBoxBack)
+        Me.Controls.Add(Me.ButtonNo)
+        Me.Controls.Add(Me.ButtonYes)
+        Me.Controls.Add(Me.LabelIdPenjualan)
+        Me.Controls.Add(Me.LabelKonfirmasi)
         Me.Name = "FormBukuPenjualanHapus"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Hapus Buku Penjualan"
+        CType(Me.PictureBoxBack, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
+
+    Friend WithEvents ButtonNo As Button
+    Friend WithEvents ButtonYes As Button
+    Friend WithEvents LabelIdPenjualan As Label
+    Friend WithEvents LabelKonfirmasi As Label
+    Friend WithEvents PictureBoxBack As PictureBox
 End Class
