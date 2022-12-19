@@ -29,9 +29,16 @@ Partial Class FormJenisMobilHapus
         '
         'BtnHapus
         '
-        Me.BtnHapus.Location = New System.Drawing.Point(353, 347)
+        Me.BtnHapus.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.bgbutton
+        Me.BtnHapus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnHapus.FlatAppearance.BorderSize = 0
+        Me.BtnHapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnHapus.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.BtnHapus.ForeColor = System.Drawing.Color.White
+        Me.BtnHapus.Location = New System.Drawing.Point(129, 144)
+        Me.BtnHapus.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnHapus.Name = "BtnHapus"
-        Me.BtnHapus.Size = New System.Drawing.Size(94, 29)
+        Me.BtnHapus.Size = New System.Drawing.Size(82, 29)
         Me.BtnHapus.TabIndex = 5
         Me.BtnHapus.Text = "Hapus"
         Me.BtnHapus.UseVisualStyleBackColor = True
@@ -39,11 +46,11 @@ Partial Class FormJenisMobilHapus
         'LblJenisMobil
         '
         Me.LblJenisMobil.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LblJenisMobil.Font = New System.Drawing.Font("Segoe UI", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.LblJenisMobil.Font = New System.Drawing.Font("Segoe UI", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.LblJenisMobil.ForeColor = System.Drawing.Color.Red
-        Me.LblJenisMobil.Location = New System.Drawing.Point(12, 192)
+        Me.LblJenisMobil.Location = New System.Drawing.Point(55, 73)
         Me.LblJenisMobil.Name = "LblJenisMobil"
-        Me.LblJenisMobil.Size = New System.Drawing.Size(776, 54)
+        Me.LblJenisMobil.Size = New System.Drawing.Size(234, 40)
         Me.LblJenisMobil.TabIndex = 4
         Me.LblJenisMobil.Text = "Jenis Mobil"
         Me.LblJenisMobil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -51,21 +58,23 @@ Partial Class FormJenisMobilHapus
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(231, 74)
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.Location = New System.Drawing.Point(25, 37)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(338, 28)
+        Me.Label1.Size = New System.Drawing.Size(297, 21)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Apakah Ingin Menghapus Jenis Mobil"
         '
         'FormJenisMobilHapus
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(336, 201)
         Me.Controls.Add(Me.BtnHapus)
         Me.Controls.Add(Me.LblJenisMobil)
         Me.Controls.Add(Me.Label1)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "FormJenisMobilHapus"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Hapus Jenis Mobil"
