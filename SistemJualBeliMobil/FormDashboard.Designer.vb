@@ -24,7 +24,6 @@ Partial Class FormDashboard
     Private Sub InitializeComponent()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -33,6 +32,7 @@ Partial Class FormDashboard
         Me.TransactionBtn = New System.Windows.Forms.Button()
         Me.SignoutBtn = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.BtnIndex = New System.Windows.Forms.Button()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -42,30 +42,18 @@ Partial Class FormDashboard
         Me.PictureBox2.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.BannerHome1
         Me.PictureBox2.Location = New System.Drawing.Point(-2, -107)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(977, 739)
+        Me.PictureBox2.Size = New System.Drawing.Size(1000, 739)
         Me.PictureBox2.TabIndex = 1
         Me.PictureBox2.TabStop = False
         '
         'PictureBox1
         '
         Me.PictureBox1.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.putih
-        Me.PictureBox1.Location = New System.Drawing.Point(-14, -8)
+        Me.PictureBox1.Location = New System.Drawing.Point(-2, -8)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(1074, 60)
+        Me.PictureBox1.Size = New System.Drawing.Size(986, 60)
         Me.PictureBox1.TabIndex = 2
         Me.PictureBox1.TabStop = False
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.White
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(25, 9)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(105, 28)
-        Me.Label1.TabIndex = 3
-        Me.Label1.Text = "JualMobil"
         '
         'Label2
         '
@@ -114,7 +102,7 @@ Partial Class FormDashboard
         Me.manageCarBtn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.manageCarBtn.Location = New System.Drawing.Point(485, 5)
         Me.manageCarBtn.Name = "manageCarBtn"
-        Me.manageCarBtn.Size = New System.Drawing.Size(111, 40)
+        Me.manageCarBtn.Size = New System.Drawing.Size(124, 40)
         Me.manageCarBtn.TabIndex = 7
         Me.manageCarBtn.Text = "Manage Car"
         Me.manageCarBtn.UseVisualStyleBackColor = False
@@ -128,9 +116,9 @@ Partial Class FormDashboard
         Me.ManageUserBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ManageUserBtn.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.ManageUserBtn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ManageUserBtn.Location = New System.Drawing.Point(616, 5)
+        Me.ManageUserBtn.Location = New System.Drawing.Point(603, 5)
         Me.ManageUserBtn.Name = "ManageUserBtn"
-        Me.ManageUserBtn.Size = New System.Drawing.Size(123, 40)
+        Me.ManageUserBtn.Size = New System.Drawing.Size(136, 40)
         Me.ManageUserBtn.TabIndex = 8
         Me.ManageUserBtn.Text = "Manage User"
         Me.ManageUserBtn.UseVisualStyleBackColor = False
@@ -144,9 +132,9 @@ Partial Class FormDashboard
         Me.TransactionBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.TransactionBtn.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.TransactionBtn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.TransactionBtn.Location = New System.Drawing.Point(745, 5)
+        Me.TransactionBtn.Location = New System.Drawing.Point(732, 5)
         Me.TransactionBtn.Name = "TransactionBtn"
-        Me.TransactionBtn.Size = New System.Drawing.Size(111, 40)
+        Me.TransactionBtn.Size = New System.Drawing.Size(124, 40)
         Me.TransactionBtn.TabIndex = 9
         Me.TransactionBtn.Text = "Transaction"
         Me.TransactionBtn.UseVisualStyleBackColor = False
@@ -164,7 +152,7 @@ Partial Class FormDashboard
         Me.SignoutBtn.ForeColor = System.Drawing.Color.White
         Me.SignoutBtn.Location = New System.Drawing.Point(862, 9)
         Me.SignoutBtn.Name = "SignoutBtn"
-        Me.SignoutBtn.Size = New System.Drawing.Size(92, 33)
+        Me.SignoutBtn.Size = New System.Drawing.Size(105, 33)
         Me.SignoutBtn.TabIndex = 10
         Me.SignoutBtn.Text = "Sign out"
         Me.SignoutBtn.UseVisualStyleBackColor = False
@@ -181,12 +169,29 @@ Partial Class FormDashboard
         Me.Label5.TabIndex = 11
         Me.Label5.Text = "."
         '
+        'BtnIndex
+        '
+        Me.BtnIndex.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnIndex.BackColor = System.Drawing.Color.White
+        Me.BtnIndex.FlatAppearance.BorderSize = 0
+        Me.BtnIndex.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnIndex.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.BtnIndex.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.BtnIndex.Location = New System.Drawing.Point(12, 5)
+        Me.BtnIndex.Name = "BtnIndex"
+        Me.BtnIndex.Size = New System.Drawing.Size(117, 40)
+        Me.BtnIndex.TabIndex = 26
+        Me.BtnIndex.Text = "JualMobil"
+        Me.BtnIndex.UseVisualStyleBackColor = False
+        '
         'FormDashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(53, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(72, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(971, 631)
+        Me.ClientSize = New System.Drawing.Size(984, 631)
+        Me.Controls.Add(Me.BtnIndex)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.SignoutBtn)
@@ -195,7 +200,6 @@ Partial Class FormDashboard
         Me.Controls.Add(Me.manageCarBtn)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.PictureBox2)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -211,7 +215,6 @@ Partial Class FormDashboard
 
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
@@ -220,4 +223,5 @@ Partial Class FormDashboard
     Friend WithEvents TransactionBtn As Button
     Friend WithEvents SignoutBtn As Button
     Friend WithEvents Label5 As Label
+    Friend WithEvents BtnIndex As Button
 End Class
