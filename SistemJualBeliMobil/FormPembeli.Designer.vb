@@ -43,6 +43,7 @@ Partial Class FormPembeli
         '
         Me.DataGridViewPembeli.AllowUserToAddRows = False
         Me.DataGridViewPembeli.AllowUserToDeleteRows = False
+        Me.DataGridViewPembeli.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridViewPembeli.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridViewPembeli.Location = New System.Drawing.Point(13, 78)
         Me.DataGridViewPembeli.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
