@@ -43,4 +43,12 @@
     Private Sub FormPembeliEdit_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         FormSignIn.Close()
     End Sub
+
+    Private Sub TextBoxNik_TextChanged(sender As Object, e As EventArgs) Handles TextBoxNik.TextChanged
+
+    End Sub
+
+    Private Sub LabelAlamat_Click(sender As Object, e As EventArgs) Handles LabelAlamat.Click
+
+    End Sub
 End Class
