@@ -90,6 +90,7 @@ Partial Class FormJenisMobil
         '
         Me.DataGridJenisMobil.AllowUserToAddRows = False
         Me.DataGridJenisMobil.AllowUserToDeleteRows = False
+        Me.DataGridJenisMobil.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridJenisMobil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridJenisMobil.Location = New System.Drawing.Point(605, 137)
         Me.DataGridJenisMobil.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
