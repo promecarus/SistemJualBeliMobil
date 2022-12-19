@@ -43,6 +43,7 @@ Partial Class FormBukuPenjualan
         '
         Me.DataGridViewBukuPenjualan.AllowUserToAddRows = False
         Me.DataGridViewBukuPenjualan.AllowUserToDeleteRows = False
+        Me.DataGridViewBukuPenjualan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridViewBukuPenjualan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridViewBukuPenjualan.Location = New System.Drawing.Point(41, 87)
         Me.DataGridViewBukuPenjualan.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
