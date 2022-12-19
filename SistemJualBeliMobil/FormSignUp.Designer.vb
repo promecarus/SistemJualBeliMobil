@@ -25,7 +25,6 @@ Partial Class FormSignUp
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.inputPassword = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.SigninBtn = New System.Windows.Forms.Button()
         Me.SignupBtn = New System.Windows.Forms.Button()
         Me.inputUsername = New System.Windows.Forms.TextBox()
@@ -44,7 +43,7 @@ Partial Class FormSignUp
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label4.Location = New System.Drawing.Point(443, 251)
+        Me.Label4.Location = New System.Drawing.Point(570, 297)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(82, 21)
         Me.Label4.TabIndex = 17
@@ -56,7 +55,7 @@ Partial Class FormSignUp
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label3.Location = New System.Drawing.Point(443, 98)
+        Me.Label3.Location = New System.Drawing.Point(570, 144)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(87, 21)
         Me.Label3.TabIndex = 16
@@ -67,22 +66,10 @@ Partial Class FormSignUp
         Me.inputPassword.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.inputPassword.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.inputPassword.Location = New System.Drawing.Point(448, 275)
+        Me.inputPassword.Location = New System.Drawing.Point(570, 325)
         Me.inputPassword.Name = "inputPassword"
-        Me.inputPassword.Size = New System.Drawing.Size(322, 34)
+        Me.inputPassword.Size = New System.Drawing.Size(346, 34)
         Me.inputPassword.TabIndex = 3
-        '
-        'Label2
-        '
-        Me.Label2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(523, 286)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(26, 21)
-        Me.Label2.TabIndex = 14
-        Me.Label2.Text = "or"
         '
         'SigninBtn
         '
@@ -92,9 +79,9 @@ Partial Class FormSignUp
         Me.SigninBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.SigninBtn.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.SigninBtn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.SigninBtn.Location = New System.Drawing.Point(448, 405)
+        Me.SigninBtn.Location = New System.Drawing.Point(570, 455)
         Me.SigninBtn.Name = "SigninBtn"
-        Me.SigninBtn.Size = New System.Drawing.Size(322, 37)
+        Me.SigninBtn.Size = New System.Drawing.Size(346, 34)
         Me.SigninBtn.TabIndex = 5
         Me.SigninBtn.Text = "Sign in"
         Me.SigninBtn.UseVisualStyleBackColor = False
@@ -107,9 +94,9 @@ Partial Class FormSignUp
         Me.SignupBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.SignupBtn.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.SignupBtn.ForeColor = System.Drawing.Color.White
-        Me.SignupBtn.Location = New System.Drawing.Point(448, 341)
+        Me.SignupBtn.Location = New System.Drawing.Point(570, 391)
         Me.SignupBtn.Name = "SignupBtn"
-        Me.SignupBtn.Size = New System.Drawing.Size(322, 37)
+        Me.SignupBtn.Size = New System.Drawing.Size(346, 34)
         Me.SignupBtn.TabIndex = 4
         Me.SignupBtn.Text = "Sign up"
         Me.SignupBtn.UseVisualStyleBackColor = False
@@ -119,9 +106,9 @@ Partial Class FormSignUp
         Me.inputUsername.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.inputUsername.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.inputUsername.Location = New System.Drawing.Point(448, 122)
+        Me.inputUsername.Location = New System.Drawing.Point(570, 172)
         Me.inputUsername.Name = "inputUsername"
-        Me.inputUsername.Size = New System.Drawing.Size(322, 34)
+        Me.inputUsername.Size = New System.Drawing.Size(346, 34)
         Me.inputUsername.TabIndex = 1
         '
         'Label1
@@ -130,7 +117,7 @@ Partial Class FormSignUp
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(443, 32)
+        Me.Label1.Location = New System.Drawing.Point(570, 78)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(117, 37)
         Me.Label1.TabIndex = 10
@@ -139,11 +126,11 @@ Partial Class FormSignUp
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.SistemJualBeliMobil.My.Resources.Resources.VEN_MY23_0052_V001_4x3
-        Me.PictureBox1.Location = New System.Drawing.Point(-7, -2)
+        Me.PictureBox1.Location = New System.Drawing.Point(-43, -53)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(409, 507)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.Size = New System.Drawing.Size(551, 747)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 9
         Me.PictureBox1.TabStop = False
         '
@@ -153,7 +140,7 @@ Partial Class FormSignUp
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label5.Location = New System.Drawing.Point(443, 175)
+        Me.Label5.Location = New System.Drawing.Point(570, 221)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(53, 21)
         Me.Label5.TabIndex = 19
@@ -164,15 +151,15 @@ Partial Class FormSignUp
         Me.inputEmail.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.inputEmail.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.inputEmail.Location = New System.Drawing.Point(448, 199)
+        Me.inputEmail.Location = New System.Drawing.Point(570, 249)
         Me.inputEmail.Name = "inputEmail"
-        Me.inputEmail.Size = New System.Drawing.Size(322, 34)
+        Me.inputEmail.Size = New System.Drawing.Size(346, 34)
         Me.inputEmail.TabIndex = 2
         '
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(745, 285)
+        Me.CheckBox1.Location = New System.Drawing.Point(889, 340)
         Me.CheckBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(15, 14)
@@ -183,7 +170,7 @@ Partial Class FormSignUp
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label6.Location = New System.Drawing.Point(599, 381)
+        Me.Label6.Location = New System.Drawing.Point(723, 427)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(26, 21)
         Me.Label6.TabIndex = 21
@@ -194,7 +181,7 @@ Partial Class FormSignUp
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(816, 503)
+        Me.ClientSize = New System.Drawing.Size(984, 623)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Label5)
@@ -202,7 +189,6 @@ Partial Class FormSignUp
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.inputPassword)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.SigninBtn)
         Me.Controls.Add(Me.SignupBtn)
         Me.Controls.Add(Me.inputUsername)
@@ -221,7 +207,6 @@ Partial Class FormSignUp
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents inputPassword As TextBox
-    Friend WithEvents Label2 As Label
     Friend WithEvents SigninBtn As Button
     Friend WithEvents SignupBtn As Button
     Friend WithEvents inputUsername As TextBox
