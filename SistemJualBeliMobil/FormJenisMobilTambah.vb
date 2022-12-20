@@ -26,6 +26,10 @@
         End If
     End Sub
 
+    Private Sub TxtJenisMobil_TextChanged(sender As Object, e As EventArgs) Handles TxtJenisMobil.TextChanged
+
+    End Sub
+
     'Private Sub FormJenisMobilTambah_Closed(sender As Object, e As EventArgs) Handles Me.Closed
     '    Form1.Show()
     'End Sub

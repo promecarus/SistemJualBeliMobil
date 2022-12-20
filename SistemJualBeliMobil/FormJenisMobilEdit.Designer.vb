@@ -25,20 +25,31 @@ Partial Class FormJenisMobilEdit
         Me.TxtJenisMobil = New System.Windows.Forms.TextBox()
         Me.BtnEdit = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TxtJenisMobil
         '
-        Me.TxtJenisMobil.Location = New System.Drawing.Point(276, 212)
+        Me.TxtJenisMobil.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.TxtJenisMobil.Location = New System.Drawing.Point(367, 114)
+        Me.TxtJenisMobil.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TxtJenisMobil.Name = "TxtJenisMobil"
-        Me.TxtJenisMobil.Size = New System.Drawing.Size(249, 27)
+        Me.TxtJenisMobil.Size = New System.Drawing.Size(309, 29)
         Me.TxtJenisMobil.TabIndex = 12
         '
         'BtnEdit
         '
-        Me.BtnEdit.Location = New System.Drawing.Point(357, 347)
+        Me.BtnEdit.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.bgbutton
+        Me.BtnEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnEdit.FlatAppearance.BorderSize = 0
+        Me.BtnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnEdit.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.BtnEdit.ForeColor = System.Drawing.Color.White
+        Me.BtnEdit.Location = New System.Drawing.Point(594, 159)
+        Me.BtnEdit.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnEdit.Name = "BtnEdit"
-        Me.BtnEdit.Size = New System.Drawing.Size(94, 29)
+        Me.BtnEdit.Size = New System.Drawing.Size(82, 31)
         Me.BtnEdit.TabIndex = 11
         Me.BtnEdit.Text = "Edit"
         Me.BtnEdit.UseVisualStyleBackColor = True
@@ -46,24 +57,38 @@ Partial Class FormJenisMobilEdit
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(313, 74)
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.Location = New System.Drawing.Point(367, 81)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(149, 28)
+        Me.Label1.Size = New System.Drawing.Size(131, 21)
         Me.Label1.TabIndex = 10
         Me.Label1.Text = "Edit Jenis Mobil"
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.MobilBawah
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox1.Location = New System.Drawing.Point(-149, -3)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(633, 351)
+        Me.PictureBox1.TabIndex = 13
+        Me.PictureBox1.TabStop = False
+        '
         'FormJenisMobilEdit
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(700, 338)
         Me.Controls.Add(Me.TxtJenisMobil)
         Me.Controls.Add(Me.BtnEdit)
         Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "FormJenisMobilEdit"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Edit Jenis Mobil"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -72,4 +97,5 @@ Partial Class FormJenisMobilEdit
     Friend WithEvents TxtJenisMobil As TextBox
     Friend WithEvents BtnEdit As Button
     Friend WithEvents Label1 As Label
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
