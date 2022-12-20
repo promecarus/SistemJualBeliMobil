@@ -9,7 +9,7 @@
                 )
 
                 MessageBox.Show("Data pembeli baru berhasil ditambahkan.")
-                Me.Close()
+                Me.Hide()
                 FormPembeli.Show()
             Else
                 MessageBox.Show("Input NIK harus angka!")
@@ -20,12 +20,12 @@
     End Sub
 
     Private Sub ButtonCancel_Click(sender As Object, e As EventArgs) Handles ButtonCancel.Click
-        Me.Close()
+        Me.Hide()
         FormPembeli.Show()
     End Sub
 
     Private Sub PictureBoxBack_Click(sender As Object, e As EventArgs) Handles PictureBoxBack.Click
-        Me.Close()
+        Me.Hide()
         FormPembeli.Show()
     End Sub
 

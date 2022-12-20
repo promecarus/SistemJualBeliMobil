@@ -10,17 +10,17 @@
     Private Sub ButtonYes_Click(sender As Object, e As EventArgs) Handles ButtonYes.Click
         FormPembeli.dataPembeli.DeleteDataPembeliByIDDatabase(FormPembeli.selectedRowPembeli)
         MessageBox.Show("Data pembeli dengan ID " & FormPembeli.selectedRowPembeli & " berhasil dihapus.")
-        Me.Close()
+        Me.Hide()
         FormPembeli.Show()
     End Sub
 
     Private Sub ButtonNo_Click(sender As Object, e As EventArgs) Handles ButtonNo.Click
-        Me.Close()
+        Me.Hide()
         FormPembeli.Show()
     End Sub
 
     Private Sub PictureBoxBack_Click(sender As Object, e As EventArgs) Handles PictureBoxBack.Click
-        Me.Close()
+        Me.Hide()
         FormPembeli.Show()
     End Sub
 
