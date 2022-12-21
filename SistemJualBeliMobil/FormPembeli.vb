@@ -81,6 +81,25 @@
         Me.Hide()
     End Sub
 
+    Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles BtnSearch.Click
+        If Not TxtSearch.Text = "" Then
+            DataGridViewPembeli.DataSource = Nothing
+            DataGridViewPembeli.DataSource = dataPembeli.GetDataPembeliDatabaseSearch(TxtSearch.Text)
+        Else
+            DataGridViewPembeli.DataSource = Nothing
+            DataGridViewPembeli.DataSource = dataPembeli.GetDataPembeliDatabase()
+        End If
+    End Sub
+
+    Private Sub TxtSearch_Enter(sender As Object, e As EventArgs) Handles TxtSearch.Enter
+        Label1.Text = ""
+    End Sub
+
+    Private Sub TxtSearch_Leave(sender As Object, e As EventArgs) Handles TxtSearch.Leave
+        If TxtSearch.Text = "" Then
+            Label1.Text = "Search by ID..."
+        End If
+
     Private Sub SignoutBtn_Click(sender As Object, e As EventArgs) Handles SignoutBtn.Click
         FormSignIn.Show()
         Me.Hide()

@@ -41,6 +41,7 @@ Partial Class FormMobil
         Me.RdbNone = New System.Windows.Forms.RadioButton()
         Me.TxtSearch = New System.Windows.Forms.TextBox()
         Me.BtnSearch = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.DataGridMobil, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -296,6 +297,7 @@ Partial Class FormMobil
         '
         'TxtSearch
         '
+        Me.TxtSearch.BackColor = System.Drawing.SystemColors.Window
         Me.TxtSearch.Location = New System.Drawing.Point(35, 560)
         Me.TxtSearch.Name = "TxtSearch"
         Me.TxtSearch.Size = New System.Drawing.Size(200, 23)
@@ -310,13 +312,21 @@ Partial Class FormMobil
         Me.BtnSearch.Text = "Search"
         Me.BtnSearch.UseVisualStyleBackColor = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(38, 564)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(81, 15)
+        Me.Label1.TabIndex = 37
+        Me.Label1.Text = "Search by ID..."
+        '
         'FormMobil
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(984, 623)
         Me.Controls.Add(Me.BtnSearch)
-        Me.Controls.Add(Me.TxtSearch)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.BtnIndex)
         Me.Controls.Add(Me.Label5)
@@ -331,6 +341,8 @@ Partial Class FormMobil
         Me.Controls.Add(Me.BtnHapus)
         Me.Controls.Add(Me.BtnTambah)
         Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.TxtSearch)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.MaximizeBox = False
@@ -366,4 +378,5 @@ Partial Class FormMobil
     Friend WithEvents RdbTerjual As RadioButton
     Friend WithEvents TxtSearch As TextBox
     Friend WithEvents BtnSearch As Button
+    Friend WithEvents Label1 As Label
 End Class
