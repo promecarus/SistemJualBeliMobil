@@ -30,12 +30,11 @@
         End If
     End Sub
 
-    Private Sub ButtonTambah_Click(sender As Object, e As EventArgs)
+    Private Sub ButtonTambah_Click(sender As Object, e As EventArgs) Handles ButtonTambah.Click
         FormBukuPenjualanTambah.Show()
-        Me.Hide()
     End Sub
 
-    Private Sub ButtonEdit_Click(sender As Object, e As EventArgs)
+    Private Sub ButtonEdit_Click(sender As Object, e As EventArgs) Handles ButtonEdit.Click
         Try
             Dim selectedBukuPenjualan As List(Of String) = dataBukuPenjualan.GetDataBukuPenjualanByIDDatabase(selectedRowBukuPenjualan)
 
@@ -46,13 +45,12 @@
 
             Dim formEdit = New FormBukuPenjualanEdit()
             formEdit.Show()
-            Me.Hide()
         Catch ex As Exception
             MessageBox.Show("Pilih row terlebih dahulu!")
         End Try
     End Sub
 
-    Private Sub ButtonHapus_Click(sender As Object, e As EventArgs)
+    Private Sub ButtonHapus_Click(sender As Object, e As EventArgs) Handles ButtonHapus.Click
         Try
             Dim selectedBukuPenjualan As List(Of String) = dataBukuPenjualan.GetDataBukuPenjualanByIDDatabase(selectedRowBukuPenjualan)
 
@@ -60,7 +58,6 @@
 
             Dim formHapus = New FormBukuPenjualanHapus()
             formHapus.Show()
-            Me.Hide()
         Catch ex As Exception
             MessageBox.Show("Pilih row terlebih dahulu!")
         End Try
@@ -68,10 +65,6 @@
 
     Private Sub FormBukuPenjualan_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         FormSignIn.Close()
-    End Sub
-
-    Private Sub FormBukuPenjualan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
     End Sub
 
     Private Sub manageCarBtn_Click(sender As Object, e As EventArgs) Handles manageCarBtn.Click
