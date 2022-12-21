@@ -71,8 +71,8 @@ Partial Class FormJenisMobilHapus
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(336, 201)
-        Me.Controls.Add(Me.BtnHapus)
         Me.Controls.Add(Me.LblJenisMobil)
+        Me.Controls.Add(Me.BtnHapus)
         Me.Controls.Add(Me.Label1)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "FormJenisMobilHapus"
