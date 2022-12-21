@@ -12,6 +12,7 @@
         ' Add any initialization after the InitializeComponent() call.
         Mobil = New Mobil()
         RdbNone.Checked = True
+        BtnSearch.Enabled = False
 
         ReloadDataTableDatabase()
 
