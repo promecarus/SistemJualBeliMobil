@@ -238,7 +238,7 @@ Partial Class FormPembeli
         Me.BtnSearch.Name = "BtnSearch"
         Me.BtnSearch.Size = New System.Drawing.Size(108, 23)
         Me.BtnSearch.TabIndex = 39
-        Me.BtnSearch.Text = "Button1"
+        Me.BtnSearch.Text = "Search"
         Me.BtnSearch.UseVisualStyleBackColor = True
         '
         'Label1
