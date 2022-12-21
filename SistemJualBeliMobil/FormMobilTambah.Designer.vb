@@ -105,6 +105,7 @@ Partial Class FormMobilTambah
         '
         Me.BtnTambahMobil.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.bgbutton
         Me.BtnTambahMobil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnTambahMobil.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnTambahMobil.FlatAppearance.BorderSize = 0
         Me.BtnTambahMobil.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnTambahMobil.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
@@ -310,7 +311,9 @@ Partial Class FormMobilTambah
         Me.Controls.Add(Me.LabelTipeMobil)
         Me.Controls.Add(Me.LabelStock)
         Me.Controls.Add(Me.LabelTahunTerbit)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.MaximizeBox = False
         Me.Name = "FormMobilTambah"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Tambah Mobil"
