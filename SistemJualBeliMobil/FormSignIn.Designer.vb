@@ -65,6 +65,7 @@ Partial Class FormSignIn
         'SigninBtn
         '
         Me.SigninBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.SigninBtn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.SigninBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.SigninBtn.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.SigninBtn.ForeColor = System.Drawing.Color.White
@@ -78,6 +79,7 @@ Partial Class FormSignIn
         'SignupBtn
         '
         Me.SignupBtn.BackColor = System.Drawing.Color.White
+        Me.SignupBtn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.SignupBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.SignupBtn.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.SignupBtn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(64, Byte), Integer))
@@ -141,7 +143,9 @@ Partial Class FormSignIn
         Me.Controls.Add(Me.inputUsername)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.MaximizeBox = False
         Me.Name = "FormSignIn"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Sign In"
