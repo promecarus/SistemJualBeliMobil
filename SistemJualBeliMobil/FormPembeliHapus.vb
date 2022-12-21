@@ -1,4 +1,4 @@
-﻿Public Class FormPembeliHapus
+Public Class FormPembeliHapus
     Public Sub New()
         ' This call is required by the designer.
         InitializeComponent()

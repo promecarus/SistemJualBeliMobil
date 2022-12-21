@@ -1,4 +1,4 @@
-﻿Public Class FormPembeliEdit
+Public Class FormPembeliEdit
     Public Sub New()
         ' This call is required by the designer.
         InitializeComponent()

@@ -1,4 +1,4 @@
-﻿Public Class FormBukuPenjualan
+Public Class FormBukuPenjualan
     Public Shared dataBukuPenjualan As BukuPenjualan
     Public Shared selectedRowBukuPenjualan
 
@@ -33,7 +33,7 @@
     Private Sub ButtonTambah_Click(sender As Object, e As EventArgs) Handles ButtonTambah.Click
         FormBukuPenjualanTambah.Show()
     End Sub
-
+    
     Private Sub ButtonEdit_Click(sender As Object, e As EventArgs) Handles ButtonEdit.Click
         Try
             Dim selectedBukuPenjualan As List(Of String) = dataBukuPenjualan.GetDataBukuPenjualanByIDDatabase(selectedRowBukuPenjualan)

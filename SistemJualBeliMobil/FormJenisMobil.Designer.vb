@@ -43,6 +43,7 @@ Partial Class FormJenisMobil
         '
         Me.BtnTambah.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.bgbutton
         Me.BtnTambah.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnTambah.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnTambah.FlatAppearance.BorderSize = 0
         Me.BtnTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnTambah.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
@@ -59,6 +60,7 @@ Partial Class FormJenisMobil
         '
         Me.BtnHapus.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.bgputihbtn
         Me.BtnHapus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnHapus.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnHapus.FlatAppearance.BorderSize = 0
         Me.BtnHapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnHapus.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
@@ -74,6 +76,7 @@ Partial Class FormJenisMobil
         '
         Me.BtnEdit.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.bgbutton
         Me.BtnEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnEdit.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnEdit.FlatAppearance.BorderSize = 0
         Me.BtnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnEdit.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
@@ -106,6 +109,7 @@ Partial Class FormJenisMobil
         Me.BtnIndex.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnIndex.BackColor = System.Drawing.Color.White
+        Me.BtnIndex.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnIndex.FlatAppearance.BorderSize = 0
         Me.BtnIndex.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnIndex.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
@@ -136,6 +140,7 @@ Partial Class FormJenisMobil
         Me.SignoutBtn.BackColor = System.Drawing.Color.Transparent
         Me.SignoutBtn.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.bgbutton
         Me.SignoutBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.SignoutBtn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.SignoutBtn.FlatAppearance.BorderSize = 0
         Me.SignoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.SignoutBtn.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
@@ -152,6 +157,7 @@ Partial Class FormJenisMobil
         Me.TransactionBtn.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TransactionBtn.BackColor = System.Drawing.Color.White
+        Me.TransactionBtn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.TransactionBtn.FlatAppearance.BorderSize = 0
         Me.TransactionBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.TransactionBtn.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
@@ -168,6 +174,7 @@ Partial Class FormJenisMobil
         Me.ManageUserBtn.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ManageUserBtn.BackColor = System.Drawing.Color.White
+        Me.ManageUserBtn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ManageUserBtn.FlatAppearance.BorderSize = 0
         Me.ManageUserBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ManageUserBtn.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
@@ -184,6 +191,7 @@ Partial Class FormJenisMobil
         Me.manageCarBtn.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.manageCarBtn.BackColor = System.Drawing.Color.White
+        Me.manageCarBtn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.manageCarBtn.FlatAppearance.BorderSize = 0
         Me.manageCarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.manageCarBtn.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
@@ -232,7 +240,9 @@ Partial Class FormJenisMobil
         Me.Controls.Add(Me.BtnHapus)
         Me.Controls.Add(Me.BtnTambah)
         Me.Controls.Add(Me.PictureBox2)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.MaximizeBox = False
         Me.Name = "FormJenisMobil"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Jenis Mobil"

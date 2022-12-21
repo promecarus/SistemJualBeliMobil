@@ -70,4 +70,23 @@
         JenisMobilHapus.Show()
     End Sub
 
+    Private Sub manageCarBtn_Click(sender As Object, e As EventArgs) Handles manageCarBtn.Click
+        FormMobil.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub ManageUserBtn_Click(sender As Object, e As EventArgs) Handles ManageUserBtn.Click
+        FormPembeli.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub TransactionBtn_Click(sender As Object, e As EventArgs) Handles TransactionBtn.Click
+        FormBukuPenjualan.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub BtnIndex_Click(sender As Object, e As EventArgs) Handles BtnIndex.Click
+        FormDashboard.Show()
+        Me.Hide()
+    End Sub
 End Class

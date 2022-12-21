@@ -62,10 +62,6 @@
         End Try
     End Sub
 
-    Private Sub FormPembeli_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-        FormSignIn.Close()
-    End Sub
-
     Private Sub manageCarBtn_Click(sender As Object, e As EventArgs) Handles manageCarBtn.Click
         FormMobil.Show()
         Me.Hide()

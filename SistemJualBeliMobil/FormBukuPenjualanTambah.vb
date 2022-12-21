@@ -1,4 +1,4 @@
-﻿Public Class FormBukuPenjualanTambah
+Public Class FormBukuPenjualanTambah
     Public Sub New()
         ' This call is required by the designer.
         InitializeComponent()

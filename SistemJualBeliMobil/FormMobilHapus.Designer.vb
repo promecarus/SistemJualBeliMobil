@@ -33,6 +33,7 @@ Partial Class FormMobilHapus
         '
         Me.BtnHapus.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.bgbutton
         Me.BtnHapus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnHapus.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnHapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnHapus.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnHapus.ForeColor = System.Drawing.Color.White
@@ -51,7 +52,7 @@ Partial Class FormMobilHapus
         Me.LblMobil.ForeColor = System.Drawing.Color.Red
         Me.LblMobil.Location = New System.Drawing.Point(355, 121)
         Me.LblMobil.Name = "LblMobil"
-        Me.LblMobil.Size = New System.Drawing.Size(333, 40)
+        Me.LblMobil.Size = New System.Drawing.Size(341, 40)
         Me.LblMobil.TabIndex = 7
         Me.LblMobil.Text = "ID Mobil"
         Me.LblMobil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -86,7 +87,9 @@ Partial Class FormMobilHapus
         Me.Controls.Add(Me.LblMobil)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.MaximizeBox = False
         Me.Name = "FormMobilHapus"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Hapus Mobil"
