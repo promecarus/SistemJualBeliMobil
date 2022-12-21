@@ -39,6 +39,7 @@ Partial Class FormPembeliEdit
         '
         Me.ButtonCancel.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.bgputihbtn
         Me.ButtonCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ButtonCancel.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonCancel.FlatAppearance.BorderSize = 0
         Me.ButtonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonCancel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
@@ -54,6 +55,7 @@ Partial Class FormPembeliEdit
         '
         Me.ButtonEdit.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.bgbutton
         Me.ButtonEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ButtonEdit.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonEdit.FlatAppearance.BorderSize = 0
         Me.ButtonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonEdit.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
@@ -112,7 +114,7 @@ Partial Class FormPembeliEdit
         Me.TextBoxNama.Location = New System.Drawing.Point(377, 137)
         Me.TextBoxNama.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBoxNama.Name = "TextBoxNama"
-        Me.TextBoxNama.Size = New System.Drawing.Size(142, 29)
+        Me.TextBoxNama.Size = New System.Drawing.Size(299, 29)
         Me.TextBoxNama.TabIndex = 7
         '
         'TextBoxNik
@@ -121,7 +123,7 @@ Partial Class FormPembeliEdit
         Me.TextBoxNik.Location = New System.Drawing.Point(377, 69)
         Me.TextBoxNik.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBoxNik.Name = "TextBoxNik"
-        Me.TextBoxNik.Size = New System.Drawing.Size(142, 29)
+        Me.TextBoxNik.Size = New System.Drawing.Size(299, 29)
         Me.TextBoxNik.TabIndex = 6
         '
         'PictureBox1
@@ -160,7 +162,9 @@ Partial Class FormPembeliEdit
         Me.Controls.Add(Me.TextBoxNama)
         Me.Controls.Add(Me.TextBoxNik)
         Me.Controls.Add(Me.PictureBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.MaximizeBox = False
         Me.Name = "FormPembeliEdit"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Edit Pembeli"
