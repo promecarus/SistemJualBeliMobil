@@ -32,8 +32,4 @@ Public Class FormPembeliEdit
     Private Sub ButtonCancel_Click(sender As Object, e As EventArgs) Handles ButtonCancel.Click
         Me.Hide()
     End Sub
-
-    Private Sub PictureBoxBack_Click(sender As Object, e As EventArgs) Handles PictureBoxBack.Click
-        Me.Hide()
-    End Sub
 End Class
