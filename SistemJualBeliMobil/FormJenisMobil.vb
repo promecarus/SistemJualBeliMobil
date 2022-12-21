@@ -100,4 +100,9 @@
             DataGridJenisMobil.DataSource = JenisMobil.GetDataJenisMobilDatabase
         End If
     End Sub
+
+    Private Sub TxtSearch_Enter(sender As Object, e As EventArgs) Handles TxtSearch.Enter
+        Label1.Text = ""
+    End Sub
+
 End Class
