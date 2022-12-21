@@ -30,12 +30,11 @@
         End If
     End Sub
 
-    Private Sub ButtonTambah_Click(sender As Object, e As EventArgs)
+    Private Sub ButtonTambah_Click(sender As Object, e As EventArgs) Handles ButtonTambah.Click
         FormPembeliTambah.Show()
-        Me.Hide()
     End Sub
 
-    Private Sub ButtonEdit_Click(sender As Object, e As EventArgs)
+    Private Sub ButtonEdit_Click(sender As Object, e As EventArgs) Handles ButtonEdit.Click
         Try
             Dim selectedPembeli As List(Of String) = dataPembeli.GetDataPembeliByIDDatabase(selectedRowPembeli)
 
@@ -45,13 +44,12 @@
 
             Dim formEdit = New FormPembeliEdit()
             formEdit.Show()
-            Me.Hide()
         Catch ex As Exception
             MessageBox.Show("Pilih row terlebih dahulu!")
         End Try
     End Sub
 
-    Private Sub ButtonHapus_Click(sender As Object, e As EventArgs)
+    Private Sub ButtonHapus_Click(sender As Object, e As EventArgs) Handles ButtonHapus.Click
         Try
             Dim selectedPembeli As List(Of String) = dataPembeli.GetDataPembeliByIDDatabase(selectedRowPembeli)
 
@@ -59,7 +57,6 @@
 
             Dim formHapus = New FormPembeliHapus()
             formHapus.Show()
-            Me.Hide()
         Catch ex As Exception
             MessageBox.Show("Pilih row terlebih dahulu!")
         End Try
@@ -83,43 +80,8 @@
         Me.Hide()
     End Sub
 
-    Private Sub ButtonTambah_Click_1(sender As Object, e As EventArgs) Handles ButtonTambah.Click
-        FormPembeliTambah.Show()
-        Me.Hide()
-    End Sub
-
     Private Sub BtnIndex_Click_1(sender As Object, e As EventArgs) Handles BtnIndex.Click
         FormDashboard.Show()
         Me.Hide()
-    End Sub
-
-    Private Sub ButtonHapus_Click_1(sender As Object, e As EventArgs) Handles ButtonHapus.Click
-        Try
-            Dim selectedPembeli As List(Of String) = dataPembeli.GetDataPembeliByIDDatabase(selectedRowPembeli)
-
-            dataPembeli.namaProperty = selectedPembeli(2)
-
-            Dim formHapus = New FormPembeliHapus()
-            formHapus.Show()
-            Me.Hide()
-        Catch ex As Exception
-            MessageBox.Show("Pilih row terlebih dahulu!")
-        End Try
-    End Sub
-
-    Private Sub ButtonEdit_Click_1(sender As Object, e As EventArgs) Handles ButtonEdit.Click
-        Try
-            Dim selectedPembeli As List(Of String) = dataPembeli.GetDataPembeliByIDDatabase(selectedRowPembeli)
-
-            dataPembeli.nikProperty = selectedPembeli(1)
-            dataPembeli.namaProperty = selectedPembeli(2)
-            dataPembeli.alamatProperty = selectedPembeli(3)
-
-            Dim formEdit = New FormPembeliEdit()
-            formEdit.Show()
-            Me.Hide()
-        Catch ex As Exception
-            MessageBox.Show("Pilih row terlebih dahulu!")
-        End Try
     End Sub
 End Class
