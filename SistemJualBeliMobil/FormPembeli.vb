@@ -85,4 +85,8 @@
         FormSignIn.Show()
         Me.Hide()
     End Sub
+
+    Private Sub FormPembeli_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        FormSignIn.Close()
+    End Sub
 End Class
