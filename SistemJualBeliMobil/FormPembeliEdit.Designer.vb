@@ -30,9 +30,8 @@ Partial Class FormPembeliEdit
         Me.RichTextBoxAlamat = New System.Windows.Forms.RichTextBox()
         Me.TextBoxNama = New System.Windows.Forms.TextBox()
         Me.TextBoxNik = New System.Windows.Forms.TextBox()
-        Me.PictureBoxBack = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        CType(Me.PictureBoxBack, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -125,16 +124,6 @@ Partial Class FormPembeliEdit
         Me.TextBoxNik.Size = New System.Drawing.Size(142, 29)
         Me.TextBoxNik.TabIndex = 6
         '
-        'PictureBoxBack
-        '
-        Me.PictureBoxBack.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBoxBack.Location = New System.Drawing.Point(377, 11)
-        Me.PictureBoxBack.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.PictureBoxBack.Name = "PictureBoxBack"
-        Me.PictureBoxBack.Size = New System.Drawing.Size(98, 33)
-        Me.PictureBoxBack.TabIndex = 19
-        Me.PictureBoxBack.TabStop = False
-        '
         'PictureBox1
         '
         Me.PictureBox1.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.MobilBawah
@@ -145,13 +134,23 @@ Partial Class FormPembeliEdit
         Me.PictureBox1.TabIndex = 20
         Me.PictureBox1.TabStop = False
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.Location = New System.Drawing.Point(372, 9)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(117, 25)
+        Me.Label1.TabIndex = 21
+        Me.Label1.Text = "Edit Pembeli"
+        '
         'FormPembeliEdit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(700, 338)
-        Me.Controls.Add(Me.PictureBoxBack)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ButtonCancel)
         Me.Controls.Add(Me.ButtonEdit)
         Me.Controls.Add(Me.LabelAlamat)
@@ -165,7 +164,6 @@ Partial Class FormPembeliEdit
         Me.Name = "FormPembeliEdit"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Edit Pembeli"
-        CType(Me.PictureBoxBack, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -180,6 +178,6 @@ Partial Class FormPembeliEdit
     Friend WithEvents RichTextBoxAlamat As RichTextBox
     Friend WithEvents TextBoxNama As TextBox
     Friend WithEvents TextBoxNik As TextBox
-    Friend WithEvents PictureBoxBack As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label1 As Label
 End Class
