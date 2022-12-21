@@ -81,4 +81,9 @@ Public Class FormBukuPenjualan
         FormDashboard.Show()
         Me.Hide()
     End Sub
+
+    Private Sub SignoutBtn_Click(sender As Object, e As EventArgs) Handles SignoutBtn.Click
+        FormSignIn.Show()
+        Me.Hide()
+    End Sub
 End Class
