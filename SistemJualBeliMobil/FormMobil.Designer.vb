@@ -35,9 +35,16 @@ Partial Class FormMobil
         Me.ManageUserBtn = New System.Windows.Forms.Button()
         Me.manageCarBtn = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.RdbBelumTerjual = New System.Windows.Forms.RadioButton()
+        Me.RdbTerjual = New System.Windows.Forms.RadioButton()
+        Me.RdbNone = New System.Windows.Forms.RadioButton()
+        Me.TxtSearch = New System.Windows.Forms.TextBox()
+        Me.BtnSearch = New System.Windows.Forms.Button()
         CType(Me.DataGridMobil, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'DataGridMobil
@@ -242,12 +249,75 @@ Partial Class FormMobil
         Me.PictureBox1.TabIndex = 27
         Me.PictureBox1.TabStop = False
         '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.RdbBelumTerjual)
+        Me.GroupBox1.Controls.Add(Me.RdbTerjual)
+        Me.GroupBox1.Controls.Add(Me.RdbNone)
+        Me.GroupBox1.Location = New System.Drawing.Point(35, 431)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(130, 107)
+        Me.GroupBox1.TabIndex = 34
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Filter Status Terjual"
+        '
+        'RdbBelumTerjual
+        '
+        Me.RdbBelumTerjual.AutoSize = True
+        Me.RdbBelumTerjual.Location = New System.Drawing.Point(15, 72)
+        Me.RdbBelumTerjual.Name = "RdbBelumTerjual"
+        Me.RdbBelumTerjual.Size = New System.Drawing.Size(96, 19)
+        Me.RdbBelumTerjual.TabIndex = 2
+        Me.RdbBelumTerjual.TabStop = True
+        Me.RdbBelumTerjual.Text = "Belum Terjual"
+        Me.RdbBelumTerjual.UseVisualStyleBackColor = True
+        '
+        'RdbTerjual
+        '
+        Me.RdbTerjual.AutoSize = True
+        Me.RdbTerjual.Location = New System.Drawing.Point(15, 47)
+        Me.RdbTerjual.Name = "RdbTerjual"
+        Me.RdbTerjual.Size = New System.Drawing.Size(59, 19)
+        Me.RdbTerjual.TabIndex = 1
+        Me.RdbTerjual.TabStop = True
+        Me.RdbTerjual.Text = "Terjual"
+        Me.RdbTerjual.UseVisualStyleBackColor = True
+        '
+        'RdbNone
+        '
+        Me.RdbNone.AutoSize = True
+        Me.RdbNone.Location = New System.Drawing.Point(15, 22)
+        Me.RdbNone.Name = "RdbNone"
+        Me.RdbNone.Size = New System.Drawing.Size(54, 19)
+        Me.RdbNone.TabIndex = 0
+        Me.RdbNone.TabStop = True
+        Me.RdbNone.Text = "None"
+        Me.RdbNone.UseVisualStyleBackColor = True
+        '
+        'TxtSearch
+        '
+        Me.TxtSearch.Location = New System.Drawing.Point(35, 560)
+        Me.TxtSearch.Name = "TxtSearch"
+        Me.TxtSearch.Size = New System.Drawing.Size(200, 23)
+        Me.TxtSearch.TabIndex = 35
+        '
+        'BtnSearch
+        '
+        Me.BtnSearch.Location = New System.Drawing.Point(253, 560)
+        Me.BtnSearch.Name = "BtnSearch"
+        Me.BtnSearch.Size = New System.Drawing.Size(75, 23)
+        Me.BtnSearch.TabIndex = 36
+        Me.BtnSearch.Text = "Search"
+        Me.BtnSearch.UseVisualStyleBackColor = True
+        '
         'FormMobil
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(984, 623)
+        Me.Controls.Add(Me.BtnSearch)
+        Me.Controls.Add(Me.TxtSearch)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.BtnIndex)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.SignoutBtn)
@@ -270,6 +340,8 @@ Partial Class FormMobil
         CType(Me.DataGridMobil, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -288,4 +360,10 @@ Partial Class FormMobil
     Friend WithEvents ManageUserBtn As Button
     Friend WithEvents manageCarBtn As Button
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents RdbNone As RadioButton
+    Friend WithEvents RdbBelumTerjual As RadioButton
+    Friend WithEvents RdbTerjual As RadioButton
+    Friend WithEvents TxtSearch As TextBox
+    Friend WithEvents BtnSearch As Button
 End Class
