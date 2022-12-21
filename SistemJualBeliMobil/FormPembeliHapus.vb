@@ -16,5 +16,4 @@ Public Class FormPembeliHapus
     Private Sub ButtonNo_Click(sender As Object, e As EventArgs) Handles ButtonNo.Click
         Me.Hide()
     End Sub
-
 End Class
