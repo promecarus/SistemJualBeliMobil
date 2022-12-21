@@ -97,6 +97,7 @@ Partial Class FormPembeliTambah
         '
         Me.ButtonTambah.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.bgbutton
         Me.ButtonTambah.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ButtonTambah.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonTambah.FlatAppearance.BorderSize = 0
         Me.ButtonTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonTambah.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
@@ -113,6 +114,7 @@ Partial Class FormPembeliTambah
         '
         Me.ButtonCancel.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.bgputihbtn1
         Me.ButtonCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ButtonCancel.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonCancel.FlatAppearance.BorderSize = 0
         Me.ButtonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonCancel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
@@ -160,7 +162,9 @@ Partial Class FormPembeliTambah
         Me.Controls.Add(Me.TextBoxNama)
         Me.Controls.Add(Me.TextBoxNik)
         Me.Controls.Add(Me.PictureBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.MinimizeBox = False
         Me.Name = "FormPembeliTambah"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Tambah Pembeli"
