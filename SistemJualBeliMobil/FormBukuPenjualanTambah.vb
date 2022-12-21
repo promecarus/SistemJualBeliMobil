@@ -28,7 +28,6 @@
 
                 MessageBox.Show("Data buku penjualan baru berhasil ditambahkan.")
                 Me.Hide()
-                FormBukuPenjualan.Show()
             Else
                 MessageBox.Show("Input harga terjual harus angka!")
             End If
@@ -39,15 +38,9 @@
 
     Private Sub ButtonCancel_Click(sender As Object, e As EventArgs) Handles ButtonCancel.Click
         Me.Hide()
-        FormBukuPenjualan.Show()
     End Sub
 
     Private Sub PictureBoxBack_Click(sender As Object, e As EventArgs) Handles PictureBoxBack.Click
         Me.Hide()
-        FormBukuPenjualan.Show()
-    End Sub
-
-    Private Sub FormBukuPenjualanTambah_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-        FormSignIn.Close()
     End Sub
 End Class
