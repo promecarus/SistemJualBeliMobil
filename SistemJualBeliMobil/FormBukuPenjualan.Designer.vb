@@ -22,72 +22,238 @@ Partial Class FormBukuPenjualan
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.ButtonHapus = New System.Windows.Forms.Button()
-        Me.ButtonEdit = New System.Windows.Forms.Button()
-        Me.ButtonTambah = New System.Windows.Forms.Button()
         Me.DataGridViewBukuPenjualan = New System.Windows.Forms.DataGridView()
+        Me.BtnIndex = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.SignoutBtn = New System.Windows.Forms.Button()
+        Me.TransactionBtn = New System.Windows.Forms.Button()
+        Me.ManageUserBtn = New System.Windows.Forms.Button()
+        Me.manageCarBtn = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.ButtonEdit = New System.Windows.Forms.Button()
+        Me.ButtonHapus = New System.Windows.Forms.Button()
+        Me.ButtonTambah = New System.Windows.Forms.Button()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         CType(Me.DataGridViewBukuPenjualan, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'ButtonHapus
-        '
-        Me.ButtonHapus.Location = New System.Drawing.Point(538, 410)
-        Me.ButtonHapus.Name = "ButtonHapus"
-        Me.ButtonHapus.Size = New System.Drawing.Size(251, 29)
-        Me.ButtonHapus.TabIndex = 7
-        Me.ButtonHapus.Text = "Hapus"
-        Me.ButtonHapus.UseVisualStyleBackColor = True
-        '
-        'ButtonEdit
-        '
-        Me.ButtonEdit.Location = New System.Drawing.Point(275, 410)
-        Me.ButtonEdit.Name = "ButtonEdit"
-        Me.ButtonEdit.Size = New System.Drawing.Size(251, 29)
-        Me.ButtonEdit.TabIndex = 6
-        Me.ButtonEdit.Text = "Edit"
-        Me.ButtonEdit.UseVisualStyleBackColor = True
-        '
-        'ButtonTambah
-        '
-        Me.ButtonTambah.Location = New System.Drawing.Point(12, 410)
-        Me.ButtonTambah.Name = "ButtonTambah"
-        Me.ButtonTambah.Size = New System.Drawing.Size(251, 29)
-        Me.ButtonTambah.TabIndex = 5
-        Me.ButtonTambah.Text = "Tambah"
-        Me.ButtonTambah.UseVisualStyleBackColor = True
         '
         'DataGridViewBukuPenjualan
         '
         Me.DataGridViewBukuPenjualan.AllowUserToAddRows = False
         Me.DataGridViewBukuPenjualan.AllowUserToDeleteRows = False
+        Me.DataGridViewBukuPenjualan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridViewBukuPenjualan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewBukuPenjualan.Location = New System.Drawing.Point(13, 12)
+        Me.DataGridViewBukuPenjualan.Location = New System.Drawing.Point(41, 87)
+        Me.DataGridViewBukuPenjualan.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DataGridViewBukuPenjualan.Name = "DataGridViewBukuPenjualan"
         Me.DataGridViewBukuPenjualan.ReadOnly = True
         Me.DataGridViewBukuPenjualan.RowHeadersWidth = 51
         Me.DataGridViewBukuPenjualan.RowTemplate.Height = 29
-        Me.DataGridViewBukuPenjualan.Size = New System.Drawing.Size(776, 387)
+        Me.DataGridViewBukuPenjualan.Size = New System.Drawing.Size(571, 258)
         Me.DataGridViewBukuPenjualan.TabIndex = 4
+        '
+        'BtnIndex
+        '
+        Me.BtnIndex.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnIndex.BackColor = System.Drawing.Color.White
+        Me.BtnIndex.FlatAppearance.BorderSize = 0
+        Me.BtnIndex.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnIndex.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.BtnIndex.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.BtnIndex.Location = New System.Drawing.Point(15, 11)
+        Me.BtnIndex.Name = "BtnIndex"
+        Me.BtnIndex.Size = New System.Drawing.Size(117, 40)
+        Me.BtnIndex.TabIndex = 33
+        Me.BtnIndex.Text = "JualMobil"
+        Me.BtnIndex.UseVisualStyleBackColor = False
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.White
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 25.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label5.ForeColor = System.Drawing.Color.Red
+        Me.Label5.Location = New System.Drawing.Point(129, 2)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(29, 46)
+        Me.Label5.TabIndex = 32
+        Me.Label5.Text = "."
+        '
+        'SignoutBtn
+        '
+        Me.SignoutBtn.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.SignoutBtn.BackColor = System.Drawing.Color.Transparent
+        Me.SignoutBtn.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.bgbutton
+        Me.SignoutBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.SignoutBtn.FlatAppearance.BorderSize = 0
+        Me.SignoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SignoutBtn.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.SignoutBtn.ForeColor = System.Drawing.Color.White
+        Me.SignoutBtn.Location = New System.Drawing.Point(865, 15)
+        Me.SignoutBtn.Name = "SignoutBtn"
+        Me.SignoutBtn.Size = New System.Drawing.Size(105, 33)
+        Me.SignoutBtn.TabIndex = 31
+        Me.SignoutBtn.Text = "Sign out"
+        Me.SignoutBtn.UseVisualStyleBackColor = False
+        '
+        'TransactionBtn
+        '
+        Me.TransactionBtn.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TransactionBtn.BackColor = System.Drawing.Color.White
+        Me.TransactionBtn.FlatAppearance.BorderSize = 0
+        Me.TransactionBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.TransactionBtn.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.TransactionBtn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.TransactionBtn.Location = New System.Drawing.Point(735, 11)
+        Me.TransactionBtn.Name = "TransactionBtn"
+        Me.TransactionBtn.Size = New System.Drawing.Size(124, 40)
+        Me.TransactionBtn.TabIndex = 30
+        Me.TransactionBtn.Text = "Transaction"
+        Me.TransactionBtn.UseVisualStyleBackColor = False
+        '
+        'ManageUserBtn
+        '
+        Me.ManageUserBtn.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ManageUserBtn.BackColor = System.Drawing.Color.White
+        Me.ManageUserBtn.FlatAppearance.BorderSize = 0
+        Me.ManageUserBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ManageUserBtn.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.ManageUserBtn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ManageUserBtn.Location = New System.Drawing.Point(606, 11)
+        Me.ManageUserBtn.Name = "ManageUserBtn"
+        Me.ManageUserBtn.Size = New System.Drawing.Size(136, 40)
+        Me.ManageUserBtn.TabIndex = 29
+        Me.ManageUserBtn.Text = "Manage User"
+        Me.ManageUserBtn.UseVisualStyleBackColor = False
+        '
+        'manageCarBtn
+        '
+        Me.manageCarBtn.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.manageCarBtn.BackColor = System.Drawing.Color.White
+        Me.manageCarBtn.FlatAppearance.BorderSize = 0
+        Me.manageCarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.manageCarBtn.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.manageCarBtn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.manageCarBtn.Location = New System.Drawing.Point(488, 11)
+        Me.manageCarBtn.Name = "manageCarBtn"
+        Me.manageCarBtn.Size = New System.Drawing.Size(124, 40)
+        Me.manageCarBtn.TabIndex = 28
+        Me.manageCarBtn.Text = "Manage Car"
+        Me.manageCarBtn.UseVisualStyleBackColor = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.putih
+        Me.PictureBox1.Location = New System.Drawing.Point(1, -2)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(986, 60)
+        Me.PictureBox1.TabIndex = 27
+        Me.PictureBox1.TabStop = False
+        '
+        'ButtonEdit
+        '
+        Me.ButtonEdit.BackColor = System.Drawing.Color.Transparent
+        Me.ButtonEdit.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.bgbutton
+        Me.ButtonEdit.FlatAppearance.BorderSize = 0
+        Me.ButtonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonEdit.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.ButtonEdit.ForeColor = System.Drawing.Color.White
+        Me.ButtonEdit.Location = New System.Drawing.Point(620, 87)
+        Me.ButtonEdit.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ButtonEdit.Name = "ButtonEdit"
+        Me.ButtonEdit.Size = New System.Drawing.Size(122, 36)
+        Me.ButtonEdit.TabIndex = 39
+        Me.ButtonEdit.Text = "Edit"
+        Me.ButtonEdit.UseVisualStyleBackColor = False
+        '
+        'ButtonHapus
+        '
+        Me.ButtonHapus.BackColor = System.Drawing.Color.Transparent
+        Me.ButtonHapus.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.bgputihbtn1
+        Me.ButtonHapus.FlatAppearance.BorderSize = 0
+        Me.ButtonHapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonHapus.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.ButtonHapus.Location = New System.Drawing.Point(620, 127)
+        Me.ButtonHapus.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ButtonHapus.Name = "ButtonHapus"
+        Me.ButtonHapus.Size = New System.Drawing.Size(122, 36)
+        Me.ButtonHapus.TabIndex = 38
+        Me.ButtonHapus.Text = "Hapus"
+        Me.ButtonHapus.UseVisualStyleBackColor = False
+        '
+        'ButtonTambah
+        '
+        Me.ButtonTambah.BackColor = System.Drawing.Color.Transparent
+        Me.ButtonTambah.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.bgbutton
+        Me.ButtonTambah.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ButtonTambah.FlatAppearance.BorderSize = 0
+        Me.ButtonTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonTambah.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.ButtonTambah.ForeColor = System.Drawing.Color.White
+        Me.ButtonTambah.Location = New System.Drawing.Point(41, 349)
+        Me.ButtonTambah.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ButtonTambah.Name = "ButtonTambah"
+        Me.ButtonTambah.Size = New System.Drawing.Size(160, 36)
+        Me.ButtonTambah.TabIndex = 40
+        Me.ButtonTambah.Text = "Tambah Penjualan"
+        Me.ButtonTambah.UseVisualStyleBackColor = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.mobil1
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox2.Location = New System.Drawing.Point(416, 237)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(590, 496)
+        Me.PictureBox2.TabIndex = 41
+        Me.PictureBox2.TabStop = False
         '
         'FormBukuPenjualan
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.ButtonHapus)
-        Me.Controls.Add(Me.ButtonEdit)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(984, 623)
         Me.Controls.Add(Me.ButtonTambah)
+        Me.Controls.Add(Me.ButtonEdit)
+        Me.Controls.Add(Me.ButtonHapus)
+        Me.Controls.Add(Me.BtnIndex)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.SignoutBtn)
+        Me.Controls.Add(Me.TransactionBtn)
+        Me.Controls.Add(Me.ManageUserBtn)
+        Me.Controls.Add(Me.manageCarBtn)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.DataGridViewBukuPenjualan)
+        Me.Controls.Add(Me.PictureBox2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "FormBukuPenjualan"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Buku Penjualan"
         CType(Me.DataGridViewBukuPenjualan, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents ButtonHapus As Button
-    Friend WithEvents ButtonEdit As Button
-    Friend WithEvents ButtonTambah As Button
     Friend WithEvents DataGridViewBukuPenjualan As DataGridView
+    Friend WithEvents BtnIndex As Button
+    Friend WithEvents Label5 As Label
+    Friend WithEvents SignoutBtn As Button
+    Friend WithEvents TransactionBtn As Button
+    Friend WithEvents ManageUserBtn As Button
+    Friend WithEvents manageCarBtn As Button
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents ButtonEdit As Button
+    Friend WithEvents ButtonHapus As Button
+    Friend WithEvents ButtonTambah As Button
+    Friend WithEvents PictureBox2 As PictureBox
 End Class

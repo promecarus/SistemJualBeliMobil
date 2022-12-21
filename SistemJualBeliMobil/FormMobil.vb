@@ -80,4 +80,33 @@
         MobilHapus.Show()
     End Sub
 
+    Private Sub TransactionBtn_Click(sender As Object, e As EventArgs)
+        FormBukuPenjualan.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub BtnIndex_Click(sender As Object, e As EventArgs)
+        FormDashboard.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub ManageUserBtn_Click(sender As Object, e As EventArgs) Handles ManageUserBtn.Click
+        FormPembeli.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub BtnIndex_Click_1(sender As Object, e As EventArgs) Handles BtnIndex.Click
+        FormDashboard.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub TransactionBtn_Click_1(sender As Object, e As EventArgs) Handles TransactionBtn.Click
+        FormBukuPenjualan.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        FormJenisMobil.Show()
+        Me.Hide()
+    End Sub
 End Class

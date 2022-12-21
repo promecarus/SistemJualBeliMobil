@@ -30,19 +30,19 @@
         End If
     End Sub
 
-    Private Sub ButtonTambah_Click(sender As Object, e As EventArgs) Handles ButtonTambah.Click
+    Private Sub ButtonTambah_Click(sender As Object, e As EventArgs)
         FormBukuPenjualanTambah.Show()
         Me.Hide()
     End Sub
 
-    Private Sub ButtonEdit_Click(sender As Object, e As EventArgs) Handles ButtonEdit.Click
+    Private Sub ButtonEdit_Click(sender As Object, e As EventArgs)
         Try
-            Dim selectedKoleksi As List(Of String) = dataBukuPenjualan.GetDataBukuPenjualanByIDDatabase(selectedRowBukuPenjualan)
+            Dim selectedBukuPenjualan As List(Of String) = dataBukuPenjualan.GetDataBukuPenjualanByIDDatabase(selectedRowBukuPenjualan)
 
-            dataBukuPenjualan.idMobilProperty = selectedKoleksi(1)
-            dataBukuPenjualan.idPembeliProperty = selectedKoleksi(2)
-            dataBukuPenjualan.hargaTerjualProperty = selectedKoleksi(3)
-            dataBukuPenjualan.tanggalPenjualanProperty = selectedKoleksi(4)
+            dataBukuPenjualan.idMobilProperty = selectedBukuPenjualan(1)
+            dataBukuPenjualan.idPembeliProperty = selectedBukuPenjualan(2)
+            dataBukuPenjualan.hargaTerjualProperty = selectedBukuPenjualan(3)
+            dataBukuPenjualan.tanggalPenjualanProperty = selectedBukuPenjualan(4)
 
             Dim formEdit = New FormBukuPenjualanEdit()
             formEdit.Show()
@@ -52,11 +52,11 @@
         End Try
     End Sub
 
-    Private Sub ButtonHapus_Click(sender As Object, e As EventArgs) Handles ButtonHapus.Click
+    Private Sub ButtonHapus_Click(sender As Object, e As EventArgs)
         Try
-            Dim selectedKoleksi As List(Of String) = dataBukuPenjualan.GetDataBukuPenjualanByIDDatabase(selectedRowBukuPenjualan)
+            Dim selectedBukuPenjualan As List(Of String) = dataBukuPenjualan.GetDataBukuPenjualanByIDDatabase(selectedRowBukuPenjualan)
 
-            dataBukuPenjualan.idMobilProperty = selectedKoleksi(1)
+            dataBukuPenjualan.idMobilProperty = selectedBukuPenjualan(1)
 
             Dim formHapus = New FormBukuPenjualanHapus()
             formHapus.Show()
@@ -68,5 +68,24 @@
 
     Private Sub FormBukuPenjualan_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         FormSignIn.Close()
+    End Sub
+
+    Private Sub FormBukuPenjualan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub manageCarBtn_Click(sender As Object, e As EventArgs) Handles manageCarBtn.Click
+        FormMobil.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub ManageUserBtn_Click(sender As Object, e As EventArgs) Handles ManageUserBtn.Click
+        FormPembeli.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub BtnIndex_Click(sender As Object, e As EventArgs) Handles BtnIndex.Click
+        FormDashboard.Show()
+        Me.Hide()
     End Sub
 End Class
