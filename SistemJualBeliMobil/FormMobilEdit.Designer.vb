@@ -53,7 +53,7 @@ Partial Class FormMobilEdit
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(547, 216)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(29, 15)
+        Me.Label3.Size = New System.Drawing.Size(30, 15)
         Me.Label3.TabIndex = 92
         Me.Label3.Text = "Hari"
         '
@@ -68,18 +68,20 @@ Partial Class FormMobilEdit
         'LabelTanggalMasukKoleksi
         '
         Me.LabelTanggalMasukKoleksi.AutoSize = True
+        Me.LabelTanggalMasukKoleksi.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.LabelTanggalMasukKoleksi.Location = New System.Drawing.Point(116, 214)
         Me.LabelTanggalMasukKoleksi.Name = "LabelTanggalMasukKoleksi"
-        Me.LabelTanggalMasukKoleksi.Size = New System.Drawing.Size(46, 15)
+        Me.LabelTanggalMasukKoleksi.Size = New System.Drawing.Size(48, 15)
         Me.LabelTanggalMasukKoleksi.TabIndex = 90
         Me.LabelTanggalMasukKoleksi.Text = "Garansi"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label2.Location = New System.Drawing.Point(311, 22)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(69, 15)
+        Me.Label2.Size = New System.Drawing.Size(74, 15)
         Me.Label2.TabIndex = 89
         Me.Label2.Text = "EDIT MOBIL"
         '
@@ -95,9 +97,10 @@ Partial Class FormMobilEdit
         'LabelJenisKoleksi
         '
         Me.LabelJenisKoleksi.AutoSize = True
+        Me.LabelJenisKoleksi.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.LabelJenisKoleksi.Location = New System.Drawing.Point(116, 70)
         Me.LabelJenisKoleksi.Name = "LabelJenisKoleksi"
-        Me.LabelJenisKoleksi.Size = New System.Drawing.Size(66, 15)
+        Me.LabelJenisKoleksi.Size = New System.Drawing.Size(68, 15)
         Me.LabelJenisKoleksi.TabIndex = 87
         Me.LabelJenisKoleksi.Text = "Jenis Mobil"
         '
@@ -123,7 +126,7 @@ Partial Class FormMobilEdit
         Me.RdSangatBuruk.Location = New System.Drawing.Point(14, 112)
         Me.RdSangatBuruk.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.RdSangatBuruk.Name = "RdSangatBuruk"
-        Me.RdSangatBuruk.Size = New System.Drawing.Size(95, 19)
+        Me.RdSangatBuruk.Size = New System.Drawing.Size(100, 19)
         Me.RdSangatBuruk.TabIndex = 27
         Me.RdSangatBuruk.TabStop = True
         Me.RdSangatBuruk.Text = "Sangat Buruk"
@@ -135,7 +138,7 @@ Partial Class FormMobilEdit
         Me.RdBuruk.Location = New System.Drawing.Point(14, 90)
         Me.RdBuruk.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.RdBuruk.Name = "RdBuruk"
-        Me.RdBuruk.Size = New System.Drawing.Size(56, 19)
+        Me.RdBuruk.Size = New System.Drawing.Size(59, 19)
         Me.RdBuruk.TabIndex = 26
         Me.RdBuruk.TabStop = True
         Me.RdBuruk.Text = "Buruk"
@@ -147,7 +150,7 @@ Partial Class FormMobilEdit
         Me.RdSedang.Location = New System.Drawing.Point(14, 68)
         Me.RdSedang.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.RdSedang.Name = "RdSedang"
-        Me.RdSedang.Size = New System.Drawing.Size(64, 19)
+        Me.RdSedang.Size = New System.Drawing.Size(66, 19)
         Me.RdSedang.TabIndex = 25
         Me.RdSedang.TabStop = True
         Me.RdSedang.Text = "Sedang"
@@ -159,7 +162,7 @@ Partial Class FormMobilEdit
         Me.RdBaik.Location = New System.Drawing.Point(14, 44)
         Me.RdBaik.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.RdBaik.Name = "RdBaik"
-        Me.RdBaik.Size = New System.Drawing.Size(47, 19)
+        Me.RdBaik.Size = New System.Drawing.Size(49, 19)
         Me.RdBaik.TabIndex = 24
         Me.RdBaik.TabStop = True
         Me.RdBaik.Text = "Baik"
@@ -171,7 +174,7 @@ Partial Class FormMobilEdit
         Me.RdSangatBaik.Location = New System.Drawing.Point(14, 20)
         Me.RdSangatBaik.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.RdSangatBaik.Name = "RdSangatBaik"
-        Me.RdSangatBaik.Size = New System.Drawing.Size(86, 19)
+        Me.RdSangatBaik.Size = New System.Drawing.Size(90, 19)
         Me.RdSangatBaik.TabIndex = 23
         Me.RdSangatBaik.TabStop = True
         Me.RdSangatBaik.Text = "Sangat Baik"
@@ -180,9 +183,10 @@ Partial Class FormMobilEdit
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label1.Location = New System.Drawing.Point(116, 245)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(46, 15)
+        Me.Label1.Size = New System.Drawing.Size(47, 15)
         Me.Label1.TabIndex = 85
         Me.Label1.Text = "Kondisi"
         '
@@ -205,7 +209,7 @@ Partial Class FormMobilEdit
         Me.RdMatic.Location = New System.Drawing.Point(14, 45)
         Me.RdMatic.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.RdMatic.Name = "RdMatic"
-        Me.RdMatic.Size = New System.Drawing.Size(55, 19)
+        Me.RdMatic.Size = New System.Drawing.Size(56, 19)
         Me.RdMatic.TabIndex = 24
         Me.RdMatic.TabStop = True
         Me.RdMatic.Text = "Matic"
@@ -241,10 +245,17 @@ Partial Class FormMobilEdit
         '
         'BtnEditMobil
         '
-        Me.BtnEditMobil.Location = New System.Drawing.Point(116, 444)
+        Me.BtnEditMobil.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.bgbutton
+        Me.BtnEditMobil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnEditMobil.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnEditMobil.FlatAppearance.BorderSize = 0
+        Me.BtnEditMobil.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnEditMobil.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.BtnEditMobil.ForeColor = System.Drawing.Color.White
+        Me.BtnEditMobil.Location = New System.Drawing.Point(266, 444)
         Me.BtnEditMobil.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnEditMobil.Name = "BtnEditMobil"
-        Me.BtnEditMobil.Size = New System.Drawing.Size(464, 22)
+        Me.BtnEditMobil.Size = New System.Drawing.Size(137, 40)
         Me.BtnEditMobil.TabIndex = 81
         Me.BtnEditMobil.Text = "Edit Mobil"
         Me.BtnEditMobil.UseVisualStyleBackColor = True
@@ -252,27 +263,30 @@ Partial Class FormMobilEdit
         'LabelTipeMobil
         '
         Me.LabelTipeMobil.AutoSize = True
+        Me.LabelTipeMobil.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.LabelTipeMobil.Location = New System.Drawing.Point(116, 99)
         Me.LabelTipeMobil.Name = "LabelTipeMobil"
-        Me.LabelTipeMobil.Size = New System.Drawing.Size(63, 15)
+        Me.LabelTipeMobil.Size = New System.Drawing.Size(65, 15)
         Me.LabelTipeMobil.TabIndex = 80
         Me.LabelTipeMobil.Text = "Tipe Mobil"
         '
         'LabelStock
         '
         Me.LabelStock.AutoSize = True
+        Me.LabelStock.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.LabelStock.Location = New System.Drawing.Point(116, 394)
         Me.LabelStock.Name = "LabelStock"
-        Me.LabelStock.Size = New System.Drawing.Size(80, 15)
+        Me.LabelStock.Size = New System.Drawing.Size(85, 15)
         Me.LabelStock.TabIndex = 79
         Me.LabelStock.Text = "Harga Default"
         '
         'LabelTahunTerbit
         '
         Me.LabelTahunTerbit.AutoSize = True
+        Me.LabelTahunTerbit.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.LabelTahunTerbit.Location = New System.Drawing.Point(116, 182)
         Me.LabelTahunTerbit.Name = "LabelTahunTerbit"
-        Me.LabelTahunTerbit.Size = New System.Drawing.Size(103, 15)
+        Me.LabelTahunTerbit.Size = New System.Drawing.Size(106, 15)
         Me.LabelTahunTerbit.TabIndex = 78
         Me.LabelTahunTerbit.Text = "Tahun Pembuatan"
         '
@@ -297,7 +311,10 @@ Partial Class FormMobilEdit
         Me.Controls.Add(Me.LabelTipeMobil)
         Me.Controls.Add(Me.LabelStock)
         Me.Controls.Add(Me.LabelTahunTerbit)
+        Me.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.MaximizeBox = False
         Me.Name = "FormMobilEdit"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Edit Mobil"

@@ -85,7 +85,7 @@
 
     Private Sub ButtonTambah_Click_1(sender As Object, e As EventArgs) Handles ButtonTambah.Click
         FormPembeliTambah.Show()
-        Me.Hide()
+        'Me.Hide()
     End Sub
 
     Private Sub BtnIndex_Click_1(sender As Object, e As EventArgs) Handles BtnIndex.Click
@@ -101,7 +101,7 @@
 
             Dim formHapus = New FormPembeliHapus()
             formHapus.Show()
-            Me.Hide()
+            'Me.Hide()
         Catch ex As Exception
             MessageBox.Show("Pilih row terlebih dahulu!")
         End Try
@@ -117,7 +117,7 @@
 
             Dim formEdit = New FormPembeliEdit()
             formEdit.Show()
-            Me.Hide()
+            'Me.Hide()
         Catch ex As Exception
             MessageBox.Show("Pilih row terlebih dahulu!")
         End Try

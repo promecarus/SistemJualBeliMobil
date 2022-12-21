@@ -32,9 +32,8 @@ Partial Class FormBukuPenjualanEdit
         Me.ComboBoxIdMobil = New System.Windows.Forms.ComboBox()
         Me.ButtonCancel = New System.Windows.Forms.Button()
         Me.ButtonEdit = New System.Windows.Forms.Button()
-        Me.PictureBoxBack = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        CType(Me.PictureBoxBack, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -84,7 +83,7 @@ Partial Class FormBukuPenjualanEdit
         Me.DateTimePickerTanggalPenjualan.Location = New System.Drawing.Point(386, 244)
         Me.DateTimePickerTanggalPenjualan.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DateTimePickerTanggalPenjualan.Name = "DateTimePickerTanggalPenjualan"
-        Me.DateTimePickerTanggalPenjualan.Size = New System.Drawing.Size(219, 29)
+        Me.DateTimePickerTanggalPenjualan.Size = New System.Drawing.Size(276, 29)
         Me.DateTimePickerTanggalPenjualan.TabIndex = 11
         '
         'TextBoxHargaTerjual
@@ -93,7 +92,7 @@ Partial Class FormBukuPenjualanEdit
         Me.TextBoxHargaTerjual.Location = New System.Drawing.Point(386, 190)
         Me.TextBoxHargaTerjual.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBoxHargaTerjual.Name = "TextBoxHargaTerjual"
-        Me.TextBoxHargaTerjual.Size = New System.Drawing.Size(110, 29)
+        Me.TextBoxHargaTerjual.Size = New System.Drawing.Size(274, 29)
         Me.TextBoxHargaTerjual.TabIndex = 10
         '
         'ComboBoxIdPembeli
@@ -103,7 +102,7 @@ Partial Class FormBukuPenjualanEdit
         Me.ComboBoxIdPembeli.Location = New System.Drawing.Point(384, 136)
         Me.ComboBoxIdPembeli.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ComboBoxIdPembeli.Name = "ComboBoxIdPembeli"
-        Me.ComboBoxIdPembeli.Size = New System.Drawing.Size(219, 29)
+        Me.ComboBoxIdPembeli.Size = New System.Drawing.Size(276, 29)
         Me.ComboBoxIdPembeli.TabIndex = 9
         '
         'ComboBoxIdMobil
@@ -113,7 +112,7 @@ Partial Class FormBukuPenjualanEdit
         Me.ComboBoxIdMobil.Location = New System.Drawing.Point(386, 79)
         Me.ComboBoxIdMobil.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ComboBoxIdMobil.Name = "ComboBoxIdMobil"
-        Me.ComboBoxIdMobil.Size = New System.Drawing.Size(219, 29)
+        Me.ComboBoxIdMobil.Size = New System.Drawing.Size(276, 29)
         Me.ComboBoxIdMobil.TabIndex = 8
         '
         'ButtonCancel
@@ -123,7 +122,7 @@ Partial Class FormBukuPenjualanEdit
         Me.ButtonCancel.FlatAppearance.BorderSize = 0
         Me.ButtonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonCancel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.ButtonCancel.Location = New System.Drawing.Point(597, 295)
+        Me.ButtonCancel.Location = New System.Drawing.Point(580, 286)
         Me.ButtonCancel.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ButtonCancel.Name = "ButtonCancel"
         Me.ButtonCancel.Size = New System.Drawing.Size(82, 32)
@@ -139,23 +138,13 @@ Partial Class FormBukuPenjualanEdit
         Me.ButtonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonEdit.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.ButtonEdit.ForeColor = System.Drawing.Color.White
-        Me.ButtonEdit.Location = New System.Drawing.Point(386, 295)
+        Me.ButtonEdit.Location = New System.Drawing.Point(386, 286)
         Me.ButtonEdit.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ButtonEdit.Name = "ButtonEdit"
         Me.ButtonEdit.Size = New System.Drawing.Size(82, 32)
         Me.ButtonEdit.TabIndex = 16
         Me.ButtonEdit.Text = "Edit"
         Me.ButtonEdit.UseVisualStyleBackColor = True
-        '
-        'PictureBoxBack
-        '
-        Me.PictureBoxBack.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBoxBack.Location = New System.Drawing.Point(386, 11)
-        Me.PictureBoxBack.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.PictureBoxBack.Name = "PictureBoxBack"
-        Me.PictureBoxBack.Size = New System.Drawing.Size(66, 28)
-        Me.PictureBoxBack.TabIndex = 18
-        Me.PictureBoxBack.TabStop = False
         '
         'PictureBox1
         '
@@ -167,13 +156,23 @@ Partial Class FormBukuPenjualanEdit
         Me.PictureBox1.TabIndex = 19
         Me.PictureBox1.TabStop = False
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.Location = New System.Drawing.Point(384, 9)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(133, 25)
+        Me.Label1.TabIndex = 20
+        Me.Label1.Text = "Edit Penjualan"
+        '
         'FormBukuPenjualanEdit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(700, 338)
-        Me.Controls.Add(Me.PictureBoxBack)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ButtonCancel)
         Me.Controls.Add(Me.ButtonEdit)
         Me.Controls.Add(Me.LabelTanggalPenjualan)
@@ -185,11 +184,13 @@ Partial Class FormBukuPenjualanEdit
         Me.Controls.Add(Me.ComboBoxIdPembeli)
         Me.Controls.Add(Me.ComboBoxIdMobil)
         Me.Controls.Add(Me.PictureBox1)
+        Me.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.MaximizeBox = False
         Me.Name = "FormBukuPenjualanEdit"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Edit Buku Penjualan"
-        CType(Me.PictureBoxBack, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -206,6 +207,6 @@ Partial Class FormBukuPenjualanEdit
     Friend WithEvents ComboBoxIdMobil As ComboBox
     Friend WithEvents ButtonCancel As Button
     Friend WithEvents ButtonEdit As Button
-    Friend WithEvents PictureBoxBack As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label1 As Label
 End Class
