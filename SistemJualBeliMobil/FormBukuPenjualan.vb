@@ -64,7 +64,7 @@
 
             Dim formEdit = New FormBukuPenjualanEdit()
             formEdit.Show()
-            Me.Hide()
+            'Me.Hide()
         Catch ex As Exception
             MessageBox.Show("Pilih row terlebih dahulu!")
         End Try
@@ -78,7 +78,7 @@
 
             Dim formHapus = New FormBukuPenjualanHapus()
             formHapus.Show()
-            Me.Hide()
+            'Me.Hide()
         Catch ex As Exception
             MessageBox.Show("Pilih row terlebih dahulu!")
         End Try
@@ -86,6 +86,6 @@
 
     Private Sub ButtonTambah_Click(sender As Object, e As EventArgs) Handles ButtonTambah.Click
         FormBukuPenjualanTambah.Show()
-        Me.Hide()
+        'Me.Hide()
     End Sub
 End Class
