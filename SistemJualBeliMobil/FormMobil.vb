@@ -47,6 +47,8 @@
         DataGridMobil.DataSource = Mobil.GetDataMobilDatabaseBelumTerjual()
     End Sub
 
+
+
     Private Sub DataGridMobil_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridMobil.CellClick
         If (e.RowIndex >= 0) Then
             Dim index As Integer = e.RowIndex
@@ -139,4 +141,9 @@
             ReloadDataTableDatabase()
         End If
     End Sub
+
+    Private Sub TxtSearch_Enter(sender As Object, e As EventArgs) Handles TxtSearch.Enter
+        Label1.Text = ""
+    End Sub
+
 End Class
