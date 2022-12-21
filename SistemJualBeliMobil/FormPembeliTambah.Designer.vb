@@ -30,16 +30,15 @@ Partial Class FormPembeliTambah
         Me.LabelAlamat = New System.Windows.Forms.Label()
         Me.ButtonTambah = New System.Windows.Forms.Button()
         Me.ButtonCancel = New System.Windows.Forms.Button()
-        Me.PictureBoxBack = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        CType(Me.PictureBoxBack, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TextBoxNik
         '
         Me.TextBoxNik.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TextBoxNik.Location = New System.Drawing.Point(390, 70)
+        Me.TextBoxNik.Location = New System.Drawing.Point(384, 70)
         Me.TextBoxNik.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBoxNik.Name = "TextBoxNik"
         Me.TextBoxNik.Size = New System.Drawing.Size(110, 29)
@@ -48,7 +47,7 @@ Partial Class FormPembeliTambah
         'TextBoxNama
         '
         Me.TextBoxNama.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TextBoxNama.Location = New System.Drawing.Point(389, 124)
+        Me.TextBoxNama.Location = New System.Drawing.Point(383, 124)
         Me.TextBoxNama.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBoxNama.Name = "TextBoxNama"
         Me.TextBoxNama.Size = New System.Drawing.Size(110, 29)
@@ -57,7 +56,7 @@ Partial Class FormPembeliTambah
         'RichTextBoxAlamat
         '
         Me.RichTextBoxAlamat.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.RichTextBoxAlamat.Location = New System.Drawing.Point(391, 186)
+        Me.RichTextBoxAlamat.Location = New System.Drawing.Point(385, 186)
         Me.RichTextBoxAlamat.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.RichTextBoxAlamat.Name = "RichTextBoxAlamat"
         Me.RichTextBoxAlamat.Size = New System.Drawing.Size(278, 91)
@@ -68,7 +67,7 @@ Partial Class FormPembeliTambah
         '
         Me.LabelNik.AutoSize = True
         Me.LabelNik.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.LabelNik.Location = New System.Drawing.Point(390, 47)
+        Me.LabelNik.Location = New System.Drawing.Point(384, 47)
         Me.LabelNik.Name = "LabelNik"
         Me.LabelNik.Size = New System.Drawing.Size(38, 21)
         Me.LabelNik.TabIndex = 3
@@ -78,7 +77,7 @@ Partial Class FormPembeliTambah
         '
         Me.LabelNama.AutoSize = True
         Me.LabelNama.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.LabelNama.Location = New System.Drawing.Point(390, 101)
+        Me.LabelNama.Location = New System.Drawing.Point(384, 101)
         Me.LabelNama.Name = "LabelNama"
         Me.LabelNama.Size = New System.Drawing.Size(56, 21)
         Me.LabelNama.TabIndex = 4
@@ -88,7 +87,7 @@ Partial Class FormPembeliTambah
         '
         Me.LabelAlamat.AutoSize = True
         Me.LabelAlamat.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.LabelAlamat.Location = New System.Drawing.Point(390, 163)
+        Me.LabelAlamat.Location = New System.Drawing.Point(384, 163)
         Me.LabelAlamat.Name = "LabelAlamat"
         Me.LabelAlamat.Size = New System.Drawing.Size(65, 21)
         Me.LabelAlamat.TabIndex = 5
@@ -102,7 +101,7 @@ Partial Class FormPembeliTambah
         Me.ButtonTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonTambah.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.ButtonTambah.ForeColor = System.Drawing.Color.White
-        Me.ButtonTambah.Location = New System.Drawing.Point(391, 297)
+        Me.ButtonTambah.Location = New System.Drawing.Point(385, 297)
         Me.ButtonTambah.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ButtonTambah.Name = "ButtonTambah"
         Me.ButtonTambah.Size = New System.Drawing.Size(82, 30)
@@ -117,23 +116,13 @@ Partial Class FormPembeliTambah
         Me.ButtonCancel.FlatAppearance.BorderSize = 0
         Me.ButtonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonCancel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.ButtonCancel.Location = New System.Drawing.Point(586, 297)
+        Me.ButtonCancel.Location = New System.Drawing.Point(580, 297)
         Me.ButtonCancel.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ButtonCancel.Name = "ButtonCancel"
         Me.ButtonCancel.Size = New System.Drawing.Size(82, 30)
         Me.ButtonCancel.TabIndex = 4
         Me.ButtonCancel.Text = "Cancel"
         Me.ButtonCancel.UseVisualStyleBackColor = True
-        '
-        'PictureBoxBack
-        '
-        Me.PictureBoxBack.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBoxBack.Location = New System.Drawing.Point(389, 11)
-        Me.PictureBoxBack.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.PictureBoxBack.Name = "PictureBoxBack"
-        Me.PictureBoxBack.Size = New System.Drawing.Size(66, 28)
-        Me.PictureBoxBack.TabIndex = 19
-        Me.PictureBoxBack.TabStop = False
         '
         'PictureBox1
         '
@@ -145,13 +134,23 @@ Partial Class FormPembeliTambah
         Me.PictureBox1.TabIndex = 20
         Me.PictureBox1.TabStop = False
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.Location = New System.Drawing.Point(384, 9)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(151, 25)
+        Me.Label1.TabIndex = 22
+        Me.Label1.Text = "Tambah Pembeli"
+        '
         'FormPembeliTambah
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(700, 338)
-        Me.Controls.Add(Me.PictureBoxBack)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ButtonCancel)
         Me.Controls.Add(Me.ButtonTambah)
         Me.Controls.Add(Me.LabelAlamat)
@@ -165,7 +164,6 @@ Partial Class FormPembeliTambah
         Me.Name = "FormPembeliTambah"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Tambah Pembeli"
-        CType(Me.PictureBoxBack, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -180,6 +178,6 @@ Partial Class FormPembeliTambah
     Friend WithEvents LabelAlamat As Label
     Friend WithEvents ButtonTambah As Button
     Friend WithEvents ButtonCancel As Button
-    Friend WithEvents PictureBoxBack As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label1 As Label
 End Class
