@@ -88,4 +88,14 @@
         FormBukuPenjualanTambah.Show()
         'Me.Hide()
     End Sub
+
+    Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles BtnSearch.Click
+        If Not TxtSearch.Text = "" Then
+            DataGridViewBukuPenjualan.DataSource = Nothing
+            DataGridViewBukuPenjualan.DataSource = dataBukuPenjualan.GetDataBukuPenjualanDatabaseSearch(TxtSearch.Text)
+        Else
+            DataGridViewBukuPenjualan.DataSource = Nothing
+            DataGridViewBukuPenjualan.DataSource = dataBukuPenjualan.GetDataBukuPenjualanDatabase()
+        End If
+    End Sub
 End Class
