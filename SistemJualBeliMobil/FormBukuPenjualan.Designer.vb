@@ -34,6 +34,9 @@ Partial Class FormBukuPenjualan
         Me.ButtonHapus = New System.Windows.Forms.Button()
         Me.ButtonTambah = New System.Windows.Forms.Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.TxtSearch = New System.Windows.Forms.TextBox()
+        Me.BtnSearch = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.DataGridViewBukuPenjualan, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -223,12 +226,40 @@ Partial Class FormBukuPenjualan
         Me.PictureBox2.TabIndex = 41
         Me.PictureBox2.TabStop = False
         '
+        'TxtSearch
+        '
+        Me.TxtSearch.Location = New System.Drawing.Point(41, 490)
+        Me.TxtSearch.Name = "TxtSearch"
+        Me.TxtSearch.Size = New System.Drawing.Size(160, 23)
+        Me.TxtSearch.TabIndex = 42
+        '
+        'BtnSearch
+        '
+        Me.BtnSearch.Location = New System.Drawing.Point(207, 490)
+        Me.BtnSearch.Name = "BtnSearch"
+        Me.BtnSearch.Size = New System.Drawing.Size(75, 23)
+        Me.BtnSearch.TabIndex = 43
+        Me.BtnSearch.Text = "Search"
+        Me.BtnSearch.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(42, 494)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(81, 15)
+        Me.Label1.TabIndex = 45
+        Me.Label1.Text = "Search by ID..."
+        '
         'FormBukuPenjualan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(984, 623)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.BtnSearch)
+        Me.Controls.Add(Me.TxtSearch)
         Me.Controls.Add(Me.ButtonTambah)
         Me.Controls.Add(Me.ButtonEdit)
         Me.Controls.Add(Me.ButtonHapus)
@@ -266,4 +297,7 @@ Partial Class FormBukuPenjualan
     Friend WithEvents ButtonHapus As Button
     Friend WithEvents ButtonTambah As Button
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents TxtSearch As TextBox
+    Friend WithEvents BtnSearch As Button
+    Friend WithEvents Label1 As Label
 End Class

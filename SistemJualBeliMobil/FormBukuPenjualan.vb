@@ -81,4 +81,24 @@ Public Class FormBukuPenjualan
         FormDashboard.Show()
         Me.Hide()
     End Sub
+
+    Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles BtnSearch.Click
+        If Not TxtSearch.Text = "" Then
+            DataGridViewBukuPenjualan.DataSource = Nothing
+            DataGridViewBukuPenjualan.DataSource = dataBukuPenjualan.GetDataBukuPenjualanDatabaseSearch(TxtSearch.Text)
+        Else
+            DataGridViewBukuPenjualan.DataSource = Nothing
+            DataGridViewBukuPenjualan.DataSource = dataBukuPenjualan.GetDataBukuPenjualanDatabase()
+        End If
+    End Sub
+
+    Private Sub TxtSearch_Enter(sender As Object, e As EventArgs) Handles TxtSearch.Enter
+        Label1.Text = ""
+    End Sub
+
+    Private Sub TxtSearch_Leave(sender As Object, e As EventArgs) Handles TxtSearch.Leave
+        If TxtSearch.Text = "" Then
+            Label1.Text = "Search by ID..."
+        End If
+    End Sub
 End Class

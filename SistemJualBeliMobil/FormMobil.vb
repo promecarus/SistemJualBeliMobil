@@ -12,6 +12,7 @@
         ' Add any initialization after the InitializeComponent() call.
         Mobil = New Mobil()
         RdbNone.Checked = True
+        BtnSearch.Enabled = False
 
         ReloadDataTableDatabase()
 
@@ -46,6 +47,8 @@
         DataGridMobil.DataSource = Nothing
         DataGridMobil.DataSource = Mobil.GetDataMobilDatabaseBelumTerjual()
     End Sub
+
+
 
     Private Sub DataGridMobil_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridMobil.CellClick
         If (e.RowIndex >= 0) Then
@@ -137,6 +140,24 @@
             ReloadDataTableDatabaseSearchBelumTerjual()
         Else
             ReloadDataTableDatabase()
+        End If
+    End Sub
+
+    Private Sub TxtSearch_Enter(sender As Object, e As EventArgs) Handles TxtSearch.Enter
+        Label1.Text = ""
+    End Sub
+
+    Private Sub TxtSearch_Leave(sender As Object, e As EventArgs) Handles TxtSearch.Leave
+        If TxtSearch.Text = "" Then
+            Label1.Text = "Search by ID..."
+        End If
+    End Sub
+
+    Private Sub TxtSearch_TextChanged(sender As Object, e As EventArgs) Handles TxtSearch.TextChanged
+        BtnSearch.Enabled = True
+
+        If TxtSearch.Text = "" Then
+            BtnSearch.Enabled = False
         End If
     End Sub
 End Class
