@@ -41,20 +41,22 @@ Partial Class FormPembeliHapus
         '
         'LabelNamaPembeli
         '
-        Me.LabelNamaPembeli.AutoSize = True
+        Me.LabelNamaPembeli.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LabelNamaPembeli.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.LabelNamaPembeli.ForeColor = System.Drawing.Color.Red
-        Me.LabelNamaPembeli.Location = New System.Drawing.Point(140, 66)
+        Me.LabelNamaPembeli.Location = New System.Drawing.Point(0, 67)
         Me.LabelNamaPembeli.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelNamaPembeli.Name = "LabelNamaPembeli"
-        Me.LabelNamaPembeli.Size = New System.Drawing.Size(123, 21)
+        Me.LabelNamaPembeli.Size = New System.Drawing.Size(396, 22)
         Me.LabelNamaPembeli.TabIndex = 1
         Me.LabelNamaPembeli.Text = "Nama Pembeli"
+        Me.LabelNamaPembeli.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'ButtonYes
         '
         Me.ButtonYes.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.bgbutton
         Me.ButtonYes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ButtonYes.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonYes.FlatAppearance.BorderSize = 0
         Me.ButtonYes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonYes.ForeColor = System.Drawing.Color.White
@@ -70,6 +72,7 @@ Partial Class FormPembeliHapus
         '
         Me.ButtonNo.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.bgputihbtn1
         Me.ButtonNo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ButtonNo.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonNo.FlatAppearance.BorderSize = 0
         Me.ButtonNo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonNo.Location = New System.Drawing.Point(210, 111)
@@ -91,7 +94,9 @@ Partial Class FormPembeliHapus
         Me.Controls.Add(Me.LabelNamaPembeli)
         Me.Controls.Add(Me.LabelKonfirmasi)
         Me.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.MaximizeBox = False
         Me.Name = "FormPembeliHapus"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Hapus Pembeli"
