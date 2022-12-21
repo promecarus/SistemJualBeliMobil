@@ -122,4 +122,14 @@
             MessageBox.Show("Pilih row terlebih dahulu!")
         End Try
     End Sub
+
+    Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles BtnSearch.Click
+        If Not TxtSearch.Text = "" Then
+            DataGridViewPembeli.DataSource = Nothing
+            DataGridViewPembeli.DataSource = dataPembeli.GetDataPembeliDatabaseSearch(TxtSearch.Text)
+        Else
+            DataGridViewPembeli.DataSource = Nothing
+            DataGridViewPembeli.DataSource = dataPembeli.GetDataPembeliDatabase()
+        End If
+    End Sub
 End Class
