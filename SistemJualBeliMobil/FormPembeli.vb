@@ -137,4 +137,9 @@
         Label1.Text = ""
     End Sub
 
+    Private Sub TxtSearch_Leave(sender As Object, e As EventArgs) Handles TxtSearch.Leave
+        If TxtSearch.Text = "" Then
+            Label1.Text = "Search by ID..."
+        End If
+    End Sub
 End Class
