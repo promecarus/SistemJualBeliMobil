@@ -16,6 +16,10 @@
         Me.Close()
     End Sub
 
+    Private Sub LblJenisMobil_Click(sender As Object, e As EventArgs) Handles LblJenisMobil.Click
+
+    End Sub
+
     'Private Sub FormJenisMobilHapus_Closed(sender As Object, e As EventArgs) Handles Me.Closed
     '    Form1.Show()
     'End Sub

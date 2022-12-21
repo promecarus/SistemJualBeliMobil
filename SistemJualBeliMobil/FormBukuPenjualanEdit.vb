@@ -48,7 +48,7 @@
         FormBukuPenjualan.Show()
     End Sub
 
-    Private Sub PictureBoxBack_Click(sender As Object, e As EventArgs) Handles PictureBoxBack.Click
+    Private Sub PictureBoxBack_Click(sender As Object, e As EventArgs)
         Me.Close()
         FormBukuPenjualan.Show()
     End Sub
@@ -62,6 +62,14 @@
     End Sub
 
     Private Sub ComboBoxIdMobil_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBoxIdMobil.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub ComboBoxIdPembeli_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBoxIdPembeli.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub TextBoxHargaTerjual_TextChanged(sender As Object, e As EventArgs) Handles TextBoxHargaTerjual.TextChanged
 
     End Sub
 End Class

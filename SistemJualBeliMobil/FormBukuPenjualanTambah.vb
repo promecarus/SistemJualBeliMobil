@@ -42,7 +42,7 @@
         FormBukuPenjualan.Show()
     End Sub
 
-    Private Sub PictureBoxBack_Click(sender As Object, e As EventArgs) Handles PictureBoxBack.Click
+    Private Sub PictureBoxBack_Click(sender As Object, e As EventArgs)
         Me.Close()
         FormBukuPenjualan.Show()
     End Sub
