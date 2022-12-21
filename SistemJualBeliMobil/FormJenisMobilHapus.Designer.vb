@@ -31,6 +31,7 @@ Partial Class FormJenisMobilHapus
         '
         Me.BtnHapus.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.bgbutton
         Me.BtnHapus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnHapus.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnHapus.FlatAppearance.BorderSize = 0
         Me.BtnHapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnHapus.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
@@ -74,7 +75,9 @@ Partial Class FormJenisMobilHapus
         Me.Controls.Add(Me.LblJenisMobil)
         Me.Controls.Add(Me.BtnHapus)
         Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.MaximizeBox = False
         Me.Name = "FormJenisMobilHapus"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Hapus Jenis Mobil"
