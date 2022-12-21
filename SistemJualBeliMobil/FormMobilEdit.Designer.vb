@@ -247,6 +247,7 @@ Partial Class FormMobilEdit
         '
         Me.BtnEditMobil.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.bgbutton
         Me.BtnEditMobil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnEditMobil.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnEditMobil.FlatAppearance.BorderSize = 0
         Me.BtnEditMobil.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnEditMobil.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
@@ -311,7 +312,9 @@ Partial Class FormMobilEdit
         Me.Controls.Add(Me.LabelStock)
         Me.Controls.Add(Me.LabelTahunTerbit)
         Me.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.MaximizeBox = False
         Me.Name = "FormMobilEdit"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Edit Mobil"
