@@ -197,7 +197,7 @@ Partial Class FormBukuPenjualan
         Me.ButtonTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonTambah.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.ButtonTambah.ForeColor = System.Drawing.Color.White
-        Me.ButtonTambah.Location = New System.Drawing.Point(41, 349)
+        Me.ButtonTambah.Location = New System.Drawing.Point(41, 358)
         Me.ButtonTambah.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ButtonTambah.Name = "ButtonTambah"
         Me.ButtonTambah.Size = New System.Drawing.Size(160, 36)
