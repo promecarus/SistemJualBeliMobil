@@ -11,20 +11,13 @@
         FormBukuPenjualan.dataBukuPenjualan.DeleteDataBukuPenjualanByIDDatabase(FormBukuPenjualan.selectedRowBukuPenjualan)
         MessageBox.Show("Data buku penjualan dengan ID " & FormBukuPenjualan.selectedRowBukuPenjualan & " berhasil dihapus.")
         Me.Hide()
-        FormBukuPenjualan.Show()
     End Sub
 
     Private Sub ButtonNo_Click(sender As Object, e As EventArgs) Handles ButtonNo.Click
         Me.Hide()
-        FormBukuPenjualan.Show()
     End Sub
 
     Private Sub PictureBoxBack_Click(sender As Object, e As EventArgs) Handles PictureBoxBack.Click
         Me.Hide()
-        FormBukuPenjualan.Show()
-    End Sub
-
-    Private Sub FormBukuPenjualanHapus_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-        FormSignIn.Close()
     End Sub
 End Class
