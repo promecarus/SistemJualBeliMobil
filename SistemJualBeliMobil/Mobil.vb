@@ -160,6 +160,66 @@ Public Class Mobil
         Return result
     End Function
 
+    Public Function GetDataMobilDatabaseTerjual() As DataTable
+        Dim result As New DataTable
+
+        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" _
+                + "password=" + password_db + ";" + "database =" + database
+
+        dbConn.Open()
+
+        sqlCommand.Connection = dbConn
+        sqlCommand.CommandText = "SELECT id AS 'ID',
+                                  id_jenis_mobil AS 'ID Jenis Mobil',
+                                  tipe_mobil AS 'Tipe Mobil',
+                                  tahun_pembuatan AS 'Tahun Pembuatan',
+                                  kondisi AS 'Kondisi',
+                                  harga AS 'Harga',
+                                  garansi AS 'Garansi',
+                                  status_terjual AS 'Status Terjual',
+                                  harga_default AS 'Harga Default'
+                                  FROM MOBIL WHERE status_terjual = 1"
+
+        sqlRead = sqlCommand.ExecuteReader
+
+        result.Load(sqlRead)
+
+        sqlRead.Close()
+        dbConn.Close()
+
+        Return result
+    End Function
+
+    Public Function GetDataMobilDatabaseBelumTerjual() As DataTable
+        Dim result As New DataTable
+
+        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" _
+                + "password=" + password_db + ";" + "database =" + database
+
+        dbConn.Open()
+
+        sqlCommand.Connection = dbConn
+        sqlCommand.CommandText = "SELECT id AS 'ID',
+                                  id_jenis_mobil AS 'ID Jenis Mobil',
+                                  tipe_mobil AS 'Tipe Mobil',
+                                  tahun_pembuatan AS 'Tahun Pembuatan',
+                                  kondisi AS 'Kondisi',
+                                  harga AS 'Harga',
+                                  garansi AS 'Garansi',
+                                  status_terjual AS 'Status Terjual',
+                                  harga_default AS 'Harga Default'
+                                  FROM MOBIL WHERE status_terjual = 0"
+
+        sqlRead = sqlCommand.ExecuteReader
+
+        result.Load(sqlRead)
+
+        sqlRead.Close()
+        dbConn.Close()
+
+        Return result
+    End Function
+
     Public Function GetDataMobilDatabaseSearchNone(ID As Integer) As DataTable
         Dim result As New DataTable
 
@@ -239,66 +299,6 @@ Public Class Mobil
                                   status_terjual AS 'Status Terjual',
                                   harga_default AS 'Harga Default'
                                   FROM MOBIL WHERE id='" & ID & "' AND status_terjual=0"
-
-        sqlRead = sqlCommand.ExecuteReader
-
-        result.Load(sqlRead)
-
-        sqlRead.Close()
-        dbConn.Close()
-
-        Return result
-    End Function
-
-    Public Function GetDataMobilDatabaseTerjual() As DataTable
-        Dim result As New DataTable
-
-        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" _
-                + "password=" + password_db + ";" + "database =" + database
-
-        dbConn.Open()
-
-        sqlCommand.Connection = dbConn
-        sqlCommand.CommandText = "SELECT id AS 'ID',
-                                  id_jenis_mobil AS 'ID Jenis Mobil',
-                                  tipe_mobil AS 'Tipe Mobil',
-                                  tahun_pembuatan AS 'Tahun Pembuatan',
-                                  kondisi AS 'Kondisi',
-                                  harga AS 'Harga',
-                                  garansi AS 'Garansi',
-                                  status_terjual AS 'Status Terjual',
-                                  harga_default AS 'Harga Default'
-                                  FROM MOBIL WHERE status_terjual = 1"
-
-        sqlRead = sqlCommand.ExecuteReader
-
-        result.Load(sqlRead)
-
-        sqlRead.Close()
-        dbConn.Close()
-
-        Return result
-    End Function
-
-    Public Function GetDataMobilDatabaseBelumTerjual() As DataTable
-        Dim result As New DataTable
-
-        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" _
-                + "password=" + password_db + ";" + "database =" + database
-
-        dbConn.Open()
-
-        sqlCommand.Connection = dbConn
-        sqlCommand.CommandText = "SELECT id AS 'ID',
-                                  id_jenis_mobil AS 'ID Jenis Mobil',
-                                  tipe_mobil AS 'Tipe Mobil',
-                                  tahun_pembuatan AS 'Tahun Pembuatan',
-                                  kondisi AS 'Kondisi',
-                                  harga AS 'Harga',
-                                  garansi AS 'Garansi',
-                                  status_terjual AS 'Status Terjual',
-                                  harga_default AS 'Harga Default'
-                                  FROM MOBIL WHERE status_terjual = 0"
 
         sqlRead = sqlCommand.ExecuteReader
 
