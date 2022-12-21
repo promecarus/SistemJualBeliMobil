@@ -152,4 +152,11 @@
         End If
     End Sub
 
+    Private Sub TxtSearch_TextChanged(sender As Object, e As EventArgs) Handles TxtSearch.TextChanged
+        BtnSearch.Enabled = True
+
+        If TxtSearch.Text = "" Then
+            BtnSearch.Enabled = False
+        End If
+    End Sub
 End Class
