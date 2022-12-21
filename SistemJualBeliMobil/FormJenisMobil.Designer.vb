@@ -34,6 +34,9 @@ Partial Class FormJenisMobil
         Me.manageCarBtn = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.TxtSearch = New System.Windows.Forms.TextBox()
+        Me.BtnSearch = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.DataGridJenisMobil, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -222,12 +225,40 @@ Partial Class FormJenisMobil
         Me.PictureBox2.TabIndex = 41
         Me.PictureBox2.TabStop = False
         '
+        'TxtSearch
+        '
+        Me.TxtSearch.Location = New System.Drawing.Point(605, 511)
+        Me.TxtSearch.Name = "TxtSearch"
+        Me.TxtSearch.Size = New System.Drawing.Size(130, 23)
+        Me.TxtSearch.TabIndex = 42
+        '
+        'BtnSearch
+        '
+        Me.BtnSearch.Location = New System.Drawing.Point(775, 510)
+        Me.BtnSearch.Name = "BtnSearch"
+        Me.BtnSearch.Size = New System.Drawing.Size(130, 23)
+        Me.BtnSearch.TabIndex = 43
+        Me.BtnSearch.Text = "Search"
+        Me.BtnSearch.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(606, 516)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(81, 15)
+        Me.Label1.TabIndex = 44
+        Me.Label1.Text = "Search by ID..."
+        '
         'FormJenisMobil
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(984, 623)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.BtnSearch)
+        Me.Controls.Add(Me.TxtSearch)
         Me.Controls.Add(Me.BtnIndex)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.SignoutBtn)
@@ -265,4 +296,7 @@ Partial Class FormJenisMobil
     Friend WithEvents manageCarBtn As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents TxtSearch As TextBox
+    Friend WithEvents BtnSearch As Button
+    Friend WithEvents Label1 As Label
 End Class
