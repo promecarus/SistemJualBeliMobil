@@ -56,4 +56,12 @@
     Private Sub FormBukuPenjualanEdit_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         FormSignIn.Close()
     End Sub
+
+    Private Sub LabelTanggalPenjualan_Click(sender As Object, e As EventArgs) Handles LabelTanggalPenjualan.Click
+
+    End Sub
+
+    Private Sub ComboBoxIdMobil_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBoxIdMobil.SelectedIndexChanged
+
+    End Sub
 End Class
