@@ -11,6 +11,7 @@
 
         ' Add any initialization after the InitializeComponent() call.
         JenisMobil = New JenisMobil()
+
         ReloadDataTableDatabase()
 
     End Sub
@@ -88,5 +89,15 @@
     Private Sub BtnIndex_Click(sender As Object, e As EventArgs) Handles BtnIndex.Click
         FormDashboard.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles BtnSearch.Click
+        If Not TxtSearch.Text = "" Then
+            DataGridJenisMobil.DataSource = Nothing
+            DataGridJenisMobil.DataSource = JenisMobil.GetDataJenisMobilDatabaseSearch(TxtSearch.Text)
+        Else
+            DataGridJenisMobil.DataSource = Nothing
+            DataGridJenisMobil.DataSource = JenisMobil.GetDataJenisMobilDatabase
+        End If
     End Sub
 End Class
