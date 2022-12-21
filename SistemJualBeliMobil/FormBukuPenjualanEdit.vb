@@ -34,7 +34,6 @@
 
                 MessageBox.Show("Data buku penjualan dengan ID " & FormBukuPenjualan.selectedRowBukuPenjualan & " berhasil diedit.")
                 Me.Hide()
-                FormBukuPenjualan.Show()
             Else
                 MessageBox.Show("Input harga terjual harus angka!")
             End If
@@ -45,23 +44,9 @@
 
     Private Sub ButtonCancel_Click(sender As Object, e As EventArgs) Handles ButtonCancel.Click
         Me.Hide()
-        FormBukuPenjualan.Show()
     End Sub
 
     Private Sub PictureBoxBack_Click(sender As Object, e As EventArgs) Handles PictureBoxBack.Click
         Me.Hide()
-        FormBukuPenjualan.Show()
-    End Sub
-
-    Private Sub FormBukuPenjualanEdit_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-        FormSignIn.Close()
-    End Sub
-
-    Private Sub LabelTanggalPenjualan_Click(sender As Object, e As EventArgs) Handles LabelTanggalPenjualan.Click
-
-    End Sub
-
-    Private Sub ComboBoxIdMobil_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBoxIdMobil.SelectedIndexChanged
-
     End Sub
 End Class
