@@ -45,5 +45,4 @@
     Private Sub ButtonCancel_Click(sender As Object, e As EventArgs) Handles ButtonCancel.Click
         Me.Hide()
     End Sub
-
 End Class

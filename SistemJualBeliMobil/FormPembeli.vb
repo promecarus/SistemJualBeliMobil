@@ -81,36 +81,6 @@
         Me.Hide()
     End Sub
 
-    Private Sub ButtonHapus_Click_1(sender As Object, e As EventArgs) Handles ButtonHapus.Click
-        Try
-            Dim selectedPembeli As List(Of String) = dataPembeli.GetDataPembeliByIDDatabase(selectedRowPembeli)
-
-            dataPembeli.namaProperty = selectedPembeli(2)
-
-            Dim formHapus = New FormPembeliHapus()
-            formHapus.Show()
-            'Me.Hide()
-        Catch ex As Exception
-            MessageBox.Show("Pilih row terlebih dahulu!")
-        End Try
-    End Sub
-
-    Private Sub ButtonEdit_Click_1(sender As Object, e As EventArgs) Handles ButtonEdit.Click
-        Try
-            Dim selectedPembeli As List(Of String) = dataPembeli.GetDataPembeliByIDDatabase(selectedRowPembeli)
-
-            dataPembeli.nikProperty = selectedPembeli(1)
-            dataPembeli.namaProperty = selectedPembeli(2)
-            dataPembeli.alamatProperty = selectedPembeli(3)
-
-            Dim formEdit = New FormPembeliEdit()
-            formEdit.Show()
-            'Me.Hide()
-        Catch ex As Exception
-            MessageBox.Show("Pilih row terlebih dahulu!")
-        End Try
-    End Sub
-
     Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles BtnSearch.Click
         If Not TxtSearch.Text = "" Then
             DataGridViewPembeli.DataSource = Nothing
@@ -129,5 +99,14 @@
         If TxtSearch.Text = "" Then
             Label1.Text = "Search by ID..."
         End If
+    End Sub
+
+    Private Sub SignoutBtn_Click(sender As Object, e As EventArgs) Handles SignoutBtn.Click
+        FormSignIn.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub FormPembeli_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        FormSignIn.Close()
     End Sub
 End Class
