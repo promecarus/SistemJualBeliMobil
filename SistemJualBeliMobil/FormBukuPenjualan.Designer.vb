@@ -174,7 +174,7 @@ Partial Class FormBukuPenjualan
         Me.ButtonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonEdit.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.ButtonEdit.ForeColor = System.Drawing.Color.White
-        Me.ButtonEdit.Location = New System.Drawing.Point(620, 87)
+        Me.ButtonEdit.Location = New System.Drawing.Point(623, 87)
         Me.ButtonEdit.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ButtonEdit.Name = "ButtonEdit"
         Me.ButtonEdit.Size = New System.Drawing.Size(122, 36)
@@ -190,7 +190,7 @@ Partial Class FormBukuPenjualan
         Me.ButtonHapus.FlatAppearance.BorderSize = 0
         Me.ButtonHapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonHapus.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.ButtonHapus.Location = New System.Drawing.Point(620, 127)
+        Me.ButtonHapus.Location = New System.Drawing.Point(623, 135)
         Me.ButtonHapus.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ButtonHapus.Name = "ButtonHapus"
         Me.ButtonHapus.Size = New System.Drawing.Size(122, 36)

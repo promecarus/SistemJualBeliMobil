@@ -78,10 +78,10 @@ Partial Class FormMobilEdit
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(311, 22)
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label2.Location = New System.Drawing.Point(282, 20)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(74, 15)
+        Me.Label2.Size = New System.Drawing.Size(137, 30)
         Me.Label2.TabIndex = 89
         Me.Label2.Text = "EDIT MOBIL"
         '
@@ -252,7 +252,7 @@ Partial Class FormMobilEdit
         Me.BtnEditMobil.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnEditMobil.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnEditMobil.ForeColor = System.Drawing.Color.White
-        Me.BtnEditMobil.Location = New System.Drawing.Point(266, 444)
+        Me.BtnEditMobil.Location = New System.Drawing.Point(282, 435)
         Me.BtnEditMobil.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnEditMobil.Name = "BtnEditMobil"
         Me.BtnEditMobil.Size = New System.Drawing.Size(137, 40)

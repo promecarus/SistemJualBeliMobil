@@ -110,7 +110,7 @@ Partial Class FormMobilTambah
         Me.BtnTambahMobil.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnTambahMobil.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnTambahMobil.ForeColor = System.Drawing.Color.White
-        Me.BtnTambahMobil.Location = New System.Drawing.Point(277, 437)
+        Me.BtnTambahMobil.Location = New System.Drawing.Point(284, 438)
         Me.BtnTambahMobil.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnTambahMobil.Name = "BtnTambahMobil"
         Me.BtnTambahMobil.Size = New System.Drawing.Size(139, 40)
@@ -256,10 +256,10 @@ Partial Class FormMobilTambah
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(295, 28)
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label2.Location = New System.Drawing.Point(260, 20)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(98, 15)
+        Me.Label2.Size = New System.Drawing.Size(182, 30)
         Me.Label2.TabIndex = 74
         Me.Label2.Text = "TAMBAH MOBIL"
         '

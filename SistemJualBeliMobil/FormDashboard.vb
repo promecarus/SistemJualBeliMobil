@@ -49,7 +49,4 @@
 
     End Sub
 
-    Private Sub SignoutBtn_Click(sender As Object, e As EventArgs) Handles SignoutBtn.Click
-
-    End Sub
 End Class
