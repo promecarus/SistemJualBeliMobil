@@ -161,7 +161,7 @@ Partial Class FormSignUp
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(889, 340)
+        Me.CheckBox1.Location = New System.Drawing.Point(892, 336)
         Me.CheckBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(15, 14)
@@ -172,7 +172,7 @@ Partial Class FormSignUp
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label6.Location = New System.Drawing.Point(723, 427)
+        Me.Label6.Location = New System.Drawing.Point(731, 428)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(26, 21)
         Me.Label6.TabIndex = 21
