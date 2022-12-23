@@ -41,7 +41,7 @@ Partial Class FormBukuPenjualanEdit
         '
         Me.LabelTanggalPenjualan.AutoSize = True
         Me.LabelTanggalPenjualan.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.LabelTanggalPenjualan.Location = New System.Drawing.Point(386, 221)
+        Me.LabelTanggalPenjualan.Location = New System.Drawing.Point(386, 219)
         Me.LabelTanggalPenjualan.Name = "LabelTanggalPenjualan"
         Me.LabelTanggalPenjualan.Size = New System.Drawing.Size(152, 21)
         Me.LabelTanggalPenjualan.TabIndex = 15
@@ -51,7 +51,7 @@ Partial Class FormBukuPenjualanEdit
         '
         Me.LabelHargaTerjual.AutoSize = True
         Me.LabelHargaTerjual.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.LabelHargaTerjual.Location = New System.Drawing.Point(384, 167)
+        Me.LabelHargaTerjual.Location = New System.Drawing.Point(384, 165)
         Me.LabelHargaTerjual.Name = "LabelHargaTerjual"
         Me.LabelHargaTerjual.Size = New System.Drawing.Size(112, 21)
         Me.LabelHargaTerjual.TabIndex = 14
@@ -61,7 +61,7 @@ Partial Class FormBukuPenjualanEdit
         '
         Me.LabelPembeli.AutoSize = True
         Me.LabelPembeli.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.LabelPembeli.Location = New System.Drawing.Point(386, 110)
+        Me.LabelPembeli.Location = New System.Drawing.Point(386, 108)
         Me.LabelPembeli.Name = "LabelPembeli"
         Me.LabelPembeli.Size = New System.Drawing.Size(73, 21)
         Me.LabelPembeli.TabIndex = 13
@@ -71,7 +71,7 @@ Partial Class FormBukuPenjualanEdit
         '
         Me.LabelIdMobil.AutoSize = True
         Me.LabelIdMobil.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.LabelIdMobil.Location = New System.Drawing.Point(386, 56)
+        Me.LabelIdMobil.Location = New System.Drawing.Point(386, 54)
         Me.LabelIdMobil.Name = "LabelIdMobil"
         Me.LabelIdMobil.Size = New System.Drawing.Size(76, 21)
         Me.LabelIdMobil.TabIndex = 12
@@ -80,7 +80,7 @@ Partial Class FormBukuPenjualanEdit
         'DateTimePickerTanggalPenjualan
         '
         Me.DateTimePickerTanggalPenjualan.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.DateTimePickerTanggalPenjualan.Location = New System.Drawing.Point(386, 244)
+        Me.DateTimePickerTanggalPenjualan.Location = New System.Drawing.Point(386, 242)
         Me.DateTimePickerTanggalPenjualan.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DateTimePickerTanggalPenjualan.Name = "DateTimePickerTanggalPenjualan"
         Me.DateTimePickerTanggalPenjualan.Size = New System.Drawing.Size(276, 29)
@@ -89,7 +89,7 @@ Partial Class FormBukuPenjualanEdit
         'TextBoxHargaTerjual
         '
         Me.TextBoxHargaTerjual.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TextBoxHargaTerjual.Location = New System.Drawing.Point(386, 190)
+        Me.TextBoxHargaTerjual.Location = New System.Drawing.Point(386, 188)
         Me.TextBoxHargaTerjual.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBoxHargaTerjual.Name = "TextBoxHargaTerjual"
         Me.TextBoxHargaTerjual.Size = New System.Drawing.Size(274, 29)
@@ -99,7 +99,7 @@ Partial Class FormBukuPenjualanEdit
         '
         Me.ComboBoxIdPembeli.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.ComboBoxIdPembeli.FormattingEnabled = True
-        Me.ComboBoxIdPembeli.Location = New System.Drawing.Point(384, 136)
+        Me.ComboBoxIdPembeli.Location = New System.Drawing.Point(384, 134)
         Me.ComboBoxIdPembeli.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ComboBoxIdPembeli.Name = "ComboBoxIdPembeli"
         Me.ComboBoxIdPembeli.Size = New System.Drawing.Size(276, 29)
@@ -109,7 +109,7 @@ Partial Class FormBukuPenjualanEdit
         '
         Me.ComboBoxIdMobil.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.ComboBoxIdMobil.FormattingEnabled = True
-        Me.ComboBoxIdMobil.Location = New System.Drawing.Point(386, 79)
+        Me.ComboBoxIdMobil.Location = New System.Drawing.Point(386, 77)
         Me.ComboBoxIdMobil.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ComboBoxIdMobil.Name = "ComboBoxIdMobil"
         Me.ComboBoxIdMobil.Size = New System.Drawing.Size(276, 29)
@@ -122,7 +122,7 @@ Partial Class FormBukuPenjualanEdit
         Me.ButtonCancel.FlatAppearance.BorderSize = 0
         Me.ButtonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonCancel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.ButtonCancel.Location = New System.Drawing.Point(580, 286)
+        Me.ButtonCancel.Location = New System.Drawing.Point(580, 290)
         Me.ButtonCancel.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ButtonCancel.Name = "ButtonCancel"
         Me.ButtonCancel.Size = New System.Drawing.Size(82, 32)
@@ -138,7 +138,7 @@ Partial Class FormBukuPenjualanEdit
         Me.ButtonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonEdit.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.ButtonEdit.ForeColor = System.Drawing.Color.White
-        Me.ButtonEdit.Location = New System.Drawing.Point(386, 286)
+        Me.ButtonEdit.Location = New System.Drawing.Point(386, 290)
         Me.ButtonEdit.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ButtonEdit.Name = "ButtonEdit"
         Me.ButtonEdit.Size = New System.Drawing.Size(82, 32)
@@ -160,7 +160,7 @@ Partial Class FormBukuPenjualanEdit
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(384, 9)
+        Me.Label1.Location = New System.Drawing.Point(384, 13)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(133, 25)
         Me.Label1.TabIndex = 20

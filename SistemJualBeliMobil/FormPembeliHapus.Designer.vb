@@ -32,7 +32,7 @@ Partial Class FormPembeliHapus
         '
         Me.LabelKonfirmasi.AutoSize = True
         Me.LabelKonfirmasi.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.LabelKonfirmasi.Location = New System.Drawing.Point(13, 25)
+        Me.LabelKonfirmasi.Location = New System.Drawing.Point(13, 36)
         Me.LabelKonfirmasi.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelKonfirmasi.Name = "LabelKonfirmasi"
         Me.LabelKonfirmasi.Size = New System.Drawing.Size(363, 21)
@@ -44,7 +44,7 @@ Partial Class FormPembeliHapus
         Me.LabelNamaPembeli.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LabelNamaPembeli.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.LabelNamaPembeli.ForeColor = System.Drawing.Color.Red
-        Me.LabelNamaPembeli.Location = New System.Drawing.Point(0, 67)
+        Me.LabelNamaPembeli.Location = New System.Drawing.Point(0, 78)
         Me.LabelNamaPembeli.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelNamaPembeli.Name = "LabelNamaPembeli"
         Me.LabelNamaPembeli.Size = New System.Drawing.Size(396, 22)
@@ -60,7 +60,7 @@ Partial Class FormPembeliHapus
         Me.ButtonYes.FlatAppearance.BorderSize = 0
         Me.ButtonYes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonYes.ForeColor = System.Drawing.Color.White
-        Me.ButtonYes.Location = New System.Drawing.Point(73, 111)
+        Me.ButtonYes.Location = New System.Drawing.Point(73, 122)
         Me.ButtonYes.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.ButtonYes.Name = "ButtonYes"
         Me.ButtonYes.Size = New System.Drawing.Size(117, 31)
@@ -75,7 +75,7 @@ Partial Class FormPembeliHapus
         Me.ButtonNo.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonNo.FlatAppearance.BorderSize = 0
         Me.ButtonNo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonNo.Location = New System.Drawing.Point(210, 111)
+        Me.ButtonNo.Location = New System.Drawing.Point(210, 122)
         Me.ButtonNo.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.ButtonNo.Name = "ButtonNo"
         Me.ButtonNo.Size = New System.Drawing.Size(117, 31)

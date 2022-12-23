@@ -37,7 +37,7 @@ Partial Class FormMobilHapus
         Me.BtnHapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnHapus.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnHapus.ForeColor = System.Drawing.Color.White
-        Me.BtnHapus.Location = New System.Drawing.Point(480, 187)
+        Me.BtnHapus.Location = New System.Drawing.Point(480, 209)
         Me.BtnHapus.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnHapus.Name = "BtnHapus"
         Me.BtnHapus.Size = New System.Drawing.Size(82, 32)
@@ -50,7 +50,7 @@ Partial Class FormMobilHapus
         Me.LblMobil.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LblMobil.Font = New System.Drawing.Font("Segoe UI", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.LblMobil.ForeColor = System.Drawing.Color.Red
-        Me.LblMobil.Location = New System.Drawing.Point(355, 121)
+        Me.LblMobil.Location = New System.Drawing.Point(355, 143)
         Me.LblMobil.Name = "LblMobil"
         Me.LblMobil.Size = New System.Drawing.Size(341, 40)
         Me.LblMobil.TabIndex = 7
@@ -61,7 +61,7 @@ Partial Class FormMobilHapus
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(356, 80)
+        Me.Label1.Location = New System.Drawing.Point(356, 102)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(340, 21)
         Me.Label1.TabIndex = 6
