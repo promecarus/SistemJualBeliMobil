@@ -45,4 +45,17 @@
         SignUp.Show()
         Me.Hide()
     End Sub
+
+    Private Sub ChkPassword_CheckedChanged(sender As Object, e As EventArgs) Handles ChkPassword.CheckedChanged
+        If ChkPassword.Checked = True Then
+            inputPassword.UseSystemPasswordChar = False
+        Else
+            inputPassword.UseSystemPasswordChar = True
+        End If
+    End Sub
+
+    Private Sub FormSignIn_Load(sender As Object, e As EventArgs) Handles Me.Load
+        inputPassword.UseSystemPasswordChar = True
+    End Sub
+
 End Class

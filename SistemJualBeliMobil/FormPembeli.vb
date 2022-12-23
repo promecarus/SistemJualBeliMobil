@@ -101,12 +101,12 @@
         End If
     End Sub
 
+    Private Sub FormPembeli_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        FormSignIn.Close()
+    End Sub
+
     Private Sub SignoutBtn_Click(sender As Object, e As EventArgs) Handles SignoutBtn.Click
         FormSignIn.Show()
         Me.Hide()
-    End Sub
-
-    Private Sub FormPembeli_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-        FormSignIn.Close()
     End Sub
 End Class
