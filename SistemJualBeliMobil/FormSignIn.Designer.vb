@@ -31,7 +31,7 @@ Partial Class FormSignIn
         Me.inputPassword = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.ChkPassword = New System.Windows.Forms.CheckBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -129,15 +129,15 @@ Partial Class FormSignIn
         Me.Label4.TabIndex = 8
         Me.Label4.Text = "Password"
         '
-        'CheckBox1
+        'ChkPassword
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(861, 285)
-        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox1.TabIndex = 21
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.ChkPassword.AutoSize = True
+        Me.ChkPassword.Location = New System.Drawing.Point(861, 285)
+        Me.ChkPassword.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ChkPassword.Name = "ChkPassword"
+        Me.ChkPassword.Size = New System.Drawing.Size(15, 14)
+        Me.ChkPassword.TabIndex = 21
+        Me.ChkPassword.UseVisualStyleBackColor = True
         '
         'FormSignIn
         '
@@ -145,7 +145,7 @@ Partial Class FormSignIn
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(984, 623)
-        Me.Controls.Add(Me.CheckBox1)
+        Me.Controls.Add(Me.ChkPassword)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.inputPassword)
@@ -176,5 +176,5 @@ Partial Class FormSignIn
     Friend WithEvents inputPassword As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents ChkPassword As CheckBox
 End Class
