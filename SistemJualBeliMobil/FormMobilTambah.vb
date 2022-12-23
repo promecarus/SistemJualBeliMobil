@@ -6,7 +6,7 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        ComboBoxJenisMobil.DataSource = Form1.JenisMobil.ListDataJenisMobil
+        ComboBoxJenisMobil.DataSource = FormSignIn.JenisMobil.ListDataJenisMobil
         ComboBoxJenisMobil.DisplayMember = "jenis"
         ComboBoxJenisMobil.ValueMember = "id_jenis"
 
@@ -36,7 +36,7 @@
             kondisi = "Sangat Buruk"
         End If
 
-        Form1.Mobil.AddDataMobilDatabase(ComboBoxJenisMobil.SelectedValue,
+        FormSignIn.Mobil.AddDataMobilDatabase(ComboBoxJenisMobil.SelectedValue,
                                          tipe_mobil,
                                          Integer.Parse(TxtTahunPembuatan.Text),
                                          kondisi,

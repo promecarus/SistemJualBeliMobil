@@ -32,7 +32,7 @@ Partial Class FormSignUp
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.inputEmail = New System.Windows.Forms.TextBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.ChkPassword = New System.Windows.Forms.CheckBox()
         Me.Label6 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -158,15 +158,15 @@ Partial Class FormSignUp
         Me.inputEmail.Size = New System.Drawing.Size(346, 34)
         Me.inputEmail.TabIndex = 2
         '
-        'CheckBox1
+        'ChkPassword
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(892, 336)
-        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox1.TabIndex = 20
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.ChkPassword.AutoSize = True
+        Me.ChkPassword.Location = New System.Drawing.Point(892, 336)
+        Me.ChkPassword.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ChkPassword.Name = "ChkPassword"
+        Me.ChkPassword.Size = New System.Drawing.Size(15, 14)
+        Me.ChkPassword.TabIndex = 20
+        Me.ChkPassword.UseVisualStyleBackColor = True
         '
         'Label6
         '
@@ -185,7 +185,7 @@ Partial Class FormSignUp
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(984, 623)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.CheckBox1)
+        Me.Controls.Add(Me.ChkPassword)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.inputEmail)
         Me.Controls.Add(Me.Label4)
@@ -218,6 +218,6 @@ Partial Class FormSignUp
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label5 As Label
     Friend WithEvents inputEmail As TextBox
-    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents ChkPassword As CheckBox
     Friend WithEvents Label6 As Label
 End Class
