@@ -54,4 +54,8 @@
         End If
     End Sub
 
+    Private Sub FormSignIn_Load(sender As Object, e As EventArgs) Handles Me.Load
+        inputPassword.UseSystemPasswordChar = True
+    End Sub
+
 End Class
