@@ -94,7 +94,7 @@ Partial Class FormSignIn
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(707, 378)
+        Me.Label2.Location = New System.Drawing.Point(712, 379)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(26, 21)
         Me.Label2.TabIndex = 5
