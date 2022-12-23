@@ -32,9 +32,8 @@ Partial Class FormBukuPenjualanTambah
         Me.LabelTanggalPenjualan = New System.Windows.Forms.Label()
         Me.ButtonTambah = New System.Windows.Forms.Button()
         Me.ButtonCancel = New System.Windows.Forms.Button()
-        Me.PictureBoxBack = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        CType(Me.PictureBoxBack, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -45,7 +44,7 @@ Partial Class FormBukuPenjualanTambah
         Me.ComboBoxIdMobil.Location = New System.Drawing.Point(23, 73)
         Me.ComboBoxIdMobil.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ComboBoxIdMobil.Name = "ComboBoxIdMobil"
-        Me.ComboBoxIdMobil.Size = New System.Drawing.Size(218, 29)
+        Me.ComboBoxIdMobil.Size = New System.Drawing.Size(265, 29)
         Me.ComboBoxIdMobil.TabIndex = 0
         '
         'ComboBoxIdPembeli
@@ -55,7 +54,7 @@ Partial Class FormBukuPenjualanTambah
         Me.ComboBoxIdPembeli.Location = New System.Drawing.Point(23, 133)
         Me.ComboBoxIdPembeli.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ComboBoxIdPembeli.Name = "ComboBoxIdPembeli"
-        Me.ComboBoxIdPembeli.Size = New System.Drawing.Size(218, 29)
+        Me.ComboBoxIdPembeli.Size = New System.Drawing.Size(265, 29)
         Me.ComboBoxIdPembeli.TabIndex = 1
         '
         'TextBoxHargaTerjual
@@ -64,7 +63,7 @@ Partial Class FormBukuPenjualanTambah
         Me.TextBoxHargaTerjual.Location = New System.Drawing.Point(22, 187)
         Me.TextBoxHargaTerjual.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBoxHargaTerjual.Name = "TextBoxHargaTerjual"
-        Me.TextBoxHargaTerjual.Size = New System.Drawing.Size(219, 29)
+        Me.TextBoxHargaTerjual.Size = New System.Drawing.Size(266, 29)
         Me.TextBoxHargaTerjual.TabIndex = 2
         '
         'DateTimePickerTanggalPenjualan
@@ -74,7 +73,7 @@ Partial Class FormBukuPenjualanTambah
         Me.DateTimePickerTanggalPenjualan.Location = New System.Drawing.Point(22, 241)
         Me.DateTimePickerTanggalPenjualan.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DateTimePickerTanggalPenjualan.Name = "DateTimePickerTanggalPenjualan"
-        Me.DateTimePickerTanggalPenjualan.Size = New System.Drawing.Size(219, 29)
+        Me.DateTimePickerTanggalPenjualan.Size = New System.Drawing.Size(266, 29)
         Me.DateTimePickerTanggalPenjualan.TabIndex = 3
         '
         'LabelIdMobil
@@ -148,16 +147,6 @@ Partial Class FormBukuPenjualanTambah
         Me.ButtonCancel.Text = "Cancel"
         Me.ButtonCancel.UseVisualStyleBackColor = True
         '
-        'PictureBoxBack
-        '
-        Me.PictureBoxBack.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBoxBack.Location = New System.Drawing.Point(23, 11)
-        Me.PictureBoxBack.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.PictureBoxBack.Name = "PictureBoxBack"
-        Me.PictureBoxBack.Size = New System.Drawing.Size(66, 28)
-        Me.PictureBoxBack.TabIndex = 9
-        Me.PictureBoxBack.TabStop = False
-        '
         'PictureBox1
         '
         Me.PictureBox1.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources._3
@@ -168,13 +157,23 @@ Partial Class FormBukuPenjualanTambah
         Me.PictureBox1.TabIndex = 10
         Me.PictureBox1.TabStop = False
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.Location = New System.Drawing.Point(22, 9)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(167, 25)
+        Me.Label1.TabIndex = 11
+        Me.Label1.Text = "Tambah Penjualan"
+        '
         'FormBukuPenjualanTambah
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(700, 338)
-        Me.Controls.Add(Me.PictureBoxBack)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ButtonCancel)
         Me.Controls.Add(Me.ButtonTambah)
         Me.Controls.Add(Me.LabelTanggalPenjualan)
@@ -186,11 +185,13 @@ Partial Class FormBukuPenjualanTambah
         Me.Controls.Add(Me.ComboBoxIdPembeli)
         Me.Controls.Add(Me.ComboBoxIdMobil)
         Me.Controls.Add(Me.PictureBox1)
+        Me.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.MaximizeBox = False
         Me.Name = "FormBukuPenjualanTambah"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Tambah Buku Penjualan"
-        CType(Me.PictureBoxBack, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -207,6 +208,6 @@ Partial Class FormBukuPenjualanTambah
     Friend WithEvents LabelTanggalPenjualan As Label
     Friend WithEvents ButtonTambah As Button
     Friend WithEvents ButtonCancel As Button
-    Friend WithEvents PictureBoxBack As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label1 As Label
 End Class

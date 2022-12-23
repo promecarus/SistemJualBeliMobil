@@ -40,7 +40,7 @@ Partial Class FormDashboard
         'PictureBox2
         '
         Me.PictureBox2.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.BannerHome1
-        Me.PictureBox2.Location = New System.Drawing.Point(-2, -107)
+        Me.PictureBox2.Location = New System.Drawing.Point(-16, -87)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(1000, 739)
         Me.PictureBox2.TabIndex = 1
@@ -96,6 +96,7 @@ Partial Class FormDashboard
         Me.manageCarBtn.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.manageCarBtn.BackColor = System.Drawing.Color.White
+        Me.manageCarBtn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.manageCarBtn.FlatAppearance.BorderSize = 0
         Me.manageCarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.manageCarBtn.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
@@ -112,6 +113,7 @@ Partial Class FormDashboard
         Me.ManageUserBtn.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ManageUserBtn.BackColor = System.Drawing.Color.White
+        Me.ManageUserBtn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ManageUserBtn.FlatAppearance.BorderSize = 0
         Me.ManageUserBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ManageUserBtn.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
@@ -128,6 +130,7 @@ Partial Class FormDashboard
         Me.TransactionBtn.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TransactionBtn.BackColor = System.Drawing.Color.White
+        Me.TransactionBtn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.TransactionBtn.FlatAppearance.BorderSize = 0
         Me.TransactionBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.TransactionBtn.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
@@ -146,6 +149,7 @@ Partial Class FormDashboard
         Me.SignoutBtn.BackColor = System.Drawing.Color.Transparent
         Me.SignoutBtn.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.bgbutton
         Me.SignoutBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.SignoutBtn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.SignoutBtn.FlatAppearance.BorderSize = 0
         Me.SignoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.SignoutBtn.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
@@ -174,6 +178,7 @@ Partial Class FormDashboard
         Me.BtnIndex.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnIndex.BackColor = System.Drawing.Color.White
+        Me.BtnIndex.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnIndex.FlatAppearance.BorderSize = 0
         Me.BtnIndex.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnIndex.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
@@ -202,7 +207,9 @@ Partial Class FormDashboard
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.PictureBox2)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.MaximizeBox = False
         Me.Name = "FormDashboard"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Dashboard"

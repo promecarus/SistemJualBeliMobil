@@ -35,9 +35,17 @@ Partial Class FormMobil
         Me.ManageUserBtn = New System.Windows.Forms.Button()
         Me.manageCarBtn = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.RdbBelumTerjual = New System.Windows.Forms.RadioButton()
+        Me.RdbTerjual = New System.Windows.Forms.RadioButton()
+        Me.RdbNone = New System.Windows.Forms.RadioButton()
+        Me.TxtSearch = New System.Windows.Forms.TextBox()
+        Me.BtnSearch = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.DataGridMobil, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'DataGridMobil
@@ -45,24 +53,25 @@ Partial Class FormMobil
         Me.DataGridMobil.AllowUserToAddRows = False
         Me.DataGridMobil.AllowUserToDeleteRows = False
         Me.DataGridMobil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridMobil.Location = New System.Drawing.Point(35, 75)
+        Me.DataGridMobil.Location = New System.Drawing.Point(14, 75)
         Me.DataGridMobil.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DataGridMobil.Name = "DataGridMobil"
         Me.DataGridMobil.ReadOnly = True
         Me.DataGridMobil.RowHeadersWidth = 51
         Me.DataGridMobil.RowTemplate.Height = 29
-        Me.DataGridMobil.Size = New System.Drawing.Size(906, 273)
+        Me.DataGridMobil.Size = New System.Drawing.Size(955, 273)
         Me.DataGridMobil.TabIndex = 15
         '
         'BtnEdit
         '
-        Me.BtnEdit.BackColor = System.Drawing.Color.Black
+        Me.BtnEdit.BackColor = System.Drawing.Color.Transparent
         Me.BtnEdit.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.bgbutton
+        Me.BtnEdit.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnEdit.FlatAppearance.BorderSize = 0
         Me.BtnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnEdit.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnEdit.ForeColor = System.Drawing.Color.White
-        Me.BtnEdit.Location = New System.Drawing.Point(819, 495)
+        Me.BtnEdit.Location = New System.Drawing.Point(850, 515)
         Me.BtnEdit.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnEdit.Name = "BtnEdit"
         Me.BtnEdit.Size = New System.Drawing.Size(122, 36)
@@ -72,12 +81,13 @@ Partial Class FormMobil
         '
         'BtnHapus
         '
-        Me.BtnHapus.BackColor = System.Drawing.Color.Black
+        Me.BtnHapus.BackColor = System.Drawing.Color.Transparent
         Me.BtnHapus.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.bgputihbtn1
+        Me.BtnHapus.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnHapus.FlatAppearance.BorderSize = 0
         Me.BtnHapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnHapus.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.BtnHapus.Location = New System.Drawing.Point(819, 535)
+        Me.BtnHapus.Location = New System.Drawing.Point(850, 564)
         Me.BtnHapus.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnHapus.Name = "BtnHapus"
         Me.BtnHapus.Size = New System.Drawing.Size(122, 36)
@@ -89,11 +99,12 @@ Partial Class FormMobil
         '
         Me.BtnTambah.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.bgbutton
         Me.BtnTambah.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnTambah.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnTambah.FlatAppearance.BorderSize = 0
         Me.BtnTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnTambah.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnTambah.ForeColor = System.Drawing.Color.White
-        Me.BtnTambah.Location = New System.Drawing.Point(35, 373)
+        Me.BtnTambah.Location = New System.Drawing.Point(14, 373)
         Me.BtnTambah.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnTambah.Name = "BtnTambah"
         Me.BtnTambah.Size = New System.Drawing.Size(130, 36)
@@ -108,11 +119,12 @@ Partial Class FormMobil
         Me.Button1.BackColor = System.Drawing.Color.Transparent
         Me.Button1.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.bgputihbtn1
         Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button1.FlatAppearance.BorderSize = 0
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.Location = New System.Drawing.Point(187, 373)
+        Me.Button1.Location = New System.Drawing.Point(166, 373)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(130, 36)
         Me.Button1.TabIndex = 23
@@ -135,6 +147,7 @@ Partial Class FormMobil
         Me.BtnIndex.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnIndex.BackColor = System.Drawing.Color.White
+        Me.BtnIndex.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnIndex.FlatAppearance.BorderSize = 0
         Me.BtnIndex.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnIndex.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
@@ -165,6 +178,7 @@ Partial Class FormMobil
         Me.SignoutBtn.BackColor = System.Drawing.Color.Transparent
         Me.SignoutBtn.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.bgbutton
         Me.SignoutBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.SignoutBtn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.SignoutBtn.FlatAppearance.BorderSize = 0
         Me.SignoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.SignoutBtn.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
@@ -181,6 +195,7 @@ Partial Class FormMobil
         Me.TransactionBtn.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TransactionBtn.BackColor = System.Drawing.Color.White
+        Me.TransactionBtn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.TransactionBtn.FlatAppearance.BorderSize = 0
         Me.TransactionBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.TransactionBtn.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
@@ -197,6 +212,7 @@ Partial Class FormMobil
         Me.ManageUserBtn.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ManageUserBtn.BackColor = System.Drawing.Color.White
+        Me.ManageUserBtn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ManageUserBtn.FlatAppearance.BorderSize = 0
         Me.ManageUserBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ManageUserBtn.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
@@ -213,6 +229,7 @@ Partial Class FormMobil
         Me.manageCarBtn.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.manageCarBtn.BackColor = System.Drawing.Color.White
+        Me.manageCarBtn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.manageCarBtn.FlatAppearance.BorderSize = 0
         Me.manageCarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.manageCarBtn.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
@@ -233,12 +250,84 @@ Partial Class FormMobil
         Me.PictureBox1.TabIndex = 27
         Me.PictureBox1.TabStop = False
         '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.RdbBelumTerjual)
+        Me.GroupBox1.Controls.Add(Me.RdbTerjual)
+        Me.GroupBox1.Controls.Add(Me.RdbNone)
+        Me.GroupBox1.Location = New System.Drawing.Point(35, 431)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(130, 107)
+        Me.GroupBox1.TabIndex = 34
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Filter Status Terjual"
+        '
+        'RdbBelumTerjual
+        '
+        Me.RdbBelumTerjual.AutoSize = True
+        Me.RdbBelumTerjual.Location = New System.Drawing.Point(15, 72)
+        Me.RdbBelumTerjual.Name = "RdbBelumTerjual"
+        Me.RdbBelumTerjual.Size = New System.Drawing.Size(96, 19)
+        Me.RdbBelumTerjual.TabIndex = 2
+        Me.RdbBelumTerjual.TabStop = True
+        Me.RdbBelumTerjual.Text = "Belum Terjual"
+        Me.RdbBelumTerjual.UseVisualStyleBackColor = True
+        '
+        'RdbTerjual
+        '
+        Me.RdbTerjual.AutoSize = True
+        Me.RdbTerjual.Location = New System.Drawing.Point(15, 47)
+        Me.RdbTerjual.Name = "RdbTerjual"
+        Me.RdbTerjual.Size = New System.Drawing.Size(59, 19)
+        Me.RdbTerjual.TabIndex = 1
+        Me.RdbTerjual.TabStop = True
+        Me.RdbTerjual.Text = "Terjual"
+        Me.RdbTerjual.UseVisualStyleBackColor = True
+        '
+        'RdbNone
+        '
+        Me.RdbNone.AutoSize = True
+        Me.RdbNone.Location = New System.Drawing.Point(15, 22)
+        Me.RdbNone.Name = "RdbNone"
+        Me.RdbNone.Size = New System.Drawing.Size(54, 19)
+        Me.RdbNone.TabIndex = 0
+        Me.RdbNone.TabStop = True
+        Me.RdbNone.Text = "None"
+        Me.RdbNone.UseVisualStyleBackColor = True
+        '
+        'TxtSearch
+        '
+        Me.TxtSearch.BackColor = System.Drawing.SystemColors.Window
+        Me.TxtSearch.Location = New System.Drawing.Point(35, 560)
+        Me.TxtSearch.Name = "TxtSearch"
+        Me.TxtSearch.Size = New System.Drawing.Size(200, 23)
+        Me.TxtSearch.TabIndex = 35
+        '
+        'BtnSearch
+        '
+        Me.BtnSearch.Location = New System.Drawing.Point(253, 560)
+        Me.BtnSearch.Name = "BtnSearch"
+        Me.BtnSearch.Size = New System.Drawing.Size(75, 23)
+        Me.BtnSearch.TabIndex = 36
+        Me.BtnSearch.Text = "Search"
+        Me.BtnSearch.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(38, 564)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(81, 15)
+        Me.Label1.TabIndex = 37
+        Me.Label1.Text = "Search by ID..."
+        '
         'FormMobil
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(984, 623)
+        Me.Controls.Add(Me.BtnSearch)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.BtnIndex)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.SignoutBtn)
@@ -252,13 +341,19 @@ Partial Class FormMobil
         Me.Controls.Add(Me.BtnHapus)
         Me.Controls.Add(Me.BtnTambah)
         Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.TxtSearch)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.MaximizeBox = False
         Me.Name = "FormMobil"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Mobil"
         CType(Me.DataGridMobil, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -277,4 +372,11 @@ Partial Class FormMobil
     Friend WithEvents ManageUserBtn As Button
     Friend WithEvents manageCarBtn As Button
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents RdbNone As RadioButton
+    Friend WithEvents RdbBelumTerjual As RadioButton
+    Friend WithEvents RdbTerjual As RadioButton
+    Friend WithEvents TxtSearch As TextBox
+    Friend WithEvents BtnSearch As Button
+    Friend WithEvents Label1 As Label
 End Class

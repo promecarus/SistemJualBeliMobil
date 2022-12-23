@@ -34,6 +34,9 @@ Partial Class FormBukuPenjualan
         Me.ButtonHapus = New System.Windows.Forms.Button()
         Me.ButtonTambah = New System.Windows.Forms.Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.TxtSearch = New System.Windows.Forms.TextBox()
+        Me.BtnSearch = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.DataGridViewBukuPenjualan, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -59,6 +62,7 @@ Partial Class FormBukuPenjualan
         Me.BtnIndex.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnIndex.BackColor = System.Drawing.Color.White
+        Me.BtnIndex.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnIndex.FlatAppearance.BorderSize = 0
         Me.BtnIndex.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnIndex.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
@@ -89,6 +93,7 @@ Partial Class FormBukuPenjualan
         Me.SignoutBtn.BackColor = System.Drawing.Color.Transparent
         Me.SignoutBtn.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.bgbutton
         Me.SignoutBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.SignoutBtn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.SignoutBtn.FlatAppearance.BorderSize = 0
         Me.SignoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.SignoutBtn.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
@@ -105,6 +110,7 @@ Partial Class FormBukuPenjualan
         Me.TransactionBtn.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TransactionBtn.BackColor = System.Drawing.Color.White
+        Me.TransactionBtn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.TransactionBtn.FlatAppearance.BorderSize = 0
         Me.TransactionBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.TransactionBtn.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
@@ -121,6 +127,7 @@ Partial Class FormBukuPenjualan
         Me.ManageUserBtn.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ManageUserBtn.BackColor = System.Drawing.Color.White
+        Me.ManageUserBtn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ManageUserBtn.FlatAppearance.BorderSize = 0
         Me.ManageUserBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ManageUserBtn.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
@@ -137,6 +144,7 @@ Partial Class FormBukuPenjualan
         Me.manageCarBtn.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.manageCarBtn.BackColor = System.Drawing.Color.White
+        Me.manageCarBtn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.manageCarBtn.FlatAppearance.BorderSize = 0
         Me.manageCarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.manageCarBtn.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
@@ -161,6 +169,7 @@ Partial Class FormBukuPenjualan
         '
         Me.ButtonEdit.BackColor = System.Drawing.Color.Transparent
         Me.ButtonEdit.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.bgbutton
+        Me.ButtonEdit.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonEdit.FlatAppearance.BorderSize = 0
         Me.ButtonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonEdit.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
@@ -177,6 +186,7 @@ Partial Class FormBukuPenjualan
         '
         Me.ButtonHapus.BackColor = System.Drawing.Color.Transparent
         Me.ButtonHapus.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.bgputihbtn1
+        Me.ButtonHapus.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonHapus.FlatAppearance.BorderSize = 0
         Me.ButtonHapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonHapus.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
@@ -193,11 +203,12 @@ Partial Class FormBukuPenjualan
         Me.ButtonTambah.BackColor = System.Drawing.Color.Transparent
         Me.ButtonTambah.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.bgbutton
         Me.ButtonTambah.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ButtonTambah.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonTambah.FlatAppearance.BorderSize = 0
         Me.ButtonTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonTambah.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.ButtonTambah.ForeColor = System.Drawing.Color.White
-        Me.ButtonTambah.Location = New System.Drawing.Point(41, 349)
+        Me.ButtonTambah.Location = New System.Drawing.Point(41, 358)
         Me.ButtonTambah.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ButtonTambah.Name = "ButtonTambah"
         Me.ButtonTambah.Size = New System.Drawing.Size(160, 36)
@@ -215,12 +226,40 @@ Partial Class FormBukuPenjualan
         Me.PictureBox2.TabIndex = 41
         Me.PictureBox2.TabStop = False
         '
+        'TxtSearch
+        '
+        Me.TxtSearch.Location = New System.Drawing.Point(41, 490)
+        Me.TxtSearch.Name = "TxtSearch"
+        Me.TxtSearch.Size = New System.Drawing.Size(160, 23)
+        Me.TxtSearch.TabIndex = 42
+        '
+        'BtnSearch
+        '
+        Me.BtnSearch.Location = New System.Drawing.Point(207, 490)
+        Me.BtnSearch.Name = "BtnSearch"
+        Me.BtnSearch.Size = New System.Drawing.Size(75, 23)
+        Me.BtnSearch.TabIndex = 43
+        Me.BtnSearch.Text = "Search"
+        Me.BtnSearch.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(42, 494)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(81, 15)
+        Me.Label1.TabIndex = 45
+        Me.Label1.Text = "Search by ID..."
+        '
         'FormBukuPenjualan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(984, 623)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.BtnSearch)
+        Me.Controls.Add(Me.TxtSearch)
         Me.Controls.Add(Me.ButtonTambah)
         Me.Controls.Add(Me.ButtonEdit)
         Me.Controls.Add(Me.ButtonHapus)
@@ -233,7 +272,9 @@ Partial Class FormBukuPenjualan
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.DataGridViewBukuPenjualan)
         Me.Controls.Add(Me.PictureBox2)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.MaximizeBox = False
         Me.Name = "FormBukuPenjualan"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Buku Penjualan"
@@ -256,4 +297,7 @@ Partial Class FormBukuPenjualan
     Friend WithEvents ButtonHapus As Button
     Friend WithEvents ButtonTambah As Button
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents TxtSearch As TextBox
+    Friend WithEvents BtnSearch As Button
+    Friend WithEvents Label1 As Label
 End Class

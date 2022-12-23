@@ -112,6 +112,32 @@ Public Class BukuPenjualan
         Return result
     End Function
 
+    Public Function GetDataBukuPenjualanDatabaseSearch(ID As Integer) As DataTable
+        Dim result As New DataTable
+
+        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" _
+                + "password=" + password_db + ";" + "database =" + database
+
+        dbConn.Open()
+
+        sqlCommand.Connection = dbConn
+        sqlCommand.CommandText = "SELECT id_penjualan AS 'ID',
+                                  id_mobil AS 'ID Mobil',
+                                  id_pembeli AS 'ID Pembeli',
+                                  harga_terjual AS 'Harga Terjual',
+                                  tanggal_penjualan AS 'Tanggal Penjualan'
+                                  FROM BUKU_PENJUALAN WHERE id_penjualan='" & ID & "'"
+
+        sqlRead = sqlCommand.ExecuteReader
+
+        result.Load(sqlRead)
+
+        sqlRead.Close()
+        dbConn.Close()
+
+        Return result
+    End Function
+
     Public Function GetDataBukuPenjualanByIDDatabase(ID As Integer) As List(Of String)
         Dim result As New List(Of String)
 

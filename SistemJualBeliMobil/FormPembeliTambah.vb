@@ -1,4 +1,4 @@
-﻿Public Class FormPembeliTambah
+Public Class FormPembeliTambah
     Private Sub ButtonTambah_Click(sender As Object, e As EventArgs) Handles ButtonTambah.Click
         If (Not TextBoxNik.Text = "") And (Not TextBoxNama.Text = "") And (Not RichTextBoxAlamat.Text = "") Then
             If IsNumeric(TextBoxNik.Text) Then
@@ -9,8 +9,7 @@
                 )
 
                 MessageBox.Show("Data pembeli baru berhasil ditambahkan.")
-                Me.Close()
-                FormPembeli.Show()
+                Me.Hide()
             Else
                 MessageBox.Show("Input NIK harus angka!")
             End If
@@ -20,16 +19,6 @@
     End Sub
 
     Private Sub ButtonCancel_Click(sender As Object, e As EventArgs) Handles ButtonCancel.Click
-        Me.Close()
-        FormPembeli.Show()
-    End Sub
-
-    Private Sub PictureBoxBack_Click(sender As Object, e As EventArgs) Handles PictureBoxBack.Click
-        Me.Close()
-        FormPembeli.Show()
-    End Sub
-
-    Private Sub FormPembeliTambah_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-        FormSignIn.Close()
+        Me.Hide()
     End Sub
 End Class

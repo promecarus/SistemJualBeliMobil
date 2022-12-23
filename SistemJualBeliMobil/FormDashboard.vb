@@ -1,6 +1,6 @@
 ﻿Public Class FormDashboard
     Private Sub FormDashboard_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-        Form1.Show()
+        FormSignIn.Close()
     End Sub
 
     Private Sub FormDashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
