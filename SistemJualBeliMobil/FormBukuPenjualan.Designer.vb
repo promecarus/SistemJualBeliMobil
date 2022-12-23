@@ -190,6 +190,7 @@ Partial Class FormBukuPenjualan
         Me.ButtonHapus.FlatAppearance.BorderSize = 0
         Me.ButtonHapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonHapus.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.ButtonHapus.Location = New System.Drawing.Point(623, 135)
         Me.ButtonHapus.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ButtonHapus.Name = "ButtonHapus"
         Me.ButtonHapus.Size = New System.Drawing.Size(122, 36)
