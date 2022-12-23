@@ -45,4 +45,13 @@
         SignUp.Show()
         Me.Hide()
     End Sub
+
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+        If CheckBox1.Checked = True Then
+            inputPassword.UseSystemPasswordChar = False
+        Else
+            inputPassword.UseSystemPasswordChar = True
+        End If
+    End Sub
+
 End Class
