@@ -31,6 +31,7 @@ Partial Class FormSignIn
         Me.inputPassword = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.ChkPassword = New System.Windows.Forms.CheckBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -94,7 +95,7 @@ Partial Class FormSignIn
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(707, 378)
+        Me.Label2.Location = New System.Drawing.Point(712, 379)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(26, 21)
         Me.Label2.TabIndex = 5
@@ -128,12 +129,23 @@ Partial Class FormSignIn
         Me.Label4.TabIndex = 8
         Me.Label4.Text = "Password"
         '
+        'ChkPassword
+        '
+        Me.ChkPassword.AutoSize = True
+        Me.ChkPassword.Location = New System.Drawing.Point(861, 285)
+        Me.ChkPassword.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ChkPassword.Name = "ChkPassword"
+        Me.ChkPassword.Size = New System.Drawing.Size(15, 14)
+        Me.ChkPassword.TabIndex = 21
+        Me.ChkPassword.UseVisualStyleBackColor = True
+        '
         'FormSignIn
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(984, 623)
+        Me.Controls.Add(Me.ChkPassword)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.inputPassword)
@@ -164,4 +176,5 @@ Partial Class FormSignIn
     Friend WithEvents inputPassword As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
+    Friend WithEvents ChkPassword As CheckBox
 End Class

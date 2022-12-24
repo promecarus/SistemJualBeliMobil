@@ -60,7 +60,7 @@ Partial Class FormPembeliEdit
         Me.ButtonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonEdit.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.ButtonEdit.ForeColor = System.Drawing.Color.White
-        Me.ButtonEdit.Location = New System.Drawing.Point(383, 300)
+        Me.ButtonEdit.Location = New System.Drawing.Point(377, 300)
         Me.ButtonEdit.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ButtonEdit.Name = "ButtonEdit"
         Me.ButtonEdit.Size = New System.Drawing.Size(115, 30)

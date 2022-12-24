@@ -13,7 +13,7 @@
                             FormSignIn.Users.AddUsersDatabase(inputUsername.Text, inputEmail.Text, inputPassword.Text)
                             MessageBox.Show("Sign Up Berhasil !!")
                             FormSignIn.Show()
-                            Me.Close()
+                            Me.Hide()
                         Else
                             MessageBox.Show("Data Password Belum Terisi !!")
                         End If
@@ -29,11 +29,11 @@
 
     Private Sub SigninBtn_Click(sender As Object, e As EventArgs) Handles SigninBtn.Click
         FormSignIn.Show()
-        Me.Close()
+        Me.Hide()
     End Sub
 
-    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
-        If CheckBox1.Checked = True Then
+    Private Sub ChkPassword_CheckedChanged(sender As Object, e As EventArgs) Handles ChkPassword.CheckedChanged
+        If ChkPassword.Checked = True Then
             inputPassword.UseSystemPasswordChar = False
         Else
             inputPassword.UseSystemPasswordChar = True

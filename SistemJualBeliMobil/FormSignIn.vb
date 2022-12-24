@@ -1,7 +1,6 @@
 ﻿Public Class FormSignIn
-
-    Public Shared Dashboard As FormDashboard
     Public Shared SignUp As FormSignUp
+    Public Shared Dashboard As FormDashboard
     Public Shared Users As Users
     Public Shared JenisMobil As JenisMobil
     Public Shared Mobil As Mobil
@@ -13,8 +12,8 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        Dashboard = New FormDashboard()
         SignUp = New FormSignUp()
+        Dashboard = New FormDashboard()
         Users = New Users()
         JenisMobil = New JenisMobil()
         Mobil = New Mobil()
@@ -31,8 +30,8 @@
         If data_users.Count > 0 Then
             Users.usernameProperty = data_users(1)
             MessageBox.Show("Sign In Berhasil, Selamat Datang di JualMobil !!")
-            Form1.Show()
-            Me.Close()
+            Dashboard.Show()
+            Me.Hide()
         ElseIf inputUsername.Text = "" Then
             MessageBox.Show("Data Username Belum Terisi !!")
         ElseIf inputPassword.Text = "" Then
@@ -44,7 +43,19 @@
 
     Private Sub SignupBtn_Click(sender As Object, e As EventArgs) Handles SignupBtn.Click
         SignUp.Show()
-        Me.Close()
+        Me.Hide()
+    End Sub
+
+    Private Sub ChkPassword_CheckedChanged(sender As Object, e As EventArgs) Handles ChkPassword.CheckedChanged
+        If ChkPassword.Checked = True Then
+            inputPassword.UseSystemPasswordChar = False
+        Else
+            inputPassword.UseSystemPasswordChar = True
+        End If
+    End Sub
+
+    Private Sub FormSignIn_Load(sender As Object, e As EventArgs) Handles Me.Load
+        inputPassword.UseSystemPasswordChar = True
     End Sub
 
 End Class

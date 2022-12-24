@@ -26,7 +26,7 @@ Partial Class FormMobil
         Me.BtnEdit = New System.Windows.Forms.Button()
         Me.BtnHapus = New System.Windows.Forms.Button()
         Me.BtnTambah = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.BtnJenisMobil = New System.Windows.Forms.Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.BtnIndex = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -41,6 +41,7 @@ Partial Class FormMobil
         Me.RdbNone = New System.Windows.Forms.RadioButton()
         Me.TxtSearch = New System.Windows.Forms.TextBox()
         Me.BtnSearch = New System.Windows.Forms.Button()
+        Me.LblSearch = New System.Windows.Forms.Label()
         CType(Me.DataGridMobil, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -111,24 +112,24 @@ Partial Class FormMobil
         Me.BtnTambah.Text = "Tambah Mobil"
         Me.BtnTambah.UseVisualStyleBackColor = True
         '
-        'Button1
+        'BtnJenisMobil
         '
-        Me.Button1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.BtnJenisMobil.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.bgputihbtn1
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.Location = New System.Drawing.Point(166, 373)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(130, 36)
-        Me.Button1.TabIndex = 23
-        Me.Button1.Text = "Jenis Mobil"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.BtnJenisMobil.BackColor = System.Drawing.Color.Transparent
+        Me.BtnJenisMobil.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.bgputihbtn1
+        Me.BtnJenisMobil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnJenisMobil.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnJenisMobil.FlatAppearance.BorderSize = 0
+        Me.BtnJenisMobil.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnJenisMobil.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.BtnJenisMobil.ForeColor = System.Drawing.Color.Black
+        Me.BtnJenisMobil.Location = New System.Drawing.Point(166, 373)
+        Me.BtnJenisMobil.Name = "BtnJenisMobil"
+        Me.BtnJenisMobil.Size = New System.Drawing.Size(130, 36)
+        Me.BtnJenisMobil.TabIndex = 23
+        Me.BtnJenisMobil.Text = "Jenis Mobil"
+        Me.BtnJenisMobil.UseVisualStyleBackColor = False
         '
         'PictureBox2
         '
@@ -296,6 +297,7 @@ Partial Class FormMobil
         '
         'TxtSearch
         '
+        Me.TxtSearch.BackColor = System.Drawing.SystemColors.Window
         Me.TxtSearch.Location = New System.Drawing.Point(35, 560)
         Me.TxtSearch.Name = "TxtSearch"
         Me.TxtSearch.Size = New System.Drawing.Size(200, 23)
@@ -310,13 +312,21 @@ Partial Class FormMobil
         Me.BtnSearch.Text = "Search"
         Me.BtnSearch.UseVisualStyleBackColor = True
         '
+        'LblSearch
+        '
+        Me.LblSearch.AutoSize = True
+        Me.LblSearch.Location = New System.Drawing.Point(38, 564)
+        Me.LblSearch.Name = "LblSearch"
+        Me.LblSearch.Size = New System.Drawing.Size(81, 15)
+        Me.LblSearch.TabIndex = 37
+        Me.LblSearch.Text = "Search by ID..."
+        '
         'FormMobil
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(984, 623)
         Me.Controls.Add(Me.BtnSearch)
-        Me.Controls.Add(Me.TxtSearch)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.BtnIndex)
         Me.Controls.Add(Me.Label5)
@@ -325,12 +335,14 @@ Partial Class FormMobil
         Me.Controls.Add(Me.ManageUserBtn)
         Me.Controls.Add(Me.manageCarBtn)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.BtnJenisMobil)
         Me.Controls.Add(Me.DataGridMobil)
         Me.Controls.Add(Me.BtnEdit)
         Me.Controls.Add(Me.BtnHapus)
         Me.Controls.Add(Me.BtnTambah)
         Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.LblSearch)
+        Me.Controls.Add(Me.TxtSearch)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.MaximizeBox = False
@@ -351,7 +363,7 @@ Partial Class FormMobil
     Friend WithEvents BtnEdit As Button
     Friend WithEvents BtnHapus As Button
     Friend WithEvents BtnTambah As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents BtnJenisMobil As Button
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents BtnIndex As Button
     Friend WithEvents Label5 As Label
@@ -366,4 +378,5 @@ Partial Class FormMobil
     Friend WithEvents RdbTerjual As RadioButton
     Friend WithEvents TxtSearch As TextBox
     Friend WithEvents BtnSearch As Button
+    Friend WithEvents LblSearch As Label
 End Class

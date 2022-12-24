@@ -57,22 +57,27 @@ VALUES
 (
 	'mawanrunner',
 	'hilmawanfauzy77@gmail.com',
-	'password'
+	'5f4dcc3b5aa765d61d8327deb882cf99'
 ),
 (
 	'promecarus',
 	'haikusersusersalslipi@gmail.com',
-	'password'
+	'5f4dcc3b5aa765d61d8327deb882cf99'
 ),
 (
 	'Dynavx',
 	'haical31@gmail.com',
-	'password'
+	'5f4dcc3b5aa765d61d8327deb882cf99'
 ),
 (
 	'Lowl16',
 	'sandhi372@gmail.com',
-	'password'
+	'5f4dcc3b5aa765d61d8327deb882cf99'
+),
+(
+	'1',
+	'satu@mail.com',
+	'c4ca4238a0b923820dcc509a6f75849b'
 );
 
 INSERT

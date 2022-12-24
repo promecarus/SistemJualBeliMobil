@@ -34,6 +34,9 @@ Partial Class FormPembeli
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.ButtonEdit = New System.Windows.Forms.Button()
         Me.ButtonHapus = New System.Windows.Forms.Button()
+        Me.TxtSearch = New System.Windows.Forms.TextBox()
+        Me.BtnSearch = New System.Windows.Forms.Button()
+        Me.LblSearch = New System.Windows.Forms.Label()
         CType(Me.DataGridViewPembeli, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -171,7 +174,7 @@ Partial Class FormPembeli
         Me.ButtonTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonTambah.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.ButtonTambah.ForeColor = System.Drawing.Color.White
-        Me.ButtonTambah.Location = New System.Drawing.Point(499, 380)
+        Me.ButtonTambah.Location = New System.Drawing.Point(486, 380)
         Me.ButtonTambah.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ButtonTambah.Name = "ButtonTambah"
         Me.ButtonTambah.Size = New System.Drawing.Size(130, 36)
@@ -222,12 +225,40 @@ Partial Class FormPembeli
         Me.ButtonHapus.Text = "Hapus"
         Me.ButtonHapus.UseVisualStyleBackColor = False
         '
+        'TxtSearch
+        '
+        Me.TxtSearch.Location = New System.Drawing.Point(13, 380)
+        Me.TxtSearch.Name = "TxtSearch"
+        Me.TxtSearch.Size = New System.Drawing.Size(331, 23)
+        Me.TxtSearch.TabIndex = 38
+        '
+        'BtnSearch
+        '
+        Me.BtnSearch.Location = New System.Drawing.Point(359, 380)
+        Me.BtnSearch.Name = "BtnSearch"
+        Me.BtnSearch.Size = New System.Drawing.Size(108, 23)
+        Me.BtnSearch.TabIndex = 39
+        Me.BtnSearch.Text = "Search"
+        Me.BtnSearch.UseVisualStyleBackColor = True
+        '
+        'LblSearch
+        '
+        Me.LblSearch.AutoSize = True
+        Me.LblSearch.Location = New System.Drawing.Point(16, 384)
+        Me.LblSearch.Name = "LblSearch"
+        Me.LblSearch.Size = New System.Drawing.Size(81, 15)
+        Me.LblSearch.TabIndex = 46
+        Me.LblSearch.Text = "Search by ID..."
+        '
         'FormPembeli
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(984, 623)
+        Me.Controls.Add(Me.LblSearch)
+        Me.Controls.Add(Me.BtnSearch)
+        Me.Controls.Add(Me.TxtSearch)
         Me.Controls.Add(Me.ButtonEdit)
         Me.Controls.Add(Me.ButtonHapus)
         Me.Controls.Add(Me.PictureBox2)
@@ -266,4 +297,7 @@ Partial Class FormPembeli
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents ButtonEdit As Button
     Friend WithEvents ButtonHapus As Button
+    Friend WithEvents TxtSearch As TextBox
+    Friend WithEvents BtnSearch As Button
+    Friend WithEvents LblSearch As Label
 End Class

@@ -12,9 +12,13 @@
         ' Add any initialization after the InitializeComponent() call.
         Mobil = New Mobil()
         RdbNone.Checked = True
+        BtnSearch.Enabled = False
 
+    End Sub
+
+    Private Sub FormMobil_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         ReloadDataTableDatabase()
-
+        DataGridMobil.ClearSelection()
     End Sub
 
     Public Sub ReloadDataTableDatabase()
@@ -47,6 +51,10 @@
         DataGridMobil.DataSource = Mobil.GetDataMobilDatabaseBelumTerjual()
     End Sub
 
+    Private Sub DataGridMobil_ColumnHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DataGridMobil.ColumnHeaderMouseClick
+        DataGridMobil.ClearSelection()
+    End Sub
+
     Private Sub DataGridMobil_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridMobil.CellClick
         If (e.RowIndex >= 0) Then
             Dim index As Integer = e.RowIndex
@@ -59,8 +67,7 @@
     End Sub
 
     Private Sub BtnTambah_Click(sender As Object, e As EventArgs) Handles BtnTambah.Click
-        Dim MobilTambah = New FormMobilTambah()
-        MobilTambah.Show()
+        FormMobilTambah.Show()
     End Sub
 
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
@@ -77,13 +84,25 @@
             Dim MobilEdit = New FormMobilEdit()
             MobilEdit.Show()
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Pilih Row Terlebih Dahulu !!")
         End Try
     End Sub
 
     Private Sub BtnHapus_Click(sender As Object, e As EventArgs) Handles BtnHapus.Click
-        Dim MobilHapus = New FormMobilHapus()
-        MobilHapus.Show()
+        Try
+            Dim selectedMobil As List(Of String) = Mobil.GetDataMobilByIDDatabase(SelectedTableMobil)
+
+            Mobil.idjenisMobillProperty = selectedMobil(1)
+
+            Dim MobilHapus = New FormMobilHapus()
+            MobilHapus.Show()
+        Catch ex As Exception
+            MessageBox.Show("Pilih Row Terlebih Dahulu !!")
+        End Try
+    End Sub
+
+    Private Sub FormMobil_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        FormSignIn.Close()
     End Sub
 
     Private Sub TransactionBtn_Click(sender As Object, e As EventArgs)
@@ -111,7 +130,7 @@
         Me.Hide()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub BtnJenisMobil_Click(sender As Object, e As EventArgs) Handles BtnJenisMobil.Click
         FormJenisMobil.Show()
         Me.Hide()
     End Sub
@@ -139,4 +158,28 @@
             ReloadDataTableDatabase()
         End If
     End Sub
+
+    Private Sub TxtSearch_Enter(sender As Object, e As EventArgs) Handles TxtSearch.Enter
+        LblSearch.Text = ""
+    End Sub
+
+    Private Sub TxtSearch_Leave(sender As Object, e As EventArgs) Handles TxtSearch.Leave
+        If TxtSearch.Text = "" Then
+            LblSearch.Text = "Search by ID..."
+        End If
+    End Sub
+
+    Private Sub TxtSearch_TextChanged(sender As Object, e As EventArgs) Handles TxtSearch.TextChanged
+        BtnSearch.Enabled = True
+
+        If TxtSearch.Text = "" Then
+            BtnSearch.Enabled = False
+        End If
+    End Sub
+
+    Private Sub SignoutBtn_Click(sender As Object, e As EventArgs) Handles SignoutBtn.Click
+        FormSignIn.Show()
+        Me.Hide()
+    End Sub
+
 End Class

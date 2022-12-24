@@ -1,4 +1,4 @@
-﻿Public Class FormPembeliEdit
+Public Class FormPembeliEdit
     Public Sub New()
         ' This call is required by the designer.
         InitializeComponent()
@@ -20,8 +20,7 @@
                 )
 
                 MessageBox.Show("Data pembeli dengan ID " & FormPembeli.selectedRowPembeli & " berhasil diedit.")
-                Me.Close()
-                FormPembeli.Show()
+                Me.Hide()
             Else
                 MessageBox.Show("Input NIK harus angka!")
             End If
@@ -31,24 +30,6 @@
     End Sub
 
     Private Sub ButtonCancel_Click(sender As Object, e As EventArgs) Handles ButtonCancel.Click
-        Me.Close()
-        FormPembeli.Show()
-    End Sub
-
-    Private Sub PictureBoxBack_Click(sender As Object, e As EventArgs) 
-        Me.Close()
-        FormPembeli.Show()
-    End Sub
-
-    Private Sub FormPembeliEdit_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-        FormSignIn.Close()
-    End Sub
-
-    Private Sub TextBoxNik_TextChanged(sender As Object, e As EventArgs) Handles TextBoxNik.TextChanged
-
-    End Sub
-
-    Private Sub LabelAlamat_Click(sender As Object, e As EventArgs) Handles LabelAlamat.Click
-
+        Me.Hide()
     End Sub
 End Class
