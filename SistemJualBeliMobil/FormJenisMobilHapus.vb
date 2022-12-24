@@ -10,17 +10,16 @@
 
     End Sub
 
-    Private Sub BtnHapus_Click(sender As Object, e As EventArgs) Handles BtnHapus.Click
+    Private Sub BtnYes_Click(sender As Object, e As EventArgs) Handles BtnYes.Click
         FormJenisMobil.JenisMobil.DeleteDataJenisMobilByIDDatabase(FormJenisMobil.SelectedTableJenisMobil)
 
-        Me.Close()
+        MessageBox.Show("Data Jenis Mobil Dengan ID " & FormJenisMobil.SelectedTableJenisMobil & " Berhasil Dihapus.")
+
+        Me.Hide()
     End Sub
 
-    Private Sub LblJenisMobil_Click(sender As Object, e As EventArgs) Handles LblJenisMobil.Click
-
+    Private Sub BtnNo_Click(sender As Object, e As EventArgs) Handles BtnNo.Click
+        Me.Hide()
     End Sub
 
-    'Private Sub FormJenisMobilHapus_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-    '    Form1.Show()
-    'End Sub
 End Class

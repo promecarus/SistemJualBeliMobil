@@ -36,7 +36,7 @@ Partial Class FormBukuPenjualan
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.TxtSearch = New System.Windows.Forms.TextBox()
         Me.BtnSearch = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.LblSearch = New System.Windows.Forms.Label()
         CType(Me.DataGridViewBukuPenjualan, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -242,14 +242,14 @@ Partial Class FormBukuPenjualan
         Me.BtnSearch.Text = "Search"
         Me.BtnSearch.UseVisualStyleBackColor = True
         '
-        'Label1
+        'LblSearch
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(42, 494)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(81, 15)
-        Me.Label1.TabIndex = 45
-        Me.Label1.Text = "Search by ID..."
+        Me.LblSearch.AutoSize = True
+        Me.LblSearch.Location = New System.Drawing.Point(42, 494)
+        Me.LblSearch.Name = "LblSearch"
+        Me.LblSearch.Size = New System.Drawing.Size(81, 15)
+        Me.LblSearch.TabIndex = 45
+        Me.LblSearch.Text = "Search by ID..."
         '
         'FormBukuPenjualan
         '
@@ -257,7 +257,7 @@ Partial Class FormBukuPenjualan
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(984, 623)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.LblSearch)
         Me.Controls.Add(Me.BtnSearch)
         Me.Controls.Add(Me.TxtSearch)
         Me.Controls.Add(Me.ButtonTambah)
@@ -299,5 +299,5 @@ Partial Class FormBukuPenjualan
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents TxtSearch As TextBox
     Friend WithEvents BtnSearch As Button
-    Friend WithEvents Label1 As Label
+    Friend WithEvents LblSearch As Label
 End Class

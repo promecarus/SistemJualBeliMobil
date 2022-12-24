@@ -27,7 +27,7 @@ Partial Class FormMobilTambah
         Me.RdManual = New System.Windows.Forms.RadioButton()
         Me.TxtHargaDefault = New System.Windows.Forms.TextBox()
         Me.TxtTahunPembuatan = New System.Windows.Forms.TextBox()
-        Me.BtnTambahMobil = New System.Windows.Forms.Button()
+        Me.BtnTambah = New System.Windows.Forms.Button()
         Me.LabelTipeMobil = New System.Windows.Forms.Label()
         Me.LabelStock = New System.Windows.Forms.Label()
         Me.LabelTahunTerbit = New System.Windows.Forms.Label()
@@ -44,6 +44,7 @@ Partial Class FormMobilTambah
         Me.LabelTanggalMasukKoleksi = New System.Windows.Forms.Label()
         Me.TxtGaransi = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.BtnCancel = New System.Windows.Forms.Button()
         Me.GroupBoxTipeMobil.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -101,22 +102,22 @@ Partial Class FormMobilTambah
         Me.TxtTahunPembuatan.Size = New System.Drawing.Size(257, 23)
         Me.TxtTahunPembuatan.TabIndex = 65
         '
-        'BtnTambahMobil
+        'BtnTambah
         '
-        Me.BtnTambahMobil.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.bgbutton
-        Me.BtnTambahMobil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnTambahMobil.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnTambahMobil.FlatAppearance.BorderSize = 0
-        Me.BtnTambahMobil.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnTambahMobil.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.BtnTambahMobil.ForeColor = System.Drawing.Color.White
-        Me.BtnTambahMobil.Location = New System.Drawing.Point(284, 438)
-        Me.BtnTambahMobil.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.BtnTambahMobil.Name = "BtnTambahMobil"
-        Me.BtnTambahMobil.Size = New System.Drawing.Size(139, 40)
-        Me.BtnTambahMobil.TabIndex = 60
-        Me.BtnTambahMobil.Text = "Tambah Mobil"
-        Me.BtnTambahMobil.UseVisualStyleBackColor = True
+        Me.BtnTambah.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.bgbutton
+        Me.BtnTambah.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnTambah.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnTambah.FlatAppearance.BorderSize = 0
+        Me.BtnTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnTambah.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.BtnTambah.ForeColor = System.Drawing.Color.White
+        Me.BtnTambah.Location = New System.Drawing.Point(207, 438)
+        Me.BtnTambah.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.BtnTambah.Name = "BtnTambah"
+        Me.BtnTambah.Size = New System.Drawing.Size(139, 40)
+        Me.BtnTambah.TabIndex = 60
+        Me.BtnTambah.Text = "Tambah"
+        Me.BtnTambah.UseVisualStyleBackColor = True
         '
         'LabelTipeMobil
         '
@@ -290,12 +291,29 @@ Partial Class FormMobilTambah
         Me.Label3.TabIndex = 77
         Me.Label3.Text = "Hari"
         '
+        'BtnCancel
+        '
+        Me.BtnCancel.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.bgputihbtn
+        Me.BtnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnCancel.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnCancel.FlatAppearance.BorderSize = 0
+        Me.BtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCancel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.BtnCancel.Location = New System.Drawing.Point(354, 438)
+        Me.BtnCancel.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.BtnCancel.Name = "BtnCancel"
+        Me.BtnCancel.Size = New System.Drawing.Size(139, 40)
+        Me.BtnCancel.TabIndex = 78
+        Me.BtnCancel.Text = "Cancel"
+        Me.BtnCancel.UseVisualStyleBackColor = True
+        '
         'FormMobilTambah
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(700, 498)
+        Me.Controls.Add(Me.BtnCancel)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.TxtGaransi)
         Me.Controls.Add(Me.LabelTanggalMasukKoleksi)
@@ -307,7 +325,7 @@ Partial Class FormMobilTambah
         Me.Controls.Add(Me.GroupBoxTipeMobil)
         Me.Controls.Add(Me.TxtHargaDefault)
         Me.Controls.Add(Me.TxtTahunPembuatan)
-        Me.Controls.Add(Me.BtnTambahMobil)
+        Me.Controls.Add(Me.BtnTambah)
         Me.Controls.Add(Me.LabelTipeMobil)
         Me.Controls.Add(Me.LabelStock)
         Me.Controls.Add(Me.LabelTahunTerbit)
@@ -331,7 +349,7 @@ Partial Class FormMobilTambah
     Friend WithEvents RdManual As RadioButton
     Friend WithEvents TxtHargaDefault As TextBox
     Friend WithEvents TxtTahunPembuatan As TextBox
-    Friend WithEvents BtnTambahMobil As Button
+    Friend WithEvents BtnTambah As Button
     Friend WithEvents LabelTipeMobil As Label
     Friend WithEvents LabelStock As Label
     Friend WithEvents LabelTahunTerbit As Label
@@ -348,4 +366,5 @@ Partial Class FormMobilTambah
     Friend WithEvents LabelTanggalMasukKoleksi As Label
     Friend WithEvents TxtGaransi As TextBox
     Friend WithEvents Label3 As Label
+    Friend WithEvents BtnCancel As Button
 End Class
