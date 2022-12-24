@@ -36,41 +36,50 @@
             kondisi = "Sangat Buruk"
         End If
 
-        If Not TxtTahunPembuatan.Text = "" Then
-            If IsNumeric(TxtTahunPembuatan.Text) Then
-                If Not TxtGaransi.Text = "" Then
-                    If IsNumeric(TxtGaransi.Text) Then
-                        If Not TxtHargaDefault.Text = "" Then
-                            If IsNumeric(TxtHargaDefault.Text) Then
-                                FormSignIn.Mobil.AddDataMobilDatabase(ComboBoxJenisMobil.SelectedValue,
-                                         tipe_mobil,
-                                         Integer.Parse(TxtTahunPembuatan.Text),
-                                         kondisi,
-                                         Integer.Parse(TxtHargaDefault.Text),
-                                         Integer.Parse(TxtGaransi.Text),
-                                         Integer.Parse(TxtHargaDefault.Text))
-
-                                MessageBox.Show("Data Mobil Baru Berhasil Ditambahkan.")
-
-                                Me.Hide()
+        If RdManual.Checked = False And RdMatic.Checked = False Then
+            MessageBox.Show("Data Tipe Mobil Belum Terpilih !!")
+        Else
+            If Not TxtTahunPembuatan.Text = "" Then
+                If IsNumeric(TxtTahunPembuatan.Text) Then
+                    If Not TxtGaransi.Text = "" Then
+                        If IsNumeric(TxtGaransi.Text) Then
+                            If RdSangatBaik.Checked = False And RdBaik.Checked = False And RdSedang.Checked = False And RdBuruk.Checked = False And RdSangatBuruk.Checked = False Then
+                                MessageBox.Show("Data Kondisi Belum Terpilih !!")
                             Else
-                                MessageBox.Show("Data Harga Default Harus Angka !!")
+                                If Not TxtHargaDefault.Text = "" Then
+                                    If IsNumeric(TxtHargaDefault.Text) Then
+                                        FormSignIn.Mobil.AddDataMobilDatabase(ComboBoxJenisMobil.SelectedValue,
+                                                 tipe_mobil,
+                                                 Integer.Parse(TxtTahunPembuatan.Text),
+                                                 kondisi,
+                                                 Integer.Parse(TxtHargaDefault.Text),
+                                                 Integer.Parse(TxtGaransi.Text),
+                                                 Integer.Parse(TxtHargaDefault.Text))
+
+                                        MessageBox.Show("Data Mobil Baru Berhasil Ditambahkan.")
+
+                                        Me.Hide()
+                                    Else
+                                        MessageBox.Show("Data Harga Default Harus Angka !!")
+                                    End If
+                                Else
+                                    MessageBox.Show("Data Harga Default Belum Terisi !!")
+                                End If
                             End If
                         Else
-                            MessageBox.Show("Data Harga Default Belum Terisi !!")
+                            MessageBox.Show("Data Garansi Harus Angka !!")
                         End If
                     Else
-                        MessageBox.Show("Data Garansi Harus Angka !!")
+                        MessageBox.Show("Data Garansi Belum Terisi !!")
                     End If
                 Else
-                    MessageBox.Show("Data Garansi Belum Terisi !!")
+                    MessageBox.Show("Data Tahun Pembuatan Harus Angka !!")
                 End If
             Else
-                MessageBox.Show("Data Tahun Pembuatan Harus Angka !!")
+                MessageBox.Show("Data Tahun Pembuatan Belum Terisi !!")
             End If
-        Else
-            MessageBox.Show("Data Tahun Pembuatan Belum Terisi !!")
         End If
+
     End Sub
 
     Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles BtnCancel.Click
