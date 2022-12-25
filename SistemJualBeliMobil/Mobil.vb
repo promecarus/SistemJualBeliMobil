@@ -138,45 +138,8 @@ Public Class Mobil
     End Function
 
     Public Function GetDataMobilByIDDatabase(ID As Integer) As List(Of String)
-        Dim result As New List(Of String)
-
-        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" _
-                + "password=" + password_db + ";" + "database =" + database
-
-        dbConn.Open()
-
-        sqlCommand.Connection = dbConn
-        sqlCommand.CommandText = "SELECT id,
-                                  id_jenis_mobil,
-                                  tipe_mobil,
-                                  tahun_pembuatan,
-                                  kondisi,
-                                  harga,
-                                  garansi,
-                                  status_terjual,
-                                  harga_default
-                                  FROM MOBIL
-                                  WHERE id='" & ID & "'"
-
-        sqlRead = sqlCommand.ExecuteReader
-
-        While sqlRead.Read
-            result.Add(sqlRead.GetString(0).ToString())
-            result.Add(sqlRead.GetString(1).ToString())
-            result.Add(sqlRead.GetString(2).ToString())
-            result.Add(sqlRead.GetString(3).ToString())
-            result.Add(sqlRead.GetString(4).ToString())
-            result.Add(sqlRead.GetString(5).ToString())
-            result.Add(sqlRead.GetString(6).ToString())
-            result.Add(sqlRead.GetString(7).ToString())
-            result.Add(sqlRead.GetString(8).ToString())
-        End While
-
-        sqlRead.Close()
-
-        dbConn.Close()
-
-        Return result
+        Dim query = "SELECT id, id_jenis_mobil, tipe_mobil, tahun_pembuatan, kondisi, harga, garansi, status_terjual, harga_default FROM mobil WHERE id='" & ID & "'"
+        Return FormSignIn.db.ExecuteGetOneRow(query, 9)
     End Function
 
     Public Function UpdateDataMobilByIDDatabase(ID As Integer,
