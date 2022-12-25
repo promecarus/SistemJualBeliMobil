@@ -40,7 +40,7 @@
         End Set
     End Property
 
-    Public Function AddDataBukuPenjualanDatabase(
+    Public Sub AddDataBukuPenjualanDatabase(
         id_mobil As Integer,
         id_pembeli As Integer,
         harga_terjual As Integer,
@@ -48,7 +48,9 @@
     )
         Dim query = "INSERT INTO buku_penjualan(id_mobil, id_pembeli, harga_terjual, tanggal_penjualan) VALUES('" & id_mobil & "', '" & id_pembeli & "', '" & harga_terjual & "', '" & tanggal_penjualan.ToString("yyyy/MM/dd") & "')"
         FormSignIn.db.ExecuteNonQuery(query)
-    End Function
+        query = "UPDATE mobil SET status_terjual=TRUE, harga=" & harga_terjual & " WHERE id=" & id_mobil
+        FormSignIn.db.ExecuteNonQuery(query)
+    End Sub
 
     Public Function GetDataBukuPenjualanDatabase() As DataTable
         Dim query = "SELECT id_penjualan AS 'ID', id_mobil AS 'ID Mobil', id_pembeli AS 'ID Pembeli', harga_terjual AS 'Harga Terjual', tanggal_penjualan AS 'Tanggal Penjualan' FROM buku_penjualan"

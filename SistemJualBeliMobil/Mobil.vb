@@ -147,7 +147,7 @@
     End Sub
 
     Public Function ListDataMobil() As DataTable
-        Dim query = "SELECT id FROM mobil ORDER BY id"
+        Dim query = "SELECT id FROM mobil WHERE status_terjual=FALSE ORDER BY id"
         Return FormSignIn.db.ExecuteQuery(query)
     End Function
 End Class
