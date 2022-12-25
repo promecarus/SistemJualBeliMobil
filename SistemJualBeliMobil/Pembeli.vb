@@ -32,14 +32,14 @@ Public Class Pembeli
         End Set
     End Property
 
-    Public Function AddDataPembeliDatabase(
+    Public Sub AddDataPembeliDatabase(
         nik As String,
         nama As String,
         alamat As String
     )
         Dim query = "INSERT INTO PEMBELI(nik, nama, alamat) VALUES('" & nik & "', '" & nama & "', '" & alamat & "')"
         FormSignIn.db.ExecuteNonQuery(query)
-    End Function
+    End Sub
 
     Public Function GetDataPembeliDatabase() As DataTable
         Dim query = "SELECT id_pembeli AS 'ID', nik AS 'NIK', nama AS 'Nama', alamat AS 'Alamat' FROM pembeli"
