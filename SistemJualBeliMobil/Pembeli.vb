@@ -124,31 +124,10 @@ Public Class Pembeli
         End Try
     End Function
 
-    Public Function DeleteDataPembeliByIDDatabase(ID As Integer)
-        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" _
-                + "password=" + password_db + ";" + "database =" + database
-
-        Try
-            dbConn.Open()
-
-            sqlCommand.Connection = dbConn
-            sqlQuery = "DELETE FROM pembeli " &
-                        "WHERE id_pembeli='" & ID & "'"
-
-            Debug.WriteLine(sqlQuery)
-
-            sqlCommand = New MySqlCommand(sqlQuery, dbConn)
-            sqlRead = sqlCommand.ExecuteReader
-
-            sqlRead.Close()
-
-            dbConn.Close()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        Finally
-            dbConn.Dispose()
-        End Try
-    End Function
+    Public Sub DeleteDataPembeliByIDDatabase(ID As Integer)
+        Dim query = "DELETE FROM pembeli " & "WHERE id_pembeli='" & ID & "'"
+        FormSignIn.db.ExecuteNonQuery(query)
+    End Sub
 
     Public Function ListDataPembeli() As DataTable
         Dim query = "SELECT id_pembeli, nama FROM pembeli"
