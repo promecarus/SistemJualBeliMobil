@@ -79,37 +79,15 @@ Public Class BukuPenjualan
         Return FormSignIn.db.ExecuteGetOneRow(query, 5)
     End Function
 
-    Public Function UpdateDataBukuPenjualanByIDDatabase(ID As Integer,
-                                                  id_mobil As Integer,
-                                                  id_pembeli As Integer,
-                                                  harga_terjual As Integer,
-                                                  tanggal_penjualan As Date)
-
-        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" _
-            + "password=" + password_db + ";" + "database =" + database
-
-        Try
-            dbConn.Open()
-
-            sqlCommand.Connection = dbConn
-            sqlQuery = "UPDATE buku_penjualan SET " &
-                        "id_mobil='" & id_mobil & "', " &
-                        "id_pembeli='" & id_pembeli & "', " &
-                        "harga_terjual='" & harga_terjual & "', " &
-                        "tanggal_penjualan='" & tanggal_penjualan.ToString("yyyy/MM/dd") & "' " &
-                        "WHERE id_penjualan='" & ID & "'"
-
-            sqlCommand = New MySqlCommand(sqlQuery, dbConn)
-            sqlRead = sqlCommand.ExecuteReader
-
-            sqlRead.Close()
-
-            dbConn.Close()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        Finally
-            dbConn.Dispose()
-        End Try
+    Public Sub UpdateDataBukuPenjualanByIDDatabase(
+        ID As Integer,
+        id_mobil As Integer,
+        id_pembeli As Integer,
+        harga_terjual As Integer,
+        tanggal_penjualan As Date
+     )
+        Dim query = "UPDATE buku_penjualan SET " & "id_mobil='" & id_mobil & "', " & "id_pembeli='" & id_pembeli & "', " & "harga_terjual='" & harga_terjual & "', " & "tanggal_penjualan='" & tanggal_penjualan.ToString("yyyy/MM/dd") & "' " & "WHERE id_penjualan='" & ID & "'"
+        FormSignIn.db.ExecuteNonQuery(query)
     End Sub
 
     Public Function DeleteDataBukuPenjualanByIDDatabase(ID As Integer)
