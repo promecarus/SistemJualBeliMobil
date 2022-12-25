@@ -90,29 +90,8 @@ Public Class BukuPenjualan
         FormSignIn.db.ExecuteNonQuery(query)
     End Sub
 
-    Public Function DeleteDataBukuPenjualanByIDDatabase(ID As Integer)
-        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" _
-                + "password=" + password_db + ";" + "database =" + database
-
-        Try
-            dbConn.Open()
-
-            sqlCommand.Connection = dbConn
-            sqlQuery = "DELETE FROM buku_penjualan " &
-                        "WHERE id_penjualan='" & ID & "'"
-
-            Debug.WriteLine(sqlQuery)
-
-            sqlCommand = New MySqlCommand(sqlQuery, dbConn)
-            sqlRead = sqlCommand.ExecuteReader
-
-            sqlRead.Close()
-
-            dbConn.Close()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        Finally
-            dbConn.Dispose()
-        End Try
-    End Function
+    Public Sub DeleteDataBukuPenjualanByIDDatabase(ID As Integer)
+        Dim query = "DELETE FROM buku_penjualan " & "WHERE id_penjualan='" & ID & "'"
+        FormSignIn.db.ExecuteNonQuery(query)
+    End Sub
 End Class
