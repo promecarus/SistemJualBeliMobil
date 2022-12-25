@@ -1,6 +1,4 @@
-﻿Imports System.Text
-Imports MySql.Data.MySqlClient
-Imports Mysqlx.XDevAPI.Relational
+﻿Imports MySql.Data.MySqlClient
 
 Public Class Pembeli
     Private nik As String
@@ -44,34 +42,13 @@ Public Class Pembeli
         End Set
     End Property
 
-    Public Function AddDataPembeliDatabase(nik As String,
-                                              nama As String,
-                                              alamat As String)
-
-        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" _
-                + "password=" + password_db + ";" + "database =" + database
-
-        Try
-            dbConn.Open()
-
-            sqlCommand.Connection = dbConn
-            sqlQuery = "INSERT INTO PEMBELI(nik, nama, alamat) VALUES('" _
-                        & nik & "', '" _
-                        & nama & "', '" _
-                        & alamat & "')"
-
-            sqlCommand = New MySqlCommand(sqlQuery, dbConn)
-            sqlRead = sqlCommand.ExecuteReader
-
-            dbConn.Close()
-
-            sqlRead.Close()
-            dbConn.Close()
-        Catch ex As Exception
-            Return ex.Message
-        Finally
-            dbConn.Dispose()
-        End Try
+    Public Function AddDataPembeliDatabase(
+        nik As String,
+        nama As String,
+        alamat As String
+    )
+        Dim query = "INSERT INTO PEMBELI(nik, nama, alamat) VALUES('" & nik & "', '" & nama & "', '" & alamat & "')"
+        FormSignIn.db.ExecuteNonQuery(query)
     End Function
 
     Public Function GetDataPembeliDatabase() As DataTable
