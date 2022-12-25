@@ -142,42 +142,6 @@ Public Class Mobil
         Return FormSignIn.db.ExecuteGetOneRow(query, 9)
     End Function
 
-    Public Function UpdateDataMobilByIDDatabase(ID As Integer,
-                                                id_jenis_mobil As Integer,
-                                                tipe_mobil As String,
-                                                tahun_pembuatan As String,
-                                                kondisi As String,
-                                                garansi As String,
-                                                harga_default As Integer)
-
-        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" _
-            + "password=" + password_db + ";" + "database =" + database
-
-        Try
-            dbConn.Open()
-
-            sqlCommand.Connection = dbConn
-            sqlQuery = "UPDATE MOBIL SET " &
-                        "id_jenis_mobil='" & id_jenis_mobil & "', " &
-                        "tipe_mobil='" & tipe_mobil & "', " &
-                        "tahun_pembuatan='" & tahun_pembuatan & "', " &
-                        "kondisi='" & kondisi & "', " &
-                        "garansi='" & garansi & "', " &
-                        "harga_default='" & harga_default & "' " &
-                        "WHERE id='" & ID & "'"
-
-            sqlCommand = New MySqlCommand(sqlQuery, dbConn)
-            sqlRead = sqlCommand.ExecuteReader
-
-            sqlRead.Close()
-
-            dbConn.Close()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        Finally
-            dbConn.Dispose()
-        End Try
-    End Function
 
     Public Function DeleteDataMobilByIDDatabase(ID As Integer)
         dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" _
@@ -196,6 +160,18 @@ Public Class Mobil
             sqlRead = sqlCommand.ExecuteReader
 
             sqlRead.Close()
+    Public Sub UpdateDataMobilByIDDatabase(
+        ID As Integer,
+        id_jenis_mobil As Integer,
+        tipe_mobil As String,
+        tahun_pembuatan As String,
+        kondisi As String,
+        garansi As String,
+        harga_default As Integer
+    )
+        Dim query = "UPDATE mobil SET " & "id_jenis_mobil='" & id_jenis_mobil & "', " & "tipe_mobil='" & tipe_mobil & "', " & "tahun_pembuatan='" & tahun_pembuatan & "', " & "kondisi='" & kondisi & "', " & "garansi='" & garansi & "', " & "harga_default='" & harga_default & "' " & "WHERE id='" & ID & "'"
+        FormSignIn.db.ExecuteNonQuery(query)
+    End Sub
 
             dbConn.Close()
         Catch ex As Exception
