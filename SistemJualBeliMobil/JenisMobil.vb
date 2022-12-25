@@ -52,31 +52,10 @@ Public Class JenisMobil
         FormSignIn.db.ExecuteNonQuery(query)
     End Sub
 
-    Public Function DeleteDataJenisMobilByIDDatabase(ID As Integer)
-        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" _
-                + "password=" + password_db + ";" + "database =" + database
-
-        Try
-            dbConn.Open()
-
-            sqlCommand.Connection = dbConn
-            sqlQuery = "DELETE FROM JENIS_MOBIL " &
-                        "WHERE id_jenis='" & ID & "'"
-
-            Debug.WriteLine(sqlQuery)
-
-            sqlCommand = New MySqlCommand(sqlQuery, dbConn)
-            sqlRead = sqlCommand.ExecuteReader
-
-            sqlRead.Close()
-
-            dbConn.Close()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        Finally
-            dbConn.Dispose()
-        End Try
-    End Function
+    Public Sub DeleteDataJenisMobilByIDDatabase(ID As Integer)
+        Dim query = "DELETE FROM jenis_mobil " & "WHERE id_jenis='" & ID & "'"
+        FormSignIn.db.ExecuteNonQuery(query)
+    End Sub
 
     Public Function ListDataJenisMobil() As DataTable
         dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" _
