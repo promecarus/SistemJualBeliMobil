@@ -40,31 +40,8 @@ Public Class JenisMobil
     End Function
 
     Public Function GetDataJenisMobilByIDDatabase(ID As Integer) As List(Of String)
-        Dim result As New List(Of String)
-
-        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" _
-                + "password=" + password_db + ";" + "database =" + database
-
-        dbConn.Open()
-
-        sqlCommand.Connection = dbConn
-        sqlCommand.CommandText = "SELECT id_jenis,
-                                  jenis
-                                  FROM JENIS_MOBIL
-                                  WHERE id_jenis='" & ID & "'"
-
-        sqlRead = sqlCommand.ExecuteReader
-
-        While sqlRead.Read
-            result.Add(sqlRead.GetString(0).ToString())
-            result.Add(sqlRead.GetString(1).ToString())
-        End While
-
-        sqlRead.Close()
-
-        dbConn.Close()
-
-        Return result
+        Dim query = "SELECT id_jenis, jenis FROM jenis_mobil WHERE id_jenis='" & ID & "'"
+        Return FormSignIn.db.ExecuteGetOneRow(query, 2)
     End Function
 
     Public Function UpdateDataJenisMobilByIDDatabase(ID As Integer,
