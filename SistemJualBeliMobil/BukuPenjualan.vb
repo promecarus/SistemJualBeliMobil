@@ -75,37 +75,8 @@ Public Class BukuPenjualan
     End Function
 
     Public Function GetDataBukuPenjualanByIDDatabase(ID As Integer) As List(Of String)
-        Dim result As New List(Of String)
-
-        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" _
-                + "password=" + password_db + ";" + "database =" + database
-
-        dbConn.Open()
-
-        sqlCommand.Connection = dbConn
-        sqlCommand.CommandText = "SELECT id_penjualan,
-                                  id_mobil,
-                                  id_pembeli,
-                                  harga_terjual,
-                                  tanggal_penjualan
-                                  FROM BUKU_PENJUALAN
-                                  WHERE id_penjualan='" & ID & "'"
-
-        sqlRead = sqlCommand.ExecuteReader
-
-        While sqlRead.Read
-            result.Add(sqlRead.GetString(0).ToString())
-            result.Add(sqlRead.GetString(1).ToString())
-            result.Add(sqlRead.GetString(2).ToString())
-            result.Add(sqlRead.GetString(3).ToString())
-            result.Add(sqlRead.GetString(4).ToString())
-        End While
-
-        sqlRead.Close()
-
-        dbConn.Close()
-
-        Return result
+        Dim query = "SELECT id_penjualan, id_mobil, id_pembeli, harga_terjual, tanggal_penjualan FROM buku_penjualan WHERE id_penjualan='" & ID & "'"
+        Return FormSignIn.db.ExecuteGetOneRow(query, 5)
     End Function
 
     Public Function UpdateDataBukuPenjualanByIDDatabase(ID As Integer,
@@ -139,7 +110,7 @@ Public Class BukuPenjualan
         Finally
             dbConn.Dispose()
         End Try
-    End Function
+    End Sub
 
     Public Function DeleteDataBukuPenjualanByIDDatabase(ID As Integer)
         dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" _
