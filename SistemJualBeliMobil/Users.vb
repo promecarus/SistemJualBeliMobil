@@ -1,23 +1,9 @@
 ﻿Imports System.Security.Cryptography
-Imports MySql.Data.MySqlClient
 
 Public Class Users
     Private username As String
     Private email As String
     Private password As String
-
-    Private user_Account As New ArrayList()
-    Private tripleDes As New TripleDESCryptoServiceProvider
-
-    Public Shared dbConn As New MySqlConnection
-    Public Shared sqlCommand As New MySqlCommand
-    Public Shared sqlRead As MySqlDataReader
-    Private sqlQuery As String
-
-    Private server As String = "localhost"
-    Private username_db As String = "root"
-    Private password_db As String = ""
-    Private database As String = "db_sistem_jual_beli_mobil"
 
     Public Property usernameProperty() As String
         Get
@@ -47,10 +33,10 @@ Public Class Users
     End Property
 
     Public Function EncryptMD5(ByVal password As String)
-        Dim x As New System.Security.Cryptography.MD5CryptoServiceProvider()
+        Dim x As New MD5CryptoServiceProvider()
         Dim bs As Byte() = System.Text.Encoding.UTF8.GetBytes(password)
         bs = x.ComputeHash(bs)
-        Dim s As New System.Text.StringBuilder()
+        Dim s As New Text.StringBuilder()
 
         For Each b As Byte In bs
             s.Append(b.ToString("x2").ToLower())
