@@ -1,22 +1,8 @@
-﻿Imports System.Text
-Imports MySql.Data.MySqlClient
-Imports Mysqlx.XDevAPI.Relational
-
-Public Class BukuPenjualan
+﻿Public Class BukuPenjualan
     Private id_mobil As Integer
     Private id_pembeli As Integer
     Private harga_terjual As Integer
     Private tanggal_penjualan As String
-
-    Public Shared dbConn As New MySqlConnection
-    Public Shared sqlCommand As New MySqlCommand
-    Public Shared sqlRead As MySqlDataReader
-    Private sqlQuery As String
-
-    Private server As String = "localhost"
-    Private username_db As String = "root"
-    Private password_db As String = ""
-    Private database As String = "db_sistem_jual_beli_mobil"
 
     Public Property idMobilProperty() As String
         Get
