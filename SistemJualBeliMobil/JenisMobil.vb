@@ -24,29 +24,10 @@ Public Class JenisMobil
         End Set
     End Property
 
-    Public Function AddDataJenisMobilDatabase(jenis As String)
-        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" _
-                + "password=" + password_db + ";" + "database =" + database
-
-        Try
-            dbConn.Open()
-
-            sqlCommand.Connection = dbConn
-            sqlQuery = "INSERT INTO JENIS_MOBIL(jenis) VALUES('" _
-                        & jenis & "')"
-
-            sqlCommand = New MySqlCommand(sqlQuery, dbConn)
-            sqlRead = sqlCommand.ExecuteReader
-
-            sqlRead.Close()
-
-            dbConn.Close()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        Finally
-            dbConn.Dispose()
-        End Try
-    End Function
+    Public Sub AddDataJenisMobilDatabase(jenis As String)
+        Dim query = "INSERT INTO jenis_mobil(jenis) VALUES('" & jenis & "')"
+        FormSignIn.db.ExecuteNonQuery(query)
+    End Sub
 
     Public Function GetDataJenisMobilDatabase() As DataTable
         Dim result As New DataTable
