@@ -69,38 +69,9 @@ Public Class Users
         Return FormSignIn.db.ExecuteGetOneRow(query, 2)
     End Function
 
-    Public Function ValidateUser(username As String)
-        Try
-            Dim result
-
-            dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" _
-                + "password=" + password_db + ";" + "database =" + database
-
-            dbConn.Open()
-            sqlCommand.Connection = dbConn
-
-            Dim queryValidation = "SELECT id_user, username FROM USERS
-                                   WHERE username='" & username & "'"
-
-            sqlCommand.CommandText = queryValidation
-            Debug.WriteLine(queryValidation)
-            sqlRead = sqlCommand.ExecuteReader
-
-            If sqlRead.HasRows Then
-                While sqlRead.Read
-                    result = True
-                End While
-            End If
-
-            sqlRead.Close()
-            dbConn.Close()
-
-            Return result
-        Catch ex As Exception
-            Debug.WriteLine(ex.Message)
-        Finally
-            dbConn.Dispose()
-        End Try
+    Public Function ValidateUser(username As String) As Boolean
+        Dim query = "SELECT username FROM users WHERE username='" & username & "'"
+        Return FormSignIn.db.CheckAvailability(query)
     End Function
 
     Public Function ValidateEmail(email As String)
