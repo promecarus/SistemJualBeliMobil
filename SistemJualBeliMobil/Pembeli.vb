@@ -64,20 +64,12 @@ Public Class Pembeli
     Public Function GetDataPembeliByIDDatabase(ID As Integer) As List(Of String)
         Dim result As New List(Of String)
 
-        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" _
-                + "password=" + password_db + ";" + "database =" + database
+        FormSignIn.db.connectionProperty.Open()
 
-        dbConn.Open()
+        FormSignIn.db.commandProperty.Connection = FormSignIn.db.connectionProperty
+        FormSignIn.db.commandProperty.CommandText = "SELECT id_pembeli, nik, nama, alamat FROM pembeli WHERE id_pembeli='" & ID & "'"
 
-        sqlCommand.Connection = dbConn
-        sqlCommand.CommandText = "SELECT id_pembeli,
-                                  nik,
-                                  nama,
-                                  alamat
-                                  FROM PEMBELI
-                                  WHERE id_pembeli='" & ID & "'"
-
-        sqlRead = sqlCommand.ExecuteReader
+        Dim sqlRead = FormSignIn.db.commandProperty.ExecuteReader
 
         While sqlRead.Read
             result.Add(sqlRead.GetString(0).ToString())
@@ -88,7 +80,8 @@ Public Class Pembeli
 
         sqlRead.Close()
 
-        dbConn.Close()
+        FormSignIn.db.connectionProperty.Close()
+        FormSignIn.db.connectionProperty.Dispose()
 
         Return result
     End Function
