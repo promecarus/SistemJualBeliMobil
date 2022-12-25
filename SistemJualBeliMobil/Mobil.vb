@@ -142,24 +142,6 @@ Public Class Mobil
         Return FormSignIn.db.ExecuteGetOneRow(query, 9)
     End Function
 
-
-    Public Function DeleteDataMobilByIDDatabase(ID As Integer)
-        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" _
-                + "password=" + password_db + ";" + "database =" + database
-
-        Try
-            dbConn.Open()
-
-            sqlCommand.Connection = dbConn
-            sqlQuery = "DELETE FROM MOBIL " &
-                        "WHERE id='" & ID & "'"
-
-            Debug.WriteLine(sqlQuery)
-
-            sqlCommand = New MySqlCommand(sqlQuery, dbConn)
-            sqlRead = sqlCommand.ExecuteReader
-
-            sqlRead.Close()
     Public Sub UpdateDataMobilByIDDatabase(
         ID As Integer,
         id_jenis_mobil As Integer,
@@ -173,13 +155,10 @@ Public Class Mobil
         FormSignIn.db.ExecuteNonQuery(query)
     End Sub
 
-            dbConn.Close()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        Finally
-            dbConn.Dispose()
-        End Try
-    End Function
+    Public Sub DeleteDataMobilByIDDatabase(ID As Integer)
+        Dim query = "DELETE FROM mobil " & "WHERE id='" & ID & "'"
+        FormSignIn.db.ExecuteNonQuery(query)
+    End Sub
 
     Public Function ListDataMobil() As DataTable
         dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" _
