@@ -30,26 +30,8 @@ Public Class JenisMobil
     End Sub
 
     Public Function GetDataJenisMobilDatabase() As DataTable
-        Dim result As New DataTable
-
-        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" _
-                + "password=" + password_db + ";" + "database =" + database
-
-        dbConn.Open()
-
-        sqlCommand.Connection = dbConn
-        sqlCommand.CommandText = "SELECT id_jenis AS 'ID',
-                                  jenis AS 'Jenis Mobil'
-                                  FROM JENIS_MOBIL ORDER BY id_jenis"
-
-        sqlRead = sqlCommand.ExecuteReader
-
-        result.Load(sqlRead)
-
-        sqlRead.Close()
-        dbConn.Close()
-
-        Return result
+        Dim query = "SELECT id_jenis AS 'ID', jenis AS 'Jenis Mobil' FROM jenis_mobil ORDER BY id_jenis"
+        Return FormSignIn.db.ExecuteQuery(query)
     End Function
 
     Public Function GetDataJenisMobilDatabaseSearch(ID As Integer) As DataTable
