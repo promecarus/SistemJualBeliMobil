@@ -87,39 +87,8 @@ Public Class Users
     End Function
 
     Public Function CheckAuthenticationDatabase(username_login As String, password_login As String) As List(Of String)
-        Try
-            Dim result As New List(Of String)
-
-            dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" _
-                + "password=" + password_db + ";" + "database =" + database
-
-            dbConn.Open()
-
-            sqlCommand.Connection = dbConn
-
-            Dim queryAuthentication = "SELECT id_user, username FROM USERS
-                                       WHERE username='" & username_login & "' AND password='" & EncryptMD5(password_login) & "'"
-
-            sqlCommand.CommandText = queryAuthentication
-            Debug.WriteLine(queryAuthentication)
-            sqlRead = sqlCommand.ExecuteReader
-
-            If sqlRead.HasRows Then
-                While sqlRead.Read
-                    result.Add(sqlRead.GetString(0).ToString())
-                    result.Add(sqlRead.GetString(1).ToString())
-                End While
-            End If
-
-            sqlRead.Close()
-            dbConn.Close()
-
-            Return result
-        Catch ex As Exception
-            Debug.WriteLine(ex.Message)
-        Finally
-            dbConn.Dispose()
-        End Try
+        Dim query = "SELECT id_user, username FROM users WHERE username='" & username_login & "' AND password='" & EncryptMD5(password_login) & "'"
+        Return FormSignIn.db.ExecuteGetOneRow(query, 2)
     End Function
 
     Public Function ValidateUser(username As String)
