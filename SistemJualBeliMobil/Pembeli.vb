@@ -1,6 +1,4 @@
-﻿Imports MySql.Data.MySqlClient
-
-Public Class Pembeli
+﻿Public Class Pembeli
     Private nik As String
     Private nama As String
     Private alamat As String
