@@ -57,4 +57,30 @@ Public Class Database
             connection.Dispose()
         End Try
     End Sub
+
+    Public Function ExecuteGetOneRow(query As String, field As Integer) As List(Of String)
+        Dim list As New List(Of String)
+
+        Try
+            connection.Open()
+            command.CommandText = query
+
+            Dim temp = command.ExecuteReader
+
+            While temp.Read
+                For i = 0 To field - 1
+                    list.Add(temp.GetString(i).ToString())
+                Next
+            End While
+
+            temp.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        Finally
+            connection.Close()
+            connection.Dispose()
+        End Try
+
+        Return list
+    End Function
 End Class
