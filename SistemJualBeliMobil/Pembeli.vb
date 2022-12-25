@@ -93,36 +93,15 @@ Public Class Pembeli
         Return result
     End Function
 
-    Public Function UpdateDataPembeliByIDDatabase(ID As Integer,
-                                                     nik As String,
-                                                     nama As String,
-                                                     alamat As String)
-
-        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" _
-            + "password=" + password_db + ";" + "database =" + database
-
-        Try
-            dbConn.Open()
-
-            sqlCommand.Connection = dbConn
-            sqlQuery = "UPDATE pembeli SET " &
-                        "nik='" & nik & "', " &
-                        "nama='" & nama & "', " &
-                        "alamat='" & alamat & "' " &
-                        "WHERE id_pembeli='" & ID & "'"
-
-            sqlCommand = New MySqlCommand(sqlQuery, dbConn)
-            sqlRead = sqlCommand.ExecuteReader
-
-            sqlRead.Close()
-
-            dbConn.Close()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        Finally
-            dbConn.Dispose()
-        End Try
-    End Function
+    Public Sub UpdateDataPembeliByIDDatabase(
+        ID As Integer,
+        nik As String,
+        nama As String,
+        alamat As String
+     )
+        Dim query = "UPDATE pembeli SET " & "nik='" & nik & "', " & "nama='" & nama & "', " & "alamat='" & alamat & "' " & "WHERE id_pembeli='" & ID & "'"
+        FormSignIn.db.ExecuteNonQuery(query)
+    End Sub
 
     Public Sub DeleteDataPembeliByIDDatabase(ID As Integer)
         Dim query = "DELETE FROM pembeli " & "WHERE id_pembeli='" & ID & "'"
