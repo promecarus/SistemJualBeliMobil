@@ -57,28 +57,8 @@ Public Class Pembeli
     End Function
 
     Public Function GetDataPembeliDatabaseSearch(ID As Integer) As DataTable
-        Dim result As New DataTable
-
-        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" _
-                + "password=" + password_db + ";" + "database =" + database
-
-        dbConn.Open()
-
-        sqlCommand.Connection = dbConn
-        sqlCommand.CommandText = "SELECT id_pembeli AS 'ID',
-                                  nik AS 'NIK',
-                                  nama AS 'Nama',
-                                  alamat AS 'Alamat'
-                                  FROM PEMBELI where id_pembeli='" & ID & "'"
-
-        sqlRead = sqlCommand.ExecuteReader
-
-        result.Load(sqlRead)
-
-        sqlRead.Close()
-        dbConn.Close()
-
-        Return result
+        Dim query = "SELECT id_pembeli AS 'ID', nik AS 'NIK', nama AS 'Nama', alamat AS 'Alamat' FROM pembeli WHERE id_pembeli='" & ID & "'"
+        Return FormSignIn.db.ExecuteQuery(query)
     End Function
 
     Public Function GetDataPembeliByIDDatabase(ID As Integer) As List(Of String)
