@@ -83,4 +83,30 @@ Public Class Database
 
         Return list
     End Function
+
+    Public Function CheckAvailability(query As String) As Boolean
+        Dim result As Boolean = False
+
+        Try
+            connection.Open()
+            command.CommandText = query
+
+            Dim temp = command.ExecuteReader
+
+            If temp.HasRows Then
+                While temp.Read
+                    result = True
+                End While
+            End If
+
+            temp.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        Finally
+            connection.Close()
+            connection.Dispose()
+        End Try
+
+        Return result
+    End Function
 End Class
