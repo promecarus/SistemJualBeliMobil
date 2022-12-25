@@ -52,28 +52,8 @@ Public Class Pembeli
     End Function
 
     Public Function GetDataPembeliByIDDatabase(ID As Integer) As List(Of String)
-        Dim result As New List(Of String)
-
-        FormSignIn.db.connectionProperty.Open()
-
-        FormSignIn.db.commandProperty.Connection = FormSignIn.db.connectionProperty
-        FormSignIn.db.commandProperty.CommandText = "SELECT id_pembeli, nik, nama, alamat FROM pembeli WHERE id_pembeli='" & ID & "'"
-
-        Dim sqlRead = FormSignIn.db.commandProperty.ExecuteReader
-
-        While sqlRead.Read
-            result.Add(sqlRead.GetString(0).ToString())
-            result.Add(sqlRead.GetString(1).ToString())
-            result.Add(sqlRead.GetString(2).ToString())
-            result.Add(sqlRead.GetString(3).ToString())
-        End While
-
-        sqlRead.Close()
-
-        FormSignIn.db.connectionProperty.Close()
-        FormSignIn.db.connectionProperty.Dispose()
-
-        Return result
+        Dim query = "SELECT id_pembeli, nik, nama, alamat FROM pembeli WHERE id_pembeli='" & ID & "'"
+        Return FormSignIn.db.ExecuteGetOneRow(query, 4)
     End Function
 
     Public Sub UpdateDataPembeliByIDDatabase(
