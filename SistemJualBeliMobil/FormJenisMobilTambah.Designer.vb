@@ -26,6 +26,7 @@ Partial Class FormJenisMobilTambah
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TxtJenisMobil = New System.Windows.Forms.TextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.BtnCancel = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -38,7 +39,7 @@ Partial Class FormJenisMobilTambah
         Me.BtnTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnTambah.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnTambah.ForeColor = System.Drawing.Color.White
-        Me.BtnTambah.Location = New System.Drawing.Point(577, 156)
+        Me.BtnTambah.Location = New System.Drawing.Point(388, 158)
         Me.BtnTambah.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnTambah.Name = "BtnTambah"
         Me.BtnTambah.Size = New System.Drawing.Size(82, 28)
@@ -75,12 +76,29 @@ Partial Class FormJenisMobilTambah
         Me.PictureBox1.TabIndex = 14
         Me.PictureBox1.TabStop = False
         '
+        'BtnCancel
+        '
+        Me.BtnCancel.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.bgputihbtn
+        Me.BtnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnCancel.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnCancel.FlatAppearance.BorderSize = 0
+        Me.BtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCancel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.BtnCancel.Location = New System.Drawing.Point(577, 158)
+        Me.BtnCancel.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.BtnCancel.Name = "BtnCancel"
+        Me.BtnCancel.Size = New System.Drawing.Size(82, 32)
+        Me.BtnCancel.TabIndex = 18
+        Me.BtnCancel.Text = "Cancel"
+        Me.BtnCancel.UseVisualStyleBackColor = True
+        '
         'FormJenisMobilTambah
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(700, 338)
+        Me.Controls.Add(Me.BtnCancel)
         Me.Controls.Add(Me.TxtJenisMobil)
         Me.Controls.Add(Me.BtnTambah)
         Me.Controls.Add(Me.Label1)
@@ -101,4 +119,5 @@ Partial Class FormJenisMobilTambah
     Friend WithEvents Label1 As Label
     Friend WithEvents TxtJenisMobil As TextBox
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents BtnCancel As Button
 End Class
