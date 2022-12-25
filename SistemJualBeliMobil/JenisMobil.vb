@@ -44,32 +44,13 @@ Public Class JenisMobil
         Return FormSignIn.db.ExecuteGetOneRow(query, 2)
     End Function
 
-    Public Function UpdateDataJenisMobilByIDDatabase(ID As Integer,
-                                                     jenis As String)
-
-        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" _
-            + "password=" + password_db + ";" + "database =" + database
-
-        Try
-            dbConn.Open()
-
-            sqlCommand.Connection = dbConn
-            sqlQuery = "UPDATE JENIS_MOBIL SET " &
-                        "jenis='" & jenis & "' " &
-                        "WHERE id_jenis='" & ID & "'"
-
-            sqlCommand = New MySqlCommand(sqlQuery, dbConn)
-            sqlRead = sqlCommand.ExecuteReader
-
-            sqlRead.Close()
-
-            dbConn.Close()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        Finally
-            dbConn.Dispose()
-        End Try
-    End Function
+    Public Sub UpdateDataJenisMobilByIDDatabase(
+        ID As Integer,
+        jenis As String
+    )
+        Dim query = "UPDATE jenis_mobil SET " & "jenis='" & jenis & "' " & "WHERE id_jenis='" & ID & "'"
+        FormSignIn.db.ExecuteNonQuery(query)
+    End Sub
 
     Public Function DeleteDataJenisMobilByIDDatabase(ID As Integer)
         dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" _
