@@ -59,32 +59,10 @@ Public Class Users
         Return s.ToString()
     End Function
 
-    Public Function AddUsersDatabase(username_regist As String, email_regist As String, password_regist As String)
-        Try
-            dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" _
-                + "password=" + password_db + ";" + "database =" + database
-
-            dbConn.Open()
-
-            sqlCommand.Connection = dbConn
-            sqlQuery = "INSERT INTO USERS(username, email, password) VALUE('" _
-                        & username_regist & "', '" _
-                        & email_regist & "', '" _
-                        & EncryptMD5(password_regist) & "')"
-
-            Debug.WriteLine(sqlQuery)
-
-            sqlCommand = New MySqlCommand(sqlQuery, dbConn)
-            sqlRead = sqlCommand.ExecuteReader
-
-            sqlRead.Close()
-            dbConn.Close()
-        Catch ex As Exception
-            Return ex.Message
-        Finally
-            dbConn.Dispose()
-        End Try
-    End Function
+    Public Sub AddUsersDatabase(username_regist As String, email_regist As String, password_regist As String)
+        Dim query = "INSERT INTO users(username, email, password) VALUE('" & username_regist & "', '" & email_regist & "', '" & EncryptMD5(password_regist) & "')"
+        FormSignIn.db.ExecuteNonQuery(query)
+    End Sub
 
     Public Function CheckAuthenticationDatabase(username_login As String, password_login As String) As List(Of String)
         Dim query = "SELECT id_user, username FROM users WHERE username='" & username_login & "' AND password='" & EncryptMD5(password_login) & "'"
