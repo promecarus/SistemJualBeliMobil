@@ -74,37 +74,8 @@ Public Class Users
         Return FormSignIn.db.CheckAvailability(query)
     End Function
 
-    Public Function ValidateEmail(email As String)
-        Try
-            Dim result
-
-            dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" _
-                + "password=" + password_db + ";" + "database =" + database
-
-            dbConn.Open()
-            sqlCommand.Connection = dbConn
-
-            Dim queryValidation = "SELECT id_user, email FROM USERS
-                                   WHERE email='" & email & "'"
-
-            sqlCommand.CommandText = queryValidation
-            Debug.WriteLine(queryValidation)
-            sqlRead = sqlCommand.ExecuteReader
-
-            If sqlRead.HasRows Then
-                While sqlRead.Read
-                    result = True
-                End While
-            End If
-
-            sqlRead.Close()
-            dbConn.Close()
-
-            Return result
-        Catch ex As Exception
-            Debug.WriteLine(ex.Message)
-        Finally
-            dbConn.Dispose()
-        End Try
+    Public Function ValidateEmail(email As String) As Boolean
+        Dim query = "SELECT email FROM users WHERE email='" & email & "'"
+        Return FormSignIn.db.CheckAvailability(query)
     End Function
 End Class
