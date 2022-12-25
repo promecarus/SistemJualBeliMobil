@@ -94,41 +94,18 @@ Public Class Mobil
         End Set
     End Property
 
-    Public Function AddDataMobilDatabase(id_jenis_mobil As Integer,
-                                         tipe_mobil As String,
-                                         tahun_pembuatan As String,
-                                         kondisi As String,
-                                         harga As Integer,
-                                         garansi As Integer,
-                                         harga_default As Integer)
-
-        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" _
-                + "password=" + password_db + ";" + "database =" + database
-
-        Try
-            dbConn.Open()
-
-            sqlCommand.Connection = dbConn
-            sqlQuery = "INSERT INTO mobil(id_jenis_mobil, tipe_mobil, tahun_pembuatan, kondisi, harga, garansi, harga_default) VALUES('" _
-                        & id_jenis_mobil & "', '" _
-                        & tipe_mobil & "', '" _
-                        & tahun_pembuatan & "', '" _
-                        & kondisi & "', '" _
-                        & harga & "', '" _
-                        & garansi & "', '" _
-                        & harga_default & "')"
-
-            sqlCommand = New MySqlCommand(sqlQuery, dbConn)
-            sqlRead = sqlCommand.ExecuteReader
-
-            sqlRead.Close()
-            dbConn.Close()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        Finally
-            dbConn.Dispose()
-        End Try
-    End Function
+    Public Sub AddDataMobilDatabase(
+        id_jenis_mobil As Integer,
+        tipe_mobil As String,
+        tahun_pembuatan As String,
+        kondisi As String,
+        harga As Integer,
+        garansi As Integer,
+        harga_default As Integer
+    )
+        Dim query = "INSERT INTO mobil(id_jenis_mobil, tipe_mobil, tahun_pembuatan, kondisi, harga, garansi, harga_default) VALUES('" & id_jenis_mobil & "', '" & tipe_mobil & "', '" & tahun_pembuatan & "', '" & kondisi & "', '" & harga & "', '" & garansi & "', '" & harga_default & "')"
+        FormSignIn.db.ExecuteNonQuery(query)
+    End Sub
 
     Public Function GetDataMobilDatabase() As DataTable
         Dim result As New DataTable
