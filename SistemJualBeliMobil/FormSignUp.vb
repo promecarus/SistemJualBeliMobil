@@ -34,7 +34,7 @@ Public Class FormSignUp
                                         MessageBox.Show("Data Confirm Password Tidak Sama dengan Data Password !!")
                                     End If
                                 Else
-                                    MessageBox.Show("Data Confirm Password Tidak Sama dengan Data Password !!")
+                                    MessageBox.Show("Data Confirm Password Belum Terisi !!")
                                 End If
                             Else
                                 MessageBox.Show("Data Confirm Password Belum Terisi !!")
