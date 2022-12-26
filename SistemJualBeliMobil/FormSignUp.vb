@@ -58,6 +58,7 @@
 
     Private Sub FormSignUp_Load(sender As Object, e As EventArgs) Handles Me.Load
         inputPassword.UseSystemPasswordChar = True
+        InputConfirmPassword.UseSystemPasswordChar = True
     End Sub
 
 End Class
