@@ -1,16 +1,16 @@
 ﻿Public Class FormSignUp
 
     Private Sub SignupBtn_Click(sender As Object, e As EventArgs) Handles SignupBtn.Click
-        If FormSignIn.Users.ValidateUser(inputUsername.Text) = True Then
+        If FormSignIn.Users.AvailabilityUsername(inputUsername.Text) = True Then
             MessageBox.Show("Username Sudah Terdaftar !!")
         Else
-            If FormSignIn.Users.ValidateEmail(inputEmail.Text) = True Then
+            If FormSignIn.Users.AvailabilityEmail(inputEmail.Text) = True Then
                 MessageBox.Show("Email Sudah Terdaftar !!")
             Else
                 If inputUsername.Text.Length > 0 Then
                     If inputEmail.Text.Length > 0 Then
                         If inputPassword.Text.Length > 0 Then
-                            FormSignIn.Users.AddUsersDatabase(inputUsername.Text, inputEmail.Text, inputPassword.Text)
+                            FormSignIn.Users.Add(inputUsername.Text, inputEmail.Text, inputPassword.Text)
                             MessageBox.Show("Sign Up Berhasil !!")
                             FormSignIn.Show()
                             Me.Hide()
