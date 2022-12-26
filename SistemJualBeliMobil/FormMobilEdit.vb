@@ -54,6 +54,19 @@ Public Class FormMobilEdit
         ElseIf RdMatic.Checked Then
             tipe_mobil = "Matic"
         End If
+
+        If RdSangatBaik.Checked Then
+            kondisi = "Sangat Baik"
+        ElseIf RdBaik.Checked Then
+            kondisi = "Baik"
+        ElseIf RdSedang.Checked Then
+            kondisi = "Sedang"
+        ElseIf RdBuruk.Checked Then
+            kondisi = "Buruk"
+        ElseIf RdSangatBuruk.Checked Then
+            kondisi = "Sangat Buruk"
+        End If
+
         If Not TxtTahunPembuatan.Text = "" Then
             If IsNumeric(TxtTahunPembuatan.Text) Then
                 If Not TxtGaransi.Text = "" Then
