@@ -44,6 +44,9 @@
     End Sub
 
     Private Sub SignupBtn_Click(sender As Object, e As EventArgs) Handles SignupBtn.Click
+        inputUsername.Text = ""
+        inputPassword.Text = ""
+
         FormSignUp.Show()
         Me.Hide()
     End Sub
