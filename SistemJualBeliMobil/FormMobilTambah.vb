@@ -48,7 +48,7 @@
                             Else
                                 If Not TxtHargaDefault.Text = "" Then
                                     If IsNumeric(TxtHargaDefault.Text) Then
-                                        FormSignIn.Mobil.AddDataMobilDatabase(ComboBoxJenisMobil.SelectedValue,
+                                        FormSignIn.Mobil.Add(ComboBoxJenisMobil.SelectedValue,
                                                  tipe_mobil,
                                                  Integer.Parse(TxtTahunPembuatan.Text),
                                                  kondisi,
