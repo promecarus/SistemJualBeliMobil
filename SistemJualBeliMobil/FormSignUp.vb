@@ -61,4 +61,10 @@
         InputConfirmPassword.UseSystemPasswordChar = True
     End Sub
 
+    Private Sub FormSignUp_Activated(sender As Object, e As EventArgs) Handles Me.Activated
+        inputUsername.Text = ""
+        inputEmail.Text = ""
+        inputPassword.Text = ""
+        InputConfirmPassword.Text = ""
+    End Sub
 End Class
