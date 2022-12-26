@@ -1,6 +1,11 @@
-﻿Public Class FormSignUp
+﻿Imports System.Text.RegularExpressions
+
+Public Class FormSignUp
 
     Private Sub SignupBtn_Click(sender As Object, e As EventArgs) Handles SignupBtn.Click
+        Dim regex As Regex = New Regex("^[^@\s]+@[^@\s]+\.[^@\s]+$")
+        Dim valid As Boolean = regex.IsMatch(inputEmail.Text.Trim)
+
         If FormSignIn.Users.ValidateUser(inputUsername.Text) = True Then
             MessageBox.Show("Username Sudah Terdaftar !!")
         Else
@@ -9,21 +14,31 @@
             Else
                 If inputUsername.Text.Length > 0 Then
                     If inputEmail.Text.Length > 0 Then
-                        If inputPassword.Text.Length > 0 Then
-                            If InputConfirmPassword.Text.Length > 0 Then
-                                If String.Compare(inputPassword.Text, InputConfirmPassword.Text) = 0 Then
-                                    FormSignIn.Users.AddUsersDatabase(inputUsername.Text, inputEmail.Text, inputPassword.Text)
-                                    MessageBox.Show("Sign Up Berhasil !!")
-                                    FormSignIn.Show()
-                                    Me.Hide()
+                        If Not valid Then
+                            MessageBox.Show("Data Email Tidak Valid !!")
+                        Else
+                            If inputPassword.Text.Length > 0 Then
+                                If InputConfirmPassword.Text.Length > 0 Then
+                                    If String.Compare(inputPassword.Text, InputConfirmPassword.Text) = 0 Then
+                                        FormSignIn.Users.AddUsersDatabase(inputUsername.Text, inputEmail.Text, inputPassword.Text)
+                                        MessageBox.Show("Sign Up Berhasil !!")
+
+                                        inputUsername.Text = ""
+                                        inputEmail.Text = ""
+                                        inputPassword.Text = ""
+                                        InputConfirmPassword.Text = ""
+
+                                        FormSignIn.Show()
+                                        Me.Hide()
+                                    Else
+                                        MessageBox.Show("Data Confirm Password Tidak Sama dengan Data Password !!")
+                                    End If
                                 Else
-                                    MessageBox.Show("Data Confirm Password Tidak Sama dengan Data Password !!")
+                                    MessageBox.Show("Data Confirm Password Belum Terisi !!")
                                 End If
                             Else
-                                MessageBox.Show("Data Confirm Password Belum Terisi !!")
+                                MessageBox.Show("Data Password Belum Terisi !!")
                             End If
-                        Else
-                            MessageBox.Show("Data Password Belum Terisi !!")
                         End If
                     Else
                         MessageBox.Show("Data Email Belum Terisi !!")
@@ -36,6 +51,11 @@
     End Sub
 
     Private Sub SigninBtn_Click(sender As Object, e As EventArgs) Handles SigninBtn.Click
+        inputUsername.Text = ""
+        inputEmail.Text = ""
+        inputPassword.Text = ""
+        InputConfirmPassword.Text = ""
+
         FormSignIn.Show()
         Me.Hide()
     End Sub
@@ -61,10 +81,4 @@
         InputConfirmPassword.UseSystemPasswordChar = True
     End Sub
 
-    Private Sub FormSignUp_Activated(sender As Object, e As EventArgs) Handles Me.Activated
-        inputUsername.Text = ""
-        inputEmail.Text = ""
-        inputPassword.Text = ""
-        InputConfirmPassword.Text = ""
-    End Sub
 End Class

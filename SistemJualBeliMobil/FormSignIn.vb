@@ -28,6 +28,10 @@
         If data_users.Count > 0 Then
             Users.usernameProperty = data_users(1)
             MessageBox.Show("Sign In Berhasil, Selamat Datang di JualMobil !!")
+
+            inputUsername.Text = ""
+            inputPassword.Text = ""
+
             FormDashboard.Show()
             Me.Hide()
         ElseIf inputUsername.Text = "" Then
@@ -40,6 +44,9 @@
     End Sub
 
     Private Sub SignupBtn_Click(sender As Object, e As EventArgs) Handles SignupBtn.Click
+        inputUsername.Text = ""
+        inputPassword.Text = ""
+
         FormSignUp.Show()
         Me.Hide()
     End Sub
@@ -56,8 +63,4 @@
         inputPassword.UseSystemPasswordChar = True
     End Sub
 
-    Private Sub FormSignIn_Activated(sender As Object, e As EventArgs) Handles Me.Activated
-        inputUsername.Text = ""
-        inputPassword.Text = ""
-    End Sub
 End Class
