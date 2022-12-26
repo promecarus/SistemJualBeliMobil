@@ -1,6 +1,4 @@
-﻿Imports Org.BouncyCastle.Asn1.Cms
-
-Public Class FormMobilEdit
+﻿Public Class FormMobilEdit
 
     Dim kondisi As String
     Dim tipe_mobil As String
@@ -11,7 +9,7 @@ Public Class FormMobilEdit
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        ComboBoxJenisMobil.DataSource = FormSignIn.JenisMobil.ListDataJenisMobil
+        ComboBoxJenisMobil.DataSource = FormSignIn.JenisMobil.List
         ComboBoxJenisMobil.DisplayMember() = "jenis"
         ComboBoxJenisMobil.ValueMember() = "id_jenis"
 

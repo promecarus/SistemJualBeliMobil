@@ -6,7 +6,7 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        ComboBoxJenisMobil.DataSource = FormSignIn.JenisMobil.ListDataJenisMobil
+        ComboBoxJenisMobil.DataSource = FormSignIn.JenisMobil.List
         ComboBoxJenisMobil.DisplayMember = "jenis"
         ComboBoxJenisMobil.ValueMember = "id_jenis"
 
