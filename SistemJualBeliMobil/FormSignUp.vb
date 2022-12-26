@@ -3,6 +3,9 @@
 Public Class FormSignUp
 
     Private Sub SignupBtn_Click(sender As Object, e As EventArgs) Handles SignupBtn.Click
+        Dim regex As Regex = New Regex("^[^@\s]+@[^@\s]+\.[^@\s]+$")
+        Dim valid As Boolean = regex.IsMatch(inputEmail.Text.Trim)
+
         If FormSignIn.Users.ValidateUser(inputUsername.Text) = True Then
             MessageBox.Show("Username Sudah Terdaftar !!")
         Else
