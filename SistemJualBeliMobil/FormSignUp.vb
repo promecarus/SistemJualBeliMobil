@@ -51,6 +51,11 @@ Public Class FormSignUp
     End Sub
 
     Private Sub SigninBtn_Click(sender As Object, e As EventArgs) Handles SigninBtn.Click
+        inputUsername.Text = ""
+        inputEmail.Text = ""
+        inputPassword.Text = ""
+        InputConfirmPassword.Text = ""
+
         FormSignIn.Show()
         Me.Hide()
     End Sub
