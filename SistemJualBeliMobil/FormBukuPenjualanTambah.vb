@@ -8,7 +8,7 @@ Public Class FormBukuPenjualanTambah
         ComboBoxIdMobil.DisplayMember = "id"
         ComboBoxIdMobil.ValueMember = "id"
 
-        ComboBoxIdPembeli.DataSource = FormSignIn.Pembeli.ListDataPembeli
+        ComboBoxIdPembeli.DataSource = FormSignIn.Pembeli.List
         ComboBoxIdPembeli.DisplayMember = "nama"
         ComboBoxIdPembeli.ValueMember = "id_pembeli"
 
