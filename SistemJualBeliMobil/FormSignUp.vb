@@ -10,10 +10,18 @@
                 If inputUsername.Text.Length > 0 Then
                     If inputEmail.Text.Length > 0 Then
                         If inputPassword.Text.Length > 0 Then
-                            FormSignIn.Users.AddUsersDatabase(inputUsername.Text, inputEmail.Text, inputPassword.Text)
-                            MessageBox.Show("Sign Up Berhasil !!")
-                            FormSignIn.Show()
-                            Me.Hide()
+                            If InputConfirmPassword.Text.Length > 0 Then
+                                If String.Compare(inputPassword.Text, InputConfirmPassword.Text) = 0 Then
+                                    FormSignIn.Users.AddUsersDatabase(inputUsername.Text, inputEmail.Text, inputPassword.Text)
+                                    MessageBox.Show("Sign Up Berhasil !!")
+                                    FormSignIn.Show()
+                                    Me.Hide()
+                                Else
+                                    MessageBox.Show("Data Confirm Password Tidak Sama dengan Data Password !!")
+                                End If
+                            Else
+                                MessageBox.Show("Data Confirm Password Belum Terisi !!")
+                            End If
                         Else
                             MessageBox.Show("Data Password Belum Terisi !!")
                         End If
@@ -40,8 +48,23 @@
         End If
     End Sub
 
-    Private Sub FormSignUp_Load(sender As Object, e As EventArgs) Handles Me.Load
-        inputPassword.UseSystemPasswordChar = True
+    Private Sub ChkConfirmPassword_CheckedChanged(sender As Object, e As EventArgs) Handles ChkConfirmPassword.CheckedChanged
+        If ChkConfirmPassword.Checked = True Then
+            InputConfirmPassword.UseSystemPasswordChar = False
+        Else
+            InputConfirmPassword.UseSystemPasswordChar = True
+        End If
     End Sub
 
+    Private Sub FormSignUp_Load(sender As Object, e As EventArgs) Handles Me.Load
+        inputPassword.UseSystemPasswordChar = True
+        InputConfirmPassword.UseSystemPasswordChar = True
+    End Sub
+
+    Private Sub FormSignUp_Activated(sender As Object, e As EventArgs) Handles Me.Activated
+        inputUsername.Text = ""
+        inputEmail.Text = ""
+        inputPassword.Text = ""
+        InputConfirmPassword.Text = ""
+    End Sub
 End Class

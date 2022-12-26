@@ -56,4 +56,8 @@
         inputPassword.UseSystemPasswordChar = True
     End Sub
 
+    Private Sub FormSignIn_Activated(sender As Object, e As EventArgs) Handles Me.Activated
+        inputUsername.Text = ""
+        inputPassword.Text = ""
+    End Sub
 End Class
