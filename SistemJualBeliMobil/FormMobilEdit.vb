@@ -49,6 +49,11 @@ Public Class FormMobilEdit
     End Sub
 
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
+        If RdManual.Checked Then
+            tipe_mobil = "Manual"
+        ElseIf RdMatic.Checked Then
+            tipe_mobil = "Matic"
+        End If
         If Not TxtTahunPembuatan.Text = "" Then
             If IsNumeric(TxtTahunPembuatan.Text) Then
                 If Not TxtGaransi.Text = "" Then
