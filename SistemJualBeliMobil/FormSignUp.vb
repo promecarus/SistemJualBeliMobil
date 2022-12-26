@@ -1,4 +1,6 @@
-﻿Public Class FormSignUp
+﻿Imports System.Text.RegularExpressions
+
+Public Class FormSignUp
 
     Private Sub SignupBtn_Click(sender As Object, e As EventArgs) Handles SignupBtn.Click
         If FormSignIn.Users.ValidateUser(inputUsername.Text) = True Then
