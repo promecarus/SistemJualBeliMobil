@@ -51,7 +51,7 @@ Partial Class FormJenisMobil
         Me.BtnTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnTambah.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnTambah.ForeColor = System.Drawing.Color.White
-        Me.BtnTambah.Location = New System.Drawing.Point(605, 369)
+        Me.BtnTambah.Location = New System.Drawing.Point(605, 402)
         Me.BtnTambah.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnTambah.Name = "BtnTambah"
         Me.BtnTambah.Size = New System.Drawing.Size(130, 36)
@@ -67,7 +67,7 @@ Partial Class FormJenisMobil
         Me.BtnHapus.FlatAppearance.BorderSize = 0
         Me.BtnHapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnHapus.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.BtnHapus.Location = New System.Drawing.Point(775, 420)
+        Me.BtnHapus.Location = New System.Drawing.Point(775, 453)
         Me.BtnHapus.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnHapus.Name = "BtnHapus"
         Me.BtnHapus.Size = New System.Drawing.Size(130, 36)
@@ -84,7 +84,7 @@ Partial Class FormJenisMobil
         Me.BtnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnEdit.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnEdit.ForeColor = System.Drawing.Color.White
-        Me.BtnEdit.Location = New System.Drawing.Point(775, 369)
+        Me.BtnEdit.Location = New System.Drawing.Point(775, 402)
         Me.BtnEdit.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnEdit.Name = "BtnEdit"
         Me.BtnEdit.Size = New System.Drawing.Size(130, 36)
@@ -98,7 +98,7 @@ Partial Class FormJenisMobil
         Me.DataGridJenisMobil.AllowUserToDeleteRows = False
         Me.DataGridJenisMobil.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridJenisMobil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridJenisMobil.Location = New System.Drawing.Point(605, 137)
+        Me.DataGridJenisMobil.Location = New System.Drawing.Point(605, 170)
         Me.DataGridJenisMobil.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DataGridJenisMobil.Name = "DataGridJenisMobil"
         Me.DataGridJenisMobil.ReadOnly = True
@@ -227,16 +227,23 @@ Partial Class FormJenisMobil
         '
         'TxtSearch
         '
-        Me.TxtSearch.Location = New System.Drawing.Point(605, 511)
+        Me.TxtSearch.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.TxtSearch.Location = New System.Drawing.Point(605, 101)
         Me.TxtSearch.Name = "TxtSearch"
-        Me.TxtSearch.Size = New System.Drawing.Size(130, 23)
+        Me.TxtSearch.Size = New System.Drawing.Size(130, 29)
         Me.TxtSearch.TabIndex = 42
         '
         'BtnSearch
         '
-        Me.BtnSearch.Location = New System.Drawing.Point(775, 510)
+        Me.BtnSearch.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.bgbutton
+        Me.BtnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnSearch.FlatAppearance.BorderSize = 0
+        Me.BtnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnSearch.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.BtnSearch.ForeColor = System.Drawing.Color.White
+        Me.BtnSearch.Location = New System.Drawing.Point(750, 100)
         Me.BtnSearch.Name = "BtnSearch"
-        Me.BtnSearch.Size = New System.Drawing.Size(130, 23)
+        Me.BtnSearch.Size = New System.Drawing.Size(70, 30)
         Me.BtnSearch.TabIndex = 43
         Me.BtnSearch.Text = "Search"
         Me.BtnSearch.UseVisualStyleBackColor = True
@@ -244,9 +251,10 @@ Partial Class FormJenisMobil
         'LblSearch
         '
         Me.LblSearch.AutoSize = True
-        Me.LblSearch.Location = New System.Drawing.Point(606, 516)
+        Me.LblSearch.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.LblSearch.Location = New System.Drawing.Point(606, 106)
         Me.LblSearch.Name = "LblSearch"
-        Me.LblSearch.Size = New System.Drawing.Size(81, 15)
+        Me.LblSearch.Size = New System.Drawing.Size(95, 19)
         Me.LblSearch.TabIndex = 44
         Me.LblSearch.Text = "Search by ID..."
         '

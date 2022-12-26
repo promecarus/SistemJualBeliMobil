@@ -48,7 +48,7 @@ Partial Class FormBukuPenjualan
         Me.DataGridViewBukuPenjualan.AllowUserToDeleteRows = False
         Me.DataGridViewBukuPenjualan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridViewBukuPenjualan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewBukuPenjualan.Location = New System.Drawing.Point(41, 87)
+        Me.DataGridViewBukuPenjualan.Location = New System.Drawing.Point(41, 130)
         Me.DataGridViewBukuPenjualan.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DataGridViewBukuPenjualan.Name = "DataGridViewBukuPenjualan"
         Me.DataGridViewBukuPenjualan.ReadOnly = True
@@ -174,7 +174,7 @@ Partial Class FormBukuPenjualan
         Me.ButtonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonEdit.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.ButtonEdit.ForeColor = System.Drawing.Color.White
-        Me.ButtonEdit.Location = New System.Drawing.Point(623, 87)
+        Me.ButtonEdit.Location = New System.Drawing.Point(657, 506)
         Me.ButtonEdit.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ButtonEdit.Name = "ButtonEdit"
         Me.ButtonEdit.Size = New System.Drawing.Size(122, 36)
@@ -190,7 +190,7 @@ Partial Class FormBukuPenjualan
         Me.ButtonHapus.FlatAppearance.BorderSize = 0
         Me.ButtonHapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonHapus.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.ButtonHapus.Location = New System.Drawing.Point(623, 135)
+        Me.ButtonHapus.Location = New System.Drawing.Point(848, 506)
         Me.ButtonHapus.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ButtonHapus.Name = "ButtonHapus"
         Me.ButtonHapus.Size = New System.Drawing.Size(122, 36)
@@ -208,7 +208,7 @@ Partial Class FormBukuPenjualan
         Me.ButtonTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonTambah.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.ButtonTambah.ForeColor = System.Drawing.Color.White
-        Me.ButtonTambah.Location = New System.Drawing.Point(41, 358)
+        Me.ButtonTambah.Location = New System.Drawing.Point(42, 415)
         Me.ButtonTambah.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ButtonTambah.Name = "ButtonTambah"
         Me.ButtonTambah.Size = New System.Drawing.Size(160, 36)
@@ -220,7 +220,7 @@ Partial Class FormBukuPenjualan
         '
         Me.PictureBox2.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.mobil1
         Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox2.Location = New System.Drawing.Point(416, 237)
+        Me.PictureBox2.Location = New System.Drawing.Point(488, 15)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(590, 496)
         Me.PictureBox2.TabIndex = 41
@@ -228,16 +228,23 @@ Partial Class FormBukuPenjualan
         '
         'TxtSearch
         '
-        Me.TxtSearch.Location = New System.Drawing.Point(41, 490)
+        Me.TxtSearch.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.TxtSearch.Location = New System.Drawing.Point(41, 83)
         Me.TxtSearch.Name = "TxtSearch"
-        Me.TxtSearch.Size = New System.Drawing.Size(160, 23)
+        Me.TxtSearch.Size = New System.Drawing.Size(260, 29)
         Me.TxtSearch.TabIndex = 42
         '
         'BtnSearch
         '
-        Me.BtnSearch.Location = New System.Drawing.Point(207, 490)
+        Me.BtnSearch.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.bgbutton
+        Me.BtnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnSearch.FlatAppearance.BorderSize = 0
+        Me.BtnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnSearch.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.BtnSearch.ForeColor = System.Drawing.Color.White
+        Me.BtnSearch.Location = New System.Drawing.Point(307, 83)
         Me.BtnSearch.Name = "BtnSearch"
-        Me.BtnSearch.Size = New System.Drawing.Size(75, 23)
+        Me.BtnSearch.Size = New System.Drawing.Size(75, 29)
         Me.BtnSearch.TabIndex = 43
         Me.BtnSearch.Text = "Search"
         Me.BtnSearch.UseVisualStyleBackColor = True
@@ -245,7 +252,7 @@ Partial Class FormBukuPenjualan
         'LblSearch
         '
         Me.LblSearch.AutoSize = True
-        Me.LblSearch.Location = New System.Drawing.Point(42, 494)
+        Me.LblSearch.Location = New System.Drawing.Point(42, 87)
         Me.LblSearch.Name = "LblSearch"
         Me.LblSearch.Size = New System.Drawing.Size(81, 15)
         Me.LblSearch.TabIndex = 45

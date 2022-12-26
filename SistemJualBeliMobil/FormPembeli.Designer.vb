@@ -227,16 +227,23 @@ Partial Class FormPembeli
         '
         'TxtSearch
         '
+        Me.TxtSearch.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.TxtSearch.Location = New System.Drawing.Point(13, 380)
         Me.TxtSearch.Name = "TxtSearch"
-        Me.TxtSearch.Size = New System.Drawing.Size(331, 23)
+        Me.TxtSearch.Size = New System.Drawing.Size(331, 25)
         Me.TxtSearch.TabIndex = 38
         '
         'BtnSearch
         '
-        Me.BtnSearch.Location = New System.Drawing.Point(359, 380)
+        Me.BtnSearch.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.bgbutton
+        Me.BtnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnSearch.FlatAppearance.BorderSize = 0
+        Me.BtnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnSearch.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.BtnSearch.ForeColor = System.Drawing.Color.White
+        Me.BtnSearch.Location = New System.Drawing.Point(372, 380)
         Me.BtnSearch.Name = "BtnSearch"
-        Me.BtnSearch.Size = New System.Drawing.Size(108, 23)
+        Me.BtnSearch.Size = New System.Drawing.Size(95, 25)
         Me.BtnSearch.TabIndex = 39
         Me.BtnSearch.Text = "Search"
         Me.BtnSearch.UseVisualStyleBackColor = True
@@ -244,9 +251,10 @@ Partial Class FormPembeli
         'LblSearch
         '
         Me.LblSearch.AutoSize = True
+        Me.LblSearch.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.LblSearch.Location = New System.Drawing.Point(16, 384)
         Me.LblSearch.Name = "LblSearch"
-        Me.LblSearch.Size = New System.Drawing.Size(81, 15)
+        Me.LblSearch.Size = New System.Drawing.Size(95, 19)
         Me.LblSearch.TabIndex = 46
         Me.LblSearch.Text = "Search by ID..."
         '

@@ -53,7 +53,7 @@ Partial Class FormMobil
         Me.DataGridMobil.AllowUserToAddRows = False
         Me.DataGridMobil.AllowUserToDeleteRows = False
         Me.DataGridMobil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridMobil.Location = New System.Drawing.Point(14, 75)
+        Me.DataGridMobil.Location = New System.Drawing.Point(17, 110)
         Me.DataGridMobil.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DataGridMobil.Name = "DataGridMobil"
         Me.DataGridMobil.ReadOnly = True
@@ -104,7 +104,7 @@ Partial Class FormMobil
         Me.BtnTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnTambah.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnTambah.ForeColor = System.Drawing.Color.White
-        Me.BtnTambah.Location = New System.Drawing.Point(14, 373)
+        Me.BtnTambah.Location = New System.Drawing.Point(17, 564)
         Me.BtnTambah.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnTambah.Name = "BtnTambah"
         Me.BtnTambah.Size = New System.Drawing.Size(130, 36)
@@ -124,7 +124,7 @@ Partial Class FormMobil
         Me.BtnJenisMobil.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnJenisMobil.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnJenisMobil.ForeColor = System.Drawing.Color.Black
-        Me.BtnJenisMobil.Location = New System.Drawing.Point(166, 373)
+        Me.BtnJenisMobil.Location = New System.Drawing.Point(266, 564)
         Me.BtnJenisMobil.Name = "BtnJenisMobil"
         Me.BtnJenisMobil.Size = New System.Drawing.Size(130, 36)
         Me.BtnJenisMobil.TabIndex = 23
@@ -255,7 +255,8 @@ Partial Class FormMobil
         Me.GroupBox1.Controls.Add(Me.RdbBelumTerjual)
         Me.GroupBox1.Controls.Add(Me.RdbTerjual)
         Me.GroupBox1.Controls.Add(Me.RdbNone)
-        Me.GroupBox1.Location = New System.Drawing.Point(35, 431)
+        Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.GroupBox1.Location = New System.Drawing.Point(17, 399)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(130, 107)
         Me.GroupBox1.TabIndex = 34
@@ -265,9 +266,10 @@ Partial Class FormMobil
         'RdbBelumTerjual
         '
         Me.RdbBelumTerjual.AutoSize = True
+        Me.RdbBelumTerjual.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.RdbBelumTerjual.Location = New System.Drawing.Point(15, 72)
         Me.RdbBelumTerjual.Name = "RdbBelumTerjual"
-        Me.RdbBelumTerjual.Size = New System.Drawing.Size(96, 19)
+        Me.RdbBelumTerjual.Size = New System.Drawing.Size(101, 19)
         Me.RdbBelumTerjual.TabIndex = 2
         Me.RdbBelumTerjual.TabStop = True
         Me.RdbBelumTerjual.Text = "Belum Terjual"
@@ -276,9 +278,10 @@ Partial Class FormMobil
         'RdbTerjual
         '
         Me.RdbTerjual.AutoSize = True
+        Me.RdbTerjual.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.RdbTerjual.Location = New System.Drawing.Point(15, 47)
         Me.RdbTerjual.Name = "RdbTerjual"
-        Me.RdbTerjual.Size = New System.Drawing.Size(59, 19)
+        Me.RdbTerjual.Size = New System.Drawing.Size(62, 19)
         Me.RdbTerjual.TabIndex = 1
         Me.RdbTerjual.TabStop = True
         Me.RdbTerjual.Text = "Terjual"
@@ -287,9 +290,10 @@ Partial Class FormMobil
         'RdbNone
         '
         Me.RdbNone.AutoSize = True
+        Me.RdbNone.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.RdbNone.Location = New System.Drawing.Point(15, 22)
         Me.RdbNone.Name = "RdbNone"
-        Me.RdbNone.Size = New System.Drawing.Size(54, 19)
+        Me.RdbNone.Size = New System.Drawing.Size(55, 19)
         Me.RdbNone.TabIndex = 0
         Me.RdbNone.TabStop = True
         Me.RdbNone.Text = "None"
@@ -298,16 +302,23 @@ Partial Class FormMobil
         'TxtSearch
         '
         Me.TxtSearch.BackColor = System.Drawing.SystemColors.Window
-        Me.TxtSearch.Location = New System.Drawing.Point(35, 560)
+        Me.TxtSearch.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.TxtSearch.Location = New System.Drawing.Point(17, 72)
         Me.TxtSearch.Name = "TxtSearch"
-        Me.TxtSearch.Size = New System.Drawing.Size(200, 23)
+        Me.TxtSearch.Size = New System.Drawing.Size(200, 25)
         Me.TxtSearch.TabIndex = 35
         '
         'BtnSearch
         '
-        Me.BtnSearch.Location = New System.Drawing.Point(253, 560)
+        Me.BtnSearch.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.bgbutton
+        Me.BtnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnSearch.FlatAppearance.BorderSize = 0
+        Me.BtnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnSearch.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.BtnSearch.ForeColor = System.Drawing.Color.White
+        Me.BtnSearch.Location = New System.Drawing.Point(223, 72)
         Me.BtnSearch.Name = "BtnSearch"
-        Me.BtnSearch.Size = New System.Drawing.Size(75, 23)
+        Me.BtnSearch.Size = New System.Drawing.Size(75, 25)
         Me.BtnSearch.TabIndex = 36
         Me.BtnSearch.Text = "Search"
         Me.BtnSearch.UseVisualStyleBackColor = True
@@ -315,9 +326,10 @@ Partial Class FormMobil
         'LblSearch
         '
         Me.LblSearch.AutoSize = True
-        Me.LblSearch.Location = New System.Drawing.Point(38, 564)
+        Me.LblSearch.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.LblSearch.Location = New System.Drawing.Point(20, 76)
         Me.LblSearch.Name = "LblSearch"
-        Me.LblSearch.Size = New System.Drawing.Size(81, 15)
+        Me.LblSearch.Size = New System.Drawing.Size(95, 19)
         Me.LblSearch.TabIndex = 37
         Me.LblSearch.Text = "Search by ID..."
         '
