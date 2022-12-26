@@ -110,7 +110,7 @@ VALUES
 	'Baik',
 	200000000,
 	2556,
-	FALSE,
+	TRUE,
 	200000000
 ),
 (
@@ -120,7 +120,7 @@ VALUES
 	'Buruk',
 	150000000,
 	2191,
-	FALSE,
+	TRUE,
 	150000000
 ),
 (
@@ -130,7 +130,7 @@ VALUES
 	'Baik',
 	250000000,
 	1826,
-	FALSE,
+	TRUE,
 	250000000
 ),
 (
@@ -140,7 +140,7 @@ VALUES
 	'Baik',
 	300000000,
 	1461,
-	FALSE,
+	TRUE,
 	350000000
 ),
 (
@@ -150,7 +150,7 @@ VALUES
 	'Sangat Baik',
 	500000000,
 	1095,
-	FALSE,
+	TRUE,
 	500000000
 ),
 (
@@ -160,7 +160,7 @@ VALUES
 	'Baik',
 	450000000,
 	730,
-	FALSE,
+	TRUE,
 	450000000
 ),
 (
@@ -170,7 +170,7 @@ VALUES
 	'Sangat Baik',
 	300000000,
 	365,
-	FALSE,
+	TRUE,
 	300000000
 ),
 (
@@ -180,9 +180,11 @@ VALUES
 	'Baik',
 	550000000,
 	2556,
-	FALSE,
+	TRUE,
 	550000000
 );
+
+
 
 INSERT
 	INTO
