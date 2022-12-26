@@ -105,7 +105,7 @@ INSERT
 VALUES
 (
 	1,
-	'matic',
+	'Matic',
 	2001,
 	'Baik',
 	200000000,
@@ -115,7 +115,7 @@ VALUES
 ),
 (
 	2,
-	'manual',
+	'Manual',
 	2003,
 	'Buruk',
 	150000000,
@@ -125,7 +125,7 @@ VALUES
 ),
 (
 	3,
-	'manual',
+	'Manual',
 	2007,
 	'Baik',
 	250000000,
@@ -135,7 +135,7 @@ VALUES
 ),
 (
 	4,
-	'manual',
+	'Manual',
 	2008,
 	'Baik',
 	300000000,
@@ -145,7 +145,7 @@ VALUES
 ),
 (
 	1,
-	'manual',
+	'Manual',
 	2005,
 	'Sangat Baik',
 	500000000,
@@ -155,7 +155,7 @@ VALUES
 ),
 (
 	2,
-	'matic',
+	'Matic',
 	2004,
 	'Baik',
 	450000000,
@@ -165,7 +165,7 @@ VALUES
 ),
 (
 	3,
-	'matic',
+	'Matic',
 	2009,
 	'Sangat Baik',
 	300000000,
@@ -175,7 +175,7 @@ VALUES
 ),
 (
 	4,
-	'matic',
+	'Matic',
 	2008,
 	'Baik',
 	550000000,
