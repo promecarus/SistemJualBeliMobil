@@ -145,7 +145,7 @@ VALUES
 ),
 (
 	1,
-	'manual',
+	'Manual',
 	2005,
 	'Sangat Baik',
 	500000000,
@@ -155,7 +155,7 @@ VALUES
 ),
 (
 	2,
-	'matic',
+	'Matic',
 	2004,
 	'Baik',
 	450000000,
@@ -165,7 +165,7 @@ VALUES
 ),
 (
 	3,
-	'matic',
+	'Matic',
 	2009,
 	'Sangat Baik',
 	300000000,
@@ -175,7 +175,7 @@ VALUES
 ),
 (
 	4,
-	'matic',
+	'Matic',
 	2008,
 	'Baik',
 	550000000,
