@@ -10,10 +10,18 @@
                 If inputUsername.Text.Length > 0 Then
                     If inputEmail.Text.Length > 0 Then
                         If inputPassword.Text.Length > 0 Then
-                            FormSignIn.Users.AddUsersDatabase(inputUsername.Text, inputEmail.Text, inputPassword.Text)
-                            MessageBox.Show("Sign Up Berhasil !!")
-                            FormSignIn.Show()
-                            Me.Hide()
+                            If InputConfirmPassword.Text.Length > 0 Then
+                                If String.Compare(inputPassword.Text, InputConfirmPassword.Text) = 0 Then
+                                    FormSignIn.Users.AddUsersDatabase(inputUsername.Text, inputEmail.Text, inputPassword.Text)
+                                    MessageBox.Show("Sign Up Berhasil !!")
+                                    FormSignIn.Show()
+                                    Me.Hide()
+                                Else
+                                    MessageBox.Show("Data Confirm Password Tidak Sama dengan Data Password !!")
+                                End If
+                            Else
+                                MessageBox.Show("Data Confirm Password Belum Terisi !!")
+                            End If
                         Else
                             MessageBox.Show("Data Password Belum Terisi !!")
                         End If
