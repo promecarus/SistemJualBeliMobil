@@ -48,6 +48,14 @@
         End If
     End Sub
 
+    Private Sub ChkConfirmPassword_CheckedChanged(sender As Object, e As EventArgs) Handles ChkConfirmPassword.CheckedChanged
+        If ChkConfirmPassword.Checked = True Then
+            InputConfirmPassword.UseSystemPasswordChar = False
+        Else
+            InputConfirmPassword.UseSystemPasswordChar = True
+        End If
+    End Sub
+
     Private Sub FormSignUp_Load(sender As Object, e As EventArgs) Handles Me.Load
         inputPassword.UseSystemPasswordChar = True
     End Sub
