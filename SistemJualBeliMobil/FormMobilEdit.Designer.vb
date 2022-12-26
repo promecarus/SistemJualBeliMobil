@@ -40,10 +40,11 @@ Partial Class FormMobilEdit
         Me.RdManual = New System.Windows.Forms.RadioButton()
         Me.TxtHargaDefault = New System.Windows.Forms.TextBox()
         Me.TxtTahunPembuatan = New System.Windows.Forms.TextBox()
-        Me.BtnEditMobil = New System.Windows.Forms.Button()
+        Me.BtnEdit = New System.Windows.Forms.Button()
         Me.LabelTipeMobil = New System.Windows.Forms.Label()
         Me.LabelStock = New System.Windows.Forms.Label()
         Me.LabelTahunTerbit = New System.Windows.Forms.Label()
+        Me.BtnCancel = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBoxTipeMobil.SuspendLayout()
         Me.SuspendLayout()
@@ -243,22 +244,22 @@ Partial Class FormMobilEdit
         Me.TxtTahunPembuatan.Size = New System.Drawing.Size(257, 23)
         Me.TxtTahunPembuatan.TabIndex = 82
         '
-        'BtnEditMobil
+        'BtnEdit
         '
-        Me.BtnEditMobil.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.bgbutton
-        Me.BtnEditMobil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnEditMobil.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnEditMobil.FlatAppearance.BorderSize = 0
-        Me.BtnEditMobil.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnEditMobil.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.BtnEditMobil.ForeColor = System.Drawing.Color.White
-        Me.BtnEditMobil.Location = New System.Drawing.Point(282, 435)
-        Me.BtnEditMobil.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.BtnEditMobil.Name = "BtnEditMobil"
-        Me.BtnEditMobil.Size = New System.Drawing.Size(137, 40)
-        Me.BtnEditMobil.TabIndex = 81
-        Me.BtnEditMobil.Text = "Edit Mobil"
-        Me.BtnEditMobil.UseVisualStyleBackColor = True
+        Me.BtnEdit.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.bgbutton
+        Me.BtnEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnEdit.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnEdit.FlatAppearance.BorderSize = 0
+        Me.BtnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnEdit.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.BtnEdit.ForeColor = System.Drawing.Color.White
+        Me.BtnEdit.Location = New System.Drawing.Point(208, 435)
+        Me.BtnEdit.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.BtnEdit.Name = "BtnEdit"
+        Me.BtnEdit.Size = New System.Drawing.Size(137, 40)
+        Me.BtnEdit.TabIndex = 81
+        Me.BtnEdit.Text = "Edit"
+        Me.BtnEdit.UseVisualStyleBackColor = True
         '
         'LabelTipeMobil
         '
@@ -290,12 +291,29 @@ Partial Class FormMobilEdit
         Me.LabelTahunTerbit.TabIndex = 78
         Me.LabelTahunTerbit.Text = "Tahun Pembuatan"
         '
+        'BtnCancel
+        '
+        Me.BtnCancel.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.bgputihbtn
+        Me.BtnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnCancel.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnCancel.FlatAppearance.BorderSize = 0
+        Me.BtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCancel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.BtnCancel.Location = New System.Drawing.Point(355, 435)
+        Me.BtnCancel.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.BtnCancel.Name = "BtnCancel"
+        Me.BtnCancel.Size = New System.Drawing.Size(137, 40)
+        Me.BtnCancel.TabIndex = 93
+        Me.BtnCancel.Text = "Cancel"
+        Me.BtnCancel.UseVisualStyleBackColor = True
+        '
         'FormMobilEdit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(700, 495)
+        Me.Controls.Add(Me.BtnCancel)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.TxtGaransi)
         Me.Controls.Add(Me.LabelTanggalMasukKoleksi)
@@ -307,7 +325,7 @@ Partial Class FormMobilEdit
         Me.Controls.Add(Me.GroupBoxTipeMobil)
         Me.Controls.Add(Me.TxtHargaDefault)
         Me.Controls.Add(Me.TxtTahunPembuatan)
-        Me.Controls.Add(Me.BtnEditMobil)
+        Me.Controls.Add(Me.BtnEdit)
         Me.Controls.Add(Me.LabelTipeMobil)
         Me.Controls.Add(Me.LabelStock)
         Me.Controls.Add(Me.LabelTahunTerbit)
@@ -345,8 +363,9 @@ Partial Class FormMobilEdit
     Friend WithEvents RdManual As RadioButton
     Friend WithEvents TxtHargaDefault As TextBox
     Friend WithEvents TxtTahunPembuatan As TextBox
-    Friend WithEvents BtnEditMobil As Button
+    Friend WithEvents BtnEdit As Button
     Friend WithEvents LabelTipeMobil As Label
     Friend WithEvents LabelStock As Label
     Friend WithEvents LabelTahunTerbit As Label
+    Friend WithEvents BtnCancel As Button
 End Class

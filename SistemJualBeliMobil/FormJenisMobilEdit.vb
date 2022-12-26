@@ -4,8 +4,6 @@ Imports System.IO
 
 Public Class FormJenisMobilEdit
 
-    Public Shared JenisMobil As JenisMobil
-
     Public Sub New()
 
         ' This call is required by the designer.
@@ -17,15 +15,22 @@ Public Class FormJenisMobilEdit
     End Sub
 
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
-        FormJenisMobil.JenisMobil.jenisProperty = TxtJenisMobil.Text.ToString()
+        If TxtJenisMobil.Text = "" Then
+            MessageBox.Show("Data Jenis Mobil Tidak Boleh Kosong !!")
+        Else
+            FormJenisMobil.JenisMobil.jenisProperty = TxtJenisMobil.Text.ToString()
 
-        FormJenisMobil.JenisMobil.UpdateDataJenisMobilByIDDatabase(FormJenisMobil.SelectedTableJenisMobil,
-                                                                   FormJenisMobil.JenisMobil.jenisProperty)
+            FormJenisMobil.JenisMobil.UpdateDataJenisMobilByIDDatabase(FormJenisMobil.SelectedTableJenisMobil,
+                                                                       FormJenisMobil.JenisMobil.jenisProperty)
 
-        Me.Close()
+            MessageBox.Show("Data Jenis Mobil dengan ID " & FormJenisMobil.SelectedTableJenisMobil & " Berhasil Diedit.")
+
+            Me.Hide()
+        End If
     End Sub
 
-    'Private Sub FormJenisMobilEdit_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-    '    Form1.Show()
-    'End Sub
+    Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles BtnCancel.Click
+        Me.Hide()
+    End Sub
+
 End Class

@@ -1,4 +1,6 @@
-﻿Public Class FormMobilEdit
+﻿Imports Org.BouncyCastle.Asn1.Cms
+
+Public Class FormMobilEdit
 
     Dim kondisi As String
     Dim tipe_mobil As String
@@ -9,7 +11,7 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        ComboBoxJenisMobil.DataSource = Form1.JenisMobil.ListDataJenisMobil
+        ComboBoxJenisMobil.DataSource = FormSignIn.JenisMobil.ListDataJenisMobil
         ComboBoxJenisMobil.DisplayMember() = "jenis"
         ComboBoxJenisMobil.ValueMember() = "id_jenis"
 
@@ -46,8 +48,14 @@
         TxtHargaDefault.Text = FormMobil.Mobil.hargaDefaultProperty
     End Sub
 
-    Private Sub BtnEditMobil_Click(sender As Object, e As EventArgs) Handles BtnEditMobil.Click
-        FormMobil.Mobil.UpdateDataMobilByIDDatabase(FormMobil.SelectedTableMobil,
+    Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
+        If Not TxtTahunPembuatan.Text = "" Then
+            If IsNumeric(TxtTahunPembuatan.Text) Then
+                If Not TxtGaransi.Text = "" Then
+                    If IsNumeric(TxtGaransi.Text) Then
+                        If Not TxtHargaDefault.Text = "" Then
+                            If IsNumeric(TxtHargaDefault.Text) Then
+                                FormMobil.Mobil.UpdateDataMobilByIDDatabase(FormMobil.SelectedTableMobil,
                                                     ComboBoxJenisMobil.SelectedValue,
                                                     tipe_mobil,
                                                     Integer.Parse(TxtTahunPembuatan.Text),
@@ -55,7 +63,30 @@
                                                     Integer.Parse(TxtGaransi.Text),
                                                     Integer.Parse(TxtHargaDefault.Text))
 
-        MessageBox.Show("Edit Data Mobil Dengan ID " & FormMobil.SelectedTableMobil & " Berhasil Diedit !!")
-        Me.Close()
+                                MessageBox.Show("Data Mobil Dengan ID " & FormMobil.SelectedTableMobil & " Berhasil Diedit")
+
+                                Me.Hide()
+                            Else
+                                MessageBox.Show("Data Harga Default Harus Angka !!")
+                            End If
+                        Else
+                            MessageBox.Show("Data Harga Default Belum Terisi !!")
+                        End If
+                    Else
+                        MessageBox.Show("Data Garansi Harus Angka !!")
+                    End If
+                Else
+                    MessageBox.Show("Data Garansi Belum Terisi !!")
+                End If
+            Else
+                MessageBox.Show("Data Tahun Pembuatan Harus Angka !!")
+            End If
+        Else
+            MessageBox.Show("Data Tahun Pembuatan Belum Terisi !!")
+        End If
+    End Sub
+
+    Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles BtnCancel.Click
+        Me.Hide()
     End Sub
 End Class
