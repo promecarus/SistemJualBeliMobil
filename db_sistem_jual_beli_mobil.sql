@@ -105,123 +105,83 @@ INSERT
 VALUES
 (
 	1,
-	'Matic',
+	'matic',
 	2001,
 	'Baik',
 	200000000,
 	2556,
-	TRUE,
+	FALSE,
 	200000000
 ),
 (
 	2,
-	'Manual',
+	'manual',
 	2003,
 	'Buruk',
 	150000000,
 	2191,
-	TRUE,
+	FALSE,
 	150000000
 ),
 (
 	3,
-	'Manual',
+	'manual',
 	2007,
 	'Baik',
 	250000000,
 	1826,
-	TRUE,
+	FALSE,
 	250000000
 ),
 (
 	4,
-	'Manual',
+	'manual',
 	2008,
 	'Baik',
 	300000000,
 	1461,
-	TRUE,
+	FALSE,
 	350000000
 ),
 (
 	1,
-	'Manual',
+	'manual',
 	2005,
 	'Sangat Baik',
 	500000000,
 	1095,
-	TRUE,
+	FALSE,
 	500000000
 ),
 (
 	2,
-	'Matic',
+	'matic',
 	2004,
 	'Baik',
 	450000000,
 	730,
-	TRUE,
+	FALSE,
 	450000000
 ),
 (
 	3,
-	'Matic',
+	'matic',
 	2009,
 	'Sangat Baik',
 	300000000,
 	365,
-	TRUE,
+	FALSE,
 	300000000
 ),
 (
 	4,
-	'Matic',
+	'matic',
 	2008,
 	'Baik',
 	550000000,
 	2556,
-	TRUE,
+	FALSE,
 	550000000
-),
-(
-	1,
-	'Manual',
-	2005,
-	'Baik',
-	550000000,
-	1495,
-	FALSE,
-	500000000
-),
-(
-	2,
-	'Matic',
-	2004,
-	'Sangat Baik',
-	350000000,
-	1730,
-	FALSE,
-	350000000
-),
-(
-	3,
-	'Matic',
-	2009,
-	'Sangat Baik',
-	450000000,
-	1365,
-	FALSE,
-	450000000
-),
-(
-	4,
-	'Matic',
-	2008,
-	'Baik',
-	400000000,
-	2356,
-	FALSE,
-	400000000
 );
 
 INSERT
