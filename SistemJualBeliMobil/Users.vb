@@ -51,7 +51,7 @@ Public Class Users
     End Sub
 
     Public Function CheckAuthenticationDatabase(username_login As String, password_login As String) As List(Of String)
-        Dim query = "SELECT id_user, username FROM users WHERE username='" & username_login & "' AND password='" & EncryptMD5(password_login) & "'"
+        Dim query = "SELECT id_user, username FROM users WHERE (username='" & username_login & "' OR email='" & username_login & "') AND password='" & EncryptMD5(password_login) & "'"
         Return FormSignIn.db.ExecuteGetOneRow(query, 2)
     End Function
 
