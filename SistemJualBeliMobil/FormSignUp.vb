@@ -81,4 +81,8 @@ Public Class FormSignUp
         InputConfirmPassword.UseSystemPasswordChar = True
     End Sub
 
+    Private Sub FormSignUp_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        FormSignIn.Close()
+    End Sub
+
 End Class

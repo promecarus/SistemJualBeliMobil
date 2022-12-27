@@ -49,7 +49,7 @@ Partial Class FormSignIn
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(565, 119)
+        Me.Label1.Location = New System.Drawing.Point(562, 129)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(105, 37)
         Me.Label1.TabIndex = 1
@@ -113,7 +113,7 @@ Partial Class FormSignIn
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label3.Location = New System.Drawing.Point(565, 198)
+        Me.Label3.Location = New System.Drawing.Point(569, 195)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(87, 21)
         Me.Label3.TabIndex = 7
@@ -123,7 +123,7 @@ Partial Class FormSignIn
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label4.Location = New System.Drawing.Point(565, 271)
+        Me.Label4.Location = New System.Drawing.Point(569, 268)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(82, 21)
         Me.Label4.TabIndex = 8
