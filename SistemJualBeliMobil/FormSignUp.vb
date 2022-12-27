@@ -8,6 +8,13 @@ Imports System.Security.Policy
 
 Public Class FormSignUp
 
+    Dim drawingFont As New Font("Arial", 15)
+    Dim captchaImage As New Bitmap(140, 40)
+    Dim captchaGraf As Graphics = Graphics.FromImage(captchaImage)
+    Dim alphabet As String = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz"
+    Dim captchaString, tickRandom As String
+    Dim processNumber As Integer
+
     Private Sub SignupBtn_Click(sender As Object, e As EventArgs) Handles SignupBtn.Click
         Dim regex As Regex = New Regex("^[^@\s]+@[^@\s]+\.[^@\s]+$")
         Dim valid As Boolean = regex.IsMatch(inputEmail.Text.Trim)
