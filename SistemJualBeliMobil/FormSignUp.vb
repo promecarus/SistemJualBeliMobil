@@ -166,6 +166,8 @@ Public Class FormSignUp
     Private Sub FormSignUp_Load(sender As Object, e As EventArgs) Handles Me.Load
         inputPassword.UseSystemPasswordChar = True
         InputConfirmPassword.UseSystemPasswordChar = True
+
+        GenerateCaptcha()
     End Sub
 
     Private Sub FormSignUp_Closed(sender As Object, e As EventArgs) Handles Me.Closed
