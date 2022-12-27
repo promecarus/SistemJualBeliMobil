@@ -86,7 +86,7 @@ Partial Class FormSignUp
         Me.SigninBtn.Location = New System.Drawing.Point(576, 512)
         Me.SigninBtn.Name = "SigninBtn"
         Me.SigninBtn.Size = New System.Drawing.Size(346, 34)
-        Me.SigninBtn.TabIndex = 5
+        Me.SigninBtn.TabIndex = 6
         Me.SigninBtn.Text = "Sign in"
         Me.SigninBtn.UseVisualStyleBackColor = False
         '
@@ -102,7 +102,7 @@ Partial Class FormSignUp
         Me.SignupBtn.Location = New System.Drawing.Point(576, 448)
         Me.SignupBtn.Name = "SignupBtn"
         Me.SignupBtn.Size = New System.Drawing.Size(346, 34)
-        Me.SignupBtn.TabIndex = 4
+        Me.SignupBtn.TabIndex = 5
         Me.SignupBtn.Text = "Sign up"
         Me.SignupBtn.UseVisualStyleBackColor = False
         '
@@ -211,7 +211,7 @@ Partial Class FormSignUp
         Me.InputConfirmPassword.Location = New System.Drawing.Point(576, 382)
         Me.InputConfirmPassword.Name = "InputConfirmPassword"
         Me.InputConfirmPassword.Size = New System.Drawing.Size(346, 34)
-        Me.InputConfirmPassword.TabIndex = 22
+        Me.InputConfirmPassword.TabIndex = 4
         '
         'FormSignUp
         '
