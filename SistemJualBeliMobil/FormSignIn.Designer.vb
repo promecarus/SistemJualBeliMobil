@@ -115,9 +115,9 @@ Partial Class FormSignIn
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label3.Location = New System.Drawing.Point(569, 195)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(87, 21)
+        Me.Label3.Size = New System.Drawing.Size(145, 21)
         Me.Label3.TabIndex = 7
-        Me.Label3.Text = "Username"
+        Me.Label3.Text = "Username / Email"
         '
         'Label4
         '
