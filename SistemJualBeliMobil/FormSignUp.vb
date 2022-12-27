@@ -1,6 +1,19 @@
 ﻿Imports System.Text.RegularExpressions
+Imports System.Text
+Imports System.Drawing
+Imports System.Windows.Forms
+Imports System.Drawing.Drawing2D
+Imports System.Security
+Imports System.Security.Policy
 
 Public Class FormSignUp
+
+    Dim drawingFont As New Font("Arial", 15)
+    Dim captchaImage As New Bitmap(140, 40)
+    Dim captchaGraf As Graphics = Graphics.FromImage(captchaImage)
+    Dim alphabet As String = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz"
+    Dim captchaString, tickRandom As String
+    Dim processNumber As Integer
 
     Private Sub SignupBtn_Click(sender As Object, e As EventArgs) Handles SignupBtn.Click
         Dim regex As Regex = New Regex("^[^@\s]+@[^@\s]+\.[^@\s]+$")
@@ -20,16 +33,27 @@ Public Class FormSignUp
                             If inputPassword.Text.Length > 0 Then
                                 If InputConfirmPassword.Text.Length > 0 Then
                                     If String.Compare(inputPassword.Text, InputConfirmPassword.Text) = 0 Then
-                                        FormSignIn.Users.AddUsersDatabase(inputUsername.Text, inputEmail.Text, inputPassword.Text)
-                                        MessageBox.Show("Sign Up Berhasil !!")
+                                        If InputCaptcha.Text.Length > 0 Then
+                                            If InputCaptcha.Text = captchaString Then
+                                                FormSignIn.Users.AddUsersDatabase(inputUsername.Text, inputEmail.Text, inputPassword.Text)
+                                                MessageBox.Show("Sign Up Berhasil !!")
 
-                                        inputUsername.Text = ""
-                                        inputEmail.Text = ""
-                                        inputPassword.Text = ""
-                                        InputConfirmPassword.Text = ""
+                                                inputUsername.Text = ""
+                                                inputEmail.Text = ""
+                                                inputPassword.Text = ""
+                                                InputConfirmPassword.Text = ""
+                                                InputCaptcha.Clear()
+                                                GenerateCaptcha()
 
-                                        FormSignIn.Show()
-                                        Me.Hide()
+                                                FormSignIn.Show()
+                                                Me.Hide()
+                                            Else
+                                                MessageBox.Show("Data Captcha Tidak Sesuai !!")
+                                                InputCaptcha.Clear()
+                                            End If
+                                        Else
+                                            MessageBox.Show("Data Captcha Belum Terisi")
+                                        End If
                                     Else
                                         MessageBox.Show("Data Confirm Password Tidak Sama dengan Data Password !!")
                                     End If
@@ -60,6 +84,10 @@ Public Class FormSignUp
         Me.Hide()
     End Sub
 
+    Private Sub BtnRefresh_Click(sender As Object, e As EventArgs) Handles BtnRefresh.Click
+        GenerateCaptcha()
+    End Sub
+
     Private Sub ChkPassword_CheckedChanged(sender As Object, e As EventArgs) Handles ChkPassword.CheckedChanged
         If ChkPassword.Checked = True Then
             inputPassword.UseSystemPasswordChar = False
@@ -76,9 +104,70 @@ Public Class FormSignUp
         End If
     End Sub
 
+    Private Sub GenerateCaptcha()
+        processNumber = My.Computer.Clock.LocalTime.Millisecond
+        If processNumber < 521 Then
+            processNumber = processNumber \ 10
+            captchaString = alphabet.Substring(processNumber, 1)
+        Else
+            captchaString = CStr(My.Computer.Clock.LocalTime.Second \ 6)
+        End If
+
+        processNumber = My.Computer.Clock.LocalTime.Second
+        If processNumber < 30 Then
+            processNumber = Math.Abs(processNumber - 8)
+            captchaString += alphabet.Substring(processNumber, 1)
+        Else
+            captchaString += CStr(My.Computer.Clock.LocalTime.Minute \ 6)
+        End If
+
+        processNumber = My.Computer.Clock.LocalTime.DayOfYear
+        If processNumber Mod 2 = 0 Then
+            processNumber = processNumber \ 8
+            captchaString += alphabet.Substring(processNumber, 1)
+        Else
+            captchaString += CStr(processNumber \ 37)
+        End If
+
+        tickRandom = My.Computer.Clock.TickCount.ToString
+        processNumber = Val(tickRandom.Substring(tickRandom.Length - 1, 1))
+        If processNumber Mod 2 = 0 Then
+            captchaString += CStr(processNumber)
+        Else
+            processNumber = Math.Abs(Int(Math.Cos(Val(tickRandom)) * 51))
+            captchaString += alphabet.Substring(processNumber, 1)
+        End If
+
+        processNumber = My.Computer.Clock.LocalTime.Hour
+        If processNumber Mod 2 = 0 Then
+            processNumber = Math.Abs(Int(Math.Sin(Val(My.Computer.Clock.LocalTime.Year)) * 51))
+            captchaString += alphabet.Substring(processNumber, 1)
+        Else
+            captchaString += CStr(processNumber \ 3)
+        End If
+
+        processNumber = My.Computer.Clock.LocalTime.Millisecond
+        If processNumber > 521 Then
+            processNumber = Math.Abs((processNumber \ 10) - 52)
+            captchaString += alphabet.Substring(processNumber, 1)
+        Else
+            captchaString += CStr(My.Computer.Clock.LocalTime.Second \ 6)
+        End If
+
+        captchaGraf.Clear(Color.White)
+
+        For hash As Integer = 0 To 5
+            captchaGraf.DrawString(captchaString.Substring(hash, 1), drawingFont, Brushes.Black, hash * 20 + hash + processNumber \ 200, (hash Mod 3) * (processNumber \ 200))
+        Next
+
+        PictBoxCaptcha.Image = captchaImage
+    End Sub
+
     Private Sub FormSignUp_Load(sender As Object, e As EventArgs) Handles Me.Load
         inputPassword.UseSystemPasswordChar = True
         InputConfirmPassword.UseSystemPasswordChar = True
+
+        GenerateCaptcha()
     End Sub
 
     Private Sub FormSignUp_Closed(sender As Object, e As EventArgs) Handles Me.Closed
