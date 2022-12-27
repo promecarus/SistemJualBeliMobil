@@ -84,6 +84,10 @@ Public Class FormSignUp
         Me.Hide()
     End Sub
 
+    Private Sub BtnRefresh_Click(sender As Object, e As EventArgs) Handles BtnRefresh.Click
+        GenerateCaptcha()
+    End Sub
+
     Private Sub ChkPassword_CheckedChanged(sender As Object, e As EventArgs) Handles ChkPassword.CheckedChanged
         If ChkPassword.Checked = True Then
             inputPassword.UseSystemPasswordChar = False
