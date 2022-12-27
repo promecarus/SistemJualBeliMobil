@@ -1,4 +1,10 @@
 ﻿Imports System.Text.RegularExpressions
+Imports System.Text
+Imports System.Drawing
+Imports System.Windows.Forms
+Imports System.Drawing.Drawing2D
+Imports System.Security
+Imports System.Security.Policy
 
 Public Class FormSignUp
 
