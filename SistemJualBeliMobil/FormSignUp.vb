@@ -104,6 +104,65 @@ Public Class FormSignUp
         End If
     End Sub
 
+    Private Sub GenerateCaptcha()
+        processNumber = My.Computer.Clock.LocalTime.Millisecond
+        If processNumber < 521 Then
+            processNumber = processNumber \ 10
+            captchaString = alphabet.Substring(processNumber, 1)
+        Else
+            captchaString = CStr(My.Computer.Clock.LocalTime.Second \ 6)
+        End If
+
+        processNumber = My.Computer.Clock.LocalTime.Second
+        If processNumber < 30 Then
+            processNumber = Math.Abs(processNumber - 8)
+            captchaString += alphabet.Substring(processNumber, 1)
+        Else
+            captchaString += CStr(My.Computer.Clock.LocalTime.Minute \ 6)
+        End If
+
+        processNumber = My.Computer.Clock.LocalTime.DayOfYear
+        If processNumber Mod 2 = 0 Then
+            processNumber = processNumber \ 8
+            captchaString += alphabet.Substring(processNumber, 1)
+        Else
+            captchaString += CStr(processNumber \ 37)
+        End If
+
+        tickRandom = My.Computer.Clock.TickCount.ToString
+        processNumber = Val(tickRandom.Substring(tickRandom.Length - 1, 1))
+        If processNumber Mod 2 = 0 Then
+            captchaString += CStr(processNumber)
+        Else
+            processNumber = Math.Abs(Int(Math.Cos(Val(tickRandom)) * 51))
+            captchaString += alphabet.Substring(processNumber, 1)
+        End If
+
+        processNumber = My.Computer.Clock.LocalTime.Hour
+        If processNumber Mod 2 = 0 Then
+            processNumber = Math.Abs(Int(Math.Sin(Val(My.Computer.Clock.LocalTime.Year)) * 51))
+            captchaString += alphabet.Substring(processNumber, 1)
+        Else
+            captchaString += CStr(processNumber \ 3)
+        End If
+
+        processNumber = My.Computer.Clock.LocalTime.Millisecond
+        If processNumber > 521 Then
+            processNumber = Math.Abs((processNumber \ 10) - 52)
+            captchaString += alphabet.Substring(processNumber, 1)
+        Else
+            captchaString += CStr(My.Computer.Clock.LocalTime.Second \ 6)
+        End If
+
+        captchaGraf.Clear(Color.White)
+
+        For hash As Integer = 0 To 5
+            captchaGraf.DrawString(captchaString.Substring(hash, 1), drawingFont, Brushes.Black, hash * 20 + hash + processNumber \ 200, (hash Mod 3) * (processNumber \ 200))
+        Next
+
+        PictBoxCaptcha.Image = captchaImage
+    End Sub
+
     Private Sub FormSignUp_Load(sender As Object, e As EventArgs) Handles Me.Load
         inputPassword.UseSystemPasswordChar = True
         InputConfirmPassword.UseSystemPasswordChar = True
