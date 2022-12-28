@@ -4,11 +4,11 @@ Public Class FormBukuPenjualanTambah
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        ComboBoxIdMobil.DataSource = FormSignIn.Mobil.ListDataMobil
+        ComboBoxIdMobil.DataSource = FormSignIn.Mobil.List
         ComboBoxIdMobil.DisplayMember = "id"
         ComboBoxIdMobil.ValueMember = "id"
 
-        ComboBoxIdPembeli.DataSource = FormSignIn.Pembeli.ListDataPembeli
+        ComboBoxIdPembeli.DataSource = FormSignIn.Pembeli.List
         ComboBoxIdPembeli.DisplayMember = "nama"
         ComboBoxIdPembeli.ValueMember = "id_pembeli"
 

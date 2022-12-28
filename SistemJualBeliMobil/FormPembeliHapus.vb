@@ -8,7 +8,7 @@ Public Class FormPembeliHapus
     End Sub
 
     Private Sub ButtonYes_Click(sender As Object, e As EventArgs) Handles ButtonYes.Click
-        FormPembeli.dataPembeli.DeleteDataPembeliByIDDatabase(FormPembeli.selectedRowPembeli)
+        FormPembeli.dataPembeli.Delete(FormPembeli.selectedRowPembeli)
         MessageBox.Show("Data pembeli dengan ID " & FormPembeli.selectedRowPembeli & " berhasil dihapus.")
         Me.Hide()
     End Sub

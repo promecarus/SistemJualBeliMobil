@@ -10,40 +10,37 @@
         End Set
     End Property
 
-    Public Sub AddDataJenisMobilDatabase(jenis As String)
+    Public Sub Add(jenis As String)
         Dim query = "INSERT INTO jenis_mobil(jenis) VALUES('" & jenis & "')"
         FormSignIn.db.ExecuteNonQuery(query)
     End Sub
 
-    Public Function GetDataJenisMobilDatabase() As DataTable
+    Public Function Read() As DataTable
         Dim query = "SELECT id_jenis AS 'ID', jenis AS 'Jenis Mobil' FROM jenis_mobil ORDER BY id_jenis"
         Return FormSignIn.db.ExecuteQuery(query)
     End Function
 
-    Public Function GetDataJenisMobilDatabaseSearch(ID As Integer) As DataTable
-        Dim query = "SELECT id_jenis AS 'ID', jenis AS 'Jenis Mobil' FROM jenis_mobil WHERE id_jenis='" & ID & "' ORDER BY id_jenis"
+    Public Function SearchById(id As Integer) As DataTable
+        Dim query = "SELECT id_jenis AS 'ID', jenis AS 'Jenis Mobil' FROM jenis_mobil WHERE id_jenis='" & id & "' ORDER BY id_jenis"
         Return FormSignIn.db.ExecuteQuery(query)
     End Function
 
-    Public Function GetDataJenisMobilByIDDatabase(ID As Integer) As List(Of String)
-        Dim query = "SELECT id_jenis, jenis FROM jenis_mobil WHERE id_jenis='" & ID & "'"
+    Public Function DetailsById(id As Integer) As List(Of String)
+        Dim query = "SELECT id_jenis, jenis FROM jenis_mobil WHERE id_jenis='" & id & "'"
         Return FormSignIn.db.ExecuteGetOneRow(query, 2)
     End Function
 
-    Public Sub UpdateDataJenisMobilByIDDatabase(
-        ID As Integer,
-        jenis As String
-    )
-        Dim query = "UPDATE jenis_mobil SET " & "jenis='" & jenis & "' " & "WHERE id_jenis='" & ID & "'"
+    Public Sub Update(id As Integer, jenis As String)
+        Dim query = "UPDATE jenis_mobil SET " & "jenis='" & jenis & "' " & "WHERE id_jenis='" & id & "'"
         FormSignIn.db.ExecuteNonQuery(query)
     End Sub
 
-    Public Sub DeleteDataJenisMobilByIDDatabase(ID As Integer)
-        Dim query = "DELETE FROM jenis_mobil " & "WHERE id_jenis='" & ID & "'"
+    Public Sub Delete(id As Integer)
+        Dim query = "DELETE FROM jenis_mobil " & "WHERE id_jenis='" & id & "'"
         FormSignIn.db.ExecuteNonQuery(query)
     End Sub
 
-    Public Function ListDataJenisMobil() As DataTable
+    Public Function List() As DataTable
         Dim query = "SELECT id_jenis, jenis FROM jenis_mobil"
         Return FormSignIn.db.ExecuteQuery(query)
     End Function

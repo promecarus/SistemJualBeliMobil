@@ -1,6 +1,4 @@
-﻿Imports Org.BouncyCastle.Asn1.Cms
-
-Public Class FormMobilEdit
+﻿Public Class FormMobilEdit
 
     Dim kondisi As String
     Dim tipe_mobil As String
@@ -11,11 +9,11 @@ Public Class FormMobilEdit
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        ComboBoxJenisMobil.DataSource = FormSignIn.JenisMobil.ListDataJenisMobil
+        ComboBoxJenisMobil.DataSource = FormSignIn.JenisMobil.List
         ComboBoxJenisMobil.DisplayMember() = "jenis"
         ComboBoxJenisMobil.ValueMember() = "id_jenis"
 
-        ComboBoxJenisMobil.SelectedValue() = FormMobil.Mobil.idjenisMobillProperty
+        ComboBoxJenisMobil.SelectedValue() = FormMobil.Mobil.idJenisMobilProperty
 
         If String.Compare(FormMobil.Mobil.tipeMobilProperty, "Manual") = 0 Then
             RdManual.Checked = True
@@ -73,7 +71,7 @@ Public Class FormMobilEdit
                     If IsNumeric(TxtGaransi.Text) Then
                         If Not TxtHargaDefault.Text = "" Then
                             If IsNumeric(TxtHargaDefault.Text) Then
-                                FormMobil.Mobil.UpdateDataMobilByIDDatabase(FormMobil.SelectedTableMobil,
+                                FormMobil.Mobil.Update(FormMobil.SelectedTableMobil,
                                                     ComboBoxJenisMobil.SelectedValue,
                                                     tipe_mobil,
                                                     Integer.Parse(TxtTahunPembuatan.Text),

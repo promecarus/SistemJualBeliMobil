@@ -12,7 +12,7 @@ Public Class FormPembeliEdit
     Private Sub ButtonEdit_Click(sender As Object, e As EventArgs) Handles ButtonEdit.Click
         If (Not TextBoxNik.Text = "") And (Not TextBoxNama.Text = "") And (Not RichTextBoxAlamat.Text = "") Then
             If IsNumeric(TextBoxNik.Text) Then
-                FormPembeli.dataPembeli.UpdateDataPembeliByIDDatabase(
+                FormPembeli.dataPembeli.Update(
                     FormPembeli.selectedRowPembeli,
                     TextBoxNik.Text,
                     TextBoxNama.Text,
