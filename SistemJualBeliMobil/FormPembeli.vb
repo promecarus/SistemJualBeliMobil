@@ -82,12 +82,16 @@
     End Sub
 
     Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles BtnSearch.Click
-        If Not TxtSearch.Text = "" Then
-            DataGridViewPembeli.DataSource = Nothing
-            DataGridViewPembeli.DataSource = dataPembeli.SearchById(TxtSearch.Text)
+        If IsNumeric(TxtSearch.Text) Then
+            If Not TxtSearch.Text = "" Then
+                DataGridViewPembeli.DataSource = Nothing
+                DataGridViewPembeli.DataSource = dataPembeli.SearchById(TxtSearch.Text)
+            Else
+                DataGridViewPembeli.DataSource = Nothing
+                DataGridViewPembeli.DataSource = dataPembeli.Read()
+            End If
         Else
-            DataGridViewPembeli.DataSource = Nothing
-            DataGridViewPembeli.DataSource = dataPembeli.Read()
+            MessageBox.Show("Data Input Search Harus Angka !!")
         End If
     End Sub
 

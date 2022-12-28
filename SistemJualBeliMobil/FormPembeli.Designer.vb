@@ -228,9 +228,9 @@ Partial Class FormPembeli
         'TxtSearch
         '
         Me.TxtSearch.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TxtSearch.Location = New System.Drawing.Point(13, 380)
+        Me.TxtSearch.Location = New System.Drawing.Point(13, 385)
         Me.TxtSearch.Name = "TxtSearch"
-        Me.TxtSearch.Size = New System.Drawing.Size(331, 25)
+        Me.TxtSearch.Size = New System.Drawing.Size(341, 25)
         Me.TxtSearch.TabIndex = 38
         '
         'BtnSearch
@@ -243,7 +243,7 @@ Partial Class FormPembeli
         Me.BtnSearch.ForeColor = System.Drawing.Color.White
         Me.BtnSearch.Location = New System.Drawing.Point(372, 380)
         Me.BtnSearch.Name = "BtnSearch"
-        Me.BtnSearch.Size = New System.Drawing.Size(95, 25)
+        Me.BtnSearch.Size = New System.Drawing.Size(95, 36)
         Me.BtnSearch.TabIndex = 39
         Me.BtnSearch.Text = "Search"
         Me.BtnSearch.UseVisualStyleBackColor = True
@@ -252,7 +252,7 @@ Partial Class FormPembeli
         '
         Me.LblSearch.AutoSize = True
         Me.LblSearch.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.LblSearch.Location = New System.Drawing.Point(16, 384)
+        Me.LblSearch.Location = New System.Drawing.Point(16, 387)
         Me.LblSearch.Name = "LblSearch"
         Me.LblSearch.Size = New System.Drawing.Size(95, 19)
         Me.LblSearch.TabIndex = 46
