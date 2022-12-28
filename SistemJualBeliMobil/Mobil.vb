@@ -258,7 +258,7 @@
         FormSignIn.db.ExecuteNonQuery(query)
     End Sub
 
-    Public Function List() As DataTable
+    Public Function ListAdd() As DataTable
         Dim query = "
             SELECT id
             FROM mobil

@@ -9,7 +9,7 @@ Public Class FormBukuPenjualanTambah
     End Sub
 
     Private Sub FormBukuPenjualanTambah_Activated(sender As Object, e As EventArgs) Handles Me.Activated
-        ComboBoxIdMobil.DataSource = FormSignIn.Mobil.List
+        ComboBoxIdMobil.DataSource = FormSignIn.Mobil.ListAdd
         ComboBoxIdMobil.DisplayMember = "id"
         ComboBoxIdMobil.ValueMember = "id"
 
