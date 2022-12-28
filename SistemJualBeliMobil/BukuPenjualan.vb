@@ -1,42 +1,42 @@
 ﻿Public Class BukuPenjualan
-    Private id_mobil As Integer
-    Private id_pembeli As Integer
-    Private harga_terjual As Integer
-    Private tanggal_penjualan As String
+    Private idMobil As Integer
+    Private idPembeli As Integer
+    Private hargaTerjual As Integer
+    Private tanggalPenjualan As String
 
     Public Property idMobilProperty() As String
         Get
-            Return id_mobil
+            Return idMobil
         End Get
         Set(ByVal value As String)
-            id_mobil = value
+            idMobil = value
         End Set
     End Property
 
     Public Property idPembeliProperty() As String
         Get
-            Return id_pembeli
+            Return idPembeli
         End Get
         Set(ByVal value As String)
-            id_pembeli = value
+            idPembeli = value
         End Set
     End Property
 
     Public Property hargaTerjualProperty() As String
         Get
-            Return harga_terjual
+            Return hargaTerjual
         End Get
         Set(ByVal value As String)
-            harga_terjual = value
+            hargaTerjual = value
         End Set
     End Property
 
     Public Property tanggalPenjualanProperty() As String
         Get
-            Return tanggal_penjualan
+            Return tanggalPenjualan
         End Get
         Set(ByVal value As String)
-            tanggal_penjualan = value
+            tanggalPenjualan = value
         End Set
     End Property
 
