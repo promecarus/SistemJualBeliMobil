@@ -53,12 +53,33 @@
     End Sub
 
     Public Function GetDataBukuPenjualanDatabase() As DataTable
-        Dim query = "SELECT id_penjualan AS 'ID', id_mobil AS 'ID Mobil', id_pembeli AS 'ID Pembeli', harga_terjual AS 'Harga Terjual', tanggal_penjualan AS 'Tanggal Penjualan' FROM buku_penjualan"
+        Dim query = "
+            SELECT
+	            a.id_penjualan 'ID',
+	            a.id_mobil AS 'ID Mobil',
+	            b.nama AS 'Nama Pembeli',
+	            a.harga_terjual AS 'Harga Terjual',
+	            a.tanggal_penjualan AS 'Tanggal Penjualan'
+            FROM buku_penjualan AS a
+            JOIN pembeli AS b
+	            ON a.id_pembeli=b.id_pembeli
+        "
         Return FormSignIn.db.ExecuteQuery(query)
     End Function
 
     Public Function GetDataBukuPenjualanDatabaseSearch(ID As Integer) As DataTable
-        Dim query = "SELECT id_penjualan AS 'ID', id_mobil AS 'ID Mobil', id_pembeli AS 'ID Pembeli', harga_terjual AS 'Harga Terjual', tanggal_penjualan AS 'Tanggal Penjualan' FROM buku_penjualan WHERE id_penjualan='" & ID & "'"
+        Dim query = "
+            SELECT
+	            a.id_penjualan AS 'ID',
+	            a.id_mobil AS 'ID Mobil',
+	            b.nama AS 'Nama Pembeli',
+	            a.harga_terjual AS 'Harga Terjual',
+	            a.tanggal_penjualan AS 'Tanggal Penjualan'
+            FROM buku_penjualan AS a
+            JOIN pembeli AS b
+	            ON a.id_pembeli=b.id_pembeli
+            WHERE id_penjualan='" & ID & "'
+        "
         Return FormSignIn.db.ExecuteQuery(query)
     End Function
 
