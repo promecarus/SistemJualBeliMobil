@@ -102,6 +102,7 @@
                 id_pembeli,
                 nama
             FROM pembeli
+            ORDER BY id_pembeli
         "
         Return FormSignIn.db.ExecuteQuery(query)
     End Function
