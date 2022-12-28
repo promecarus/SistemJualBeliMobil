@@ -15,7 +15,7 @@
     End Sub
 
     Private Sub FormJenisMobil_Activated(sender As Object, e As EventArgs) Handles Me.Activated
-        DataGridJenisMobil.DataSource = JenisMobil.GetDataJenisMobilDatabase()
+        DataGridJenisMobil.DataSource = JenisMobil.Read()
         DataGridJenisMobil.ClearSelection()
     End Sub
 
@@ -40,7 +40,7 @@
 
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
         Try
-            Dim selectedJenisMobil As List(Of String) = JenisMobil.GetDataJenisMobilByIDDatabase(SelectedTableJenisMobil)
+            Dim selectedJenisMobil As List(Of String) = JenisMobil.DetailsById(SelectedTableJenisMobil)
 
             JenisMobil.jenisProperty = selectedJenisMobil(1)
 
@@ -53,7 +53,7 @@
 
     Private Sub BtnHapus_Click(sender As Object, e As EventArgs) Handles BtnHapus.Click
         Try
-            Dim selectedJenisMobil As List(Of String) = JenisMobil.GetDataJenisMobilByIDDatabase(SelectedTableJenisMobil)
+            Dim selectedJenisMobil As List(Of String) = JenisMobil.DetailsById(SelectedTableJenisMobil)
 
             JenisMobil.jenisProperty = selectedJenisMobil(1)
 
@@ -91,10 +91,10 @@
     Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles BtnSearch.Click
         If Not TxtSearch.Text = "" Then
             DataGridJenisMobil.DataSource = Nothing
-            DataGridJenisMobil.DataSource = JenisMobil.GetDataJenisMobilDatabaseSearch(TxtSearch.Text)
+            DataGridJenisMobil.DataSource = JenisMobil.SearchById(TxtSearch.Text)
         Else
             DataGridJenisMobil.DataSource = Nothing
-            DataGridJenisMobil.DataSource = JenisMobil.GetDataJenisMobilDatabase
+            DataGridJenisMobil.DataSource = JenisMobil.Read
         End If
     End Sub
 

@@ -19,10 +19,10 @@ Public Class FormSignUp
         Dim regex As Regex = New Regex("^[^@\s]+@[^@\s]+\.[^@\s]+$")
         Dim valid As Boolean = regex.IsMatch(inputEmail.Text.Trim)
 
-        If FormSignIn.Users.ValidateUser(inputUsername.Text) = True Then
+        If FormSignIn.Users.AvailabilityUsername(inputUsername.Text) = True Then
             MessageBox.Show("Username Sudah Terdaftar !!")
         Else
-            If FormSignIn.Users.ValidateEmail(inputEmail.Text) = True Then
+            If FormSignIn.Users.AvailabilityEmail(inputEmail.Text) = True Then
                 MessageBox.Show("Email Sudah Terdaftar !!")
             Else
                 If inputUsername.Text.Length > 0 Then
@@ -35,7 +35,7 @@ Public Class FormSignUp
                                     If String.Compare(inputPassword.Text, InputConfirmPassword.Text) = 0 Then
                                         If InputCaptcha.Text.Length > 0 Then
                                             If InputCaptcha.Text = captchaString Then
-                                                FormSignIn.Users.AddUsersDatabase(inputUsername.Text, inputEmail.Text, inputPassword.Text)
+                                                FormSignIn.Users.Add(inputUsername.Text, inputEmail.Text, inputPassword.Text)
                                                 MessageBox.Show("Sign Up Berhasil !!")
 
                                                 inputUsername.Text = ""

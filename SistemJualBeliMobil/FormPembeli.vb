@@ -11,7 +11,7 @@
     End Sub
 
     Private Sub FormPembeli_Activated(sender As Object, e As EventArgs) Handles Me.Activated
-        DataGridViewPembeli.DataSource = dataPembeli.GetDataPembeliDatabase
+        DataGridViewPembeli.DataSource = dataPembeli.Read
         DataGridViewPembeli.ClearSelection()
     End Sub
 
@@ -36,7 +36,7 @@
 
     Private Sub ButtonEdit_Click(sender As Object, e As EventArgs) Handles ButtonEdit.Click
         Try
-            Dim selectedPembeli As List(Of String) = dataPembeli.GetDataPembeliByIDDatabase(selectedRowPembeli)
+            Dim selectedPembeli As List(Of String) = dataPembeli.DetailsById(selectedRowPembeli)
 
             dataPembeli.nikProperty = selectedPembeli(1)
             dataPembeli.namaProperty = selectedPembeli(2)
@@ -51,7 +51,7 @@
 
     Private Sub ButtonHapus_Click(sender As Object, e As EventArgs) Handles ButtonHapus.Click
         Try
-            Dim selectedPembeli As List(Of String) = dataPembeli.GetDataPembeliByIDDatabase(selectedRowPembeli)
+            Dim selectedPembeli As List(Of String) = dataPembeli.DetailsById(selectedRowPembeli)
 
             dataPembeli.namaProperty = selectedPembeli(2)
 
@@ -84,10 +84,10 @@
     Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles BtnSearch.Click
         If Not TxtSearch.Text = "" Then
             DataGridViewPembeli.DataSource = Nothing
-            DataGridViewPembeli.DataSource = dataPembeli.GetDataPembeliDatabaseSearch(TxtSearch.Text)
+            DataGridViewPembeli.DataSource = dataPembeli.SearchById(TxtSearch.Text)
         Else
             DataGridViewPembeli.DataSource = Nothing
-            DataGridViewPembeli.DataSource = dataPembeli.GetDataPembeliDatabase()
+            DataGridViewPembeli.DataSource = dataPembeli.Read()
         End If
     End Sub
 

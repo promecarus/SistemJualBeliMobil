@@ -1,37 +1,37 @@
 ﻿Public Class Mobil
-    Private id_jenis_mobil As Integer
-    Private tipe_mobil As String
-    Private tahun_pembuatan As String
+    Private idJenisMobil As Integer
+    Private tipeMobil As String
+    Private tahunPembuatan As String
     Private kondisi As String
     Private harga As Integer
     Private garansi As Integer
-    Private status_terjual As Integer
-    Private harga_default As Integer
+    Private statusTerjual As Integer
+    Private hargaDefault As Integer
 
-    Public Property idjenisMobillProperty() As String
+    Public Property idJenisMobilProperty() As String
         Get
-            Return id_jenis_mobil
+            Return idJenisMobil
         End Get
         Set(ByVal value As String)
-            id_jenis_mobil = value
+            idJenisMobil = value
         End Set
     End Property
 
     Public Property tipeMobilProperty() As String
         Get
-            Return tipe_mobil
+            Return tipeMobil
         End Get
         Set(ByVal value As String)
-            tipe_mobil = value
+            tipeMobil = value
         End Set
     End Property
 
     Public Property tahunPembuatanProperty() As String
         Get
-            Return tahun_pembuatan
+            Return tahunPembuatan
         End Get
         Set(ByVal value As String)
-            tahun_pembuatan = value
+            tahunPembuatan = value
         End Set
     End Property
 
@@ -64,89 +64,73 @@
 
     Public Property statusTerjualProperty() As String
         Get
-            Return status_terjual
+            Return statusTerjual
         End Get
         Set(ByVal value As String)
-            status_terjual = value
+            statusTerjual = value
         End Set
     End Property
 
     Public Property hargaDefaultProperty() As String
         Get
-            Return harga_default
+            Return hargaDefault
         End Get
         Set(ByVal value As String)
-            harga_default = value
+            hargaDefault = value
         End Set
     End Property
 
-    Public Sub AddDataMobilDatabase(
-        id_jenis_mobil As Integer,
-        tipe_mobil As String,
-        tahun_pembuatan As String,
-        kondisi As String,
-        harga As Integer,
-        garansi As Integer,
-        harga_default As Integer
-    )
-        Dim query = "INSERT INTO mobil(id_jenis_mobil, tipe_mobil, tahun_pembuatan, kondisi, harga, garansi, harga_default) VALUES('" & id_jenis_mobil & "', '" & tipe_mobil & "', '" & tahun_pembuatan & "', '" & kondisi & "', '" & harga & "', '" & garansi & "', '" & harga_default & "')"
+    Public Sub Add(idJenisMobil As Integer, tipeMobil As String, tahunPembuatan As String, kondisi As String, harga As Integer, garansi As Integer, hargaDefault As Integer)
+        Dim query = "INSERT INTO mobil(id_jenis_mobil, tipe_mobil, tahun_pembuatan, kondisi, harga, garansi, harga_default) VALUES('" & idJenisMobil & "', '" & tipeMobil & "', '" & tahunPembuatan & "', '" & kondisi & "', '" & harga & "', '" & garansi & "', '" & hargaDefault & "')"
         FormSignIn.db.ExecuteNonQuery(query)
     End Sub
 
-    Public Function GetDataMobilDatabase() As DataTable
+    Public Function Read() As DataTable
         Dim query = "SELECT id AS 'ID', id_jenis_mobil AS 'ID Jenis Mobil', tipe_mobil AS 'Tipe Mobil', tahun_pembuatan AS 'Tahun Pembuatan', kondisi AS 'Kondisi', harga AS 'Harga', garansi AS 'Garansi', status_terjual AS 'Status Terjual', harga_default AS 'Harga Default' FROM mobil"
         Return FormSignIn.db.ExecuteQuery(query)
     End Function
 
-    Public Function GetDataMobilDatabaseTerjual() As DataTable
+    Public Function ReadTerjual() As DataTable
         Dim query = "SELECT id AS 'ID', id_jenis_mobil AS 'ID Jenis Mobil', tipe_mobil AS 'Tipe Mobil', tahun_pembuatan AS 'Tahun Pembuatan', kondisi AS 'Kondisi', harga AS 'Harga', garansi AS 'Garansi', status_terjual AS 'Status Terjual', harga_default AS 'Harga Default' FROM mobil WHERE status_terjual = 1"
         Return FormSignIn.db.ExecuteQuery(query)
     End Function
 
-    Public Function GetDataMobilDatabaseBelumTerjual() As DataTable
+    Public Function ReadTerjualBelum() As DataTable
         Dim query = "SELECT id AS 'ID', id_jenis_mobil AS 'ID Jenis Mobil', tipe_mobil AS 'Tipe Mobil', tahun_pembuatan AS 'Tahun Pembuatan', kondisi AS 'Kondisi', harga AS 'Harga', garansi AS 'Garansi', status_terjual AS 'Status Terjual', harga_default AS 'Harga Default' FROM mobil WHERE status_terjual = 0"
         Return FormSignIn.db.ExecuteQuery(query)
     End Function
 
-    Public Function GetDataMobilDatabaseSearchNone(ID As Integer) As DataTable
-        Dim query = "SELECT id AS 'ID', id_jenis_mobil AS 'ID Jenis Mobil', tipe_mobil AS 'Tipe Mobil', tahun_pembuatan AS 'Tahun Pembuatan', kondisi AS 'Kondisi', harga AS 'Harga', garansi AS 'Garansi', status_terjual AS 'Status Terjual', harga_default AS 'Harga Default' FROM mobil WHERE id='" & ID & "'"
+    Public Function SearchNone(id As Integer) As DataTable
+        Dim query = "SELECT id AS 'ID', id_jenis_mobil AS 'ID Jenis Mobil', tipe_mobil AS 'Tipe Mobil', tahun_pembuatan AS 'Tahun Pembuatan', kondisi AS 'Kondisi', harga AS 'Harga', garansi AS 'Garansi', status_terjual AS 'Status Terjual', harga_default AS 'Harga Default' FROM mobil WHERE id='" & id & "'"
         Return FormSignIn.db.ExecuteQuery(query)
     End Function
 
-    Public Function GetDataMobilDatabaseSearchTerjual(ID As Integer) As DataTable
-        Dim query = "SELECT id AS 'ID', id_jenis_mobil AS 'ID Jenis Mobil', tipe_mobil AS 'Tipe Mobil', tahun_pembuatan AS 'Tahun Pembuatan', kondisi AS 'Kondisi', harga AS 'Harga', garansi AS 'Garansi', status_terjual AS 'Status Terjual', harga_default AS 'Harga Default' FROM mobil WHERE id='" & ID & "' AND status_terjual=1"
+    Public Function SearchTerjual(id As Integer) As DataTable
+        Dim query = "SELECT id AS 'ID', id_jenis_mobil AS 'ID Jenis Mobil', tipe_mobil AS 'Tipe Mobil', tahun_pembuatan AS 'Tahun Pembuatan', kondisi AS 'Kondisi', harga AS 'Harga', garansi AS 'Garansi', status_terjual AS 'Status Terjual', harga_default AS 'Harga Default' FROM mobil WHERE id='" & id & "' AND status_terjual=1"
         Return FormSignIn.db.ExecuteQuery(query)
     End Function
 
-    Public Function GetDataMobilDatabaseSearchBelumTerjual(ID As Integer) As DataTable
-        Dim query = "SELECT id AS 'ID', id_jenis_mobil AS 'ID Jenis Mobil', tipe_mobil AS 'Tipe Mobil', tahun_pembuatan AS 'Tahun Pembuatan', kondisi AS 'Kondisi', harga AS 'Harga',garansi AS 'Garansi', status_terjual AS 'Status Terjual', harga_default AS 'Harga Default' FROM mobil WHERE id='" & ID & "' AND status_terjual=0"
+    Public Function SearchTerjualBelum(id As Integer) As DataTable
+        Dim query = "SELECT id AS 'ID', id_jenis_mobil AS 'ID Jenis Mobil', tipe_mobil AS 'Tipe Mobil', tahun_pembuatan AS 'Tahun Pembuatan', kondisi AS 'Kondisi', harga AS 'Harga',garansi AS 'Garansi', status_terjual AS 'Status Terjual', harga_default AS 'Harga Default' FROM mobil WHERE id='" & id & "' AND status_terjual=0"
         Return FormSignIn.db.ExecuteQuery(query)
     End Function
 
-    Public Function GetDataMobilByIDDatabase(ID As Integer) As List(Of String)
-        Dim query = "SELECT id, id_jenis_mobil, tipe_mobil, tahun_pembuatan, kondisi, harga, garansi, status_terjual, harga_default FROM mobil WHERE id='" & ID & "'"
+    Public Function DetailsById(id As Integer) As List(Of String)
+        Dim query = "SELECT id, id_jenis_mobil, tipe_mobil, tahun_pembuatan, kondisi, harga, garansi, status_terjual, harga_default FROM mobil WHERE id='" & id & "'"
         Return FormSignIn.db.ExecuteGetOneRow(query, 9)
     End Function
 
-    Public Sub UpdateDataMobilByIDDatabase(
-        ID As Integer,
-        id_jenis_mobil As Integer,
-        tipe_mobil As String,
-        tahun_pembuatan As String,
-        kondisi As String,
-        garansi As String,
-        harga_default As Integer
-    )
-        Dim query = "UPDATE mobil SET " & "id_jenis_mobil='" & id_jenis_mobil & "', " & "tipe_mobil='" & tipe_mobil & "', " & "tahun_pembuatan='" & tahun_pembuatan & "', " & "kondisi='" & kondisi & "', " & "garansi='" & garansi & "', " & "harga_default='" & harga_default & "' " & "WHERE id='" & ID & "'"
+    Public Sub Update(id As Integer, idJenisMobil As Integer, tipeMobil As String, tahunPembuatan As String, kondisi As String, garansi As String, hargaDefault As Integer)
+        Dim query = "UPDATE mobil SET " & "id_jenis_mobil='" & idJenisMobil & "', " & "tipe_mobil='" & tipeMobil & "', " & "tahun_pembuatan='" & tahunPembuatan & "', " & "kondisi='" & kondisi & "', " & "garansi='" & garansi & "', " & "harga_default='" & hargaDefault & "' " & "WHERE id='" & id & "'"
         FormSignIn.db.ExecuteNonQuery(query)
     End Sub
 
-    Public Sub DeleteDataMobilByIDDatabase(ID As Integer)
-        Dim query = "DELETE FROM mobil " & "WHERE id='" & ID & "'"
+    Public Sub Delete(id As Integer)
+        Dim query = "DELETE FROM mobil " & "WHERE id='" & id & "'"
         FormSignIn.db.ExecuteNonQuery(query)
     End Sub
 
-    Public Function ListDataMobil() As DataTable
+    Public Function List() As DataTable
         Dim query = "SELECT id FROM mobil WHERE status_terjual=FALSE ORDER BY id"
         Return FormSignIn.db.ExecuteQuery(query)
     End Function

@@ -21,9 +21,9 @@
 
     Private Sub SigninBtn_Click(sender As Object, e As EventArgs) Handles SigninBtn.Click
         Dim plainUsername As String = inputUsername.Text
-        Dim PlainPassword As String = inputPassword.Text
+        Dim plainPassword As String = inputPassword.Text
 
-        Dim data_users As List(Of String) = Users.CheckAuthenticationDatabase(plainUsername, PlainPassword)
+        Dim data_users As List(Of String) = Users.Authentication(plainUsername, plainPassword)
 
         If data_users.Count > 0 Then
             Users.usernameProperty = data_users(1)
