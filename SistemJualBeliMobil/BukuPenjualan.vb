@@ -40,23 +40,23 @@
         End Set
     End Property
 
-    Public Sub AddDataBukuPenjualanDatabase(id_mobil As Integer, id_pembeli As Integer, harga_terjual As Integer, tanggal_penjualan As Date)
+    Public Sub Add(idMobil As Integer, idPembeli As Integer, hargaTerjual As Integer, tanggalPenjualan As Date)
         Dim query = "
             INSERT INTO buku_penjualan(id_mobil, id_pembeli, harga_terjual, tanggal_penjualan)
-                VALUES('" & id_mobil & "', '" & id_pembeli & "', '" & harga_terjual & "', '" & tanggal_penjualan.ToString("yyyy/MM/dd") & "')
+                VALUES('" & idMobil & "', '" & idPembeli & "', '" & hargaTerjual & "', '" & tanggalPenjualan.ToString("yyyy/MM/dd") & "')
         "
         FormSignIn.db.ExecuteNonQuery(query)
         query = "
             UPDATE mobil
             SET
                 status_terjual=TRUE,
-                harga=" & harga_terjual & "
-            WHERE id=" & id_mobil & "
+                harga=" & hargaTerjual & "
+            WHERE id=" & idMobil & "
         "
         FormSignIn.db.ExecuteNonQuery(query)
     End Sub
 
-    Public Function GetDataBukuPenjualanDatabase() As DataTable
+    Public Function Read() As DataTable
         Dim query = "
             SELECT
 	            a.id_penjualan 'ID',
@@ -71,7 +71,7 @@
         Return FormSignIn.db.ExecuteQuery(query)
     End Function
 
-    Public Function GetDataBukuPenjualanDatabaseSearch(ID As Integer) As DataTable
+    Public Function SearchById(id As Integer) As DataTable
         Dim query = "
             SELECT
 	            a.id_penjualan AS 'ID',
@@ -82,12 +82,12 @@
             FROM buku_penjualan AS a
             JOIN pembeli AS b
 	            ON a.id_pembeli=b.id_pembeli
-            WHERE id_penjualan='" & ID & "'
+            WHERE id_penjualan='" & id & "'
         "
         Return FormSignIn.db.ExecuteQuery(query)
     End Function
 
-    Public Function GetDataBukuPenjualanByIDDatabase(ID As Integer) As List(Of String)
+    Public Function DetailsById(id As Integer) As List(Of String)
         Dim query = "
             SELECT
                 id_penjualan,
@@ -96,34 +96,28 @@
                 harga_terjual,
                 tanggal_penjualan
             FROM buku_penjualan
-            WHERE id_penjualan='" & ID & "'
+            WHERE id_penjualan='" & id & "'
         "
         Return FormSignIn.db.ExecuteGetOneRow(query, 5)
     End Function
 
-    Public Sub UpdateDataBukuPenjualanByIDDatabase(
-        ID As Integer,
-        id_mobil As Integer,
-        id_pembeli As Integer,
-        harga_terjual As Integer,
-        tanggal_penjualan As Date
-     )
+    Public Sub Update(id As Integer, idMobil As Integer, idPembeli As Integer, hargaTerjual As Integer, tanggalPenjualan As Date)
         Dim query = "
             UPDATE buku_penjualan
             SET " & "
-                id_mobil='" & id_mobil & "', " & "
-                id_pembeli='" & id_pembeli & "', " & "
-                harga_terjual='" & harga_terjual & "', " & "
-                tanggal_penjualan='" & tanggal_penjualan.ToString("yyyy/MM/dd") & "' " & "
-            WHERE id_penjualan='" & ID & "'
+                id_mobil='" & idMobil & "', " & "
+                id_pembeli='" & idPembeli & "', " & "
+                harga_terjual='" & hargaTerjual & "', " & "
+                tanggal_penjualan='" & tanggalPenjualan.ToString("yyyy/MM/dd") & "' " & "
+            WHERE id_penjualan='" & id & "'
         "
         FormSignIn.db.ExecuteNonQuery(query)
     End Sub
 
-    Public Sub DeleteDataBukuPenjualanByIDDatabase(ID As Integer)
+    Public Sub Delete(id As Integer)
         Dim query = "
             DELETE FROM buku_penjualan" & "
-            WHERE id_penjualan='" & ID & "'
+            WHERE id_penjualan='" & id & "'
         "
         FormSignIn.db.ExecuteNonQuery(query)
     End Sub

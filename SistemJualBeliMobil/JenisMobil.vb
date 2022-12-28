@@ -75,6 +75,7 @@
                 id_jenis,
                 jenis
             FROM jenis_mobil
+            ORDER BY id_jenis
         "
         Return FormSignIn.db.ExecuteQuery(query)
     End Function

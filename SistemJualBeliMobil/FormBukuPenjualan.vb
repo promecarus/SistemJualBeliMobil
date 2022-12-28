@@ -11,7 +11,7 @@ Public Class FormBukuPenjualan
     End Sub
 
     Private Sub FormBukuPenjualan_Activated(sender As Object, e As EventArgs) Handles Me.Activated
-        DataGridViewBukuPenjualan.DataSource = dataBukuPenjualan.GetDataBukuPenjualanDatabase()
+        DataGridViewBukuPenjualan.DataSource = dataBukuPenjualan.Read()
         DataGridViewBukuPenjualan.ClearSelection()
     End Sub
 
@@ -36,7 +36,7 @@ Public Class FormBukuPenjualan
     
     Private Sub ButtonEdit_Click(sender As Object, e As EventArgs) Handles ButtonEdit.Click
         Try
-            Dim selectedBukuPenjualan As List(Of String) = dataBukuPenjualan.GetDataBukuPenjualanByIDDatabase(selectedRowBukuPenjualan)
+            Dim selectedBukuPenjualan As List(Of String) = dataBukuPenjualan.DetailsById(selectedRowBukuPenjualan)
 
             dataBukuPenjualan.idMobilProperty = selectedBukuPenjualan(1)
             dataBukuPenjualan.idPembeliProperty = selectedBukuPenjualan(2)
@@ -52,7 +52,7 @@ Public Class FormBukuPenjualan
 
     Private Sub ButtonHapus_Click(sender As Object, e As EventArgs) Handles ButtonHapus.Click
         Try
-            Dim selectedBukuPenjualan As List(Of String) = dataBukuPenjualan.GetDataBukuPenjualanByIDDatabase(selectedRowBukuPenjualan)
+            Dim selectedBukuPenjualan As List(Of String) = dataBukuPenjualan.DetailsById(selectedRowBukuPenjualan)
 
             dataBukuPenjualan.idMobilProperty = selectedBukuPenjualan(1)
 
@@ -86,10 +86,10 @@ Public Class FormBukuPenjualan
         If IsNumeric(TxtSearch.Text) Then
             If Not TxtSearch.Text = "" Then
                 DataGridViewBukuPenjualan.DataSource = Nothing
-                DataGridViewBukuPenjualan.DataSource = dataBukuPenjualan.GetDataBukuPenjualanDatabaseSearch(TxtSearch.Text)
+                DataGridViewBukuPenjualan.DataSource = dataBukuPenjualan.SearchById(TxtSearch.Text)
             Else
                 DataGridViewBukuPenjualan.DataSource = Nothing
-                DataGridViewBukuPenjualan.DataSource = dataBukuPenjualan.GetDataBukuPenjualanDatabase()
+                DataGridViewBukuPenjualan.DataSource = dataBukuPenjualan.Read()
             End If
         Else
             MessageBox.Show("Data Input Search Harus Angka !!")

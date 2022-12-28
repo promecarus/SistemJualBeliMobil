@@ -8,7 +8,7 @@
     End Sub
 
     Private Sub ButtonYes_Click(sender As Object, e As EventArgs) Handles ButtonYes.Click
-        FormBukuPenjualan.dataBukuPenjualan.DeleteDataBukuPenjualanByIDDatabase(FormBukuPenjualan.selectedRowBukuPenjualan)
+        FormBukuPenjualan.dataBukuPenjualan.Delete(FormBukuPenjualan.selectedRowBukuPenjualan)
         MessageBox.Show("Data buku penjualan dengan ID " & FormBukuPenjualan.selectedRowBukuPenjualan & " berhasil dihapus.")
         Me.Hide()
     End Sub

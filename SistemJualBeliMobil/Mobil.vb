@@ -91,16 +91,19 @@
     Public Function Read() As DataTable
         Dim query = "
             SELECT
-                id AS 'ID',
-                id_jenis_mobil AS 'ID Jenis Mobil',
-                tipe_mobil AS 'Tipe Mobil',
-                tahun_pembuatan AS 'Tahun Pembuatan',
-                kondisi AS 'Kondisi',
-                harga AS 'Harga',
-                garansi AS 'Garansi',
-                status_terjual AS 'Status Terjual',
-                harga_default AS 'Harga Default'
-            FROM mobil
+                a.id AS 'ID',
+                b.jenis AS 'Jenis Mobil',
+                a.tipe_mobil AS 'Tipe Mobil',
+                a.tahun_pembuatan AS 'Tahun Pembuatan',
+                a.kondisi AS 'Kondisi',
+                a.harga AS 'Harga',
+                a.garansi AS 'Garansi (Hari)',
+                a.status_terjual AS 'Status Terjual',
+                a.harga_default AS 'Harga Default'
+            FROM mobil AS a
+            JOIN jenis_mobil AS b
+	            ON a.id_jenis_mobil=b.id_jenis
+            ORDER BY a.id
         "
         Return FormSignIn.db.ExecuteQuery(query)
     End Function
@@ -108,17 +111,20 @@
     Public Function ReadTerjual() As DataTable
         Dim query = "
             SELECT
-                id AS 'ID',
-                id_jenis_mobil AS 'ID Jenis Mobil',
-                tipe_mobil AS 'Tipe Mobil',
-                tahun_pembuatan AS 'Tahun Pembuatan',
-                kondisi AS 'Kondisi',
-                harga AS 'Harga',
-                garansi AS 'Garansi',
-                status_terjual AS 'Status Terjual',
-                harga_default AS 'Harga Default'
-            FROM mobil
-            WHERE status_terjual = 1
+                a.id AS 'ID',
+                b.jenis AS 'Jenis Mobil',
+                a.tipe_mobil AS 'Tipe Mobil',
+                a.tahun_pembuatan AS 'Tahun Pembuatan',
+                a.kondisi AS 'Kondisi',
+                a.harga AS 'Harga',
+                a.garansi AS 'Garansi (Hari)',
+                a.status_terjual AS 'Status Terjual',
+                a.harga_default AS 'Harga Default'
+            FROM mobil AS a
+            JOIN jenis_mobil AS b
+	            ON a.id_jenis_mobil=b.id_jenis
+            WHERE a.status_terjual=1
+            ORDER BY a.id
         "
         Return FormSignIn.db.ExecuteQuery(query)
     End Function
@@ -126,17 +132,20 @@
     Public Function ReadTerjualBelum() As DataTable
         Dim query = "
             SELECT
-                id AS 'ID',
-                id_jenis_mobil AS 'ID Jenis Mobil',
-                tipe_mobil AS 'Tipe Mobil',
-                tahun_pembuatan AS 'Tahun Pembuatan',
-                kondisi AS 'Kondisi',
-                harga AS 'Harga',
-                garansi AS 'Garansi',
-                status_terjual AS 'Status Terjual',
-                harga_default AS 'Harga Default'
-            FROM mobil
-            WHERE status_terjual = 0
+                a.id AS 'ID',
+                b.jenis AS 'Jenis Mobil',
+                a.tipe_mobil AS 'Tipe Mobil',
+                a.tahun_pembuatan AS 'Tahun Pembuatan',
+                a.kondisi AS 'Kondisi',
+                a.harga AS 'Harga',
+                a.garansi AS 'Garansi (Hari)',
+                a.status_terjual AS 'Status Terjual',
+                a.harga_default AS 'Harga Default'
+            FROM mobil AS a
+            JOIN jenis_mobil AS b
+	            ON a.id_jenis_mobil=b.id_jenis
+            WHERE a.status_terjual=FALSE
+            ORDER BY a.id
         "
         Return FormSignIn.db.ExecuteQuery(query)
     End Function
@@ -144,17 +153,20 @@
     Public Function SearchNone(id As Integer) As DataTable
         Dim query = "
             SELECT
-                id AS 'ID',
-                id_jenis_mobil AS 'ID Jenis Mobil',
-                tipe_mobil AS 'Tipe Mobil',
-                tahun_pembuatan AS 'Tahun Pembuatan',
-                kondisi AS 'Kondisi',
-                harga AS 'Harga',
-                garansi AS 'Garansi',
-                status_terjual AS 'Status Terjual',
-                harga_default AS 'Harga Default'
-            FROM mobil
-            WHERE id='" & id & "'
+                a.id AS 'ID',
+                b.jenis AS 'Jenis Mobil',
+                a.tipe_mobil AS 'Tipe Mobil',
+                a.tahun_pembuatan AS 'Tahun Pembuatan',
+                a.kondisi AS 'Kondisi',
+                a.harga AS 'Harga',
+                a.garansi AS 'Garansi (Hari)',
+                a.status_terjual AS 'Status Terjual',
+                a.harga_default AS 'Harga Default'
+            FROM mobil AS a
+            JOIN jenis_mobil AS b
+	            ON a.id_jenis_mobil=b.id_jenis
+            WHERE a.id='" & id & "'
+            ORDER BY a.id
         "
         Return FormSignIn.db.ExecuteQuery(query)
     End Function
@@ -162,19 +174,22 @@
     Public Function SearchTerjual(id As Integer) As DataTable
         Dim query = "
             SELECT
-                id AS 'ID',
-                id_jenis_mobil AS 'ID Jenis Mobil',
-                tipe_mobil AS 'Tipe Mobil',
-                tahun_pembuatan AS 'Tahun Pembuatan',
-                kondisi AS 'Kondisi',
-                harga AS 'Harga',
-                garansi AS 'Garansi',
-                status_terjual AS 'Status Terjual',
-                harga_default AS 'Harga Default'
-            FROM mobil
+                a.id AS 'ID',
+                b.jenis AS 'Jenis Mobil',
+                a.tipe_mobil AS 'Tipe Mobil',
+                a.tahun_pembuatan AS 'Tahun Pembuatan',
+                a.kondisi AS 'Kondisi',
+                a.harga AS 'Harga',
+                a.garansi AS 'Garansi (Hari)',
+                a.status_terjual AS 'Status Terjual',
+                a.harga_default AS 'Harga Default'
+            FROM mobil AS a
+            JOIN jenis_mobil AS b
+	            ON a.id_jenis_mobil=b.id_jenis
             WHERE
-                id='" & id & "' AND
-                status_terjual=1
+                a.id='" & id & "' AND
+                a.status_terjual=TRUE
+            ORDER BY a.id
         "
         Return FormSignIn.db.ExecuteQuery(query)
     End Function
@@ -182,19 +197,22 @@
     Public Function SearchTerjualBelum(id As Integer) As DataTable
         Dim query = "
             SELECT
-                id AS 'ID',
-                id_jenis_mobil AS 'ID Jenis Mobil',
-                tipe_mobil AS 'Tipe Mobil',
-                tahun_pembuatan AS 'Tahun Pembuatan',
-                kondisi AS 'Kondisi',
-                harga AS 'Harga',
-                garansi AS 'Garansi',
-                status_terjual AS 'Status Terjual',
-                harga_default AS 'Harga Default'
-            FROM mobil
+                a.id AS 'ID',
+                b.jenis AS 'Jenis Mobil',
+                a.tipe_mobil AS 'Tipe Mobil',
+                a.tahun_pembuatan AS 'Tahun Pembuatan',
+                a.kondisi AS 'Kondisi',
+                a.harga AS 'Harga',
+                a.garansi AS 'Garansi (Hari)',
+                a.status_terjual AS 'Status Terjual',
+                a.harga_default AS 'Harga Default'
+            FROM mobil AS a
+            JOIN jenis_mobil AS b
+	            ON a.id_jenis_mobil=b.id_jenis
             WHERE
-                id='" & id & "' AND
-                status_terjual=0
+                a.id='" & id & "' AND
+                a.status_terjual=FALSE
+            ORDER BY a.id
         "
         Return FormSignIn.db.ExecuteQuery(query)
     End Function
@@ -240,11 +258,23 @@
         FormSignIn.db.ExecuteNonQuery(query)
     End Sub
 
-    Public Function List() As DataTable
+    Public Function ListAdd() As DataTable
         Dim query = "
             SELECT id
             FROM mobil
             WHERE status_terjual=FALSE
+            ORDER BY id
+        "
+        Return FormSignIn.db.ExecuteQuery(query)
+    End Function
+
+    Public Function ListEdit(id As Integer) As DataTable
+        Dim query = "
+            SELECT id
+            FROM mobil
+            WHERE
+                status_terjual=FALSE OR
+                id=" & id & "
             ORDER BY id
         "
         Return FormSignIn.db.ExecuteQuery(query)
