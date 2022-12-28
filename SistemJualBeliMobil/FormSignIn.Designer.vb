@@ -49,7 +49,7 @@ Partial Class FormSignIn
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(558, 99)
+        Me.Label1.Location = New System.Drawing.Point(562, 129)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(105, 37)
         Me.Label1.TabIndex = 1
@@ -58,7 +58,7 @@ Partial Class FormSignIn
         'inputUsername
         '
         Me.inputUsername.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.inputUsername.Location = New System.Drawing.Point(563, 202)
+        Me.inputUsername.Location = New System.Drawing.Point(570, 222)
         Me.inputUsername.Name = "inputUsername"
         Me.inputUsername.Size = New System.Drawing.Size(322, 34)
         Me.inputUsername.TabIndex = 1
@@ -70,7 +70,7 @@ Partial Class FormSignIn
         Me.SigninBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.SigninBtn.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.SigninBtn.ForeColor = System.Drawing.Color.White
-        Me.SigninBtn.Location = New System.Drawing.Point(563, 341)
+        Me.SigninBtn.Location = New System.Drawing.Point(570, 361)
         Me.SigninBtn.Name = "SigninBtn"
         Me.SigninBtn.Size = New System.Drawing.Size(322, 37)
         Me.SigninBtn.TabIndex = 3
@@ -84,7 +84,7 @@ Partial Class FormSignIn
         Me.SignupBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.SignupBtn.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.SignupBtn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.SignupBtn.Location = New System.Drawing.Point(563, 405)
+        Me.SignupBtn.Location = New System.Drawing.Point(570, 425)
         Me.SignupBtn.Name = "SignupBtn"
         Me.SignupBtn.Size = New System.Drawing.Size(322, 37)
         Me.SignupBtn.TabIndex = 4
@@ -95,7 +95,7 @@ Partial Class FormSignIn
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(712, 379)
+        Me.Label2.Location = New System.Drawing.Point(719, 399)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(26, 21)
         Me.Label2.TabIndex = 5
@@ -104,7 +104,7 @@ Partial Class FormSignIn
         'inputPassword
         '
         Me.inputPassword.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.inputPassword.Location = New System.Drawing.Point(563, 275)
+        Me.inputPassword.Location = New System.Drawing.Point(570, 295)
         Me.inputPassword.Name = "inputPassword"
         Me.inputPassword.Size = New System.Drawing.Size(322, 34)
         Me.inputPassword.TabIndex = 2
@@ -113,17 +113,17 @@ Partial Class FormSignIn
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label3.Location = New System.Drawing.Point(558, 178)
+        Me.Label3.Location = New System.Drawing.Point(569, 195)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(87, 21)
+        Me.Label3.Size = New System.Drawing.Size(145, 21)
         Me.Label3.TabIndex = 7
-        Me.Label3.Text = "Username"
+        Me.Label3.Text = "Username / Email"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label4.Location = New System.Drawing.Point(558, 251)
+        Me.Label4.Location = New System.Drawing.Point(569, 268)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(82, 21)
         Me.Label4.TabIndex = 8
@@ -132,7 +132,7 @@ Partial Class FormSignIn
         'ChkPassword
         '
         Me.ChkPassword.AutoSize = True
-        Me.ChkPassword.Location = New System.Drawing.Point(861, 285)
+        Me.ChkPassword.Location = New System.Drawing.Point(868, 305)
         Me.ChkPassword.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ChkPassword.Name = "ChkPassword"
         Me.ChkPassword.Size = New System.Drawing.Size(15, 14)
