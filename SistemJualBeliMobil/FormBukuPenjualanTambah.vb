@@ -4,6 +4,11 @@ Public Class FormBukuPenjualanTambah
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
+        DateTimePickerTanggalPenjualan.Format = DateTimePickerFormat.Custom
+        DateTimePickerTanggalPenjualan.CustomFormat = "yyyy/MM/dd"
+    End Sub
+
+    Private Sub FormBukuPenjualanTambah_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         ComboBoxIdMobil.DataSource = FormSignIn.Mobil.List
         ComboBoxIdMobil.DisplayMember = "id"
         ComboBoxIdMobil.ValueMember = "id"
@@ -11,9 +16,6 @@ Public Class FormBukuPenjualanTambah
         ComboBoxIdPembeli.DataSource = FormSignIn.Pembeli.List
         ComboBoxIdPembeli.DisplayMember = "nama"
         ComboBoxIdPembeli.ValueMember = "id_pembeli"
-
-        DateTimePickerTanggalPenjualan.Format = DateTimePickerFormat.Custom
-        DateTimePickerTanggalPenjualan.CustomFormat = "yyyy/MM/dd"
     End Sub
 
     Private Sub ButtonTambah_Click(sender As Object, e As EventArgs) Handles ButtonTambah.Click
