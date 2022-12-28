@@ -148,14 +148,18 @@
     End Sub
 
     Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles BtnSearch.Click
-        If Not TxtSearch.Text = "" And RdbNone.Checked Then
-            ReloadDataTableDatabaseSearchNone()
-        ElseIf Not TxtSearch.Text = "" And RdbTerjual.Checked Then
-            ReloadDataTableDatabaseSearchTerjual()
-        ElseIf Not TxtSearch.Text = "" And RdbBelumTerjual.Checked Then
-            ReloadDataTableDatabaseSearchBelumTerjual()
+        If IsNumeric(TxtSearch.Text) Then
+            If Not TxtSearch.Text = "" And RdbNone.Checked Then
+                ReloadDataTableDatabaseSearchNone()
+            ElseIf Not TxtSearch.Text = "" And RdbTerjual.Checked Then
+                ReloadDataTableDatabaseSearchTerjual()
+            ElseIf Not TxtSearch.Text = "" And RdbBelumTerjual.Checked Then
+                ReloadDataTableDatabaseSearchBelumTerjual()
+            Else
+                ReloadDataTableDatabase()
+            End If
         Else
-            ReloadDataTableDatabase()
+            MessageBox.Show("Data Input Search Harus Angka !!")
         End If
     End Sub
 
