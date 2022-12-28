@@ -242,7 +242,7 @@ Partial Class FormBukuPenjualan
         Me.BtnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnSearch.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnSearch.ForeColor = System.Drawing.Color.White
-        Me.BtnSearch.Location = New System.Drawing.Point(307, 83)
+        Me.BtnSearch.Location = New System.Drawing.Point(319, 83)
         Me.BtnSearch.Name = "BtnSearch"
         Me.BtnSearch.Size = New System.Drawing.Size(75, 29)
         Me.BtnSearch.TabIndex = 43
@@ -252,7 +252,7 @@ Partial Class FormBukuPenjualan
         'LblSearch
         '
         Me.LblSearch.AutoSize = True
-        Me.LblSearch.Location = New System.Drawing.Point(42, 87)
+        Me.LblSearch.Location = New System.Drawing.Point(46, 90)
         Me.LblSearch.Name = "LblSearch"
         Me.LblSearch.Size = New System.Drawing.Size(81, 15)
         Me.LblSearch.TabIndex = 45
