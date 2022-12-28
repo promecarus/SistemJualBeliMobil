@@ -97,7 +97,7 @@
                 a.tahun_pembuatan AS 'Tahun Pembuatan',
                 a.kondisi AS 'Kondisi',
                 a.harga AS 'Harga',
-                a.garansi AS 'Garansi',
+                a.garansi AS 'Garansi (Hari)',
                 a.status_terjual AS 'Status Terjual',
                 a.harga_default AS 'Harga Default'
             FROM mobil AS a
@@ -117,7 +117,7 @@
                 a.tahun_pembuatan AS 'Tahun Pembuatan',
                 a.kondisi AS 'Kondisi',
                 a.harga AS 'Harga',
-                a.garansi AS 'Garansi',
+                a.garansi AS 'Garansi (Hari)',
                 a.status_terjual AS 'Status Terjual',
                 a.harga_default AS 'Harga Default'
             FROM mobil AS a
@@ -138,7 +138,7 @@
                 a.tahun_pembuatan AS 'Tahun Pembuatan',
                 a.kondisi AS 'Kondisi',
                 a.harga AS 'Harga',
-                a.garansi AS 'Garansi',
+                a.garansi AS 'Garansi (Hari)',
                 a.status_terjual AS 'Status Terjual',
                 a.harga_default AS 'Harga Default'
             FROM mobil AS a
@@ -159,7 +159,7 @@
                 a.tahun_pembuatan AS 'Tahun Pembuatan',
                 a.kondisi AS 'Kondisi',
                 a.harga AS 'Harga',
-                a.garansi AS 'Garansi',
+                a.garansi AS 'Garansi (Hari)',
                 a.status_terjual AS 'Status Terjual',
                 a.harga_default AS 'Harga Default'
             FROM mobil AS a
@@ -180,7 +180,7 @@
                 a.tahun_pembuatan AS 'Tahun Pembuatan',
                 a.kondisi AS 'Kondisi',
                 a.harga AS 'Harga',
-                a.garansi AS 'Garansi',
+                a.garansi AS 'Garansi (Hari)',
                 a.status_terjual AS 'Status Terjual',
                 a.harga_default AS 'Harga Default'
             FROM mobil AS a
@@ -203,7 +203,7 @@
                 a.tahun_pembuatan AS 'Tahun Pembuatan',
                 a.kondisi AS 'Kondisi',
                 a.harga AS 'Harga',
-                a.garansi AS 'Garansi',
+                a.garansi AS 'Garansi (Hari)',
                 a.status_terjual AS 'Status Terjual',
                 a.harga_default AS 'Harga Default'
             FROM mobil AS a
