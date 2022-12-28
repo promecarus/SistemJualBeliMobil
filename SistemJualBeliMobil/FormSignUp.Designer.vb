@@ -250,12 +250,16 @@ Partial Class FormSignUp
         '
         'BtnRefresh
         '
+        Me.BtnRefresh.BackColor = System.Drawing.Color.White
+        Me.BtnRefresh.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.captchaLogo
+        Me.BtnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnRefresh.FlatAppearance.BorderSize = 0
+        Me.BtnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnRefresh.Location = New System.Drawing.Point(888, 424)
         Me.BtnRefresh.Name = "BtnRefresh"
         Me.BtnRefresh.Size = New System.Drawing.Size(34, 34)
         Me.BtnRefresh.TabIndex = 28
-        Me.BtnRefresh.Text = "R"
-        Me.BtnRefresh.UseVisualStyleBackColor = True
+        Me.BtnRefresh.UseVisualStyleBackColor = False
         '
         'FormSignUp
         '
