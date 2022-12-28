@@ -241,7 +241,7 @@ Partial Class FormJenisMobil
         Me.BtnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnSearch.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnSearch.ForeColor = System.Drawing.Color.White
-        Me.BtnSearch.Location = New System.Drawing.Point(750, 100)
+        Me.BtnSearch.Location = New System.Drawing.Point(751, 100)
         Me.BtnSearch.Name = "BtnSearch"
         Me.BtnSearch.Size = New System.Drawing.Size(70, 30)
         Me.BtnSearch.TabIndex = 43
