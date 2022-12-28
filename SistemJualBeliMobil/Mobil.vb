@@ -267,4 +267,16 @@
         "
         Return FormSignIn.db.ExecuteQuery(query)
     End Function
+
+    Public Function ListEdit(id As Integer) As DataTable
+        Dim query = "
+            SELECT id
+            FROM mobil
+            WHERE
+                status_terjual=FALSE OR
+                id=" & id & "
+            ORDER BY id
+        "
+        Return FormSignIn.db.ExecuteQuery(query)
+    End Function
 End Class
