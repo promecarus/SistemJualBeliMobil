@@ -91,7 +91,7 @@ Partial Class FormSignUp
         Me.SigninBtn.Location = New System.Drawing.Point(576, 553)
         Me.SigninBtn.Name = "SigninBtn"
         Me.SigninBtn.Size = New System.Drawing.Size(346, 34)
-        Me.SigninBtn.TabIndex = 6
+        Me.SigninBtn.TabIndex = 7
         Me.SigninBtn.Text = "Sign in"
         Me.SigninBtn.UseVisualStyleBackColor = False
         '
@@ -107,7 +107,7 @@ Partial Class FormSignUp
         Me.SignupBtn.Location = New System.Drawing.Point(576, 489)
         Me.SignupBtn.Name = "SignupBtn"
         Me.SignupBtn.Size = New System.Drawing.Size(346, 34)
-        Me.SignupBtn.TabIndex = 5
+        Me.SignupBtn.TabIndex = 6
         Me.SignupBtn.Text = "Sign up"
         Me.SignupBtn.UseVisualStyleBackColor = False
         '
@@ -238,7 +238,7 @@ Partial Class FormSignUp
         Me.InputCaptcha.Location = New System.Drawing.Point(576, 424)
         Me.InputCaptcha.Name = "InputCaptcha"
         Me.InputCaptcha.Size = New System.Drawing.Size(138, 34)
-        Me.InputCaptcha.TabIndex = 25
+        Me.InputCaptcha.TabIndex = 5
         '
         'PictBoxCaptcha
         '
@@ -250,12 +250,17 @@ Partial Class FormSignUp
         '
         'BtnRefresh
         '
+        Me.BtnRefresh.BackColor = System.Drawing.Color.White
+        Me.BtnRefresh.BackgroundImage = Global.SistemJualBeliMobil.My.Resources.Resources.captchaLogo
+        Me.BtnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnRefresh.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnRefresh.FlatAppearance.BorderSize = 0
+        Me.BtnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnRefresh.Location = New System.Drawing.Point(888, 424)
         Me.BtnRefresh.Name = "BtnRefresh"
         Me.BtnRefresh.Size = New System.Drawing.Size(34, 34)
         Me.BtnRefresh.TabIndex = 28
-        Me.BtnRefresh.Text = "R"
-        Me.BtnRefresh.UseVisualStyleBackColor = True
+        Me.BtnRefresh.UseVisualStyleBackColor = False
         '
         'FormSignUp
         '

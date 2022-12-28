@@ -89,12 +89,16 @@
     End Sub
 
     Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles BtnSearch.Click
-        If Not TxtSearch.Text = "" Then
-            DataGridJenisMobil.DataSource = Nothing
-            DataGridJenisMobil.DataSource = JenisMobil.SearchById(TxtSearch.Text)
+        If IsNumeric(TxtSearch.Text) Then
+            If Not TxtSearch.Text = "" Then
+                DataGridJenisMobil.DataSource = Nothing
+                DataGridJenisMobil.DataSource = JenisMobil.SearchById(TxtSearch.Text)
+            Else
+                DataGridJenisMobil.DataSource = Nothing
+                DataGridJenisMobil.DataSource = JenisMobil.Read
+            End If
         Else
-            DataGridJenisMobil.DataSource = Nothing
-            DataGridJenisMobil.DataSource = JenisMobil.Read
+            MessageBox.Show("Data Input Search Harus Angka !!")
         End If
     End Sub
 

@@ -316,7 +316,7 @@ Partial Class FormMobil
         Me.BtnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnSearch.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnSearch.ForeColor = System.Drawing.Color.White
-        Me.BtnSearch.Location = New System.Drawing.Point(223, 72)
+        Me.BtnSearch.Location = New System.Drawing.Point(231, 72)
         Me.BtnSearch.Name = "BtnSearch"
         Me.BtnSearch.Size = New System.Drawing.Size(75, 25)
         Me.BtnSearch.TabIndex = 36
@@ -327,7 +327,7 @@ Partial Class FormMobil
         '
         Me.LblSearch.AutoSize = True
         Me.LblSearch.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.LblSearch.Location = New System.Drawing.Point(20, 76)
+        Me.LblSearch.Location = New System.Drawing.Point(20, 75)
         Me.LblSearch.Name = "LblSearch"
         Me.LblSearch.Size = New System.Drawing.Size(95, 19)
         Me.LblSearch.TabIndex = 37

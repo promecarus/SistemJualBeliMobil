@@ -83,12 +83,16 @@ Public Class FormBukuPenjualan
     End Sub
 
     Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles BtnSearch.Click
-        If Not TxtSearch.Text = "" Then
-            DataGridViewBukuPenjualan.DataSource = Nothing
-            DataGridViewBukuPenjualan.DataSource = dataBukuPenjualan.SearchById(TxtSearch.Text)
+        If IsNumeric(TxtSearch.Text) Then
+            If Not TxtSearch.Text = "" Then
+                DataGridViewBukuPenjualan.DataSource = Nothing
+                DataGridViewBukuPenjualan.DataSource = dataBukuPenjualan.SearchById(TxtSearch.Text)
+            Else
+                DataGridViewBukuPenjualan.DataSource = Nothing
+                DataGridViewBukuPenjualan.DataSource = dataBukuPenjualan.Read()
+            End If
         Else
-            DataGridViewBukuPenjualan.DataSource = Nothing
-            DataGridViewBukuPenjualan.DataSource = dataBukuPenjualan.Read()
+            MessageBox.Show("Data Input Search Harus Angka !!")
         End If
     End Sub
 

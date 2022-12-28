@@ -52,14 +52,16 @@ Partial Class FormMobilEdit
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label3.Location = New System.Drawing.Point(547, 216)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(30, 15)
+        Me.Label3.Size = New System.Drawing.Size(29, 15)
         Me.Label3.TabIndex = 92
         Me.Label3.Text = "Hari"
         '
         'TxtGaransi
         '
+        Me.TxtGaransi.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.TxtGaransi.Location = New System.Drawing.Point(323, 214)
         Me.TxtGaransi.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TxtGaransi.Name = "TxtGaransi"
@@ -88,6 +90,7 @@ Partial Class FormMobilEdit
         '
         'ComboBoxJenisMobil
         '
+        Me.ComboBoxJenisMobil.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.ComboBoxJenisMobil.FormattingEnabled = True
         Me.ComboBoxJenisMobil.Location = New System.Drawing.Point(323, 68)
         Me.ComboBoxJenisMobil.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -112,6 +115,7 @@ Partial Class FormMobilEdit
         Me.GroupBox1.Controls.Add(Me.RdSedang)
         Me.GroupBox1.Controls.Add(Me.RdBaik)
         Me.GroupBox1.Controls.Add(Me.RdSangatBaik)
+        Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.GroupBox1.Location = New System.Drawing.Point(323, 242)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GroupBox1.Name = "GroupBox1"
@@ -127,7 +131,7 @@ Partial Class FormMobilEdit
         Me.RdSangatBuruk.Location = New System.Drawing.Point(14, 112)
         Me.RdSangatBuruk.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.RdSangatBuruk.Name = "RdSangatBuruk"
-        Me.RdSangatBuruk.Size = New System.Drawing.Size(100, 19)
+        Me.RdSangatBuruk.Size = New System.Drawing.Size(95, 19)
         Me.RdSangatBuruk.TabIndex = 27
         Me.RdSangatBuruk.TabStop = True
         Me.RdSangatBuruk.Text = "Sangat Buruk"
@@ -139,7 +143,7 @@ Partial Class FormMobilEdit
         Me.RdBuruk.Location = New System.Drawing.Point(14, 90)
         Me.RdBuruk.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.RdBuruk.Name = "RdBuruk"
-        Me.RdBuruk.Size = New System.Drawing.Size(59, 19)
+        Me.RdBuruk.Size = New System.Drawing.Size(56, 19)
         Me.RdBuruk.TabIndex = 26
         Me.RdBuruk.TabStop = True
         Me.RdBuruk.Text = "Buruk"
@@ -151,7 +155,7 @@ Partial Class FormMobilEdit
         Me.RdSedang.Location = New System.Drawing.Point(14, 68)
         Me.RdSedang.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.RdSedang.Name = "RdSedang"
-        Me.RdSedang.Size = New System.Drawing.Size(66, 19)
+        Me.RdSedang.Size = New System.Drawing.Size(64, 19)
         Me.RdSedang.TabIndex = 25
         Me.RdSedang.TabStop = True
         Me.RdSedang.Text = "Sedang"
@@ -163,7 +167,7 @@ Partial Class FormMobilEdit
         Me.RdBaik.Location = New System.Drawing.Point(14, 44)
         Me.RdBaik.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.RdBaik.Name = "RdBaik"
-        Me.RdBaik.Size = New System.Drawing.Size(49, 19)
+        Me.RdBaik.Size = New System.Drawing.Size(47, 19)
         Me.RdBaik.TabIndex = 24
         Me.RdBaik.TabStop = True
         Me.RdBaik.Text = "Baik"
@@ -175,7 +179,7 @@ Partial Class FormMobilEdit
         Me.RdSangatBaik.Location = New System.Drawing.Point(14, 20)
         Me.RdSangatBaik.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.RdSangatBaik.Name = "RdSangatBaik"
-        Me.RdSangatBaik.Size = New System.Drawing.Size(90, 19)
+        Me.RdSangatBaik.Size = New System.Drawing.Size(86, 19)
         Me.RdSangatBaik.TabIndex = 23
         Me.RdSangatBaik.TabStop = True
         Me.RdSangatBaik.Text = "Sangat Baik"
@@ -195,6 +199,7 @@ Partial Class FormMobilEdit
         '
         Me.GroupBoxTipeMobil.Controls.Add(Me.RdMatic)
         Me.GroupBoxTipeMobil.Controls.Add(Me.RdManual)
+        Me.GroupBoxTipeMobil.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.GroupBoxTipeMobil.Location = New System.Drawing.Point(323, 96)
         Me.GroupBoxTipeMobil.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GroupBoxTipeMobil.Name = "GroupBoxTipeMobil"
@@ -210,7 +215,7 @@ Partial Class FormMobilEdit
         Me.RdMatic.Location = New System.Drawing.Point(14, 45)
         Me.RdMatic.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.RdMatic.Name = "RdMatic"
-        Me.RdMatic.Size = New System.Drawing.Size(56, 19)
+        Me.RdMatic.Size = New System.Drawing.Size(55, 19)
         Me.RdMatic.TabIndex = 24
         Me.RdMatic.TabStop = True
         Me.RdMatic.Text = "Matic"
@@ -230,6 +235,7 @@ Partial Class FormMobilEdit
         '
         'TxtHargaDefault
         '
+        Me.TxtHargaDefault.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.TxtHargaDefault.Location = New System.Drawing.Point(323, 392)
         Me.TxtHargaDefault.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TxtHargaDefault.Name = "TxtHargaDefault"
@@ -238,6 +244,7 @@ Partial Class FormMobilEdit
         '
         'TxtTahunPembuatan
         '
+        Me.TxtTahunPembuatan.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.TxtTahunPembuatan.Location = New System.Drawing.Point(323, 179)
         Me.TxtTahunPembuatan.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TxtTahunPembuatan.Name = "TxtTahunPembuatan"
