@@ -118,8 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="bgbutton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\Resources\bgbutton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\Resources\3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MobilBawah" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\Resources\MobilBawah.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="mobil1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\Resources\mobil1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -127,34 +130,34 @@
   <data name="BannerHome" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\Resources\BannerHome.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BannerSign" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\Resources\BannerSign.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\Resources\3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bgputihbtn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\Resources\bgputihbtn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="mobil" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\Resources\mobil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BannerHome1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\Resources\BannerHome.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BannerSignup" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\Resources\BannerSignup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="bgputihbtn1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\Resources\bgputihbtn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="putih" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\Resources\putih.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="VEN_MY23_0052_V001_4x3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\Resources\VEN_MY23_0052_V001_4x3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MobilBawah" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\Resources\MobilBawah.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BannerSignup" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\Resources\BannerSignup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mobil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\Resources\mobil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="putih" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\Resources\putih.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bgputihbtn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\Resources\bgputihbtn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bgbutton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\Resources\bgbutton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BannerSign" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\Resources\BannerSign.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BannerHome1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\Resources\BannerHome.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="captchaLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\Resources\captchaLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

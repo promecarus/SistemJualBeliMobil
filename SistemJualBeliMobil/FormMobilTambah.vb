@@ -6,7 +6,7 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        ComboBoxJenisMobil.DataSource = FormSignIn.JenisMobil.ListDataJenisMobil
+        ComboBoxJenisMobil.DataSource = FormSignIn.JenisMobil.List
         ComboBoxJenisMobil.DisplayMember = "jenis"
         ComboBoxJenisMobil.ValueMember = "id_jenis"
 
@@ -48,7 +48,7 @@
                             Else
                                 If Not TxtHargaDefault.Text = "" Then
                                     If IsNumeric(TxtHargaDefault.Text) Then
-                                        FormSignIn.Mobil.AddDataMobilDatabase(ComboBoxJenisMobil.SelectedValue,
+                                        FormSignIn.Mobil.Add(ComboBoxJenisMobil.SelectedValue,
                                                  tipe_mobil,
                                                  Integer.Parse(TxtTahunPembuatan.Text),
                                                  kondisi,

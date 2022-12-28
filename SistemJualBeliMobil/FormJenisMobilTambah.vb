@@ -6,7 +6,7 @@
         Else
             FormJenisMobil.JenisMobil.jenisProperty = TxtJenisMobil.Text.ToString()
 
-            FormJenisMobil.JenisMobil.AddDataJenisMobilDatabase(FormJenisMobil.JenisMobil.jenisProperty)
+            FormJenisMobil.JenisMobil.Add(FormJenisMobil.JenisMobil.jenisProperty)
 
             MessageBox.Show("Data Jenis Mobil Baru Berhasil Ditambahkan.")
 

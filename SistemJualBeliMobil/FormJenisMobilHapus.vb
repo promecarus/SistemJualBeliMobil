@@ -11,7 +11,7 @@
     End Sub
 
     Private Sub BtnYes_Click(sender As Object, e As EventArgs) Handles BtnYes.Click
-        FormJenisMobil.JenisMobil.DeleteDataJenisMobilByIDDatabase(FormJenisMobil.SelectedTableJenisMobil)
+        FormJenisMobil.JenisMobil.Delete(FormJenisMobil.SelectedTableJenisMobil)
 
         MessageBox.Show("Data Jenis Mobil Dengan ID " & FormJenisMobil.SelectedTableJenisMobil & " Berhasil Dihapus.")
 

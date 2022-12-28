@@ -23,32 +23,32 @@
 
     Public Sub ReloadDataTableDatabase()
         DataGridMobil.DataSource = Nothing
-        DataGridMobil.DataSource = Mobil.GetDataMobilDatabase()
+        DataGridMobil.DataSource = Mobil.Read()
     End Sub
 
     Public Sub ReloadDataTableDatabaseSearchNone()
         DataGridMobil.DataSource = Nothing
-        DataGridMobil.DataSource = Mobil.GetDataMobilDatabaseSearchNone(TxtSearch.Text)
+        DataGridMobil.DataSource = Mobil.SearchNone(TxtSearch.Text)
     End Sub
 
     Public Sub ReloadDataTableDatabaseSearchTerjual()
         DataGridMobil.DataSource = Nothing
-        DataGridMobil.DataSource = Mobil.GetDataMobilDatabaseSearchTerjual(TxtSearch.Text)
+        DataGridMobil.DataSource = Mobil.SearchTerjual(TxtSearch.Text)
     End Sub
 
     Public Sub ReloadDataTableDatabaseSearchBelumTerjual()
         DataGridMobil.DataSource = Nothing
-        DataGridMobil.DataSource = Mobil.GetDataMobilDatabaseSearchBelumTerjual(TxtSearch.Text)
+        DataGridMobil.DataSource = Mobil.SearchTerjualBelum(TxtSearch.Text)
     End Sub
 
     Public Sub ReloadDataTableDatabaseTerjual()
         DataGridMobil.DataSource = Nothing
-        DataGridMobil.DataSource = Mobil.GetDataMobilDatabaseTerjual()
+        DataGridMobil.DataSource = Mobil.ReadTerjual()
     End Sub
 
     Public Sub ReloadDataTableDatabaseBelumTerjual()
         DataGridMobil.DataSource = Nothing
-        DataGridMobil.DataSource = Mobil.GetDataMobilDatabaseBelumTerjual()
+        DataGridMobil.DataSource = Mobil.ReadTerjualBelum()
     End Sub
 
     Private Sub DataGridMobil_ColumnHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DataGridMobil.ColumnHeaderMouseClick
@@ -72,9 +72,9 @@
 
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
         Try
-            Dim selectedMobil As List(Of String) = Mobil.GetDataMobilByIDDatabase(SelectedTableMobil)
+            Dim selectedMobil As List(Of String) = Mobil.DetailsById(SelectedTableMobil)
 
-            Mobil.idjenisMobillProperty = selectedMobil(1)
+            Mobil.idJenisMobilProperty = selectedMobil(1)
             Mobil.tipeMobilProperty = selectedMobil(2)
             Mobil.tahunPembuatanProperty = selectedMobil(3)
             Mobil.kondisiProperty = selectedMobil(4)
@@ -90,9 +90,9 @@
 
     Private Sub BtnHapus_Click(sender As Object, e As EventArgs) Handles BtnHapus.Click
         Try
-            Dim selectedMobil As List(Of String) = Mobil.GetDataMobilByIDDatabase(SelectedTableMobil)
+            Dim selectedMobil As List(Of String) = Mobil.DetailsById(SelectedTableMobil)
 
-            Mobil.idjenisMobillProperty = selectedMobil(1)
+            Mobil.idJenisMobilProperty = selectedMobil(1)
 
             Dim MobilHapus = New FormMobilHapus()
             MobilHapus.Show()

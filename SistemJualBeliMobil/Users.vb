@@ -32,9 +32,9 @@ Public Class Users
         End Set
     End Property
 
-    Public Function EncryptMD5(ByVal password As String)
+    Public Function EncryptMD5(ByVal password As String) As String
         Dim x As New MD5CryptoServiceProvider()
-        Dim bs As Byte() = System.Text.Encoding.UTF8.GetBytes(password)
+        Dim bs As Byte() = Text.Encoding.UTF8.GetBytes(password)
         bs = x.ComputeHash(bs)
         Dim s As New Text.StringBuilder()
 
@@ -45,22 +45,22 @@ Public Class Users
         Return s.ToString()
     End Function
 
-    Public Sub AddUsersDatabase(username_regist As String, email_regist As String, password_regist As String)
-        Dim query = "INSERT INTO users(username, email, password) VALUE('" & username_regist & "', '" & email_regist & "', '" & EncryptMD5(password_regist) & "')"
+    Public Sub Add(username As String, email As String, password As String)
+        Dim query = "INSERT INTO users(username, email, password) VALUE('" & username & "', '" & email & "', '" & EncryptMD5(password) & "')"
         FormSignIn.db.ExecuteNonQuery(query)
     End Sub
 
-    Public Function CheckAuthenticationDatabase(username_login As String, password_login As String) As List(Of String)
-        Dim query = "SELECT id_user, username FROM users WHERE username='" & username_login & "' AND password='" & EncryptMD5(password_login) & "'"
+    Public Function Authentication(username As String, password As String) As List(Of String)
+        Dim query = "SELECT id_user, username FROM users WHERE (username='" & username & "' OR email='" & username & "') AND password='" & EncryptMD5(password) & "'"
         Return FormSignIn.db.ExecuteGetOneRow(query, 2)
     End Function
 
-    Public Function ValidateUser(username As String) As Boolean
+    Public Function AvailabilityUsername(username As String) As Boolean
         Dim query = "SELECT username FROM users WHERE username='" & username & "'"
         Return FormSignIn.db.CheckAvailability(query)
     End Function
 
-    Public Function ValidateEmail(email As String) As Boolean
+    Public Function AvailabilityEmail(email As String) As Boolean
         Dim query = "SELECT email FROM users WHERE email='" & email & "'"
         Return FormSignIn.db.CheckAvailability(query)
     End Function

@@ -1,8 +1,4 @@
-﻿Imports System.Configuration
-Imports System.Globalization
-Imports System.IO
-
-Public Class FormJenisMobilEdit
+﻿Public Class FormJenisMobilEdit
 
     Public Sub New()
 
@@ -20,8 +16,10 @@ Public Class FormJenisMobilEdit
         Else
             FormJenisMobil.JenisMobil.jenisProperty = TxtJenisMobil.Text.ToString()
 
-            FormJenisMobil.JenisMobil.UpdateDataJenisMobilByIDDatabase(FormJenisMobil.SelectedTableJenisMobil,
-                                                                       FormJenisMobil.JenisMobil.jenisProperty)
+            FormJenisMobil.JenisMobil.Update(
+                FormJenisMobil.SelectedTableJenisMobil,
+                FormJenisMobil.JenisMobil.jenisProperty
+            )
 
             MessageBox.Show("Data Jenis Mobil dengan ID " & FormJenisMobil.SelectedTableJenisMobil & " Berhasil Diedit.")
 
