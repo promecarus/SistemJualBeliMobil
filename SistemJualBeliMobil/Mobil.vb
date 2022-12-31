@@ -1,14 +1,14 @@
 ﻿Public Class Mobil
     Private db As New Database
     Private query As String
-    Private idJenisMobil As Integer
+    Private idJenisMobil As String
     Private tipeMobil As String
     Private tahunPembuatan As String
     Private kondisi As String
-    Private harga As Integer
-    Private garansi As Integer
-    Private statusTerjual As Integer
-    Private hargaDefault As Integer
+    Private harga As String
+    Private garansi As String
+    Private statusTerjual As String
+    Private hargaDefault As String
 
     Public Property idJenisMobilProperty() As String
         Get

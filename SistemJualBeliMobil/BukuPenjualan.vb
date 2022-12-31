@@ -1,9 +1,9 @@
 ﻿Public Class BukuPenjualan
     Private db As New Database
     Private query As String
-    Private idMobil As Integer
-    Private idPembeli As Integer
-    Private hargaTerjual As Integer
+    Private idMobil As String
+    Private idPembeli As String
+    Private hargaTerjual As String
     Private tanggalPenjualan As String
 
     Public Property idMobilProperty() As String
@@ -69,6 +69,7 @@
             FROM buku_penjualan AS a
             JOIN pembeli AS b
 	            ON a.id_pembeli=b.id_pembeli
+            ORDER BY a.id_penjualan
         "
         Return db.ExecuteQuery(query)
     End Function
