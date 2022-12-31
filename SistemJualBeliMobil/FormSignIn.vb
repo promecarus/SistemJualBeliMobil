@@ -1,7 +1,5 @@
 ﻿Public Class FormSignIn
-    Public Shared db As New Database
-
-    Public Shared Users As Users
+    Private Users As New Users
     Public Shared JenisMobil As JenisMobil
     Public Shared Mobil As Mobil
     Public Shared Pembeli As Pembeli
@@ -12,7 +10,6 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        Users = New Users()
         JenisMobil = New JenisMobil()
         Mobil = New Mobil()
         Pembeli = New Pembeli()
