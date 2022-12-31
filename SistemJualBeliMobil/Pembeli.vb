@@ -48,6 +48,7 @@
                 nama AS 'Nama',
                 alamat AS 'Alamat'
             FROM pembeli
+            ORDER BY id_pembeli
         "
         Return db.ExecuteQuery(query)
     End Function
