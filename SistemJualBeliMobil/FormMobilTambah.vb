@@ -12,7 +12,7 @@
 
     End Sub
 
-    Private Sub BtnTambah_Click(sender As Object, e As EventArgs) Handles BtnTambah.Click
+    Private Sub ButtonTambah_Click(sender As Object, e As EventArgs) Handles BtnTambah.Click
 
         Dim tipe_mobil As String
 
@@ -93,7 +93,7 @@
 
     End Sub
 
-    Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles BtnCancel.Click
+    Private Sub ButtonCancel_Click(sender As Object, e As EventArgs) Handles BtnCancel.Click
         Me.Hide()
 
         TxtTahunPembuatan.Text = ""

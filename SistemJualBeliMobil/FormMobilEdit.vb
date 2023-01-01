@@ -46,7 +46,7 @@
         TxtHargaDefault.Text = FormMobil.Mobil.hargaDefaultProperty
     End Sub
 
-    Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
+    Private Sub ButtonEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
         If RdManual.Checked Then
             tipe_mobil = "Manual"
         ElseIf RdMatic.Checked Then
@@ -71,7 +71,7 @@
                     If IsNumeric(TxtGaransi.Text) Then
                         If Not TxtHargaDefault.Text = "" Then
                             If IsNumeric(TxtHargaDefault.Text) Then
-                                FormMobil.Mobil.Update(FormMobil.SelectedTableMobil,
+                                FormMobil.Mobil.Update(FormMobil.SelectedRowMobil,
                                                     ComboBoxJenisMobil.SelectedValue,
                                                     tipe_mobil,
                                                     Integer.Parse(TxtTahunPembuatan.Text),
@@ -79,7 +79,7 @@
                                                     Integer.Parse(TxtGaransi.Text),
                                                     Integer.Parse(TxtHargaDefault.Text))
 
-                                MessageBox.Show("Data Mobil Dengan ID " & FormMobil.SelectedTableMobil & " Berhasil Diedit")
+                                MessageBox.Show("Data Mobil Dengan ID " & FormMobil.SelectedRowMobil & " Berhasil Diedit")
 
                                 Me.Hide()
                             Else
@@ -102,7 +102,7 @@
         End If
     End Sub
 
-    Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles BtnCancel.Click
+    Private Sub ButtonCancel_Click(sender As Object, e As EventArgs) Handles BtnCancel.Click
         Me.Hide()
     End Sub
 End Class
