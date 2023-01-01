@@ -4,15 +4,15 @@ Public Class FormPembeliEdit
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        TextBoxNik.Text = FormPembeli.dataPembeli.nikProperty
-        TextBoxNama.Text = FormPembeli.dataPembeli.namaProperty
-        RichTextBoxAlamat.Text = FormPembeli.dataPembeli.alamatProperty
+        TextBoxNik.Text = FormPembeli.Pembeli.nikProperty
+        TextBoxNama.Text = FormPembeli.Pembeli.namaProperty
+        RichTextBoxAlamat.Text = FormPembeli.Pembeli.alamatProperty
     End Sub
 
     Private Sub ButtonEdit_Click(sender As Object, e As EventArgs) Handles ButtonEdit.Click
         If (Not TextBoxNik.Text = "") And (Not TextBoxNama.Text = "") And (Not RichTextBoxAlamat.Text = "") Then
             If IsNumeric(TextBoxNik.Text) Then
-                FormPembeli.dataPembeli.Update(
+                FormPembeli.Pembeli.Update(
                     FormPembeli.selectedRowPembeli,
                     TextBoxNik.Text,
                     TextBoxNama.Text,

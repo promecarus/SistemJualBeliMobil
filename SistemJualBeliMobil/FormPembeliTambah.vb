@@ -2,7 +2,7 @@ Public Class FormPembeliTambah
     Private Sub ButtonTambah_Click(sender As Object, e As EventArgs) Handles ButtonTambah.Click
         If (Not TextBoxNik.Text = "") And (Not TextBoxNama.Text = "") And (Not RichTextBoxAlamat.Text = "") Then
             If IsNumeric(TextBoxNik.Text) Then
-                FormPembeli.dataPembeli.Add(
+                FormPembeli.Pembeli.Add(
                     TextBoxNik.Text,
                     TextBoxNama.Text,
                     RichTextBoxAlamat.Text
