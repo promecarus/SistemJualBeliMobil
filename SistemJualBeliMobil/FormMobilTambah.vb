@@ -1,11 +1,7 @@
 ﻿Public Class FormMobilTambah
 
-    Public Sub New()
+    Private Sub FormMobilTambah_Activated(sender As Object, e As EventArgs) Handles Me.Activated
 
-        ' This call is required by the designer.
-        InitializeComponent()
-
-        ' Add any initialization after the InitializeComponent() call.
         ComboBoxJenisMobil.DataSource = FormSignIn.JenisMobil.List
         ComboBoxJenisMobil.DisplayMember = "jenis"
         ComboBoxJenisMobil.ValueMember = "id_jenis"

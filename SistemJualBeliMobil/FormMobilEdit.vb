@@ -3,12 +3,7 @@
     Dim kondisi As String
     Dim tipe_mobil As String
 
-    Public Sub New()
-
-        ' This call is required by the designer.
-        InitializeComponent()
-
-        ' Add any initialization after the InitializeComponent() call.
+    Private Sub FormMobilEdit_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         ComboBoxJenisMobil.DataSource = FormSignIn.JenisMobil.List
         ComboBoxJenisMobil.DisplayMember() = "jenis"
         ComboBoxJenisMobil.ValueMember() = "id_jenis"

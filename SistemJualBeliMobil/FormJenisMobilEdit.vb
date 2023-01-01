@@ -1,13 +1,6 @@
 ﻿Public Class FormJenisMobilEdit
-
-    Public Sub New()
-
-        ' This call is required by the designer.
-        InitializeComponent()
-
-        ' Add any initialization after the InitializeComponent() call.
+    Private Sub FormJenisMobilEdit_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         TxtJenisMobil.Text = FormJenisMobil.JenisMobil.jenisProperty
-
     End Sub
 
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click

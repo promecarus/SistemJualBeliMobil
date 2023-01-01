@@ -35,8 +35,7 @@ Public Class FormBukuPenjualan
             BukuPenjualan.hargaTerjualProperty = selectedBukuPenjualan(3)
             BukuPenjualan.tanggalPenjualanProperty = selectedBukuPenjualan(4)
 
-            Dim formEdit = New FormBukuPenjualanEdit()
-            formEdit.Show()
+            FormBukuPenjualanEdit.Show()
         Catch ex As Exception
             MessageBox.Show("Pilih row terlebih dahulu!")
         End Try

@@ -77,8 +77,7 @@
             Mobil.garansiProperty = selectedMobil(6)
             Mobil.hargaDefaultProperty = selectedMobil(8)
 
-            Dim MobilEdit = New FormMobilEdit()
-            MobilEdit.Show()
+            FormMobilEdit.Show()
         Catch ex As Exception
             MessageBox.Show("Pilih Row Terlebih Dahulu !!")
         End Try

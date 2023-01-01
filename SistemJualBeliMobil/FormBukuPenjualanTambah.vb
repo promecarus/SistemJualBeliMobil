@@ -1,14 +1,8 @@
 Public Class FormBukuPenjualanTambah
-    Public Sub New()
-        ' This call is required by the designer.
-        InitializeComponent()
-
-        ' Add any initialization after the InitializeComponent() call.
+    Private Sub FormBukuPenjualanTambah_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         DateTimePickerTanggalPenjualan.Format = DateTimePickerFormat.Custom
         DateTimePickerTanggalPenjualan.CustomFormat = "yyyy/MM/dd"
-    End Sub
 
-    Private Sub FormBukuPenjualanTambah_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         ComboBoxIdMobil.DataSource = FormSignIn.Mobil.ListAdd
         ComboBoxIdMobil.DisplayMember = "id"
         ComboBoxIdMobil.ValueMember = "id"

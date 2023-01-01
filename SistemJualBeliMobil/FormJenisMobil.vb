@@ -44,8 +44,7 @@
 
             JenisMobil.jenisProperty = selectedJenisMobil(1)
 
-            Dim JenisMobilEdit = New FormJenisMobilEdit()
-            JenisMobilEdit.Show()
+            FormJenisMobilEdit.Show()
         Catch ex As Exception
             MessageBox.Show("Pilih Row Terlebih Dahulu !!")
         End Try
