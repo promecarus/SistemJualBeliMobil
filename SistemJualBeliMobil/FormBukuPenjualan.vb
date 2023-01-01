@@ -1,14 +1,6 @@
 Public Class FormBukuPenjualan
-    Public Shared dataBukuPenjualan As BukuPenjualan
+    Public Shared dataBukuPenjualan As New BukuPenjualan
     Public Shared selectedRowBukuPenjualan
-
-    Public Sub New()
-        ' This call is required by the designer.
-        InitializeComponent()
-
-        ' Add any initialization after the InitializeComponent() call.
-        dataBukuPenjualan = New BukuPenjualan
-    End Sub
 
     Private Sub FormBukuPenjualan_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         DataGridViewBukuPenjualan.DataSource = dataBukuPenjualan.Read()
@@ -33,7 +25,7 @@ Public Class FormBukuPenjualan
     Private Sub ButtonTambah_Click(sender As Object, e As EventArgs) Handles ButtonTambah.Click
         FormBukuPenjualanTambah.Show()
     End Sub
-    
+
     Private Sub ButtonEdit_Click(sender As Object, e As EventArgs) Handles ButtonEdit.Click
         Try
             Dim selectedBukuPenjualan As List(Of String) = dataBukuPenjualan.DetailsById(selectedRowBukuPenjualan)
