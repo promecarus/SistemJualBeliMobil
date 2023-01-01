@@ -9,7 +9,7 @@
     End Sub
 
     Private Sub FormBukuPenjualanEdit_Activated(sender As Object, e As EventArgs) Handles Me.Activated
-        ComboBoxIdMobil.DataSource = FormSignIn.Mobil.ListEdit(FormBukuPenjualan.dataBukuPenjualan.idMobilProperty)
+        ComboBoxIdMobil.DataSource = FormSignIn.Mobil.ListEdit(FormBukuPenjualan.BukuPenjualan.idMobilProperty)
         ComboBoxIdMobil.DisplayMember = "id"
         ComboBoxIdMobil.ValueMember = "id"
 
@@ -17,24 +17,24 @@
         ComboBoxIdPembeli.DisplayMember = "nama"
         ComboBoxIdPembeli.ValueMember = "id_pembeli"
 
-        ComboBoxIdMobil.SelectedValue() = FormBukuPenjualan.dataBukuPenjualan.idMobilProperty
-        ComboBoxIdPembeli.SelectedValue() = FormBukuPenjualan.dataBukuPenjualan.idPembeliProperty
-        TextBoxHargaTerjual.Text = FormBukuPenjualan.dataBukuPenjualan.hargaTerjualProperty
-        DateTimePickerTanggalPenjualan.Value = FormBukuPenjualan.dataBukuPenjualan.tanggalPenjualanProperty
+        ComboBoxIdMobil.SelectedValue() = FormBukuPenjualan.BukuPenjualan.idMobilProperty
+        ComboBoxIdPembeli.SelectedValue() = FormBukuPenjualan.BukuPenjualan.idPembeliProperty
+        TextBoxHargaTerjual.Text = FormBukuPenjualan.BukuPenjualan.hargaTerjualProperty
+        DateTimePickerTanggalPenjualan.Value = FormBukuPenjualan.BukuPenjualan.tanggalPenjualanProperty
     End Sub
 
     Private Sub ButtonEdit_Click(sender As Object, e As EventArgs) Handles ButtonEdit.Click
         If Not TextBoxHargaTerjual.Text = "" Then
             If IsNumeric(TextBoxHargaTerjual.Text) Then
-                FormBukuPenjualan.dataBukuPenjualan.Update(
-                    FormBukuPenjualan.selectedRowBukuPenjualan,
+                FormBukuPenjualan.BukuPenjualan.Update(
+                    FormBukuPenjualan.SelectedRowBukuPenjualan,
                     ComboBoxIdMobil.SelectedValue,
                     ComboBoxIdPembeli.SelectedValue,
                     TextBoxHargaTerjual.Text,
                     DateTimePickerTanggalPenjualan.Value.ToShortDateString()
                 )
 
-                MessageBox.Show("Data buku penjualan dengan ID " & FormBukuPenjualan.selectedRowBukuPenjualan & " berhasil diedit.")
+                MessageBox.Show("Data buku penjualan dengan ID " & FormBukuPenjualan.SelectedRowBukuPenjualan & " berhasil diedit.")
                 Me.Hide()
             Else
                 MessageBox.Show("Input harga terjual harus angka!")
