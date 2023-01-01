@@ -1,6 +1,6 @@
 ﻿Public Class FormJenisMobilTambah
 
-    Private Sub BtnTambah_Click(sender As Object, e As EventArgs) Handles BtnTambah.Click
+    Private Sub ButtonTambah_Click(sender As Object, e As EventArgs) Handles BtnTambah.Click
         If TxtJenisMobil.Text = "" Then
             MessageBox.Show("Data Jenis Mobil Tidak Boleh Kosong !!")
         Else
@@ -14,7 +14,7 @@
         End If
     End Sub
 
-    Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles BtnCancel.Click
+    Private Sub ButtonCancel_Click(sender As Object, e As EventArgs) Handles BtnCancel.Click
         Me.Hide()
 
         TxtJenisMobil.Text = ""
