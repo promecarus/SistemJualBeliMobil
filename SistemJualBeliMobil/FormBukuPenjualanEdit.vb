@@ -24,7 +24,7 @@
     End Sub
 
     Private Sub ButtonEdit_Click(sender As Object, e As EventArgs) Handles ButtonEdit.Click
-        If Not TextBoxHargaTerjual.Text = "" Then
+        If Not TextBoxHargaTerjual.Text = "" And ComboBoxIdMobil.SelectedValue IsNot Nothing And ComboBoxIdPembeli.SelectedValue IsNot Nothing Then
             If IsNumeric(TextBoxHargaTerjual.Text) Then
                 FormBukuPenjualan.BukuPenjualan.Update(
                     FormBukuPenjualan.SelectedRowBukuPenjualan,

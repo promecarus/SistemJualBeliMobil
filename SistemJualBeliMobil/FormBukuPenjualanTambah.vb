@@ -19,7 +19,7 @@ Public Class FormBukuPenjualanTambah
     End Sub
 
     Private Sub ButtonTambah_Click(sender As Object, e As EventArgs) Handles ButtonTambah.Click
-        If Not TextBoxHargaTerjual.Text = "" Then
+        If Not TextBoxHargaTerjual.Text = "" And ComboBoxIdMobil.SelectedValue IsNot Nothing And ComboBoxIdPembeli.SelectedValue IsNot Nothing Then
             If IsNumeric(TextBoxHargaTerjual.Text) Then
                 FormBukuPenjualan.BukuPenjualan.Add(
                     ComboBoxIdMobil.SelectedValue,
