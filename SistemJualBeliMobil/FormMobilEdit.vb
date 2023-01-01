@@ -4,7 +4,7 @@
     Private tipe_mobil As String
 
     Private Sub FormMobilEdit_Activated(sender As Object, e As EventArgs) Handles Me.Activated
-        ComboBoxJenisMobil.DataSource = FormSignIn.JenisMobil.List
+        ComboBoxJenisMobil.DataSource = FormMobil.JenisMobil.List
         ComboBoxJenisMobil.DisplayMember() = "jenis"
         ComboBoxJenisMobil.ValueMember() = "id_jenis"
 

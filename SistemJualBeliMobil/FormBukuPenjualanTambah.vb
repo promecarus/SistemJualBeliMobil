@@ -3,11 +3,11 @@ Public Class FormBukuPenjualanTambah
         DateTimePickerTanggalPenjualan.Format = DateTimePickerFormat.Custom
         DateTimePickerTanggalPenjualan.CustomFormat = "yyyy/MM/dd"
 
-        ComboBoxIdMobil.DataSource = FormSignIn.Mobil.ListAdd
+        ComboBoxIdMobil.DataSource = FormBukuPenjualan.Mobil.ListAdd
         ComboBoxIdMobil.DisplayMember = "id"
         ComboBoxIdMobil.ValueMember = "id"
 
-        ComboBoxIdPembeli.DataSource = FormSignIn.Pembeli.List
+        ComboBoxIdPembeli.DataSource = FormBukuPenjualan.Pembeli.List
         ComboBoxIdPembeli.DisplayMember = "nama"
         ComboBoxIdPembeli.ValueMember = "id_pembeli"
     End Sub

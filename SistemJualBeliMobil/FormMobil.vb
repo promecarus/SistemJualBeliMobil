@@ -1,5 +1,6 @@
 ﻿Public Class FormMobil
     Public Shared Mobil As New Mobil
+    Public Shared JenisMobil As New JenisMobil
     Public Shared SelectedRowMobil As Integer
 
     Public Sub New()

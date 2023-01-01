@@ -1,20 +1,5 @@
 ﻿Public Class FormSignIn
     Private Users As New Users
-    Public Shared JenisMobil As JenisMobil
-    Public Shared Mobil As Mobil
-    Public Shared Pembeli As Pembeli
-    Public Shared BukuPenjualan As BukuPenjualan
-
-    Public Sub New()
-        ' This call is required by the designer.
-        InitializeComponent()
-
-        ' Add any initialization after the InitializeComponent() call.
-        JenisMobil = New JenisMobil()
-        Mobil = New Mobil()
-        Pembeli = New Pembeli()
-        BukuPenjualan = New BukuPenjualan()
-    End Sub
 
     Private Sub SigninBtn_Click(sender As Object, e As EventArgs) Handles SigninBtn.Click
         Dim plainUsername As String = inputUsername.Text

@@ -2,7 +2,7 @@
 
     Private Sub FormMobilTambah_Activated(sender As Object, e As EventArgs) Handles Me.Activated
 
-        ComboBoxJenisMobil.DataSource = FormSignIn.JenisMobil.List
+        ComboBoxJenisMobil.DataSource = FormMobil.JenisMobil.List
         ComboBoxJenisMobil.DisplayMember = "jenis"
         ComboBoxJenisMobil.ValueMember = "id_jenis"
 
@@ -44,7 +44,7 @@
                             Else
                                 If Not TxtHargaDefault.Text = "" Then
                                     If IsNumeric(TxtHargaDefault.Text) Then
-                                        FormSignIn.Mobil.Add(ComboBoxJenisMobil.SelectedValue,
+                                        FormMobil.Mobil.Add(ComboBoxJenisMobil.SelectedValue,
                                                  tipe_mobil,
                                                  Integer.Parse(TxtTahunPembuatan.Text),
                                                  kondisi,

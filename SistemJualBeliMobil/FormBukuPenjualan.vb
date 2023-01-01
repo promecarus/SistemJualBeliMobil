@@ -1,5 +1,7 @@
 Public Class FormBukuPenjualan
     Public Shared BukuPenjualan As New BukuPenjualan
+    Public Shared Mobil As New Mobil
+    Public Shared Pembeli As New Pembeli
     Public Shared SelectedRowBukuPenjualan As Integer
 
     Private Sub FormBukuPenjualan_Activated(sender As Object, e As EventArgs) Handles Me.Activated
