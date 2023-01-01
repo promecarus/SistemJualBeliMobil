@@ -1,8 +1,7 @@
 ﻿Public Class FormJenisMobil
 
     Public Shared JenisMobil As JenisMobil
-    Public Shared SelectedTableJenisMobil
-    Public Shared SelectedTableJenisMobilNama
+    Public Shared SelectedTableJenisMobil As Integer
 
     Public Sub New()
 
@@ -30,7 +29,6 @@
             selectedRow = DataGridJenisMobil.Rows(index)
 
             SelectedTableJenisMobil = selectedRow.Cells(0).Value
-            SelectedTableJenisMobilNama = selectedRow.Cells(1).Value
         End If
     End Sub
 

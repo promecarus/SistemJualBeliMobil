@@ -6,14 +6,14 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        LblJenisMobil.Text = FormJenisMobil.SelectedTableJenisMobilNama
+        LblJenisMobil.Text = FormJenisMobil.JenisMobil.jenisProperty
 
     End Sub
 
     Private Sub BtnYes_Click(sender As Object, e As EventArgs) Handles BtnYes.Click
         FormJenisMobil.JenisMobil.Delete(FormJenisMobil.SelectedTableJenisMobil)
 
-        MessageBox.Show("Data Jenis Mobil Dengan ID " & FormJenisMobil.SelectedTableJenisMobil & " Berhasil Dihapus.")
+        MessageBox.Show("Data Jenis Mobil Dengan Nama " & FormJenisMobil.JenisMobil.jenisProperty & " Berhasil Dihapus.")
 
         Me.Hide()
     End Sub
