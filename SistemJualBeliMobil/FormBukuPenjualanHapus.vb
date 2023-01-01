@@ -4,12 +4,12 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        LabelIdPenjualan.Text = FormBukuPenjualan.selectedRowBukuPenjualan
+        LabelIdPenjualan.Text = FormBukuPenjualan.SelectedRowBukuPenjualan
     End Sub
 
     Private Sub ButtonYes_Click(sender As Object, e As EventArgs) Handles ButtonYes.Click
-        FormBukuPenjualan.dataBukuPenjualan.Delete(FormBukuPenjualan.selectedRowBukuPenjualan)
-        MessageBox.Show("Data buku penjualan dengan ID " & FormBukuPenjualan.selectedRowBukuPenjualan & " berhasil dihapus.")
+        FormBukuPenjualan.BukuPenjualan.Delete(FormBukuPenjualan.SelectedRowBukuPenjualan)
+        MessageBox.Show("Data buku penjualan dengan ID " & FormBukuPenjualan.SelectedRowBukuPenjualan & " berhasil dihapus.")
         Me.Hide()
     End Sub
 

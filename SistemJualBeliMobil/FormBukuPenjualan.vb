@@ -1,17 +1,11 @@
 Public Class FormBukuPenjualan
-    Public Shared dataBukuPenjualan As BukuPenjualan
-    Public Shared selectedRowBukuPenjualan
-
-    Public Sub New()
-        ' This call is required by the designer.
-        InitializeComponent()
-
-        ' Add any initialization after the InitializeComponent() call.
-        dataBukuPenjualan = New BukuPenjualan
-    End Sub
+    Public Shared BukuPenjualan As New BukuPenjualan
+    Public Shared Mobil As New Mobil
+    Public Shared Pembeli As New Pembeli
+    Public Shared SelectedRowBukuPenjualan As Integer
 
     Private Sub FormBukuPenjualan_Activated(sender As Object, e As EventArgs) Handles Me.Activated
-        DataGridViewBukuPenjualan.DataSource = dataBukuPenjualan.Read()
+        DataGridViewBukuPenjualan.DataSource = BukuPenjualan.Read()
         DataGridViewBukuPenjualan.ClearSelection()
     End Sub
 
@@ -26,25 +20,24 @@ Public Class FormBukuPenjualan
             Dim selectedRow As DataGridViewRow
             selectedRow = DataGridViewBukuPenjualan.Rows(index)
 
-            selectedRowBukuPenjualan = selectedRow.Cells(0).Value
+            SelectedRowBukuPenjualan = selectedRow.Cells(0).Value
         End If
     End Sub
 
     Private Sub ButtonTambah_Click(sender As Object, e As EventArgs) Handles ButtonTambah.Click
         FormBukuPenjualanTambah.Show()
     End Sub
-    
+
     Private Sub ButtonEdit_Click(sender As Object, e As EventArgs) Handles ButtonEdit.Click
         Try
-            Dim selectedBukuPenjualan As List(Of String) = dataBukuPenjualan.DetailsById(selectedRowBukuPenjualan)
+            Dim selectedBukuPenjualan As List(Of String) = BukuPenjualan.DetailsById(SelectedRowBukuPenjualan)
 
-            dataBukuPenjualan.idMobilProperty = selectedBukuPenjualan(1)
-            dataBukuPenjualan.idPembeliProperty = selectedBukuPenjualan(2)
-            dataBukuPenjualan.hargaTerjualProperty = selectedBukuPenjualan(3)
-            dataBukuPenjualan.tanggalPenjualanProperty = selectedBukuPenjualan(4)
+            BukuPenjualan.idMobilProperty = selectedBukuPenjualan(1)
+            BukuPenjualan.idPembeliProperty = selectedBukuPenjualan(2)
+            BukuPenjualan.hargaTerjualProperty = selectedBukuPenjualan(3)
+            BukuPenjualan.tanggalPenjualanProperty = selectedBukuPenjualan(4)
 
-            Dim formEdit = New FormBukuPenjualanEdit()
-            formEdit.Show()
+            FormBukuPenjualanEdit.Show()
         Catch ex As Exception
             MessageBox.Show("Pilih row terlebih dahulu!")
         End Try
@@ -52,9 +45,9 @@ Public Class FormBukuPenjualan
 
     Private Sub ButtonHapus_Click(sender As Object, e As EventArgs) Handles ButtonHapus.Click
         Try
-            Dim selectedBukuPenjualan As List(Of String) = dataBukuPenjualan.DetailsById(selectedRowBukuPenjualan)
+            Dim selectedBukuPenjualan As List(Of String) = BukuPenjualan.DetailsById(SelectedRowBukuPenjualan)
 
-            dataBukuPenjualan.idMobilProperty = selectedBukuPenjualan(1)
+            BukuPenjualan.idMobilProperty = selectedBukuPenjualan(1)
 
             Dim formHapus = New FormBukuPenjualanHapus()
             formHapus.Show()
@@ -67,46 +60,46 @@ Public Class FormBukuPenjualan
         FormSignIn.Close()
     End Sub
 
-    Private Sub manageCarBtn_Click(sender As Object, e As EventArgs) Handles manageCarBtn.Click
+    Private Sub ButtonManageCar_Click(sender As Object, e As EventArgs) Handles manageCarBtn.Click
         FormMobil.Show()
         Me.Hide()
     End Sub
 
-    Private Sub ManageUserBtn_Click(sender As Object, e As EventArgs) Handles ManageUserBtn.Click
+    Private Sub ButtonManageUser_Click(sender As Object, e As EventArgs) Handles ManageUserBtn.Click
         FormPembeli.Show()
         Me.Hide()
     End Sub
 
-    Private Sub BtnIndex_Click(sender As Object, e As EventArgs) Handles BtnIndex.Click
+    Private Sub ButtonDashboard_Click(sender As Object, e As EventArgs) Handles BtnIndex.Click
         FormDashboard.Show()
         Me.Hide()
     End Sub
 
-    Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles BtnSearch.Click
+    Private Sub ButtonSearch_Click(sender As Object, e As EventArgs) Handles BtnSearch.Click
         If IsNumeric(TxtSearch.Text) Then
             If Not TxtSearch.Text = "" Then
                 DataGridViewBukuPenjualan.DataSource = Nothing
-                DataGridViewBukuPenjualan.DataSource = dataBukuPenjualan.SearchById(TxtSearch.Text)
+                DataGridViewBukuPenjualan.DataSource = BukuPenjualan.SearchById(TxtSearch.Text)
             Else
                 DataGridViewBukuPenjualan.DataSource = Nothing
-                DataGridViewBukuPenjualan.DataSource = dataBukuPenjualan.Read()
+                DataGridViewBukuPenjualan.DataSource = BukuPenjualan.Read()
             End If
         Else
             MessageBox.Show("Data Input Search Harus Angka !!")
         End If
     End Sub
 
-    Private Sub TxtSearch_Enter(sender As Object, e As EventArgs) Handles TxtSearch.Enter
+    Private Sub TextBoxSearch_Enter(sender As Object, e As EventArgs) Handles TxtSearch.Enter
         LblSearch.Text = ""
     End Sub
 
-    Private Sub TxtSearch_Leave(sender As Object, e As EventArgs) Handles TxtSearch.Leave
+    Private Sub TextBoxSearch_Leave(sender As Object, e As EventArgs) Handles TxtSearch.Leave
         If TxtSearch.Text = "" Then
             LblSearch.Text = "Search by ID..."
         End If
     End Sub
 
-    Private Sub SignoutBtn_Click(sender As Object, e As EventArgs) Handles SignoutBtn.Click
+    Private Sub ButtonSignOut_Click(sender As Object, e As EventArgs) Handles SignoutBtn.Click
         FormSignIn.Show()
         Me.Hide()
     End Sub

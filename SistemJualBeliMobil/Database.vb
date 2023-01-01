@@ -13,21 +13,6 @@ Public Class Database
         command.Connection = connection
     End Sub
 
-    Public ReadOnly Property connectionProperty As MySqlConnection
-        Get
-            Return connection
-        End Get
-    End Property
-
-    Public Property commandProperty As MySqlCommand
-        Get
-            Return command
-        End Get
-        Set(value As MySqlCommand)
-            command = value
-        End Set
-    End Property
-
     Public Function ExecuteQuery(query As String) As DataTable
         Dim dataTable As New DataTable()
 

@@ -1,13 +1,7 @@
 ﻿Imports System.Text.RegularExpressions
-Imports System.Text
-Imports System.Drawing
-Imports System.Windows.Forms
-Imports System.Drawing.Drawing2D
-Imports System.Security
-Imports System.Security.Policy
 
 Public Class FormSignUp
-
+    Private Users As New Users
     Dim drawingFont As New Font("Arial", 15)
     Dim captchaImage As New Bitmap(140, 40)
     Dim captchaGraf As Graphics = Graphics.FromImage(captchaImage)
@@ -19,10 +13,10 @@ Public Class FormSignUp
         Dim regex As Regex = New Regex("^[^@\s]+@[^@\s]+\.[^@\s]+$")
         Dim valid As Boolean = regex.IsMatch(inputEmail.Text.Trim)
 
-        If FormSignIn.Users.AvailabilityUsername(inputUsername.Text) = True Then
+        If Users.AvailabilityUsername(inputUsername.Text) = True Then
             MessageBox.Show("Username Sudah Terdaftar !!")
         Else
-            If FormSignIn.Users.AvailabilityEmail(inputEmail.Text) = True Then
+            If Users.AvailabilityEmail(inputEmail.Text) = True Then
                 MessageBox.Show("Email Sudah Terdaftar !!")
             Else
                 If inputUsername.Text.Length > 0 Then
@@ -35,7 +29,7 @@ Public Class FormSignUp
                                     If String.Compare(inputPassword.Text, InputConfirmPassword.Text) = 0 Then
                                         If InputCaptcha.Text.Length > 0 Then
                                             If InputCaptcha.Text = captchaString Then
-                                                FormSignIn.Users.Add(inputUsername.Text, inputEmail.Text, inputPassword.Text)
+                                                Users.Add(inputUsername.Text, inputEmail.Text, inputPassword.Text)
                                                 MessageBox.Show("Sign Up Berhasil !!")
 
                                                 inputUsername.Text = ""

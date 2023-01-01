@@ -4,11 +4,11 @@ Public Class FormPembeliHapus
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        LabelNamaPembeli.Text = FormPembeli.dataPembeli.namaProperty
+        LabelNamaPembeli.Text = FormPembeli.Pembeli.namaProperty
     End Sub
 
     Private Sub ButtonYes_Click(sender As Object, e As EventArgs) Handles ButtonYes.Click
-        FormPembeli.dataPembeli.Delete(FormPembeli.selectedRowPembeli)
+        FormPembeli.Pembeli.Delete(FormPembeli.selectedRowPembeli)
         MessageBox.Show("Data pembeli dengan ID " & FormPembeli.selectedRowPembeli & " berhasil dihapus.")
         Me.Hide()
     End Sub
