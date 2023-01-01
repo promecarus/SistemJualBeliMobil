@@ -1,17 +1,7 @@
 ﻿Public Class FormJenisMobil
 
-    Public Shared JenisMobil As JenisMobil
+    Public Shared JenisMobil As New JenisMobil
     Public Shared SelectedTableJenisMobil As Integer
-
-    Public Sub New()
-
-        ' This call is required by the designer.
-        InitializeComponent()
-
-        ' Add any initialization after the InitializeComponent() call.
-        JenisMobil = New JenisMobil()
-
-    End Sub
 
     Private Sub FormJenisMobil_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         DataGridJenisMobil.DataSource = JenisMobil.Read()
