@@ -59,6 +59,17 @@
                                         MessageBox.Show("Data Mobil Baru Berhasil Ditambahkan.")
 
                                         Me.Hide()
+
+                                        TxtTahunPembuatan.Text = ""
+                                        TxtHargaDefault.Text = ""
+                                        TxtGaransi.Text = ""
+                                        RdManual.Checked = False
+                                        RdMatic.Checked = False
+                                        RdSangatBaik.Checked = False
+                                        RdBaik.Checked = False
+                                        RdSedang.Checked = False
+                                        RdBuruk.Checked = False
+                                        RdSangatBuruk.Checked = False
                                     Else
                                         MessageBox.Show("Data Harga Default Harus Angka !!")
                                     End If
@@ -84,5 +95,16 @@
 
     Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles BtnCancel.Click
         Me.Hide()
+
+        TxtTahunPembuatan.Text = ""
+        TxtHargaDefault.Text = ""
+        TxtGaransi.Text = ""
+        RdManual.Checked = False
+        RdMatic.Checked = False
+        RdSangatBaik.Checked = False
+        RdBaik.Checked = False
+        RdSedang.Checked = False
+        RdBuruk.Checked = False
+        RdSangatBuruk.Checked = False
     End Sub
 End Class

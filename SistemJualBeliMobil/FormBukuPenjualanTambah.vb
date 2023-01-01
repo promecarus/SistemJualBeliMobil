@@ -30,6 +30,9 @@ Public Class FormBukuPenjualanTambah
 
                 MessageBox.Show("Data buku penjualan baru berhasil ditambahkan.")
                 Me.Hide()
+
+                TextBoxHargaTerjual.Text = ""
+                DateTimePickerTanggalPenjualan.Value = Date.Today
             Else
                 MessageBox.Show("Input harga terjual harus angka!")
             End If
@@ -40,5 +43,8 @@ Public Class FormBukuPenjualanTambah
 
     Private Sub ButtonCancel_Click(sender As Object, e As EventArgs) Handles ButtonCancel.Click
         Me.Hide()
+
+        TextBoxHargaTerjual.Text = ""
+        DateTimePickerTanggalPenjualan.Value = Date.Today
     End Sub
 End Class
