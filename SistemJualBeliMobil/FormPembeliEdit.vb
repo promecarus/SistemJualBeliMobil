@@ -1,9 +1,5 @@
 Public Class FormPembeliEdit
-    Public Sub New()
-        ' This call is required by the designer.
-        InitializeComponent()
-
-        ' Add any initialization after the InitializeComponent() call.
+    Private Sub FormPembeliEdit_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         TextBoxNik.Text = FormPembeli.Pembeli.nikProperty
         TextBoxNama.Text = FormPembeli.Pembeli.namaProperty
         RichTextBoxAlamat.Text = FormPembeli.Pembeli.alamatProperty
@@ -13,13 +9,13 @@ Public Class FormPembeliEdit
         If (Not TextBoxNik.Text = "") And (Not TextBoxNama.Text = "") And (Not RichTextBoxAlamat.Text = "") Then
             If IsNumeric(TextBoxNik.Text) Then
                 FormPembeli.Pembeli.Update(
-                    FormPembeli.selectedRowPembeli,
+                    FormPembeli.SelectedRowPembeli,
                     TextBoxNik.Text,
                     TextBoxNama.Text,
                     RichTextBoxAlamat.Text
                 )
 
-                MessageBox.Show("Data pembeli dengan ID " & FormPembeli.selectedRowPembeli & " berhasil diedit.")
+                MessageBox.Show("Data pembeli dengan ID " & FormPembeli.SelectedRowPembeli & " berhasil diedit.")
                 Me.Hide()
             Else
                 MessageBox.Show("Input NIK harus angka!")
