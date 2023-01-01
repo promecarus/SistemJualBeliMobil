@@ -1,7 +1,7 @@
 ﻿Public Class FormMobilEdit
 
-    Dim kondisi As String
-    Dim tipe_mobil As String
+    Private kondisi As String
+    Private tipe_mobil As String
 
     Private Sub FormMobilEdit_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         ComboBoxJenisMobil.DataSource = FormSignIn.JenisMobil.List
