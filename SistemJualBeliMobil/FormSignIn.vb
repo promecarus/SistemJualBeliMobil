@@ -1,7 +1,7 @@
 ﻿Public Class FormSignIn
     Private Users As New Users
 
-    Private Sub SigninBtn_Click(sender As Object, e As EventArgs) Handles SigninBtn.Click
+    Private Sub ButtonSignIn_Click(sender As Object, e As EventArgs) Handles SigninBtn.Click
         Dim plainUsername As String = inputUsername.Text
         Dim plainPassword As String = inputPassword.Text
 
@@ -25,7 +25,7 @@
         End If
     End Sub
 
-    Private Sub SignupBtn_Click(sender As Object, e As EventArgs) Handles SignupBtn.Click
+    Private Sub ButtonSignUp_Click(sender As Object, e As EventArgs) Handles SignupBtn.Click
         inputUsername.Text = ""
         inputPassword.Text = ""
 
@@ -33,7 +33,7 @@
         Me.Hide()
     End Sub
 
-    Private Sub ChkPassword_CheckedChanged(sender As Object, e As EventArgs) Handles ChkPassword.CheckedChanged
+    Private Sub CheckBoxPassword_CheckedChanged(sender As Object, e As EventArgs) Handles ChkPassword.CheckedChanged
         If ChkPassword.Checked = True Then
             inputPassword.UseSystemPasswordChar = False
         Else
