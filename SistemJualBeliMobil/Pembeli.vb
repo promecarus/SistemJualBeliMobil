@@ -1,4 +1,6 @@
 ﻿Public Class Pembeli
+    Private db As New Database
+    Private query As String
     Private nik As String
     Private nama As String
     Private alamat As String
@@ -31,27 +33,28 @@
     End Property
 
     Public Sub Add(nik As String, nama As String, alamat As String)
-        Dim query = "
+        query = "
             INSERT INTO pembeli(nik, nama, alamat)
                 VALUES('" & nik & "', '" & nama & "', '" & alamat & "')
         "
-        FormSignIn.db.ExecuteNonQuery(query)
+        db.ExecuteNonQuery(query)
     End Sub
 
     Public Function Read() As DataTable
-        Dim query = "
+        query = "
             SELECT
                 id_pembeli AS 'ID',
                 nik AS 'NIK',
                 nama AS 'Nama',
                 alamat AS 'Alamat'
             FROM pembeli
+            ORDER BY id_pembeli
         "
-        Return FormSignIn.db.ExecuteQuery(query)
+        Return db.ExecuteQuery(query)
     End Function
 
     Public Function SearchById(id As Integer) As DataTable
-        Dim query = "
+        query = "
             SELECT
                 id_pembeli AS 'ID',
                 nik AS 'NIK',
@@ -60,11 +63,11 @@
             FROM pembeli
             WHERE id_pembeli='" & id & "'
         "
-        Return FormSignIn.db.ExecuteQuery(query)
+        Return db.ExecuteQuery(query)
     End Function
 
     Public Function DetailsById(id As Integer) As List(Of String)
-        Dim query = "
+        query = "
             SELECT
                 id_pembeli,
                 nik,
@@ -73,11 +76,11 @@
             FROM pembeli
             WHERE id_pembeli='" & id & "'
         "
-        Return FormSignIn.db.ExecuteGetOneRow(query, 4)
+        Return db.ExecuteGetOneRow(query, 4)
     End Function
 
     Public Sub Update(id As Integer, nik As String, nama As String, alamat As String)
-        Dim query = "
+        query = "
             UPDATE pembeli
             SET " & "
                 nik='" & nik & "', " & "
@@ -85,25 +88,25 @@
                 alamat='" & alamat & "' " & "
             WHERE id_pembeli='" & id & "'
         "
-        FormSignIn.db.ExecuteNonQuery(query)
+        db.ExecuteNonQuery(query)
     End Sub
 
     Public Sub Delete(id As Integer)
-        Dim query = "
+        query = "
             DELETE FROM pembeli " & "
             WHERE id_pembeli='" & id & "'
         "
-        FormSignIn.db.ExecuteNonQuery(query)
+        db.ExecuteNonQuery(query)
     End Sub
 
     Public Function List() As DataTable
-        Dim query = "
+        query = "
             SELECT
                 id_pembeli,
                 nama
             FROM pembeli
             ORDER BY id_pembeli
         "
-        Return FormSignIn.db.ExecuteQuery(query)
+        Return db.ExecuteQuery(query)
     End Function
 End Class
