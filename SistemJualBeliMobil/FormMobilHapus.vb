@@ -6,19 +6,19 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        LblMobil.Text = FormMobil.SelectedTableMobil
+        LblMobil.Text = FormMobil.SelectedRowMobil
 
     End Sub
 
-    Private Sub BtnYes_Click(sender As Object, e As EventArgs) Handles BtnYes.Click
-        FormMobil.Mobil.Delete(FormMobil.SelectedTableMobil)
+    Private Sub ButtonYes_Click(sender As Object, e As EventArgs) Handles BtnYes.Click
+        FormMobil.Mobil.Delete(FormMobil.SelectedRowMobil)
 
-        MessageBox.Show("Data Mobil dengan ID " & FormMobil.SelectedTableMobil & " Berhasil Dihapus.")
+        MessageBox.Show("Data Mobil dengan ID " & FormMobil.SelectedRowMobil & " Berhasil Dihapus.")
 
         Me.Hide()
     End Sub
 
-    Private Sub BtnNo_Click(sender As Object, e As EventArgs) Handles BtnNo.Click
+    Private Sub ButtonNo_Click(sender As Object, e As EventArgs) Handles BtnNo.Click
         Me.Hide()
     End Sub
 

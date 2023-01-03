@@ -1,25 +1,7 @@
 ﻿Public Class FormSignIn
-    Public Shared db As New Database
+    Private Users As New Users
 
-    Public Shared Users As Users
-    Public Shared JenisMobil As JenisMobil
-    Public Shared Mobil As Mobil
-    Public Shared Pembeli As Pembeli
-    Public Shared BukuPenjualan As BukuPenjualan
-
-    Public Sub New()
-        ' This call is required by the designer.
-        InitializeComponent()
-
-        ' Add any initialization after the InitializeComponent() call.
-        Users = New Users()
-        JenisMobil = New JenisMobil()
-        Mobil = New Mobil()
-        Pembeli = New Pembeli()
-        BukuPenjualan = New BukuPenjualan()
-    End Sub
-
-    Private Sub SigninBtn_Click(sender As Object, e As EventArgs) Handles SigninBtn.Click
+    Private Sub ButtonSignIn_Click(sender As Object, e As EventArgs) Handles SigninBtn.Click
         Dim plainUsername As String = inputUsername.Text
         Dim plainPassword As String = inputPassword.Text
 
@@ -43,7 +25,7 @@
         End If
     End Sub
 
-    Private Sub SignupBtn_Click(sender As Object, e As EventArgs) Handles SignupBtn.Click
+    Private Sub ButtonSignUp_Click(sender As Object, e As EventArgs) Handles SignupBtn.Click
         inputUsername.Text = ""
         inputPassword.Text = ""
 
@@ -51,7 +33,7 @@
         Me.Hide()
     End Sub
 
-    Private Sub ChkPassword_CheckedChanged(sender As Object, e As EventArgs) Handles ChkPassword.CheckedChanged
+    Private Sub CheckBoxPassword_CheckedChanged(sender As Object, e As EventArgs) Handles ChkPassword.CheckedChanged
         If ChkPassword.Checked = True Then
             inputPassword.UseSystemPasswordChar = False
         Else

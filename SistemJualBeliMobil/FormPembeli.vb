@@ -1,17 +1,9 @@
 ﻿Public Class FormPembeli
-    Public Shared dataPembeli As Pembeli
-    Public Shared selectedRowPembeli
-
-    Public Sub New()
-        ' This call is required by the designer.
-        InitializeComponent()
-
-        ' Add any initialization after the InitializeComponent() call.
-        dataPembeli = New Pembeli
-    End Sub
+    Public Shared Pembeli As New Pembeli
+    Public Shared SelectedRowPembeli As Integer
 
     Private Sub FormPembeli_Activated(sender As Object, e As EventArgs) Handles Me.Activated
-        DataGridViewPembeli.DataSource = dataPembeli.Read
+        DataGridViewPembeli.DataSource = Pembeli.Read
         DataGridViewPembeli.ClearSelection()
     End Sub
 
@@ -26,7 +18,7 @@
             Dim selectedRow As DataGridViewRow
             selectedRow = DataGridViewPembeli.Rows(index)
 
-            selectedRowPembeli = selectedRow.Cells(0).Value
+            SelectedRowPembeli = selectedRow.Cells(0).Value
         End If
     End Sub
 
@@ -36,11 +28,11 @@
 
     Private Sub ButtonEdit_Click(sender As Object, e As EventArgs) Handles ButtonEdit.Click
         Try
-            Dim selectedPembeli As List(Of String) = dataPembeli.DetailsById(selectedRowPembeli)
+            Dim selectedPembeli As List(Of String) = Pembeli.DetailsById(SelectedRowPembeli)
 
-            dataPembeli.nikProperty = selectedPembeli(1)
-            dataPembeli.namaProperty = selectedPembeli(2)
-            dataPembeli.alamatProperty = selectedPembeli(3)
+            Pembeli.nikProperty = selectedPembeli(1)
+            Pembeli.namaProperty = selectedPembeli(2)
+            Pembeli.alamatProperty = selectedPembeli(3)
 
             Dim formEdit = New FormPembeliEdit()
             formEdit.Show()
@@ -51,9 +43,9 @@
 
     Private Sub ButtonHapus_Click(sender As Object, e As EventArgs) Handles ButtonHapus.Click
         Try
-            Dim selectedPembeli As List(Of String) = dataPembeli.DetailsById(selectedRowPembeli)
+            Dim selectedPembeli As List(Of String) = Pembeli.DetailsById(SelectedRowPembeli)
 
-            dataPembeli.namaProperty = selectedPembeli(2)
+            Pembeli.namaProperty = selectedPembeli(2)
 
             Dim formHapus = New FormPembeliHapus()
             formHapus.Show()
@@ -62,44 +54,40 @@
         End Try
     End Sub
 
-    Private Sub manageCarBtn_Click(sender As Object, e As EventArgs) Handles manageCarBtn.Click
+    Private Sub ButtonManageCar_Click(sender As Object, e As EventArgs) Handles manageCarBtn.Click
         FormMobil.Show()
         Me.Hide()
     End Sub
 
-    Private Sub TransactionBtn_Click(sender As Object, e As EventArgs) Handles TransactionBtn.Click
+    Private Sub ButtonTransaction_Click(sender As Object, e As EventArgs) Handles TransactionBtn.Click
         FormBukuPenjualan.Show()
         Me.Hide()
     End Sub
-    Private Sub BtnIndex_Click(sender As Object, e As EventArgs)
+
+    Private Sub ButtonDashboard_Click(sender As Object, e As EventArgs) Handles BtnIndex.Click
         FormDashboard.Show()
         Me.Hide()
     End Sub
 
-    Private Sub BtnIndex_Click_1(sender As Object, e As EventArgs) Handles BtnIndex.Click
-        FormDashboard.Show()
-        Me.Hide()
-    End Sub
-
-    Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles BtnSearch.Click
+    Private Sub ButtonSearch_Click(sender As Object, e As EventArgs) Handles BtnSearch.Click
         If IsNumeric(TxtSearch.Text) Then
             If Not TxtSearch.Text = "" Then
                 DataGridViewPembeli.DataSource = Nothing
-                DataGridViewPembeli.DataSource = dataPembeli.SearchById(TxtSearch.Text)
+                DataGridViewPembeli.DataSource = Pembeli.SearchById(TxtSearch.Text)
             Else
                 DataGridViewPembeli.DataSource = Nothing
-                DataGridViewPembeli.DataSource = dataPembeli.Read()
+                DataGridViewPembeli.DataSource = Pembeli.Read()
             End If
         Else
             MessageBox.Show("Data Input Search Harus Angka !!")
         End If
     End Sub
 
-    Private Sub TxtSearch_Enter(sender As Object, e As EventArgs) Handles TxtSearch.Enter
+    Private Sub TextBoxSearch_Enter(sender As Object, e As EventArgs) Handles TxtSearch.Enter
         LblSearch.Text = ""
     End Sub
 
-    Private Sub TxtSearch_Leave(sender As Object, e As EventArgs) Handles TxtSearch.Leave
+    Private Sub TextBoxSearch_Leave(sender As Object, e As EventArgs) Handles TxtSearch.Leave
         If TxtSearch.Text = "" Then
             LblSearch.Text = "Search by ID..."
         End If
@@ -109,7 +97,7 @@
         FormSignIn.Close()
     End Sub
 
-    Private Sub SignoutBtn_Click(sender As Object, e As EventArgs) Handles SignoutBtn.Click
+    Private Sub ButtonSignOut_Click(sender As Object, e As EventArgs) Handles SignoutBtn.Click
         FormSignIn.Show()
         Me.Hide()
     End Sub

@@ -1,18 +1,14 @@
 ﻿Public Class FormMobilTambah
 
-    Public Sub New()
+    Private Sub FormMobilTambah_Activated(sender As Object, e As EventArgs) Handles Me.Activated
 
-        ' This call is required by the designer.
-        InitializeComponent()
-
-        ' Add any initialization after the InitializeComponent() call.
-        ComboBoxJenisMobil.DataSource = FormSignIn.JenisMobil.List
+        ComboBoxJenisMobil.DataSource = FormMobil.JenisMobil.List
         ComboBoxJenisMobil.DisplayMember = "jenis"
         ComboBoxJenisMobil.ValueMember = "id_jenis"
 
     End Sub
 
-    Private Sub BtnTambah_Click(sender As Object, e As EventArgs) Handles BtnTambah.Click
+    Private Sub ButtonTambah_Click(sender As Object, e As EventArgs) Handles BtnTambah.Click
 
         Dim tipe_mobil As String
 
@@ -48,7 +44,7 @@
                             Else
                                 If Not TxtHargaDefault.Text = "" Then
                                     If IsNumeric(TxtHargaDefault.Text) Then
-                                        FormSignIn.Mobil.Add(ComboBoxJenisMobil.SelectedValue,
+                                        FormMobil.Mobil.Add(ComboBoxJenisMobil.SelectedValue,
                                                  tipe_mobil,
                                                  Integer.Parse(TxtTahunPembuatan.Text),
                                                  kondisi,
@@ -59,6 +55,17 @@
                                         MessageBox.Show("Data Mobil Baru Berhasil Ditambahkan.")
 
                                         Me.Hide()
+
+                                        TxtTahunPembuatan.Text = ""
+                                        TxtHargaDefault.Text = ""
+                                        TxtGaransi.Text = ""
+                                        RdManual.Checked = False
+                                        RdMatic.Checked = False
+                                        RdSangatBaik.Checked = False
+                                        RdBaik.Checked = False
+                                        RdSedang.Checked = False
+                                        RdBuruk.Checked = False
+                                        RdSangatBuruk.Checked = False
                                     Else
                                         MessageBox.Show("Data Harga Default Harus Angka !!")
                                     End If
@@ -82,7 +89,18 @@
 
     End Sub
 
-    Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles BtnCancel.Click
+    Private Sub ButtonCancel_Click(sender As Object, e As EventArgs) Handles BtnCancel.Click
         Me.Hide()
+
+        TxtTahunPembuatan.Text = ""
+        TxtHargaDefault.Text = ""
+        TxtGaransi.Text = ""
+        RdManual.Checked = False
+        RdMatic.Checked = False
+        RdSangatBaik.Checked = False
+        RdBaik.Checked = False
+        RdSedang.Checked = False
+        RdBuruk.Checked = False
+        RdSangatBuruk.Checked = False
     End Sub
 End Class

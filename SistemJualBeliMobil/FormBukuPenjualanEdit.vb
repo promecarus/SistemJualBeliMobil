@@ -1,38 +1,34 @@
 ﻿Public Class FormBukuPenjualanEdit
-    Public Sub New()
-        ' This call is required by the designer.
-        InitializeComponent()
-
-        ' Add any initialization after the InitializeComponent() call.
-        ComboBoxIdMobil.DataSource = FormSignIn.Mobil.List
-        ComboBoxIdMobil.DisplayMember = "id"
-        ComboBoxIdMobil.ValueMember = "id"
-
-        ComboBoxIdPembeli.DataSource = FormSignIn.Pembeli.List
-        ComboBoxIdPembeli.DisplayMember = "nama"
-        ComboBoxIdPembeli.ValueMember = "id_pembeli"
-
+    Private Sub FormBukuPenjualanEdit_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         DateTimePickerTanggalPenjualan.Format = DateTimePickerFormat.Custom
         DateTimePickerTanggalPenjualan.CustomFormat = "yyyy/MM/dd"
 
-        ComboBoxIdMobil.SelectedValue() = FormBukuPenjualan.dataBukuPenjualan.idMobilProperty
-        ComboBoxIdPembeli.SelectedValue() = FormBukuPenjualan.dataBukuPenjualan.idPembeliProperty
-        TextBoxHargaTerjual.Text = FormBukuPenjualan.dataBukuPenjualan.hargaTerjualProperty
-        DateTimePickerTanggalPenjualan.Value = FormBukuPenjualan.dataBukuPenjualan.tanggalPenjualanProperty
+        ComboBoxIdMobil.DataSource = FormBukuPenjualan.Mobil.ListEdit(FormBukuPenjualan.BukuPenjualan.idMobilProperty)
+        ComboBoxIdMobil.DisplayMember = "id"
+        ComboBoxIdMobil.ValueMember = "id"
+
+        ComboBoxIdPembeli.DataSource = FormBukuPenjualan.Pembeli.List
+        ComboBoxIdPembeli.DisplayMember = "nama"
+        ComboBoxIdPembeli.ValueMember = "id_pembeli"
+
+        ComboBoxIdMobil.SelectedValue() = FormBukuPenjualan.BukuPenjualan.idMobilProperty
+        ComboBoxIdPembeli.SelectedValue() = FormBukuPenjualan.BukuPenjualan.idPembeliProperty
+        TextBoxHargaTerjual.Text = FormBukuPenjualan.BukuPenjualan.hargaTerjualProperty
+        DateTimePickerTanggalPenjualan.Value = FormBukuPenjualan.BukuPenjualan.tanggalPenjualanProperty
     End Sub
 
     Private Sub ButtonEdit_Click(sender As Object, e As EventArgs) Handles ButtonEdit.Click
-        If Not TextBoxHargaTerjual.Text = "" Then
+        If Not TextBoxHargaTerjual.Text = "" And ComboBoxIdMobil.SelectedValue IsNot Nothing And ComboBoxIdPembeli.SelectedValue IsNot Nothing Then
             If IsNumeric(TextBoxHargaTerjual.Text) Then
-                FormBukuPenjualan.dataBukuPenjualan.UpdateDataBukuPenjualanByIDDatabase(
-                    FormBukuPenjualan.selectedRowBukuPenjualan,
+                FormBukuPenjualan.BukuPenjualan.Update(
+                    FormBukuPenjualan.SelectedRowBukuPenjualan,
                     ComboBoxIdMobil.SelectedValue,
                     ComboBoxIdPembeli.SelectedValue,
                     TextBoxHargaTerjual.Text,
                     DateTimePickerTanggalPenjualan.Value.ToShortDateString()
                 )
 
-                MessageBox.Show("Data buku penjualan dengan ID " & FormBukuPenjualan.selectedRowBukuPenjualan & " berhasil diedit.")
+                MessageBox.Show("Data buku penjualan dengan ID " & FormBukuPenjualan.SelectedRowBukuPenjualan & " berhasil diedit.")
                 Me.Hide()
             Else
                 MessageBox.Show("Input harga terjual harus angka!")

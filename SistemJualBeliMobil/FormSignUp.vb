@@ -1,28 +1,23 @@
 ﻿Imports System.Text.RegularExpressions
-Imports System.Text
-Imports System.Drawing
-Imports System.Windows.Forms
-Imports System.Drawing.Drawing2D
-Imports System.Security
-Imports System.Security.Policy
 
 Public Class FormSignUp
+    Private Users As New Users
+    Private drawingFont As New Font("Arial", 15)
+    Private captchaImage As New Bitmap(140, 40)
+    Private captchaGraf As Graphics = Graphics.FromImage(captchaImage)
+    Private alphabet As String = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz"
+    Private captchaString As String
+    Private tickRandom As String
+    Private processNumber As Integer
 
-    Dim drawingFont As New Font("Arial", 15)
-    Dim captchaImage As New Bitmap(140, 40)
-    Dim captchaGraf As Graphics = Graphics.FromImage(captchaImage)
-    Dim alphabet As String = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz"
-    Dim captchaString, tickRandom As String
-    Dim processNumber As Integer
-
-    Private Sub SignupBtn_Click(sender As Object, e As EventArgs) Handles SignupBtn.Click
+    Private Sub ButtonSignUp_Click(sender As Object, e As EventArgs) Handles SignupBtn.Click
         Dim regex As Regex = New Regex("^[^@\s]+@[^@\s]+\.[^@\s]+$")
         Dim valid As Boolean = regex.IsMatch(inputEmail.Text.Trim)
 
-        If FormSignIn.Users.AvailabilityUsername(inputUsername.Text) = True Then
+        If Users.AvailabilityUsername(inputUsername.Text) = True Then
             MessageBox.Show("Username Sudah Terdaftar !!")
         Else
-            If FormSignIn.Users.AvailabilityEmail(inputEmail.Text) = True Then
+            If Users.AvailabilityEmail(inputEmail.Text) = True Then
                 MessageBox.Show("Email Sudah Terdaftar !!")
             Else
                 If inputUsername.Text.Length > 0 Then
@@ -35,7 +30,7 @@ Public Class FormSignUp
                                     If String.Compare(inputPassword.Text, InputConfirmPassword.Text) = 0 Then
                                         If InputCaptcha.Text.Length > 0 Then
                                             If InputCaptcha.Text = captchaString Then
-                                                FormSignIn.Users.Add(inputUsername.Text, inputEmail.Text, inputPassword.Text)
+                                                Users.Add(inputUsername.Text, inputEmail.Text, inputPassword.Text)
                                                 MessageBox.Show("Sign Up Berhasil !!")
 
                                                 inputUsername.Text = ""
@@ -74,7 +69,7 @@ Public Class FormSignUp
         End If
     End Sub
 
-    Private Sub SigninBtn_Click(sender As Object, e As EventArgs) Handles SigninBtn.Click
+    Private Sub ButtonSignIn_Click(sender As Object, e As EventArgs) Handles SigninBtn.Click
         inputUsername.Text = ""
         inputEmail.Text = ""
         inputPassword.Text = ""
@@ -84,11 +79,11 @@ Public Class FormSignUp
         Me.Hide()
     End Sub
 
-    Private Sub BtnRefresh_Click(sender As Object, e As EventArgs) Handles BtnRefresh.Click
+    Private Sub ButtonRefreshCaptcha_Click(sender As Object, e As EventArgs) Handles BtnRefresh.Click
         GenerateCaptcha()
     End Sub
 
-    Private Sub ChkPassword_CheckedChanged(sender As Object, e As EventArgs) Handles ChkPassword.CheckedChanged
+    Private Sub CheckBoxPassword_CheckedChanged(sender As Object, e As EventArgs) Handles ChkPassword.CheckedChanged
         If ChkPassword.Checked = True Then
             inputPassword.UseSystemPasswordChar = False
         Else
@@ -96,7 +91,7 @@ Public Class FormSignUp
         End If
     End Sub
 
-    Private Sub ChkConfirmPassword_CheckedChanged(sender As Object, e As EventArgs) Handles ChkConfirmPassword.CheckedChanged
+    Private Sub CheckBoxPasswordConfirm_CheckedChanged(sender As Object, e As EventArgs) Handles ChkConfirmPassword.CheckedChanged
         If ChkConfirmPassword.Checked = True Then
             InputConfirmPassword.UseSystemPasswordChar = False
         Else

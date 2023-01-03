@@ -31,7 +31,7 @@ CREATE TABLE mobil(
 
 CREATE TABLE pembeli(
 	id_pembeli INT(11) PRIMARY KEY AUTO_INCREMENT,
-	nik VARCHAR(16),
+	nik VARCHAR(16) UNIQUE,
 	nama VARCHAR(100),
 	alamat VARCHAR(100)
 );
@@ -61,7 +61,7 @@ VALUES
 ),
 (
 	'promecarus',
-	'haikusersusersalslipi@gmail.com',
+	'haikalslipi@gmail.com',
 	'5f4dcc3b5aa765d61d8327deb882cf99'
 ),
 (
@@ -233,22 +233,22 @@ INSERT
 	)
 VALUES 
 (
-	'2107411009',
+	'2107411009000001',
 	'Hilmawan Fauzy Wibowo',
 	'Marrakash Blok B 7'
 ),
 (
-	'2107411022',
+	'2107411022000002',
 	'Heical Chandra Saputra',
 	'Jakarta Pusat JL.Mangga'
 ),
 (
-	'2107411025',
+	'2107411025000003',
 	'Muhammad Haikal Al Rasyid',
 	'Jakarta Pusat Slipi'
 ),
 (
-	'2107411007',
+	'2107411007000004',
 	'Sandhi Karunia Sugihartana',
 	'Bogor JL.Sisingamangaraja'
 );

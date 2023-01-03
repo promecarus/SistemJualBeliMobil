@@ -1,6 +1,8 @@
 ﻿Imports System.Security.Cryptography
 
 Public Class Users
+    Private db As New Database
+    Private query As String
     Private username As String
     Private email As String
     Private password As String
@@ -46,22 +48,40 @@ Public Class Users
     End Function
 
     Public Sub Add(username As String, email As String, password As String)
-        Dim query = "INSERT INTO users(username, email, password) VALUE('" & username & "', '" & email & "', '" & EncryptMD5(password) & "')"
-        FormSignIn.db.ExecuteNonQuery(query)
+        query = "
+            INSERT INTO users(username, email, password)
+                VALUE('" & username & "', '" & email & "', '" & EncryptMD5(password) & "')
+        "
+        db.ExecuteNonQuery(query)
     End Sub
 
     Public Function Authentication(username As String, password As String) As List(Of String)
-        Dim query = "SELECT id_user, username FROM users WHERE (username='" & username & "' OR email='" & username & "') AND password='" & EncryptMD5(password) & "'"
-        Return FormSignIn.db.ExecuteGetOneRow(query, 2)
+        query = "
+            SELECT
+                id_user,
+                username
+            FROM users
+            WHERE 
+                (username='" & username & "' OR email='" & username & "') AND
+                password='" & EncryptMD5(password) & "'
+        "
+        Return db.ExecuteGetOneRow(query, 2)
     End Function
 
     Public Function AvailabilityUsername(username As String) As Boolean
-        Dim query = "SELECT username FROM users WHERE username='" & username & "'"
-        Return FormSignIn.db.CheckAvailability(query)
+        query = "
+            SELECT username
+            FROM users
+            WHERE username='" & username & "'"
+        Return db.CheckAvailability(query)
     End Function
 
     Public Function AvailabilityEmail(email As String) As Boolean
-        Dim query = "SELECT email FROM users WHERE email='" & email & "'"
-        Return FormSignIn.db.CheckAvailability(query)
+        query = "
+            SELECT email
+            FROM users
+            WHERE email='" & email & "'
+        "
+        Return db.CheckAvailability(query)
     End Function
 End Class
