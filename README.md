@@ -31,7 +31,6 @@ Sebuah aplikasi jual beli mobil berbasis VB
 - Mampu membuat, menghapus, dan mengedit Penjualan Mobile
 - Memiliki fitur pencarian yang fleksibel.
 - Memiliki fitur autentikasi dan otorisasi
--
 - Memanfaatkan mysql sebagai databasenya.
 
 ## Technology
