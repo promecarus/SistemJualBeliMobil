@@ -109,4 +109,12 @@
         "
         Return db.ExecuteQuery(query)
     End Function
+
+    Public Function AvailabilityNik(nik As String) As Boolean
+        query = "
+            SELECT nik
+            FROM pembeli
+            WHERE nik='" & nik & "'"
+        Return db.CheckAvailability(query)
+    End Function
 End Class
