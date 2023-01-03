@@ -60,7 +60,11 @@ Public Class Database
 
             temp.Close()
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            If ex.Message = "Unable to connect to any of the specified MySQL hosts." Then
+                MessageBox.Show("Database belum dinyalakan, nyalakan terlebih dahulu!")
+            Else
+                MessageBox.Show(ex.Message)
+            End If
         Finally
             connection.Close()
             connection.Dispose()
