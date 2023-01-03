@@ -59,8 +59,12 @@ Public Class Database
             End While
 
             temp.Close()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
+        Catch ex As MySqlException
+            If ex.Number = 0 Then
+                MessageBox.Show("Database belum dinyalakan, nyalakan terlebih dahulu!")
+            Else
+                MessageBox.Show(ex.Message)
+            End If
         Finally
             connection.Close()
             connection.Dispose()
