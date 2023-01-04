@@ -6,7 +6,7 @@
         Else
             FormJenisMobil.JenisMobil.Add(TxtJenisMobil.Text)
 
-            MessageBox.Show("Data Jenis Mobil Baru Berhasil Ditambahkan.")
+            MessageBox.Show("Data jenis mobil baru berhasil ditambahkan.")
 
             Me.Hide()
 
