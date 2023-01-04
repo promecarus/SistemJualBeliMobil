@@ -40,7 +40,7 @@
                     If Not TxtGaransi.Text = "" Then
                         If IsNumeric(TxtGaransi.Text) Then
                             If RdSangatBaik.Checked = False And RdBaik.Checked = False And RdSedang.Checked = False And RdBuruk.Checked = False And RdSangatBuruk.Checked = False Then
-                                MessageBox.Show("Data Kondisi Belum Terpilih !!")
+                                MessageBox.Show("Data kondisi belum terpilih!")
                             Else
                                 If Not TxtHargaDefault.Text = "" Then
                                     If IsNumeric(TxtHargaDefault.Text) Then
