@@ -74,7 +74,7 @@
                                 End If
                             End If
                         Else
-                            MessageBox.Show("Data Garansi Harus Angka !!")
+                            MessageBox.Show("Data garansi harus angka!")
                         End If
                     Else
                         MessageBox.Show("Data Garansi Belum Terisi !!")
