@@ -84,7 +84,7 @@
                             MessageBox.Show("Data harga default belum terisi!")
                         End If
                     Else
-                        MessageBox.Show("Data Garansi Harus Angka !!")
+                        MessageBox.Show("Data garansi harus angka!")
                     End If
                 Else
                     MessageBox.Show("Data Garansi Belum Terisi !!")
