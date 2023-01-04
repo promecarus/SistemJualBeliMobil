@@ -86,7 +86,7 @@
 
             FormMobilEdit.Show()
         Catch ex As Exception
-            MessageBox.Show("Pilih row terlebih dahulu !!")
+            MessageBox.Show("Pilih row terlebih dahulu!")
         End Try
     End Sub
 
@@ -99,7 +99,7 @@
             Dim MobilHapus = New FormMobilHapus()
             MobilHapus.Show()
         Catch ex As Exception
-            MessageBox.Show("Pilih Row Terlebih Dahulu !!")
+            MessageBox.Show("Pilih row terlebih dahulu !!")
         End Try
     End Sub
 
