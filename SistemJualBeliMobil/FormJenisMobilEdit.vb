@@ -14,7 +14,7 @@
                 FormJenisMobil.JenisMobil.jenisProperty
             )
 
-            MessageBox.Show("Data Jenis Mobil dengan ID " & FormJenisMobil.SelectedRowJenisMobil & " Berhasil Diedit.")
+            MessageBox.Show("Data jenis mobil dengan id " & FormJenisMobil.SelectedRowJenisMobil & " Berhasil Diedit.")
 
             Me.Hide()
         End If
