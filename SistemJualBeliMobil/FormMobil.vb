@@ -69,7 +69,7 @@
         If jumlahJenisMobil > 0 Then
             FormMobilTambah.Show()
         ElseIf jumlahJenisMobil = 0 Then
-            MessageBox.Show("Data Jenis Mobil Masih Kosong, Tambah Data Jenis Mobil Terlebih Dahulu !!")
+            MessageBox.Show("Data jenis mobil masih kosong, tambah data jenis mobil terlebih dahulu!")
         End If
     End Sub
 
