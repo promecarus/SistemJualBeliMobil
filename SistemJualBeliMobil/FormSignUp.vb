@@ -50,7 +50,7 @@ Public Class FormSignUp
                                             MessageBox.Show("Data captcha belum terisi")
                                         End If
                                     Else
-                                        MessageBox.Show("Data Confirm Password Tidak Sama dengan Data Password !!")
+                                        MessageBox.Show("Data confirm password tidak sama dengan data password!")
                                     End If
                                 Else
                                     MessageBox.Show("Data Confirm Password Belum Terisi !!")
