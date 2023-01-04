@@ -17,7 +17,7 @@
             FormDashboard.Show()
             Me.Hide()
         ElseIf inputUsername.Text = "" Then
-            MessageBox.Show("Data Username Belum Terisi !!")
+            MessageBox.Show("Data username belum terisi!")
         ElseIf inputPassword.Text = "" Then
             MessageBox.Show("Data Password Belum Terisi !!")
         Else
