@@ -21,7 +21,7 @@
         ElseIf inputPassword.Text = "" Then
             MessageBox.Show("Data password belum terisi!")
         Else
-            MessageBox.Show("Username atau Password Salah !!")
+            MessageBox.Show("Username atau password salah !")
         End If
     End Sub
 
