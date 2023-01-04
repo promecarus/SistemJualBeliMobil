@@ -34,7 +34,7 @@
 
             FormJenisMobilEdit.Show()
         Catch ex As Exception
-            MessageBox.Show("Pilih Row Terlebih Dahulu !!")
+            MessageBox.Show("Pilih row terlebih dahulu!")
         End Try
     End Sub
 
