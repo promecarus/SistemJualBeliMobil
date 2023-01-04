@@ -64,7 +64,13 @@
     End Sub
 
     Private Sub ButtonTambah_Click(sender As Object, e As EventArgs) Handles BtnTambah.Click
-        FormMobilTambah.Show()
+        Dim jumlahJenisMobil = JenisMobil.Read.Rows.Count
+
+        If jumlahJenisMobil > 0 Then
+            FormMobilTambah.Show()
+        ElseIf jumlahJenisMobil = 0 Then
+            MessageBox.Show("Data Jenis Mobil Masih Kosong, Tambah Data Jenis Mobil Terlebih Dahulu !!")
+        End If
     End Sub
 
     Private Sub ButtonEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click

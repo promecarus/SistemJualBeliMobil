@@ -25,7 +25,16 @@ Public Class FormBukuPenjualan
     End Sub
 
     Private Sub ButtonTambah_Click(sender As Object, e As EventArgs) Handles ButtonTambah.Click
-        FormBukuPenjualanTambah.Show()
+        Dim jumlahMobil = Mobil.ReadTerjualBelum.Rows.Count
+        Dim jumlahPembeli = Pembeli.Read.Rows.Count
+
+        If jumlahMobil + jumlahPembeli > 0 Then
+            FormBukuPenjualanTambah.Show()
+        ElseIf jumlahMobil = 0 Then
+            MessageBox.Show("Data mobil yang dapat dijual masih kosong, tambah data mobil terlebih dahulu!")
+        ElseIf jumlahPembeli = 0 Then
+            MessageBox.Show("Data pembeli masih kosong, tambah data pembeli terlebih dahulu!")
+        End If
     End Sub
 
     Private Sub ButtonEdit_Click(sender As Object, e As EventArgs) Handles ButtonEdit.Click
