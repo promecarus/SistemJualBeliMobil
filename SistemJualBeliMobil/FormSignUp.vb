@@ -31,7 +31,7 @@ Public Class FormSignUp
                                         If InputCaptcha.Text.Length > 0 Then
                                             If InputCaptcha.Text = captchaString Then
                                                 Users.Add(inputUsername.Text, inputEmail.Text, inputPassword.Text)
-                                                MessageBox.Show("Sign Up Berhasil !!")
+                                                MessageBox.Show("Sign up berhasil!")
 
                                                 inputUsername.Text = ""
                                                 inputEmail.Text = ""
