@@ -63,7 +63,7 @@ Public Class FormSignUp
                         MessageBox.Show("Data email belum terisi!")
                     End If
                 Else
-                    MessageBox.Show("Data Username Belum Terisi !!")
+                    MessageBox.Show("Data username belum terisi!")
                 End If
             End If
         End If
