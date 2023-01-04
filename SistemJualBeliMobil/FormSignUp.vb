@@ -43,7 +43,7 @@ Public Class FormSignUp
                                                 FormSignIn.Show()
                                                 Me.Hide()
                                             Else
-                                                MessageBox.Show("Data Captcha Tidak Sesuai !!")
+                                                MessageBox.Show("Data captcha tidak sesuai!")
                                                 InputCaptcha.Clear()
                                             End If
                                         Else
