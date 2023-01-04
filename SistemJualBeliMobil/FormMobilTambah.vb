@@ -83,7 +83,7 @@
                     MessageBox.Show("Data tahun pembuatan harus angka!")
                 End If
             Else
-                MessageBox.Show("Data Tahun Pembuatan Belum Terisi !!")
+                MessageBox.Show("Data tahun pembuatan belum terisi!")
             End If
         End If
 
