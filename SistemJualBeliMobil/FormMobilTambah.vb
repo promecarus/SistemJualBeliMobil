@@ -67,7 +67,7 @@
                                         RdBuruk.Checked = False
                                         RdSangatBuruk.Checked = False
                                     Else
-                                        MessageBox.Show("Data Harga Default Harus Angka !!")
+                                        MessageBox.Show("Data harga default harus angka!")
                                     End If
                                 Else
                                     MessageBox.Show("Data Harga Default Belum Terisi !!")
