@@ -9,7 +9,7 @@
 
         If data_users.Count > 0 Then
             Users.usernameProperty = data_users(1)
-            MessageBox.Show("Sign In Berhasil, Selamat Datang di JualMobil !!")
+            MessageBox.Show("Sign in berhasil, selamat datang di jualmobil!")
 
             inputUsername.Text = ""
             inputPassword.Text = ""
