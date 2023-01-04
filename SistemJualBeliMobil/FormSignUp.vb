@@ -56,7 +56,7 @@ Public Class FormSignUp
                                     MessageBox.Show("Data confirm password belum terisi!")
                                 End If
                             Else
-                                MessageBox.Show("Data Password Belum Terisi !!")
+                                MessageBox.Show("Data password belum terisi!")
                             End If
                         End If
                     Else
