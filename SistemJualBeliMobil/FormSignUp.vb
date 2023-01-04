@@ -23,7 +23,7 @@ Public Class FormSignUp
                 If inputUsername.Text.Length > 0 Then
                     If inputEmail.Text.Length > 0 Then
                         If Not valid Then
-                            MessageBox.Show("Data Email Tidak Valid !!")
+                            MessageBox.Show("Data email tidak valid!")
                         Else
                             If inputPassword.Text.Length > 0 Then
                                 If InputConfirmPassword.Text.Length > 0 Then
