@@ -33,7 +33,7 @@
         End If
 
         If RdManual.Checked = False And RdMatic.Checked = False Then
-            MessageBox.Show("Data Tipe Mobil Belum Terpilih !!")
+            MessageBox.Show("Data tipe mobil belum terpilih!")
         Else
             If Not TxtTahunPembuatan.Text = "" Then
                 If IsNumeric(TxtTahunPembuatan.Text) Then
