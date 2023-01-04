@@ -74,7 +74,7 @@
                                                     Integer.Parse(TxtGaransi.Text),
                                                     Integer.Parse(TxtHargaDefault.Text))
 
-                                MessageBox.Show("Data Mobil Dengan ID " & FormMobil.SelectedRowMobil & " Berhasil Diedit")
+                                MessageBox.Show("Data mobil dengan id " & FormMobil.SelectedRowMobil & " Berhasil diedit")
 
                                 Me.Hide()
                             Else
