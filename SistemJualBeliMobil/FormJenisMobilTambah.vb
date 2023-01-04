@@ -2,11 +2,11 @@
 
     Private Sub ButtonTambah_Click(sender As Object, e As EventArgs) Handles BtnTambah.Click
         If TxtJenisMobil.Text = "" Then
-            MessageBox.Show("Data Jenis Mobil Tidak Boleh Kosong !!")
+            MessageBox.Show("Data jenis mobil tidak boleh kosong!")
         Else
             FormJenisMobil.JenisMobil.Add(TxtJenisMobil.Text)
 
-            MessageBox.Show("Data Jenis Mobil Baru Berhasil Ditambahkan.")
+            MessageBox.Show("Data jenis mobil baru berhasil ditambahkan.")
 
             Me.Hide()
 
