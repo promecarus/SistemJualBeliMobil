@@ -15,7 +15,7 @@ Public Class FormSignUp
         Dim valid As Boolean = regex.IsMatch(inputEmail.Text.Trim)
 
         If Users.AvailabilityUsername(inputUsername.Text) = True Then
-            MessageBox.Show("Username Sudah Terdaftar !!")
+            MessageBox.Show("Username sudah terdaftar!")
         Else
             If Users.AvailabilityEmail(inputEmail.Text) = True Then
                 MessageBox.Show("Email Sudah Terdaftar !!")
