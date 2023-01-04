@@ -18,7 +18,7 @@ Public Class FormSignUp
             MessageBox.Show("Username sudah terdaftar!")
         Else
             If Users.AvailabilityEmail(inputEmail.Text) = True Then
-                MessageBox.Show("Email Sudah Terdaftar !!")
+                MessageBox.Show("Email sudah terdaftar!")
             Else
                 If inputUsername.Text.Length > 0 Then
                     If inputEmail.Text.Length > 0 Then
