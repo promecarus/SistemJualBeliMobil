@@ -79,7 +79,7 @@
                 DataGridViewPembeli.DataSource = Pembeli.Read()
             End If
         Else
-            MessageBox.Show("Data Input Search Harus Angka !!")
+            MessageBox.Show("Data input search harus angka!")
         End If
     End Sub
 
