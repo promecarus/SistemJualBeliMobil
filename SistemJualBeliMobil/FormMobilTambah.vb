@@ -52,7 +52,7 @@
                                                  Integer.Parse(TxtGaransi.Text),
                                                  Integer.Parse(TxtHargaDefault.Text))
 
-                                        MessageBox.Show("Data Mobil Baru Berhasil Ditambahkan.")
+                                        MessageBox.Show("Data mobil baru berhasil ditambahkan.")
 
                                         Me.Hide()
 
