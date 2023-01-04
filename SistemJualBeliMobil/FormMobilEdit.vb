@@ -90,7 +90,7 @@
                     MessageBox.Show("Data garansi belum terisi!")
                 End If
             Else
-                MessageBox.Show("Data Tahun Pembuatan Harus Angka !!")
+                MessageBox.Show("Data tahun pembuatan harus angka!")
             End If
         Else
             MessageBox.Show("Data Tahun Pembuatan Belum Terisi !!")
