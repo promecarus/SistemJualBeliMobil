@@ -105,7 +105,7 @@ Partial Class FormJenisMobilTambah
         Me.Controls.Add(Me.PictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.MinimizeBox = False
+        Me.MaximizeBox = False
         Me.Name = "FormJenisMobilTambah"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Tambah Jenis Mobil"
