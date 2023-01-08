@@ -9,7 +9,7 @@
 
         If data_users.Count > 0 Then
             Users.usernameProperty = data_users(1)
-            MessageBox.Show("Sign In Berhasil, Selamat Datang di JualMobil !!")
+            MessageBox.Show("Sign in berhasil, selamat datang di jualmobil!")
 
             inputUsername.Text = ""
             inputPassword.Text = ""
@@ -17,11 +17,11 @@
             FormDashboard.Show()
             Me.Hide()
         ElseIf inputUsername.Text = "" Then
-            MessageBox.Show("Data Username Belum Terisi !!")
+            MessageBox.Show("Data username belum terisi!")
         ElseIf inputPassword.Text = "" Then
-            MessageBox.Show("Data Password Belum Terisi !!")
+            MessageBox.Show("Data password belum terisi!")
         Else
-            MessageBox.Show("Username atau Password Salah !!")
+            MessageBox.Show("Username atau password salah!")
         End If
     End Sub
 

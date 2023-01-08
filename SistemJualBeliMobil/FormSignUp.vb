@@ -15,15 +15,15 @@ Public Class FormSignUp
         Dim valid As Boolean = regex.IsMatch(inputEmail.Text.Trim)
 
         If Users.AvailabilityUsername(inputUsername.Text) = True Then
-            MessageBox.Show("Username Sudah Terdaftar !!")
+            MessageBox.Show("Username sudah terdaftar!")
         Else
             If Users.AvailabilityEmail(inputEmail.Text) = True Then
-                MessageBox.Show("Email Sudah Terdaftar !!")
+                MessageBox.Show("Email sudah terdaftar!")
             Else
                 If inputUsername.Text.Length > 0 Then
                     If inputEmail.Text.Length > 0 Then
                         If Not valid Then
-                            MessageBox.Show("Data Email Tidak Valid !!")
+                            MessageBox.Show("Data email tidak valid!")
                         Else
                             If inputPassword.Text.Length > 0 Then
                                 If InputConfirmPassword.Text.Length > 0 Then
@@ -31,7 +31,7 @@ Public Class FormSignUp
                                         If InputCaptcha.Text.Length > 0 Then
                                             If InputCaptcha.Text = captchaString Then
                                                 Users.Add(inputUsername.Text, inputEmail.Text, inputPassword.Text)
-                                                MessageBox.Show("Sign Up Berhasil !!")
+                                                MessageBox.Show("Sign up berhasil!")
 
                                                 inputUsername.Text = ""
                                                 inputEmail.Text = ""
@@ -43,27 +43,27 @@ Public Class FormSignUp
                                                 FormSignIn.Show()
                                                 Me.Hide()
                                             Else
-                                                MessageBox.Show("Data Captcha Tidak Sesuai !!")
+                                                MessageBox.Show("Data captcha tidak sesuai!")
                                                 InputCaptcha.Clear()
                                             End If
                                         Else
-                                            MessageBox.Show("Data Captcha Belum Terisi")
+                                            MessageBox.Show("Data captcha belum terisi")
                                         End If
                                     Else
-                                        MessageBox.Show("Data Confirm Password Tidak Sama dengan Data Password !!")
+                                        MessageBox.Show("Data confirm password tidak sama dengan data password!")
                                     End If
                                 Else
-                                    MessageBox.Show("Data Confirm Password Belum Terisi !!")
+                                    MessageBox.Show("Data confirm password belum terisi!")
                                 End If
                             Else
-                                MessageBox.Show("Data Password Belum Terisi !!")
+                                MessageBox.Show("Data password belum terisi!")
                             End If
                         End If
                     Else
-                        MessageBox.Show("Data Email Belum Terisi !!")
+                        MessageBox.Show("Data email belum terisi!")
                     End If
                 Else
-                    MessageBox.Show("Data Username Belum Terisi !!")
+                    MessageBox.Show("Data username belum terisi!")
                 End If
             End If
         End If

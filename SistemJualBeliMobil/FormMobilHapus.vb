@@ -13,7 +13,7 @@
     Private Sub ButtonYes_Click(sender As Object, e As EventArgs) Handles BtnYes.Click
         FormMobil.Mobil.Delete(FormMobil.SelectedRowMobil)
 
-        MessageBox.Show("Data Mobil dengan ID " & FormMobil.SelectedRowMobil & " Berhasil Dihapus.")
+        MessageBox.Show("Data mobil dengan id " & FormMobil.SelectedRowMobil & " Berhasil dihapus.")
 
         Me.Hide()
     End Sub

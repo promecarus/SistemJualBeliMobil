@@ -69,7 +69,7 @@
         If jumlahJenisMobil > 0 Then
             FormMobilTambah.Show()
         ElseIf jumlahJenisMobil = 0 Then
-            MessageBox.Show("Data Jenis Mobil Masih Kosong, Tambah Data Jenis Mobil Terlebih Dahulu !!")
+            MessageBox.Show("Data jenis mobil masih kosong, tambah data jenis mobil terlebih dahulu!")
         End If
     End Sub
 
@@ -86,7 +86,7 @@
 
             FormMobilEdit.Show()
         Catch ex As Exception
-            MessageBox.Show("Pilih Row Terlebih Dahulu !!")
+            MessageBox.Show("Pilih row terlebih dahulu!")
         End Try
     End Sub
 
@@ -99,7 +99,7 @@
             Dim MobilHapus = New FormMobilHapus()
             MobilHapus.Show()
         Catch ex As Exception
-            MessageBox.Show("Pilih Row Terlebih Dahulu !!")
+            MessageBox.Show("Pilih row terlebih dahulu!")
         End Try
     End Sub
 
@@ -151,7 +151,7 @@
                 ReloadDataTable()
             End If
         Else
-            MessageBox.Show("Data Input Search Harus Angka !!")
+            MessageBox.Show("Data input search harus angka!")
         End If
     End Sub
 

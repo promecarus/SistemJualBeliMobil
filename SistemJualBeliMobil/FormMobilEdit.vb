@@ -74,26 +74,26 @@
                                                     Integer.Parse(TxtGaransi.Text),
                                                     Integer.Parse(TxtHargaDefault.Text))
 
-                                MessageBox.Show("Data Mobil Dengan ID " & FormMobil.SelectedRowMobil & " Berhasil Diedit")
+                                MessageBox.Show("Data mobil dengan id " & FormMobil.SelectedRowMobil & " Berhasil diedit")
 
                                 Me.Hide()
                             Else
-                                MessageBox.Show("Data Harga Default Harus Angka !!")
+                                MessageBox.Show("Data harga default harus angka!")
                             End If
                         Else
-                            MessageBox.Show("Data Harga Default Belum Terisi !!")
+                            MessageBox.Show("Data harga default belum terisi!")
                         End If
                     Else
-                        MessageBox.Show("Data Garansi Harus Angka !!")
+                        MessageBox.Show("Data garansi harus angka!")
                     End If
                 Else
-                    MessageBox.Show("Data Garansi Belum Terisi !!")
+                    MessageBox.Show("Data garansi belum terisi!")
                 End If
             Else
-                MessageBox.Show("Data Tahun Pembuatan Harus Angka !!")
+                MessageBox.Show("Data tahun pembuatan harus angka!")
             End If
         Else
-            MessageBox.Show("Data Tahun Pembuatan Belum Terisi !!")
+            MessageBox.Show("Data tahun pembuatan belum terisi!")
         End If
     End Sub
 
