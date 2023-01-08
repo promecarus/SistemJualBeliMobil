@@ -28,7 +28,7 @@ Public Class FormBukuPenjualan
         Dim jumlahMobil = Mobil.ReadTerjualBelum.Rows.Count
         Dim jumlahPembeli = Pembeli.Read.Rows.Count
 
-        If jumlahMobil + jumlahPembeli > 0 Then
+        If jumlahMobil > 0 And jumlahPembeli > 0 Then
             FormBukuPenjualanTambah.Show()
         ElseIf jumlahMobil = 0 Then
             MessageBox.Show("Data mobil yang dapat dijual masih kosong, tambah data mobil terlebih dahulu!")
