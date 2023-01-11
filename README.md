@@ -57,10 +57,15 @@ To run the project, import the [sql script](/db_sistem_jual_beli_mobil.sql) to M
 
 ## Authors
 
-- [Heical Chandra Syahputra](https://github.com/Dynavx)
-- [Hilmawan Fauzy Wibowo](https://github.com/mawanrunner)
-- [Muhammad Haikal Al Rasyid](https://github.com/promecarus)
-- [Sandhi Karunia Sugihartana](https://github.com/Lowl16)
+<div align="center">
+
+Name                                                        | NIM
+--                                                          | --
+[Sandhi Karunia Sugihartana](https://github.com/Lowl16)     | 2107411006
+[Hilmawan Fauzy Wibowo](https://github.com/mawanrunner)     | 2107411009
+[Heical Chandra Syahputra](https://github.com/Dynavx)       | 2107411022
+[Muhammad Haikal Al Rasyid](https://github.com/promecarus)  | 2107411025
+</div>
 
 ## Documentation
 
