@@ -57,7 +57,7 @@ To run the project, import the [sql script](/db_sistem_jual_beli_mobil.sql) to M
 
 ## Authors
 
-<div align="center">
+<!-- <div align="center"> -->
 
 Name                                                        | NIM
 --                                                          | --
@@ -65,7 +65,7 @@ Name                                                        | NIM
 [Hilmawan Fauzy Wibowo](https://github.com/mawanrunner)     | 2107411009
 [Heical Chandra Syahputra](https://github.com/Dynavx)       | 2107411022
 [Muhammad Haikal Al Rasyid](https://github.com/promecarus)  | 2107411025
-</div>
+<!-- </div> -->
 
 ## Documentation
 
