@@ -21,11 +21,7 @@ Public Class Database
             command.CommandText = query
             dataTable.Load(command.ExecuteReader())
         Catch ex As MySqlException
-            If ex.Number = 1042 Then
-                MessageBox.Show("Database belum dinyalakan, nyalakan terlebih dahulu!")
-            Else
-                MessageBox.Show(ex.Message)
-            End If
+            'MessageBox.Show("Error: " + ex.Message)
         Finally
             connection.Close()
             connection.Dispose()
@@ -40,11 +36,7 @@ Public Class Database
             command.CommandText = query
             command.ExecuteNonQuery()
         Catch ex As MySqlException
-            If ex.Number = 1042 Then
-                MessageBox.Show("Database belum dinyalakan, nyalakan terlebih dahulu!")
-            Else
-                MessageBox.Show(ex.Message)
-            End If
+            'MessageBox.Show("Error: " + ex.Message)
         Finally
             connection.Close()
             connection.Dispose()
@@ -68,11 +60,7 @@ Public Class Database
 
             temp.Close()
         Catch ex As MySqlException
-            If ex.Number = 1042 Then
-                MessageBox.Show("Database belum dinyalakan, nyalakan terlebih dahulu!")
-            Else
-                MessageBox.Show(ex.Message)
-            End If
+            'MessageBox.Show("Error: " + ex.Message)
         Finally
             connection.Close()
             connection.Dispose()
@@ -98,11 +86,7 @@ Public Class Database
 
             temp.Close()
         Catch ex As MySqlException
-            If ex.Number = 1042 Then
-                MessageBox.Show("Database belum dinyalakan, nyalakan terlebih dahulu!")
-            Else
-                MessageBox.Show(ex.Message)
-            End If
+            'MessageBox.Show("Error: " + ex.Message)
         Finally
             connection.Close()
             connection.Dispose()
