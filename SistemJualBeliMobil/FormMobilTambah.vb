@@ -33,14 +33,14 @@
         End If
 
         If RdManual.Checked = False And RdMatic.Checked = False Then
-            MessageBox.Show("Data Tipe Mobil Belum Terpilih !!")
+            MessageBox.Show("Data tipe mobil belum terpilih!")
         Else
             If Not TxtTahunPembuatan.Text = "" Then
                 If IsNumeric(TxtTahunPembuatan.Text) Then
                     If Not TxtGaransi.Text = "" Then
                         If IsNumeric(TxtGaransi.Text) Then
                             If RdSangatBaik.Checked = False And RdBaik.Checked = False And RdSedang.Checked = False And RdBuruk.Checked = False And RdSangatBuruk.Checked = False Then
-                                MessageBox.Show("Data Kondisi Belum Terpilih !!")
+                                MessageBox.Show("Data kondisi belum terpilih!")
                             Else
                                 If Not TxtHargaDefault.Text = "" Then
                                     If IsNumeric(TxtHargaDefault.Text) Then
@@ -52,7 +52,7 @@
                                                  Integer.Parse(TxtGaransi.Text),
                                                  Integer.Parse(TxtHargaDefault.Text))
 
-                                        MessageBox.Show("Data Mobil Baru Berhasil Ditambahkan.")
+                                        MessageBox.Show("Data mobil baru berhasil ditambahkan.")
 
                                         Me.Hide()
 
@@ -67,23 +67,23 @@
                                         RdBuruk.Checked = False
                                         RdSangatBuruk.Checked = False
                                     Else
-                                        MessageBox.Show("Data Harga Default Harus Angka !!")
+                                        MessageBox.Show("Data harga default harus angka!")
                                     End If
                                 Else
-                                    MessageBox.Show("Data Harga Default Belum Terisi !!")
+                                    MessageBox.Show("Data harga default belum terisi!")
                                 End If
                             End If
                         Else
-                            MessageBox.Show("Data Garansi Harus Angka !!")
+                            MessageBox.Show("Data garansi harus angka!")
                         End If
                     Else
-                        MessageBox.Show("Data Garansi Belum Terisi !!")
+                        MessageBox.Show("Data garansi belum terisi!")
                     End If
                 Else
-                    MessageBox.Show("Data Tahun Pembuatan Harus Angka !!")
+                    MessageBox.Show("Data tahun pembuatan harus angka!")
                 End If
             Else
-                MessageBox.Show("Data Tahun Pembuatan Belum Terisi !!")
+                MessageBox.Show("Data tahun pembuatan belum terisi!")
             End If
         End If
 

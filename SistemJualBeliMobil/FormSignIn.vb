@@ -1,4 +1,6 @@
-﻿Public Class FormSignIn
+﻿Imports MySql.Data.MySqlClient
+
+Public Class FormSignIn
     Private Users As New Users
 
     Private Sub ButtonSignIn_Click(sender As Object, e As EventArgs) Handles SigninBtn.Click
@@ -7,22 +9,33 @@
 
         Dim data_users As List(Of String) = Users.Authentication(plainUsername, plainPassword)
 
-        If data_users.Count > 0 Then
-            Users.usernameProperty = data_users(1)
-            MessageBox.Show("Sign In Berhasil, Selamat Datang di JualMobil !!")
+        Dim connection As New MySqlConnection("server=localhost;user id=root;password=;database=db_sistem_jual_beli_mobil")
+        Try
+            connection.Open()
+        Catch ex As Exception
+        End Try
 
-            inputUsername.Text = ""
-            inputPassword.Text = ""
+        If connection.State = ConnectionState.Open Then
+            If data_users.Count > 0 Then
+                Users.usernameProperty = data_users(1)
+                MessageBox.Show("Sign in berhasil, selamat datang di jualmobil!")
 
-            FormDashboard.Show()
-            Me.Hide()
-        ElseIf inputUsername.Text = "" Then
-            MessageBox.Show("Data Username Belum Terisi !!")
-        ElseIf inputPassword.Text = "" Then
-            MessageBox.Show("Data Password Belum Terisi !!")
+                inputUsername.Text = ""
+                inputPassword.Text = ""
+
+                FormDashboard.Show()
+                Me.Hide()
+            ElseIf inputUsername.Text = "" Then
+                MessageBox.Show("Data username belum terisi!")
+            ElseIf inputPassword.Text = "" Then
+                MessageBox.Show("Data password belum terisi!")
+            Else
+                MessageBox.Show("Username atau password salah!")
+            End If
         Else
-            MessageBox.Show("Username atau Password Salah !!")
+            MessageBox.Show("Database belum dinyalakan, nyalakan terlebih dahulu!")
         End If
+        connection.Close()
     End Sub
 
     Private Sub ButtonSignUp_Click(sender As Object, e As EventArgs) Handles SignupBtn.Click

@@ -1,4 +1,5 @@
 ﻿Imports System.Text.RegularExpressions
+Imports MySql.Data.MySqlClient
 
 Public Class FormSignUp
     Private Users As New Users
@@ -14,59 +15,70 @@ Public Class FormSignUp
         Dim regex As Regex = New Regex("^[^@\s]+@[^@\s]+\.[^@\s]+$")
         Dim valid As Boolean = regex.IsMatch(inputEmail.Text.Trim)
 
-        If Users.AvailabilityUsername(inputUsername.Text) = True Then
-            MessageBox.Show("Username Sudah Terdaftar !!")
-        Else
-            If Users.AvailabilityEmail(inputEmail.Text) = True Then
-                MessageBox.Show("Email Sudah Terdaftar !!")
+        Dim connection As New MySqlConnection("server=localhost;user id=root;password=;database=db_sistem_jual_beli_mobil")
+        Try
+            connection.Open()
+        Catch ex As Exception
+        End Try
+
+        If connection.State = ConnectionState.Open Then
+            If Users.AvailabilityUsername(inputUsername.Text) = True Then
+                MessageBox.Show("Username sudah terdaftar!")
             Else
-                If inputUsername.Text.Length > 0 Then
-                    If inputEmail.Text.Length > 0 Then
-                        If Not valid Then
-                            MessageBox.Show("Data Email Tidak Valid !!")
-                        Else
-                            If inputPassword.Text.Length > 0 Then
-                                If InputConfirmPassword.Text.Length > 0 Then
-                                    If String.Compare(inputPassword.Text, InputConfirmPassword.Text) = 0 Then
-                                        If InputCaptcha.Text.Length > 0 Then
-                                            If InputCaptcha.Text = captchaString Then
-                                                Users.Add(inputUsername.Text, inputEmail.Text, inputPassword.Text)
-                                                MessageBox.Show("Sign Up Berhasil !!")
+                If Users.AvailabilityEmail(inputEmail.Text) = True Then
+                    MessageBox.Show("Email sudah terdaftar!")
+                Else
+                    If inputUsername.Text.Length > 0 Then
+                        If inputEmail.Text.Length > 0 Then
+                            If Not valid Then
+                                MessageBox.Show("Data email tidak valid!")
+                            Else
+                                If inputPassword.Text.Length > 0 Then
+                                    If InputConfirmPassword.Text.Length > 0 Then
+                                        If String.Compare(inputPassword.Text, InputConfirmPassword.Text) = 0 Then
+                                            If InputCaptcha.Text.Length > 0 Then
+                                                If InputCaptcha.Text = captchaString Then
+                                                    Users.Add(inputUsername.Text, inputEmail.Text, inputPassword.Text)
+                                                    MessageBox.Show("Sign up berhasil!")
 
-                                                inputUsername.Text = ""
-                                                inputEmail.Text = ""
-                                                inputPassword.Text = ""
-                                                InputConfirmPassword.Text = ""
-                                                InputCaptcha.Clear()
-                                                GenerateCaptcha()
+                                                    inputUsername.Text = ""
+                                                    inputEmail.Text = ""
+                                                    inputPassword.Text = ""
+                                                    InputConfirmPassword.Text = ""
+                                                    InputCaptcha.Clear()
+                                                    GenerateCaptcha()
 
-                                                FormSignIn.Show()
-                                                Me.Hide()
+                                                    FormSignIn.Show()
+                                                    Me.Hide()
+                                                Else
+                                                    MessageBox.Show("Data captcha tidak sesuai!")
+                                                    InputCaptcha.Clear()
+                                                End If
                                             Else
-                                                MessageBox.Show("Data Captcha Tidak Sesuai !!")
-                                                InputCaptcha.Clear()
+                                                MessageBox.Show("Data captcha belum terisi")
                                             End If
                                         Else
-                                            MessageBox.Show("Data Captcha Belum Terisi")
+                                            MessageBox.Show("Data confirm password tidak sama dengan data password!")
                                         End If
                                     Else
-                                        MessageBox.Show("Data Confirm Password Tidak Sama dengan Data Password !!")
+                                        MessageBox.Show("Data confirm password belum terisi!")
                                     End If
                                 Else
-                                    MessageBox.Show("Data Confirm Password Belum Terisi !!")
+                                    MessageBox.Show("Data password belum terisi!")
                                 End If
-                            Else
-                                MessageBox.Show("Data Password Belum Terisi !!")
                             End If
+                        Else
+                            MessageBox.Show("Data email belum terisi!")
                         End If
                     Else
-                        MessageBox.Show("Data Email Belum Terisi !!")
+                        MessageBox.Show("Data username belum terisi!")
                     End If
-                Else
-                    MessageBox.Show("Data Username Belum Terisi !!")
                 End If
             End If
+        Else
+            MessageBox.Show("Database belum dinyalakan, nyalakan terlebih dahulu!")
         End If
+        connection.Close()
     End Sub
 
     Private Sub ButtonSignIn_Click(sender As Object, e As EventArgs) Handles SigninBtn.Click
