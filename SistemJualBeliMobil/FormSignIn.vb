@@ -18,7 +18,7 @@ Public Class FormSignIn
         If connection.State = ConnectionState.Open Then
             If data_users.Count > 0 Then
                 Users.usernameProperty = data_users(1)
-                MessageBox.Show("Sign in berhasil, selamat datang di jualmobil!")
+                MessageBox.Show("Sign in berhasil, selamat datang di JualMobil!")
 
                 inputUsername.Text = ""
                 inputPassword.Text = ""
