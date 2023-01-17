@@ -74,9 +74,6 @@
             If Not TxtSearch.Text = "" Then
                 DataGridViewPembeli.DataSource = Nothing
                 DataGridViewPembeli.DataSource = Pembeli.SearchById(TxtSearch.Text)
-            Else
-                DataGridViewPembeli.DataSource = Nothing
-                DataGridViewPembeli.DataSource = Pembeli.Read()
             End If
         Else
             MessageBox.Show("Data input search harus angka!")
