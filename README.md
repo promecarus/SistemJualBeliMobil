@@ -28,7 +28,7 @@ Sebuah aplikasi jual beli mobil berbasis VB
 
 ### Features
 
-- Mampu membuat, menghapus, dan mengedit Penjualan Mobile
+- Mampu Membuat, menghapus, dan mengedit Penjualan Mobile
 - Memiliki fitur pencarian yang fleksibel.
 - Memiliki fitur autentikasi dan otorisasi
 -
