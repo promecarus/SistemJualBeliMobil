@@ -11,7 +11,7 @@
 
 ## Description
 
-This Project is a system for buying and selling cars. It allows users to manage data starting from car types, cars, buyers, and sales books. The system is built using Visual Basic and uses a MySQL database to store all data. It has a user-friendly interface, making it easy to use on desktop.
+This project is a system for buying and selling cars. It allows users to manage data starting from car types, cars, buyers, and sales books. The system is built using Visual Basic and uses a MySQL database to store all data. It has a user-friendly interface, making it easy to use on desktop.
 
 <!-- ## Overview
 
